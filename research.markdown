@@ -2,6 +2,9 @@
 title: Research
 ---
 
+This page is still under construction! Please bear with me as I repopulate this list with links to papers, handouts, etc. Feel free to email me 
+directly at <a href="mailto:patrick.d.elliott@gmail.com">patrick.d.elliott@gmail.com</a>, and I'll be happy to send you anything that's missing.
+
 <h2 class="sans">Upcoming presentations</h2>
 
 Elliott, Patrick D. Ellipsis identity redux: a (re)evaluation of the empirical landscape. IGRA-Colloquium, Universität Leipzig. November 11 2016.
