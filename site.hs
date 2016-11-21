@@ -28,9 +28,9 @@ main = hakyllWith config $ do
     match "index.html" $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
+            --posts <- recentFirst =<< loadAll "posts/*"
             let indexCtx =
-                    listField "posts" postCtx (return posts) `mappend`
+                    -- listField "posts" postCtx (return posts) `mappend`
                     -- constField "title" "Home"                `mappend`
                     defaultContext
 
@@ -43,10 +43,10 @@ main = hakyllWith config $ do
 
 
 --------------------------------------------------------------------------------
-postCtx :: Context String
-postCtx =
-    dateField "date" "%B %e, %Y" `mappend`
-    defaultContext
+-- postCtx :: Context String
+-- postCtx =
+--     dateField "date" "%B %e, %Y" `mappend`
+--     defaultContext
 
 config :: Configuration
 config = defaultConfiguration
