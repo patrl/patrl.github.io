@@ -13,6 +13,31 @@ Elliott, Patrick D. and Nicolae, Andreea. Cumulative readings beyond nominals. L
 
 <h2 class="sans">Papers</h2>
 
+Elliott, Patrick D. In prep. Nesting habits of flightless *wh*-phrases. Ms.
+<details>
+<summary>Abstract</summary>
+<p>The focus of this paper is a construction involving what Heim (1994)
+  refers to as nested <i>which</i>-phrases, and lessons for a compositional
+  account <i>wh</i>-interrogatives. The central puzzle under consideration is the
+  unavailability of the pair-list interpretation when an <i>in-situ</i>
+  <i>wh-</i>phrase is nested inside of the moved <i>wh-</i>phrase,
+  despite the fact that the pair-list interpretation obtains when the
+  <i>in-situ</i> <i>wh-</i>expression is contained in an island. Even under the surviving single-pair reading, nested
+  \emph{which-}phrases pose some well-known problems relating to the semantics
+  of pied-piping, as discussed by von Stechow (1996), Sternefeld (2001) and
+  Sauerland and Heck (2003). We aim to show that nested <i>which</i>-phrases are
+  problematic for current compositional accounts
+  of <i>wh-</i>interrogatives. We go on to propose a new account,
+  which combines
+  Cable's (2010) syntax for interrogatives with a semantics based on
+  Charlow's (2015) system for composing
+  alternatives. We show that this system is powerful enough to derive pair-list
+  readings across islands, via covert pied-piping, and the single-pair reading
+  of nested <i>which</i>-phrases, via trace conversion. On the other hand, the
+  pair-list reading of nested \emph{which}-phrases is shown to be impossible to
+  generate, given some well-motivated syntactic restrictions on covert movement.</p>
+</details>
+
 Elliott, Patrick D. Submitted. Explaining DPs vs. CPs without syntax. In: *Proceedings of CLS 52*. <a href= "/documents/cls52-paper_draft.pdf" download="cls52-paper_draft.pdf">(draft).</a>
 
 <a href= "/documents/nels46.pdf" download="nels46.pdf"></a> Nicolae, Andreea, Elliott, Patrick D., and Sudo, Yasutada. Submitted. List readings of conjoined singular *which*-phrases. In: *Proceedings of NELS 46*.
@@ -118,8 +143,6 @@ Barros, Matt, Elliott, Patrick D., and Thoms, Gary. 2013a. 'More variation in is
 Elliott, Patrick D. 2012. 'Illusory island repair in sluicing: Evidence from non-predicative adjectives.' Invited talk for the *Syntax and Semantics Reading Group*, University of Edinburgh, October 10th 2012.
 
 <h2 class="sans">Unpublished work</h2>
-
-Elliott, Patrick D. In prep. Sorting out multiple questions. Ms. Email me for a draft.
 
 Elliott, Patrick D. 2013. 'Clausal ellipsis and identity'. MSc dissertation, University of Edinburgh. Email me for a copy. (Supervised by Dr. Peter Ackema and Dr. Gary Thoms)
 
