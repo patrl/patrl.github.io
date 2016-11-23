@@ -13,7 +13,7 @@ Elliott, Patrick D. and Nicolae, Andreea. Cumulative readings beyond nominals. L
 
 <h2 class="sans">Papers</h2>
 
-Elliott, Patrick D. In prep. Nesting habits of flightless *wh*-phrases. Ms.
+<p>Elliott, Patrick D. In prep. Nesting habits of flightless *wh*-phrases. Ms. (Email me for a draft).
 <details>
 <summary>Abstract</summary>
 <p>The focus of this paper is a construction involving what Heim (1994)
@@ -29,14 +29,14 @@ Elliott, Patrick D. In prep. Nesting habits of flightless *wh*-phrases. Ms.
   problematic for current compositional accounts
   of <i>wh-</i>interrogatives. We go on to propose a new account,
   which combines
-  Cable's (2010) syntax for interrogatives with a semantics based on
+  Cable's syntax for interrogatives with a semantics based on
   Charlow's (2015) system for composing
   alternatives. We show that this system is powerful enough to derive pair-list
   readings across islands, via covert pied-piping, and the single-pair reading
   of nested <i>which</i>-phrases, via trace conversion. On the other hand, the
-  pair-list reading of nested \emph{which}-phrases is shown to be impossible to
+  pair-list reading of nested <i>which</i>-phrases is shown to be impossible to
   generate, given some well-motivated syntactic restrictions on covert movement.</p>
-</details>
+</details></p>
 
 Elliott, Patrick D. Submitted. Explaining DPs vs. CPs without syntax. In: *Proceedings of CLS 52*. <a href= "/documents/cls52-paper_draft.pdf" download="cls52-paper_draft.pdf">(draft).</a>
 
