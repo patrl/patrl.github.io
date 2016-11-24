@@ -9,6 +9,8 @@ directly at <a href="mailto:patrick.d.elliott@gmail.com">patrick.d.elliott@gmail
 
 Elliott, Patrick D. TBA. FB IV workshop, ZAS, Berlin. December 9, 2016.
 
+Elliott, Patrick D. Superiority, economy, and information structure. ConSOLE XXV, Leipzig. January 2017. (poster)
+
 Elliott, Patrick D. and Nicolae, Andreea. Cumulative readings beyond nominals. LSA 2017 Annual Meeting, Austin, Texas. January 2017. (poster)
 
 <h2 class="sans">Papers</h2>
