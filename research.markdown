@@ -44,7 +44,7 @@ Elliott, Patrick D. Submitted. Explaining DPs vs. CPs without syntax. In: *Proce
 
 <a href= "/documents/nels46.pdf" download="nels46.pdf"></a> Nicolae, Andreea, Elliott, Patrick D., and Sudo, Yasutada. Submitted. List readings of conjoined singular *which*-phrases. In: *Proceedings of NELS 46*.
 
-<a href= "/documents/PoRs.pdf" download="PoRs.pdf"></a> Elliott, Patrick D., Klinedinst, Nathan, Sudo, Yasu, and Uegaki, Wataru. Under revision. Predicates of relevancdfe and theories of question embedding. Ms., UCL and Keio University/Institut Jean-Nicod/JSPS
+<a href= "/documents/PoRs.pdf" download="PoRs.pdf"></a> Elliott, Patrick D., Klinedinst, Nathan, Sudo, Yasu, and Uegaki, Wataru. Under revision. Predicates of relevance and theories of question embedding. Ms., UCL and Keio University/Institut Jean-Nicod/JSPS
 
 Elliott, Patrick D. In preparation. Nested *wh*-questions and the locality of scope taking. In: *Proceedings of ConSOLE XXIV*.
 
