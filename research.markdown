@@ -7,7 +7,7 @@ directly at <a href="mailto:patrick.d.elliott@gmail.com">patrick.d.elliott@gmail
 
 <h2 class="sans">Upcoming presentations</h2>
 
-Elliott, Patrick D. TBA. FB IV workshop, ZAS, Berlin. December 9, 2016.
+Elliott, Patrick D. Rethinking the semantics of embedding. FB IV workshop, ZAS, Berlin. December 9, 2016.
 
 Elliott, Patrick D. Superiority, economy, and information structure. ConSOLE XXV, Leipzig. January 2017. (poster)
 
