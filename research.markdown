@@ -70,6 +70,8 @@ Elliott, Patrick D., McCready, Eric, and Sudo, Yasu. In preparation. Discourse *
 
 <h2 class="sans">Presentations</h2>
 
+Elliott, Patrick D. Rethinking the semantics of embedded. FB IV workshop, ZAS, Berlin. December 9 2016.
+
 Elliott, Patrick D. Ellipsis identity and the alternative tier. Theory of the Grammar colloquium, Universität Leipzig. November 11 2016.
 
 Elliott, Patrick D., Klinedinst, Nathan, Sudo, Yasutada, and Uegaki, Wataru. Predicates of relevance and theories of question embedding. NELS 47, UMass Amherst. October 2016.
