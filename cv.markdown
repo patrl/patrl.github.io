@@ -187,6 +187,15 @@ Advisor: [Dr. Roland Mühlenbernd](http://www.sfs.uni-tubeingen.de/~roland/)
 
 ### Refereed conference presentations
 
+* 2017
+    + "Who and what do *who* and *what* range over cross-linguistically?"
+    with [Andreea Nicolae](https://sites.google.com/site/andreeanicolae/) and [Uli Sauerland](http://www.zas.gwz-berlin.de/mitarbeiter_sauerland.html).  
+    Theoretical and Experimental Approaches to Presuppositions, Genoa, Italy, 3-5 March, 2017.
+    + "Cumulative readings beyond nominals"
+    with [Andreea Nicolae](https://sites.google.com/site/andreeanicolae/).  
+    Poster at the LSA 2017 Annual Meeting, Austin, Texas, 5-8 January, 2017.
+    + "Superiority, economy, and information structure"  
+    ConSOLE XXV, University of Leipzig, 4-7 January, 2017.
 * 2016
     + "Predicates of relevance and theories of question embedding"  
     with [Nathan Klinedinst](https://www.ucl.ac.uk/pals/people/profiles/academic-staff/nathan-klinedinst), [Yasutada Sudo](http://www.ucl.ac.uk/~ucjtudo/), and [Wataru Uegaki](https://wataruu.wordpress.com).  
@@ -401,6 +410,19 @@ Advisor: [Dr. Roland Mühlenbernd](http://www.sfs.uni-tubeingen.de/~roland/)
 
 ##  References
 
--  Available upon request.
+* Dr. Klaus Abels
+    + Reading in Linguistics, University College London  
+    115b, 2 Wakefield Street  
+    Chandler House  
+    London, WC1N 1PF  
+    +442076794061
+
+* Dr. Uli Sauerland
+    + Programmbereichskoordinator, Zentrum für Allgemeine Sprachwissenschaft  
+    Schützenstr. 18  
+    D-10117 Berlin  
+    +493020192570
+
+
 
 
