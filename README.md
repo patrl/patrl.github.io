@@ -14,3 +14,10 @@ The development branch of my new personal site, powered by Hakyll.
 - run `stack init`.
 - run `stack build`.
 - after making any changes to the site, run `stack exec site deploy`.
+
+## Workflow
+
+- In `develop` branch, modify site and run `stack exec site watch` to preview any changes on a local server.
+- Commit any changes and run, `stack exec site deploy` to deploy to http://patrickdelliott.com
+- The `master` branch should never be touched.
+
