@@ -7,8 +7,6 @@ directly at <a href="mailto:patrick.d.elliott@gmail.com">patrick.d.elliott@gmail
 
 <h2 class="sans">Upcoming presentations</h2>
 
-Elliott, Patrick D. Superiority, economy, and information structure. ConSOLE XXV, Leipzig. January 2017. (poster)
-
 Elliott, Patrick D. and Nicolae, Andreea. Cumulative readings beyond nominals. LSA 2017 Annual Meeting, Austin, Texas. January 2017. (poster)
 
 Elliott, Patrick D., Nicolae, Andreea, and Sauerland, Uli. Who and what do *who* and *what* range over cross-linguistically?. Theoretical and Experimental Approaches to Presuppositions, Genoa, Italy. 4 March 2017. (<a href="/documents/genoa_abstract.pdf" download="genoa_abstract.pdf">abstract</a>)
