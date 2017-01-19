@@ -13,6 +13,8 @@ Elliott, Patrick D., Nicolae, Andreea, and Sauerland, Uli. Who and what do *who*
 
 <h2 class="sans">Papers</h2>
 
+<p>Elliott, Patrick D. In prep. Embedded declaratives as modifiers. In: *Proceedings of Sinn und Bedeutung 21*.
+
 <p>Elliott, Patrick D. In prep. Nesting habits of flightless *wh*-phrases. Ms. (Email me for a draft).
 <details>
 <summary>Abstract</summary>
