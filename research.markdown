@@ -7,8 +7,6 @@ directly at <a href="mailto:patrick.d.elliott@gmail.com">patrick.d.elliott@gmail
 
 <h2 class="sans">Upcoming presentations</h2>
 
-Elliott, Patrick D. and Nicolae, Andreea. Cumulative readings beyond nominals. LSA 2017 Annual Meeting, Austin, Texas. January 2017. (poster)
-
 Elliott, Patrick D., Nicolae, Andreea, and Sauerland, Uli. Who and what do *who* and *what* range over cross-linguistically?. Theoretical and Experimental Approaches to Presuppositions, Genoa, Italy. 4 March 2017. (<a href="/documents/genoa_abstract.pdf" download="genoa_abstract.pdf">abstract</a>)
 
 <h2 class="sans">Papers</h2>
@@ -69,6 +67,8 @@ Elliott, Patrick D., McCready, Eric, and Sudo, Yasu. In preparation. Discourse *
 <a href="http://www.ledonline.it/snippets/allegati/snippets30001.pdf" download="snippet.pdf"></a> Nicolae, Andreea, Elliott, Patrick D. and Sudo, Yasu. 2015. Pair-List Readings of Conjoined Singular *Which*-Phrases. *Snippets*, 30:5--6. doi: 10.7358/snip-2015-030-nico
 
 <h2 class="sans">Presentations</h2>
+
+Elliott, Patrick D. and Nicolae, Andreea. Cumulative readings beyond nominals. LSA 2017 Annual Meeting, Austin, Texas. January 2017. (poster)
 
 Elliott, Patrick D. Rethinking the semantics of embedding. FB IV workshop, ZAS, Berlin. December 9 2016.
 
