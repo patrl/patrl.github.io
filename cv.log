@@ -1,0 +1,1707 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.26)  1 MAR 2017 16:15
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**\input cv.tex
+(./cv.tex (/home/patrl/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/home/patrl/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./cv.aux)
+\openout1 = `cv.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+
+./cv.tex:9: Undefined control sequence.
+l.9 \href
+         {mailto:p.elliott@ucl.ac.uk}{\nolinkurl{p.elliott@ucl.ac.uk}}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:9: Undefined control sequence.
+l.9 \href{mailto:p.elliott@ucl.ac.uk}{\nolinkurl
+                                                {p.elliott@ucl.ac.uk}}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
+(/home/patrl/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
+
+./cv.tex:25: Undefined control sequence.
+l.25   \tightlist
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:41: Undefined control sequence.
+l.41   \href
+            {https://www.ucl.ac.uk/pals/people/profiles/academic-staff/klaus...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:43: Undefined control sequence.
+l.43   \href
+            {http://ling.yale.edu/people/matt-barros}{Matt Barros (Yale
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:45: Undefined control sequence.
+l.45   \href
+            {https://www.ucl.ac.uk/pals/people/profiles/academic-stbineraff/...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:47: Undefined control sequence.
+l.47   \href
+            {https://sites.google.com/site/esmccready/}{Eric McCready (Aoyama
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:48: Undefined control sequence.
+l.48   Gakuin University)}, \href
+                                 {home.uni-leipzig.de/murphy/}{Andrew Murphy
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¤ in font cmr10!
+./cv.tex:50: Undefined control sequence.
+l.50   \href
+            {https://sites.google.com/site/andreeanicolae/}{Andreea Nicolae
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+./cv.tex:52: Undefined control sequence.
+l.52   \href
+            {www.ucl.ac.uk/~ucjtudo/}{Yasutada Sudo (University College
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:53: Undefined control sequence.
+l.53   London)}, \href
+                      {https://sites.google.com/site/garythoms/}{Gary Thoms
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:55: Undefined control sequence.
+l.55   \href
+            {https://sites.google.com/site/esmccready/}{Wataru Uegaki (Leiden
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:57: Undefined control sequence.
+l.57   \href
+            {https://www.hud.ac.uk/ourstaff/profile/index.php?staffid=1451}{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (33.75081pt too wide) in paragraph at lines 40--59
+[]\OT1/cmr/m/n/10 Collaborators: https://www.ucl.ac.uk/pals/people/profiles/aca
+demic-staff/klaus-
+ []
+
+
+Overfull \hbox (31.16747pt too wide) in paragraph at lines 40--59
+\OT1/cmr/m/n/10 abelsKlaus Abels (Uni-ver-sity Col-lege Lon-don), http://ling.y
+ale.edu/people/matt-
+ []
+
+
+Overfull \hbox (79.75084pt too wide) in paragraph at lines 40--59
+\OT1/cmr/m/n/10 barrosMatt Bar-ros (Yale Uni-ver-sity), https://www.ucl.ac.uk/p
+als/people/profiles/academic-
+ []
+
+
+Overfull \hbox (11.27844pt too wide) in paragraph at lines 40--59
+\OT1/cmr/m/n/10 ver-sitt Leipzig), https://sites.google.com/site/andreeanicolae
+/Andreea Nico-
+ []
+
+
+Overfull \hbox (38.58403pt too wide) in paragraph at lines 40--59
+\OT1/cmr/m/n/10 lae (Zen-trum fr All-ge-meine Sprach-wis-senschaft), www.ucl.ac
+.uk/ ucj-tudo/Yasutada
+ []
+
+
+Overfull \hbox (33.9036pt too wide) in paragraph at lines 40--59
+\OT1/cmr/m/n/10 Sudo (Uni-ver-sity Col-lege Lon-don), https://sites.google.com/
+site/garythoms/Gary
+ []
+
+
+Overfull \hbox (36.93129pt too wide) in paragraph at lines 40--59
+\OT1/cmr/m/n/10 Thoms (Uni-ver-sity of Glas-gow), https://sites.google.com/site
+/esmccready/Wataru
+ []
+
+
+Overfull \hbox (116.91768pt too wide) in paragraph at lines 40--59
+\OT1/cmr/m/n/10 Ue-gaki (Lei-den Uni-ver-sity), https://www.hud.ac.uk/ourstaff/
+profile/index.php?staffid=1451Rebecca
+ []
+
+./cv.tex:69: Undefined control sequence.
+l.69 \href
+          {https://www.ucl.ac.uk/pals/people/profiles/academic-staff/klaus-a...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:70: Undefined control sequence.
+l.70 Abels} (primary) and \href
+                               {https://www.ucl.ac.uk/~ucjtudo/}{Dr.~Yasutada
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:72: Undefined control sequence.
+l.72 Funding body: \href
+                        {http://www.ahrc.ac.uk/}{The Arts and Humanities
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (51.00084pt too wide) in paragraph at lines 65--74
+\OT1/cmr/m/n/10 Advisors: https://www.ucl.ac.uk/pals/people/profiles/academic-s
+taff/klaus-abelsDr. Klaus
+ []
+
+
+Overfull \hbox (6.08401pt too wide) in paragraph at lines 65--74
+\OT1/cmr/m/n/10 Funding body: http://www.ahrc.ac.uk/The Arts and Hu-man-i-ties 
+Re-search Coun-
+ []
+
+[1
+
+{/home/patrl/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+
+./cv.tex:81: Undefined control sequence.
+l.81 \href
+          {http://www.zas.gwz-berlin.de/mitarbeiter_sauerland.html}{Dr.~Uli
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:81: Missing $ inserted.
+<inserted text> 
+                $
+l.81 ...{http://www.zas.gwz-berlin.de/mitarbeiter_
+                                                  sauerland.html}{Dr.~Uli
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 81.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 81.
+./cv.tex:81: Extra }, or forgotten $.
+l.81 ....gwz-berlin.de/mitarbeiter_sauerland.html}
+                                                  {Dr.~Uli
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./cv.tex:83: Undefined control sequence.
+l.83 Funding body: \href
+                        {https://www.erasmusplus.org.uk/}{Erasmus+}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:84: Missing $ inserted.
+<inserted text> 
+                $
+l.84 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (26.46608pt too wide) in paragraph at lines 78--84
+\OT1/cmr/m/n/10 Mentor: http://www.zas.gwz-berlin.de/mitarbeiter$[]\OML/cmm/m/i
+t/10 auerland:html[][] 
+ []
+
+./cv.tex:96: Undefined control sequence.
+l.96 Advisors: \href
+                    {http://www.lel.ed.ac.uk/~packema/}{Dr.~Peter Ackema}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:97: Undefined control sequence.
+l.97 (primary) and \href
+                        {https://sites.google.com/site/garythoms/}{Dr.~Gary
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:109: Undefined control sequence.
+l.109 \href
+           {https://www.ucl.ac.uk/pals/people/profiles/academic-staff/hans-v...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¤ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+./cv.tex:119: Undefined control sequence.
+l.119 Advisor: \href
+                    {http://www.sfs.uni-tubeingen.de/~roland/}{Dr.~Roland
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+./cv.tex:125: Undefined control sequence.
+l.125 \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:130: Undefined control sequence.
+l.130   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[2]
+./cv.tex:141: Undefined control sequence.
+l.141   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:155: Undefined control sequence.
+l.155   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:170: Undefined control sequence.
+l.170   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:185: Undefined control sequence.
+l.185   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:197: Undefined control sequence.
+l.197   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:209: Undefined control sequence.
+l.209   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[3]
+./cv.tex:227: Undefined control sequence.
+l.227 \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:232: Undefined control sequence.
+l.232   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:235: Undefined control sequence.
+l.235     with \href
+                    {...}{Matt Barros} and \href{...}{Gary Thoms}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:235: Undefined control sequence.
+l.235     with \href{...}{Matt Barros} and \href
+                                                {...}{Gary Thoms}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:236: Undefined control sequence.
+l.236     Draft on \href
+                        {http://ling.auf.net/lingbuzz/002100}{LingBuzz}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:239: Undefined control sequence.
+l.239     with \href
+                    {...}{Nathan Klinedinst}, \href{...}{Yasutada Sudo}, and
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:239: Undefined control sequence.
+l.239 ...with \href{...}{Nathan Klinedinst}, \href
+                                                  {...}{Yasutada Sudo}, and
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:240: Undefined control sequence.
+l.240     \href
+               {...}{Wataru Uegaki}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:246: Undefined control sequence.
+l.246   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:249: Undefined control sequence.
+l.249     readings?'' with \href
+                                {...}{Andreea Nicolae} and \href{...}{Yasutada
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:249: Undefined control sequence.
+l.249 ...ith \href{...}{Andreea Nicolae} and \href
+                                                  {...}{Yasutada
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:256: Undefined control sequence.
+l.256   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:259: Undefined control sequence.
+l.259     with \href
+                    {...}{Andreea Nicolae} and \href{...}{Yasutada Sudo}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:259: Undefined control sequence.
+l.259 ...ith \href{...}{Andreea Nicolae} and \href
+                                                  {...}{Yasutada Sudo}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:265: Undefined control sequence.
+l.265   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:270: Undefined control sequence.
+l.270     with \href
+                    {...}{Klaus Abels}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:282: Undefined control sequence.
+l.282 \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:287: Undefined control sequence.
+l.287   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[4]
+./cv.tex:299: Undefined control sequence.
+l.299   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:304: Undefined control sequence.
+l.304     Draft on \href
+                        {http://ling.auf.net/lingbuzz/003128}{LingBuzz} and
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:305: Undefined control sequence.
+l.305     \href
+               {http://www.semanticsarchive.net/Archive/zY4NGRlY/}{Semantics
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (246.20952pt too wide) in paragraph at lines 301--308
+\OT1/cmr/m/n/10 Draft on http://ling.auf.net/lingbuzz/003128LingBuzz and http:/
+/www.semanticsarchive.net/Archive/zY4NGRlY/Semantics
+ []
+
+./cv.tex:309: Undefined control sequence.
+l.309     with \href
+                    {...}{Andreea Nicolae} and \href{...}{Yasutada Sudo}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:309: Undefined control sequence.
+l.309 ...ith \href{...}{Andreea Nicolae} and \href
+                                                  {...}{Yasutada Sudo}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:316: Undefined control sequence.
+l.316   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:319: Undefined control sequence.
+l.319     with \href
+                    {...}{Yasutada Sudo}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:323: Undefined control sequence.
+l.323     with \href
+                    {...}{Gary Thoms} Proceedings of WCCFL 33
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:329: Undefined control sequence.
+l.329   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:333: Undefined control sequence.
+l.333     with \href
+                    {...}{Matt Barros} and \href{...}{Gary Thoms}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:333: Undefined control sequence.
+l.333     with \href{...}{Matt Barros} and \href
+                                                {...}{Gary Thoms}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:344: Undefined control sequence.
+l.344 \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:349: Undefined control sequence.
+l.349   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:353: Undefined control sequence.
+l.353     \href
+               {https://sites.google.com/site/andreeanicolae/}{Andreea
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:355: Undefined control sequence.
+l.355     \href
+               {http://www.zas.gwz-berlin.de/mitarbeiter_sauerland.html}{Uli
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:355: Missing $ inserted.
+<inserted text> 
+                $
+l.355 ...http://www.zas.gwz-berlin.de/mitarbeiter_
+                                                  sauerland.html}{Uli
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./cv.tex:355: Extra }, or forgotten $.
+l.355 ...gwz-berlin.de/mitarbeiter_sauerland.html}
+                                                  {Uli
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+./cv.tex:359: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.359   \item
+             
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./cv.tex:360: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.360     `
+           `Cumulative readings beyond nominals'' with
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./cv.tex:360: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.360     `
+           `Cumulative readings beyond nominals'' with
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./cv.tex:361: Undefined control sequence.
+l.361     \href
+               {https://sites.google.com/site/andreeanicolae/}{Andreea
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./cv.tex:365: LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.365   \item
+             
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./cv.tex:366: Missing $ inserted.
+<inserted text> 
+                $
+l.366     `
+           `Superiority, economy, and information structure''\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./cv.tex:366: Missing } inserted.
+<inserted text> 
+                }
+l.366     `
+           `Superiority, economy, and information structure''\\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (11.72287pt too wide) in paragraph at lines 351--366
+\OT1/cmr/m/n/10 with https://sites.google.com/site/andreeanicolae/Andreea Nico-
+lae and
+ []
+
+
+Overfull \hbox (18.98085pt too wide) in paragraph at lines 351--366
+\OT1/cmr/m/n/10 http://www.zas.gwz-berlin.de/mitarbeiter$[]\OML/cmm/m/it/10 aue
+rland:html[]:[] 
+ []
+
+
+Overfull \hbox (44.36235pt too wide) in paragraph at lines 351--366
+\OML/cmm/m/it/10 TheoreticalandExperimentalApproachestoPresuppositions; Genoa; 
+Italy; \OT1/cmr/m/n/10 3 \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (248.89566pt too wide) in paragraph at lines 351--366
+\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 March; \OT1/cmr/m/n/10 2017\OML/cmm/m/it/10 :
+\OT1/cmr/m/n/10 \\OML/cmm/m/it/10 Cumulativereadingsbeyondnominals[]with[][]:[]
+ 
+ []
+
+
+Overfull \hbox (24.06567pt too wide) in paragraph at lines 351--366
+\OML/cmm/m/it/10 PosterattheLSA\OT1/cmr/m/n/10 2017\OML/cmm/m/it/10 AnnualMeeti
+ng; Austin; Texas; \OT1/cmr/m/n/10 5 \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 8\OML
+/cmm/m/it/10 January; \OT1/cmr/m/n/10 2017\OML/cmm/m/it/10 :[][]$ 
+ []
+
+./cv.tex:373: Undefined control sequence.
+l.373   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:377: Undefined control sequence.
+l.377     \href
+               {https://www.ucl.ac.uk/pals/people/profiles/academic-staff/na...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:378: Undefined control sequence.
+l.378     Klinedinst}, \href
+                            {http://www.ucl.ac.uk/~ucjtudo/}{Yasutada Sudo},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:379: Undefined control sequence.
+l.379     and \href
+                   {https://wataruu.wordpress.com}{Wataru Uegaki}.\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:380: Undefined control sequence.
+<recently read> \href 
+                      
+l.380     \href
+               {http://umass2016.nelsconference.org/}{North East Linguistics
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (19.47295pt too wide) in paragraph at lines 375--384
+\OT1/cmr/m/n/10 with https://www.ucl.ac.uk/pals/people/profiles/academic-staff/
+nathan-
+ []
+
+
+Overfull \hbox (9.88965pt too wide) in paragraph at lines 375--384
+\OT1/cmr/m/n/10 klinedinstNathan Klinedinst, http://www.ucl.ac.uk/ ucj-tudo/Yas
+utada
+ []
+
+[5]
+./cv.tex:385: Undefined control sequence.
+l.385     with \href
+                    {https://sites.google.com/site/garythoms/}{Gary Thoms}.\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:386: Undefined control sequence.
+<recently read> \href 
+                      
+l.386     \href
+               {http://www.lagb.org.uk/lagb2016/home}{2016 Annual Meeting of
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:391: Undefined control sequence.
+l.391     with \href
+                    {https://sites.google.com/site/andreeanicolae/}{Andreea
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:393: Undefined control sequence.
+<recently read> \href 
+                      
+l.393     \href
+               {http://www.lagb.org.uk/lagb2016/home}{2016 Annual Meeting of
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:407: Undefined control sequence.
+l.407     Poster at \href
+                         {http://olinco.upol.cz/}{the 2016 Olomouc Linguistics
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:412: Undefined control sequence.
+l.412     with \href
+                    {http://home.uni-leipzig.de/murphy/}{Andrew Murphy}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:413: Undefined control sequence.
+l.413     Poster at \href
+                         {http://olinco.upol.cz/}{the 2016 Olomouc Linguistics
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:417: Undefined control sequence.
+<recently read> \href 
+                      
+l.417     \href
+               {http://chicagolinguisticsociety.org/}{52nd Annual Meeting of
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (11.58401pt too wide) in paragraph at lines 416--421
+\OT1/cmr/m/n/10 http://chicagolinguisticsociety.org/52nd An-nual Meet-ing of th
+e Chicago
+ []
+
+./cv.tex:423: Undefined control sequence.
+<recently read> \href 
+                      
+l.423     \href
+               {http://www.cril.unisalento.it/igg2016/}{Incontro di Grammatica
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:427: Undefined control sequence.
+<recently read> \href 
+                      
+l.427     \href
+               {https://sites.google.com/a/york.ac.uk/consolexxiv/home}{24th
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (4.50076pt too wide) in paragraph at lines 426--430
+\OT1/cmr/m/n/10 https://sites.google.com/a/york.ac.uk/consolexxiv/home24th Con-
+fer-
+ []
+
+[6]
+./cv.tex:435: Undefined control sequence.
+l.435   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:438: Undefined control sequence.
+l.438     with \href
+                    {..}{Andreea Nicolae} and \href{...}{Yasutada Sudo}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:438: Undefined control sequence.
+l.438 ...with \href{..}{Andreea Nicolae} and \href
+                                                  {...}{Yasutada Sudo}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:439: Undefined control sequence.
+<recently read> \href 
+                      
+l.439     \href
+               {http://linguistics.concordia.ca/nels46/}{North East
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:445: Undefined control sequence.
+l.445     with \href
+                    {http://www.ucl.ac.uk/~ucjtudo/}{Yasutada Sudo}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:447: Undefined control sequence.
+l.447     \href
+               {https://sites.google.com/site/sinnundbedeutung20/home}{Sinn
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¤ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+
+Overfull \hbox (11.11183pt too wide) in paragraph at lines 443--450
+\OT1/cmr/m/n/10 Poster at https://sites.google.com/site/sinnundbedeutung20/home
+Sinn
+ []
+
+./cv.tex:451: Undefined control sequence.
+l.451     with \href
+                    {http://www.ucl.ac.uk/~ucjtudo/}{Yasutada Sudo} and Eric
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:453: Undefined control sequence.
+l.453     Poster at \href
+                         {...}{Semantics And Linguistic Theory (SALT) 25},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:457: Undefined control sequence.
+l.457     with \href
+                    {...}{Andrew Murphy}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:458: Undefined control sequence.
+<recently read> \href 
+                      
+l.458     \href
+               {http://www.iel.unicamp.br/ellipsis/}{Grasping Ellipsis: its
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:464: Undefined control sequence.
+l.464     with \href
+                    {...}{Gary Thoms} Poster at
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:465: Undefined control sequence.
+l.465     \href
+               {https://sites.google.com/site/2015glow/home}{Generative
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (75.1952pt too wide) in paragraph at lines 462--468
+\OT1/cmr/m/n/10 with ...Gary Thoms Poster at https://sites.google.com/site/2015
+glow/homeGenerative
+ []
+
+./cv.tex:469: Undefined control sequence.
+l.469     with \href
+                    {...}{Gary Thoms}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:470: Undefined control sequence.
+<recently read> \href 
+                      
+l.470     \href
+               {https://sites.google.com/site/wccflsfu/}{West Coast Conference
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (3.4172pt too wide) in paragraph at lines 468--472
+\OT1/cmr/m/n/10 https://sites.google.com/site/wccflsfu/West Coast Con-fer-ence 
+on For-
+ []
+
+./cv.tex:477: Undefined control sequence.
+l.477   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:480: Undefined control sequence.
+l.480     with \href
+                    {http://www.ucl.ac.uk/~ucjtudo/}{Yasutada Sudo}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:481: Undefined control sequence.
+<recently read> \href 
+                      
+l.481     \href
+               {http://www.lagb.org.uk/lagb2014/home}{2014 Annual Meeting of
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:486: Undefined control sequence.
+l.486     with \href
+                    {...}{Andreea Nicolae} and
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:487: Undefined control sequence.
+l.487     \href
+               {http://www.ucl.ac.uk/~ucjtudo/}{Yasutada Sudo}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (3.47289pt too wide) in paragraph at lines 485--489
+\OT1/cmr/m/n/10 with ...An-dreea Nico-lae and http://www.ucl.ac.uk/ ucj-tudo/Ya
+sutada
+ []
+
+[7]
+./cv.tex:497: Undefined control sequence.
+l.497   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:500: Undefined control sequence.
+<recently read> \href 
+                      
+l.500     \href
+               {https://mfilconf.wordpress.com/archive/mfil-2013-programme/}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (32.3063pt too wide) in paragraph at lines 499--504
+\OT1/cmr/m/n/10 https://mfilconf.wordpress.com/archive/mfil-2013-programme/2013
+ Manch-
+ []
+
+./cv.tex:505: Undefined control sequence.
+<recently read> \href 
+                      
+l.505     \href
+               {https://mfilconf.wordpress.com/archive/mfil-2013-programme/}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (32.3063pt too wide) in paragraph at lines 504--509
+\OT1/cmr/m/n/10 https://mfilconf.wordpress.com/archive/mfil-2013-programme/2013
+ Manch-
+ []
+
+
+Overfull \hbox (5.30614pt too wide) in paragraph at lines 513--517
+\OT1/cmr/m/n/10 Poster at the Post-grad-u-ate Lin-guis-tics Work-shop, Uni-ver-
+sity of St. An-
+ []
+
+./cv.tex:519: Undefined control sequence.
+l.519     with \href
+                    {...}{Matt Barros} and \href{...}{Gary Thoms}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:519: Undefined control sequence.
+l.519     with \href{...}{Matt Barros} and \href
+                                                {...}{Gary Thoms}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:520: Undefined control sequence.
+<recently read> \href 
+                      
+l.520     \href
+               {...}{The 49th Annual Meeting of the Chicago Linguistics
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:528: Undefined control sequence.
+l.528 \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:533: Undefined control sequence.
+l.533   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¤ in font cmr10!
+./cv.tex:547: Undefined control sequence.
+l.547   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:554: Undefined control sequence.
+l.554     with \href
+                    {...}{Luke Burke}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (0.33383pt too wide) in paragraph at lines 553--557
+\OT1/cmr/m/n/10 Interactions be-tween Syn-tax and Se-man-tics Across Frame-work
+s work-
+ []
+
+./cv.tex:562: Undefined control sequence.
+l.562   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (1.7078pt too wide) in paragraph at lines 564--566
+\OT1/cmr/m/n/10 LF Read-ing Group, Mas-sachusetts In-sti-tute of Tech-nol-ogy, 
+June 2014. 
+ []
+
+[8]
+./cv.tex:571: Undefined control sequence.
+l.571   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:574: Undefined control sequence.
+l.574     with \href
+                    {...}{Matt Barros} and \href{...}{Gary Thoms}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:574: Undefined control sequence.
+l.574     with \href{...}{Matt Barros} and \href
+                                                {...}{Gary Thoms}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:581: Undefined control sequence.
+l.581   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:593: Undefined control sequence.
+l.593 \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:598: Undefined control sequence.
+l.598   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:610: Undefined control sequence.
+l.610   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:614: Undefined control sequence.
+l.614     \href
+               {http://linguistics.sllf.qmul.ac.uk/people/anne-beshears}{Anne
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:616: Undefined control sequence.
+<recently read> \href 
+                      
+l.616     \href
+               {...}{Eastern Generative Grammar (EGG) open podium}, Brno,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (26.7507pt too wide) in paragraph at lines 612--619
+\OT1/cmr/m/n/10 with http://linguistics.sllf.qmul.ac.uk/people/anne-beshearsAnn
+e Beshears 
+ []
+
+./cv.tex:629: Undefined control sequence.
+l.629   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:632: Undefined control sequence.
+l.632     with \href
+                    {...}{Andreea Nicolae} and \href{...}{Yasutada Sudo}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:632: Undefined control sequence.
+l.632 ...ith \href{...}{Andreea Nicolae} and \href
+                                                  {...}{Yasutada Sudo}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:640: Undefined control sequence.
+l.640 \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:645: Undefined control sequence.
+l.645   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[9]
+./cv.tex:661: Undefined control sequence.
+l.661 \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:666: Undefined control sequence.
+l.666   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:682: Undefined control sequence.
+l.682   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:684: Undefined control sequence.
+l.684     Teaching assistant for \href
+                                      {http://www.actl.ucl.ac.uk/}{Advanced
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (10.30614pt too wide) in paragraph at lines 684--688
+[]\OT1/cmr/m/n/10 Teaching as-sis-tant for http://www.actl.ucl.ac.uk/Advanced C
+ore Train-
+ []
+
+./cv.tex:696: Undefined control sequence.
+l.696   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:709: Undefined control sequence.
+l.709 \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:714: Undefined control sequence.
+l.714   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:728: Undefined control sequence.
+l.728   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[10]
+./cv.tex:740: Undefined control sequence.
+l.740   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:752: Undefined control sequence.
+l.752   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:778: Undefined control sequence.
+l.778   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[11]
+./cv.tex:805: Undefined control sequence.
+l.805 \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:813: Undefined control sequence.
+l.813 \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:824: Undefined control sequence.
+l.824 \tightlist
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:829: Undefined control sequence.
+l.829   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./cv.tex:841: Undefined control sequence.
+l.841   \tightlist
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+
+Overfull \hbox (21.4173pt too wide) in paragraph at lines 843--848
+[]\OT1/cmr/m/n/10 Programmbereichskoordinator, Zen-trum fr All-ge-meine Sprach-
+wis-senschaft 
+ []
+
+[12] (./cv.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 81 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 252 strings out of 494902
+ 2954 string characters out of 6179763
+ 52643 words of memory out of 5000000
+ 3633 multiletter control sequences out of 15000+600000
+ 4899 words of font info for 18 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 23i,4n,19p,161b,273s stack positions out of 5000i,500n,10000p,200000b,80000s
+</home/patrl/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb></home/patrl/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
+2.pfb></home/patrl/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></home/patrl/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></hom
+e/patrl/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/patr
+l/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/patrl/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/patrl/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on cv.pdf (12 pages, 131376 bytes).
+PDF statistics:
+ 75 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
