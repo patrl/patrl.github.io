@@ -68,6 +68,8 @@ Elliott, Patrick D., McCready, Eric, and Sudo, Yasu. In preparation. Discourse *
 
 <h2 class="sans">Presentations</h2>
 
+Elliott, Patrick D., Nicolae, Andreea C., and Sauerland, Uli. 2017. Who and what do *who* and *what* range over cross-linguistically?. Theoretical and experimental approaches to presuppositions, Genoa, Italy. March 4 2017. <a href="/documents/genoaSlides.pdf" download="genoaSlides.pdf">Slides</a>.
+
 Elliott, Patrick D. and Nicolae, Andreea. Cumulative readings beyond nominals. LSA 2017 Annual Meeting, Austin, Texas. January 2017. (poster)
 
 Elliott, Patrick D. Rethinking the semantics of embedding. FB IV workshop, ZAS, Berlin. December 9 2016.
