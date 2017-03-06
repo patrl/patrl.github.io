@@ -5,10 +5,6 @@ title: Research
 This page is still under construction! Please bear with me as I repopulate this list with links to papers, handouts, etc. Feel free to email me 
 directly at <a href="mailto:patrick.d.elliott@gmail.com">patrick.d.elliott@gmail.com</a>, and I'll be happy to send you anything that's missing.
 
-<h2 class="sans">Upcoming presentations</h2>
-
-Elliott, Patrick D., Nicolae, Andreea, and Sauerland, Uli. Who and what do *who* and *what* range over cross-linguistically?. Theoretical and Experimental Approaches to Presuppositions, Genoa, Italy. 4 March 2017. (<a href="/documents/genoa_abstract.pdf" download="genoa_abstract.pdf">abstract</a>)
-
 <h2 class="sans">Papers</h2>
 
 <p>Elliott, Patrick D. In prep. Embedded declaratives as modifiers. In: *Proceedings of Sinn und Bedeutung 21*.
