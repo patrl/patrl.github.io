@@ -56,9 +56,8 @@ Elliott, Patrick D., McCready, Eric, and Sudo, Yasu. In preparation. Discourse *
 
 <h2 class="sans">Snippets</h2>
 
-<a href= "/documents/snippet-superiority.pdf" download="snippet-superiority.pdf"></a> Nicolae, Andreea, Elliott, Patrick D., and Sudo, Yasutada. Under review. Do superiority-violating multiple singular <i>which</i>-questions have pair-list readings? Ms., UCL and ZAS.
+<a href= "/documents/snippet-superiority.pdf" download="snippet-superiority.pdf"></a> Nicolae, Andreea, Elliott, Patrick D., and Sudo, Yasutada. to appear. Do superiority-violating multiple singular <i>which</i>-questions have pair-list readings?. *Snippets*. <a href="/documents/superioritySnippet.doc" download="superioritySnippet.doc">Draft</a>, <a href="https://github.com/patrl/superiorityExperiment">Raw data</a>
 
-<a href= "/documents/weakisland-snippet.pdf" download="weakisland-snippet.pdf"></a> Elliott, Patrick D. Submitted. Weak island effects and obviation in infinitival complements to adjectives. Ms., UCL. 
 
 <a href="http://www.ledonline.it/snippets/allegati/snippets30001.pdf" download="snippet.pdf"></a> Nicolae, Andreea, Elliott, Patrick D. and Sudo, Yasu. 2015. Pair-List Readings of Conjoined Singular *Which*-Phrases. *Snippets*, 30:5--6. doi: 10.7358/snip-2015-030-nico
 
