@@ -15,7 +15,7 @@ main = hakyllWith config $ do
         route   idRoute
         compile copyFileCompiler
 
-    match ".well-known/*" $ do
+    match "keybase.txt" $ do
         route   idRoute
         compile copyFileCompiler
 
