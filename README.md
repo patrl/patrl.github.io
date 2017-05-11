@@ -5,6 +5,8 @@ The development branch of my new personal site, powered by Hakyll.
 ## TODO
 
 - [ ] write a custom pandoc writer in Lua that targets tufte.css.
+- [ ] redesign css using tachyons.
+- [ ] get pandoc to parse citations.
 - [x] remove references to blog posts from the main executable.
 
 ## Instructions (using [stack](https://docs.haskellstack.org/en/stable/README/))
