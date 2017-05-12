@@ -24,6 +24,12 @@ main = hakyllWith config $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "index.md" $ do
+        route   $ setExtension "html"
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/default.html" defaultContext
+            >>= relativizeUrls
+
     match "templates/*" $ compile templateCompiler
 
 
