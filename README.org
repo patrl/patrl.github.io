@@ -1,0 +1,6 @@
+In any order run
+
+```
+npm install
+stack build 
+```
