@@ -5,22 +5,28 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>My Hakyll Blog - $title$</title>
+        <link href="https://fonts.googleapis.com/css?family=Podkova" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+        <link rel="stylesheet" href="/css/extraFonts.css" />
         <link rel="stylesheet" href="/css/tachyons.min.css" />
         <script src="js/jquery.slim.min.js"></script>
     </head>
     <body>
-        <header class="bb courier">
-            <h1>Patrick D. Elliott</h1>
+        <header class="w-100">
+            <h1 class="tc podkova f-headline lh-title tracked ttu fw1 mb3">Patrick D. Elliott</h1>
+            <nav class="inconsolata tc ttu tracked f3 fw2">
+                <a class="link dim gray" href="#" title="Home">Home</a>
+                <a class="link dim gray" href="#" title="About">About</a>
+                <a class="link dim gray" href="#" title="Store">Store</a>
+                <a class="link dim gray" href="#" title="Contact">Contact</a>
+            </nav>
         </header>
-        <nav class="pa4">
-            <a class="link gray dim">Hi</a>
-            <a class="link gray dim">There</a>
-            <a class ="link gray dim">It me.</a>
-        </nav>
-        <main>
-            <p>Here is some content</p>
+        <main class="inconsolata lh-copy f4 fw4 tc w-100">
+            <p>My name is Patrick and I'm a linguist at UCL</p>
+
+            <p>I like cycling, climbing, etc.</p>
         </main>
-        <footer>
-            <p>This is my footer element.</p>
+        <footer class="inconsolata tc gray w-100 f4 lh-copy">
+            <p>Built with λove using Hakyll and Tachyons.</p>
         </footer>
 </html>
