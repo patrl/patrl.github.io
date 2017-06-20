@@ -183,6 +183,9 @@
       </else>
     </choose>
   </macro>
+  <macro name="note">
+    <text variable="note" suffix="."/>
+  </macro>
   <macro name="edition">
     <choose>
       <if type="bill book chapter graphic legal_case legislation motion_picture paper-conference report song" match="any">
@@ -362,6 +365,7 @@
             </group>
             <text macro="collection-title"/>
             <text macro="issue"/>
+            <text macro="note"/>
           </group>
           <text macro="locators-article"/>
         </group>

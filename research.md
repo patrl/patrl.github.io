@@ -4,6 +4,39 @@ title: research
 
 Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/redesign/bib/myWork.bib).
 
+<details>
+<summary>Papers</summary>
+
+@paper17jos
+
+@paper16wccfl
+
+@paper15cls
+
+</details>
+
+
+<details>
+
+<summary>Snippets</Summary>
+
+@snippet17
+
+@snippet15
+
+</details>
+
+<details>
+<summary>Unpublished</summary>
+
+@unpub17thesis
+
+</details>
+
+<details>
+<summary>Miscellaneous</summary>
+</details>
+
 ### Presentations
 
 #### 2015
@@ -41,9 +74,3 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/r
 #### 2012
 
 @talk12edin
-
-### Snippets
-
-@snippet17
-
-@snippet15
