@@ -1,8 +1,9 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
+import           Control.Monad (liftM)
 import           Data.Monoid (mappend)
 import           Hakyll
-
+import           Text.Pandoc.Options
 
 --------------------------------------------------------------------------------
 main :: IO ()
