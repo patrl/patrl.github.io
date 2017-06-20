@@ -5,9 +5,17 @@ title: research
 Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/redesign/bib/myWork.bib).
 
 <details>
-<summary>Papers</summary>
+<summary><h3>Papers</h3></summary>
 
 @paper17jos
+
+@paper16nels
+
+@paper16salt
+
+@paper16sub
+
+@paper16cls
 
 @paper16wccfl
 
@@ -18,7 +26,7 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/r
 
 <details>
 
-<summary>Snippets</Summary>
+<summary><h3>Snippets</h3></Summary>
 
 @snippet17
 
@@ -27,19 +35,27 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/r
 </details>
 
 <details>
-<summary>Unpublished</summary>
+<summary><h3>Unpublished</h3></summary>
 
 @unpub17thesis
+
+@unpub13thesis
+
+@unpub12thesis
 
 </details>
 
 <details>
-<summary>Miscellaneous</summary>
+<summary><h3>Miscellaneous</h3></summary>
+
+...
+
 </details>
 
 ### Presentations
 
-#### 2015
+<details>
+<summary>2015</summary>
 
 @talk15egg
 
@@ -53,11 +69,17 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/r
 
 @talk15cam
 
-#### 2014
+</details>
+
+<details>
+<summary>2014</summary>
 
 @poster14salt
 
-#### 2013
+</details>
+
+<details>
+<summary>2013</summary>
 
 @talk13mfil
 
@@ -71,6 +93,11 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/r
 
 @talk13cls
 
-#### 2012
+</details>
+
+<details>
+<summary>2012</summary>
 
 @talk12edin
+
+</details>
