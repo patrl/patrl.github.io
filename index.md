@@ -1,5 +1,7 @@
---
+---
 title: home
---
+nocite: |
+  @Elliott16IGG
+...
 
-Some content.
+@Elliott16IGG

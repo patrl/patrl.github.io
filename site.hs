@@ -30,9 +30,16 @@ main = hakyll $ do
 
     match "*.md" $ do
         route   $ setExtension "html"
-        compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
-            >>= relativizeUrls
+        compile $ bibtexCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib"
+          >>= loadAndApplyTemplate "templates/default.html" defaultContext
+          >>= relativizeUrls
+
+    -- match "*.md" $ do
+    --     route   $ setExtension "html"
+    --     compile $ pandocCompiler
+    --         >>= loadAndApplyTemplate "templates/default.html" defaultContext
+    --         >>= relativizeUrls
+  
     -- match (fromList ["about.rst", "contact.markdown"]) $ do
     --     route   $ setExtension "html"
     --     compile $ pandocCompiler
@@ -45,6 +52,10 @@ main = hakyll $ do
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
+
+    match "bib/*" $ compile biblioCompiler
+
+    match "csl/*" $ compile cslCompiler
 
     -- create ["archive.html"] $ do
     --     route idRoute
