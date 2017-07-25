@@ -5,7 +5,7 @@ title: research
 Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/redesign/bib/myWork.bib).
 
 <details>
-<summary><h3>Papers</h3></summary>
+<summary>Papers</summary>
 
 @paper17jos
 
@@ -26,7 +26,7 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/r
 
 <details>
 
-<summary><h3>Snippets</h3></Summary>
+<summary>Snippets</Summary>
 
 @snippet17
 
@@ -35,7 +35,7 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/r
 </details>
 
 <details>
-<summary><h3>Unpublished</h3></summary>
+<summary>Unpublished</summary>
 
 @unpub17thesis
 
@@ -46,7 +46,7 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/r
 </details>
 
 <details>
-<summary><h3>Miscellaneous</h3></summary>
+<summary>Miscellaneous</summary>
 
 ...
 
@@ -101,3 +101,18 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/r
 @talk12edin
 
 </details>
+
+<style type="text/css">
+
+DETAILS[open] SUMMARY ~ * 
+{
+ animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep 
+{
+ 0%    {opacity: 0; margin-left: -10px}
+ 100%  {opacity: 1; margin-left: 0px}
+}
+
+</style>
