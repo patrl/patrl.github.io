@@ -39,6 +39,7 @@ main = hakyll $ do
     match "*.md" $ do
         route   $ setExtension "html"
         compile $ bibtexCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib"
+          >>= loadAndApplyTemplate "templates/head.html" defaultContext
           >>= loadAndApplyTemplate "templates/default.html" defaultContext
           >>= relativizeUrls
 
@@ -46,6 +47,7 @@ main = hakyll $ do
         route $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
+            >>= loadAndApplyTemplate "templates/head.html" defaultContext
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
@@ -64,6 +66,7 @@ main = hakyll $ do
 
             makeItem ""
                 >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
+                >>= loadAndApplyTemplate "templates/head.html" archiveCtx
                 >>= loadAndApplyTemplate "templates/default.html" archiveCtx
                 >>= relativizeUrls
 
