@@ -7,19 +7,21 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/r
 <details>
 <summary>Papers</summary>
 
-@paper17jos
+@paper17jos <a href="/documents/PoRs.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/cls52.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
 
-@paper16nels
+@paper16nels <a href="/documents/nels46.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/nels46.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
 
-@paper16salt
+@paper16salt <a href="/documents/saltpaper.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/saltpaper.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
 
-@paper16sub
+@paper16sub <a href="/documents/SuB20.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/SuB20.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
 
-@paper16cls
 
-@paper16wccfl
+@paper16cls <a href="/documents/cls52.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/cls52.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
 
-@paper15cls
+
+@paper16wccfl <a href="/documents/wccfl_draft.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/wccfl_draft.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
+
+@paper15cls <a href="/documents/CLSproc.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/CLSproc.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
 
 </details>
 
@@ -28,9 +30,9 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/r
 
 <summary>Snippets</Summary>
 
-@snippet17
+@snippet17 <a href="/documents/PoRs.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
-@snippet15
+@snippet15 <a href="/documents/PoRs.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
 </details>
 

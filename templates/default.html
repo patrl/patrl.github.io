@@ -5,29 +5,97 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>My Hakyll Blog - $title$</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Podkova" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
         <link rel="stylesheet" href="/css/extraFonts.css" />
         <link rel="stylesheet" href="/css/tachyons.min.css" />
         <script src="js/jquery.slim.min.js"></script>
+        <script src="/js/link.js"></script>
     </head>
-    <body class="mt0 mh0">
-        <header class="podkova w-50 ph4 fl">
-            <h1 class="f1 lh-title tracked-mega ttu fw1 mb3 pointer link mt3 bt bw2">Patrick D. Elliott</h1>
-            <nav class="ttu tracked f3 fw2">
-                <a class="link gray dim" href="/index.html" title="Home">Home</a>
-                <a class="link gray dim" href="#" title="About">About</a>
-                <a class="link gray dim" href="/research.html" title="Research">Research</a>
-                <a class="link gray dim" href="#" title="Contact">Contact</a>
-            </nav>
-        </header>
-        <main class="w-50 fl inconsolata lh-copy f4 fw4 mb6 measure mh4">
-              $body$
-        </main>
-        </div>
-        <div class="w-100 vh-100"></div>
-        <footer class="inconsolata tc gray f4 lh-copy w-100">
-            <p>Built with λove using Hakyll and Tachyons.</p>
-        </footer>
+    <!-- <body class="mt0 mh0">
+         <header class="podkova w-50 ph4 fl">
+         <h1 class="f1 lh-title tracked-mega ttu fw1 mb3 pointer link mt3 bt bw2">Patrick D. Elliott</h1>
+         <nav class="ttu tracked f3 fw2">
+         <a class="link gray dim" href="/index.html" title="Home">Home</a>
+         <a class="link gray dim" href="#" title="About">About</a>
+         <a class="link gray dim" href="/research.html" title="Research">Research</a>
+         <a class="link gray dim" href="#" title="Contact">Contact</a>
+         </nav>
+         </header>
+         <main class="w-50 fl inconsolata lh-copy f4 fw4 mb6 measure mh4">
+         $body$
+         </main>
+         </div>
+         <div class="w-100 vh-100"></div>
+         <footer class="inconsolata tc gray f4 lh-copy w-100">
+         <p>Built with λove using Hakyll and Tachyons.</p>
+         </footer>
+         <script src="/js/link.js"></script>
+         </body> -->
+  <body>
+    <div class="measure-wide center pt4 ph2 pb5 mw100">
+      <header class="pv2 pv4-ns tc">
+          <div class="lh-solid">
+          <pre class="inconsolata">
+  _ \       |       _)      |      ____| | |_)       |   |   
+ |   | _` | __|  __| |  __| |  /   __|   | | |  _ \  __| __| 
+ ___/ (   | |   |    | (      <    |     | | | (   | |   |   
+_|   \__,_|\__|_|   _|\___|_|\_\  _____|_|_|_|\___/ \__|\__| 
+          </pre>
+          </div>
+         <nav class="tc ttu tracked f3 podkova" role="navigation">
+           <a class="dib pa2" href="/index.html">About</a>
+           <!-- <a class="dib pa2" href="archive.html">Posts</a> -->
+           <a class="dib pa2" href="/research.html">Research</a>
+           <!-- <a class="dib pa2" href="#">Contact</a> -->
+         </nav>
+      </header>
+<div class="center tc">
+<pre class="inconsolata f6">
+  _______________________________________
+/ I'm currently in the process of         \
+| resigning my homepage, so expect things |
+| to be a little bare-bones for the time  |
+\ being. Email me if anything is missing. /
+  ---------------------------------------
+  \   ^__^ 
+          \  (oo)\_______
+                 (__)\       )\/\
+                 ||----w |
+                 ||     ||
+</pre>
+</div>
+      <div class="pt2 pt4-ns inconsolata">
+          $body$
+
+          Reach me at: <a href="mailto:patrick.d.elliott@gmail.com"><i>myFirstName</i>.d.<i>myLastName</i>@gmail.com</a>
+      </div>
+    </div>
+    <footer class="bt b--light-gray f6 gray pa5">
+      <div class="measure-wide tc center ph2">
+  <a class="link hover-silver near-black dib h2 w2 mr3" href="https://twitter.com/patrickdelliott" title="Twitter">
+      <img src="/images/twitter.svg"/>
+  </a>
+  <!-- <a class="link near-black hover-silver dib h2 w2 mr3" href="https://facebook.com/pdelliott" title="Facebook">
+       <img src="/images/facebook.svg"/>
+       </a> -->
+  <a class="link near-black hover-silver dib h2 w2 mr3" href="https://keybase.io/patrl" title="Keybase">
+      <img src="/images/keybase.svg"/>
+  </a>
+ <a class="link near-black hover-silver dib h2 w2 mr3" href="https://github.com/patrl" title="GitHub">
+     <img src="/images/github.svg"/>
+  </a>
+  <!-- <a class="link hover-silver near-black dib h2 w2 mr3" href="https://instagram.com/patrickdelliott" title="Instagram">
+       <img src="/images/instagram.svg"/>
+       </a> -->
+      </div>
+      <div class="measure-wide tc inconsolata gray center pa3">
+      @ 2017 Patrick D. Elliott
+      </div>
+      <div class="measure-wide tc inconsolata gray center pa1">
+          Built with λove using Hakyll and Tachyons. <a href="https://github.com/patrl/patrl.github.io">Source</a>
+      </div>
+      </footer>
     </body>
 </html>
