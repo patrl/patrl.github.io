@@ -34,6 +34,9 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/r
 
 @snippet15 <a href="/documents/PoRs.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
+@snippet17tense <a href="/documents/rebindingTense.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/rebindingTense.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
+
+
 </details>
 
 <details>
