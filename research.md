@@ -5,6 +5,11 @@ title: research
 Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/redesign/bib/myWork.bib).
 
 <details>
+<summary>Upcoming talks</summary>
+November 13-15, 2017. "An algebraic theory of attitudes". *Logic and Engineering of Natural Language Semantics 14*, Tokyo, Japan.
+</details>
+
+<details>
 <summary>Papers</summary>
 
 @paper17jos <a href="/documents/PoRs.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/cls52.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
