@@ -6,7 +6,9 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/r
 
 <details>
 <summary>Upcoming talks</summary>
-November 13-15, 2017. "An algebraic theory of attitudes". *Logic and Engineering of Natural Language Semantics 14*, Tokyo, Japan.
+October 13, 2017. "Arguments and attitudes". *FB4 Workshop*, Leibniz-ZAS, Berlin.
+
+November 13-15, 2017. "An algebraic theory of attitudes". *Logic and Engineering of Natural Language Semantics 14*, Tokyo.
 </details>
 
 <details>
