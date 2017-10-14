@@ -6,7 +6,6 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/r
 
 <details>
 <summary>Upcoming talks</summary>
-October 13, 2017. "Arguments and attitudes". *FB4 Workshop*, Leibniz-ZAS, Berlin.
 
 November 13-15, 2017. "An algebraic theory of attitudes". *Logic and Engineering of Natural Language Semantics 14*, Tokyo.
 </details>
@@ -23,7 +22,7 @@ November 13-15, 2017. "An algebraic theory of attitudes". *Logic and Engineering
 @paper16sub <a href="/documents/SuB20.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/SuB20.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
 
 
-@paper16cls <a href="/documents/cls52.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/cls52.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
+@paper16cls <a href="/documents/cls52paper.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/cls52paper.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
 
 
 @paper16wccfl <a href="/documents/wccfl_draft.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/wccfl_draft.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
@@ -64,10 +63,30 @@ November 13-15, 2017. "An algebraic theory of attitudes". *Logic and Engineering
 
 </details>
 
-### Presentations
+### Presentations (currently very incomplete)
+
+<details>
+<summary>2017</summary>
+
+@talk17zas
+
+</details>
+
+<details>
+<summary>2016</summary>
+
+@talk16igg
+
+@talk16console
+
+</details>
 
 <details>
 <summary>2015</summary>
+
+@poster15glow
+
+@talk15wccfl
 
 @talk15egg
 
@@ -85,6 +104,8 @@ November 13-15, 2017. "An algebraic theory of attitudes". *Logic and Engineering
 
 <details>
 <summary>2014</summary>
+
+@talk14lagb
 
 @poster14salt
 
