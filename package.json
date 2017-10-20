@@ -14,5 +14,8 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "tachyons": "^4.7.2"
+  },
+  "devDependencies": {
+    "gradients": "^1.0.1"
   }
 }

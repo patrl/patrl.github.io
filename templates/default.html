@@ -1,28 +1,36 @@
 <!doctype html>
 <html lang="en">
     $partial("templates/head.html")$
-  <body>
-      <div class="measure-wide center pt4 ph2 pb5 mw100">
-          $partial("templates/header.html")$
-<div class="center tc">
-<pre class="inconsolata f6">
-  _________________________________________
-/ I'm currently in the process of           \
-| redesigning my homepage, so expect things |
-| to be a little bare-bones for the time    |
-\ being. Email me if anything is missing.   /
-  -----------------------------------------
-  \   ^__^ 
-          \  (oo)\_______
-                 (__)\       )\/\
-                 ||----w |
-                 ||     ||
-</pre>
-</div>
-      <div class="pt2 pt4-ns inconsolata">
-          $body$
-      </div>
-    </div>
-    $partial("templates/footer.html")$
-    </body>
+    <body class="vh-100 w-100 bg-navy-gradient">
+        <nav class="flex justify-between bb b--white-10 inconsolata tracked-mega ttu">
+            <div class="flex items-center pa3">
+                <a class="f5 link dib white dim b ttl">λ</a>
+            </div>
+            <div class="flex-grow pa3 flex items-center">
+                <a class="f5 link dib white dim mr3 mr4-ns" href="#0">About</a>
+                <a class="f5 link dib white dim" href="#0">Sign In</a>
+            </div>
+
+        </nav>
+        <div class="dt w-100 pv4">
+            <div class="dtc v-mid podkova f-headline ttu white tracked center tc">
+                Patrick<br>
+                David<br>
+                Elliott
+            </div>
+        </div>
+        <!-- <header class="vh-100 w-100 bg-navy-gradient white dt"> -->
+        <!-- <div class="dtc tc center measure v-mid"> -->
+        <!-- <h1 class="f-headline dim link lh-solid tracked podkova white normal ttu tracked">Patrick<br>David<br>Elliott</h1> -->
+        <!-- <nav class="inconsolata"> -->
+        <!-- <div class="fl"> -->
+        <!-- hi -->
+        <!-- </div> -->
+        <!-- <div class="fl"> -->
+        <!-- hi -->
+        <!-- </div> -->
+        <!-- </nav> -->
+        <!-- </div> -->
+        <!-- </header> -->
+        <!-- </body> -->
 </html>

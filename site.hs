@@ -36,6 +36,10 @@ main = hakyllWith config $ do
         route $ customRoute (const "js/jquery.slim.min.js")
         compile copyFileCompiler
 
+    match "node_modules/gradients/gradients.min.css" $ do
+        route $ customRoute (const "css/gradients.min.css")
+        compile copyFileCompiler
+
     match "*.md" $ do
         route   $ setExtension "html"
         compile $ bibtexCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib"
