@@ -5,3 +5,28 @@
 .inconsolata {
     font-family: "Inconsolata", monospace;
 }
+
+.denote:before, .denote:after {
+	  position: absolute;
+	  top: -9px; /* Value depends on your design. */
+	  color: transparent;/* It makes the curly brackets invisible at the beginning.*/
+}
+.brackets:hover:before, .brackets:hover:after {
+	  color: black; /* Or whatever colour you want. */
+}
+
+/* For movement */
+.brackets:before {
+	  content: "{";
+	  left: -20px;
+}
+.brackets:hover:before {
+	  left: -15px;
+}
+.brackets:after {
+	  content: "}";
+	  right: -20px;
+}
+.brackets:hover:after {
+	  right: -15px;
+}
