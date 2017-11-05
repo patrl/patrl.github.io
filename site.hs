@@ -11,10 +11,11 @@ main = hakyllWith config $ do
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
-
-    match "documents/*" $ do
-        route   idRoute
-        compile copyFileCompiler
+  --
+  -- don't need this since switching to keybase
+    -- match "documents/*" $ do
+    --     route   idRoute
+    --     compile copyFileCompiler
 
     match "keybase.txt" $ do
         route   idRoute
