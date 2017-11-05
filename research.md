@@ -13,21 +13,19 @@ November 13-15, 2017. "An algebraic theory of attitudes". *Logic and Engineering
 <details>
 <summary>Papers</summary>
 
-@paper17jos <a href="/documents/PoRs.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/cls52.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
+@paper17jos <a href="https://patrl.keybase.pub/papers/PoRs.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
-@paper16nels <a href="/documents/nels46.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/nels46.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
+@paper16nels <a href="https://patrl.keybase.pub/papers/nels46.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
-@paper16salt <a href="/documents/saltpaper.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/saltpaper.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
+@paper16salt <a href="https://patrl.keybase.pub/papers/saltpaper.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
-@paper16sub <a href="/documents/SuB20.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/SuB20.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
+@paper16sub <a href="https://patrl.keybase.pub/papers/SuB20.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
+@paper16cls <a href="https://patrl.keybase.pub/papers/cls52proceedings.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
-@paper16cls <a href="/documents/cls52paper.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/cls52paper.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
+@paper16wccfl <a href="https://patrl.keybase.pub/papers/wccfl-draft.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
-
-@paper16wccfl <a href="/documents/wccfl_draft.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/wccfl_draft.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
-
-@paper15cls <a href="/documents/CLSproc.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/CLSproc.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
+@paper15cls <a href="https://patrl.keybase.pub/papers/cls49proceedings.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
 </details>
 
@@ -36,11 +34,11 @@ November 13-15, 2017. "An algebraic theory of attitudes". *Logic and Engineering
 
 <summary>Snippets</Summary>
 
-@snippet17 <a href="/documents/PoRs.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+@snippet17 <a href="https://patrl.keybase.pub/snippets/snippet-superiority.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
-@snippet15 <a href="/documents/PoRs.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+@snippet15 <a href="https://patrl.keybase.pub/snippets/snippet.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
-@snippet17tense <a href="/documents/rebindingTense.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a> <a href="/documents/rebindingTense.pdf.asc"><i class="fa fa-lock" aria-hidden="true"></i></a>
+@snippet17tense <a href="https://patrl.keybase.pub/snippets/tenseSnippet_v1.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
 
 </details>
@@ -49,6 +47,10 @@ November 13-15, 2017. "An algebraic theory of attitudes". *Logic and Engineering
 <summary>Unpublished</summary>
 
 @unpub17thesis
+
+
+
+
 
 @unpub13thesis
 
