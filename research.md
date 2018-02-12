@@ -2,7 +2,7 @@
 title: research 
 ...
 
-Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/redesign/bib/myWork.bib).
+Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/develop/bib/myWork.bib).
 
 <details>
 <summary>Upcoming talks</summary>
