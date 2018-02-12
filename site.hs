@@ -104,5 +104,8 @@ bibtexCompiler cslFileName bibFileName = do
 
 config :: Configuration
 config = defaultConfiguration
-    { deployCommand = "git stash && git checkout develop && stack exec site clean && stack exec site build && git fetch --all && git checkout -b master --track origin/master && cp -a _site/. . && git add -A && git commit -m \"Publish.\" && git push origin master:master && git checkout develop && git branch -D master && git stash pop"
+    { deployCommand = "./deploy.sh"
     }
+{-config = defaultConfiguration-}
+{-    { deployCommand = "git stash && git checkout develop && stack exec site clean && stack exec site build && git fetch --all && git checkout -b master --track origin/master && cp -a _site/. . && git add -A && git commit -m \"Publish.\" && git push origin master:master && git checkout develop && git branch -D master && git stash pop"-}
+{-    }-}
