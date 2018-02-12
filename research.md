@@ -65,7 +65,7 @@ November 13-15, 2017. "An algebraic theory of attitudes". *Logic and Engineering
 
 </details>
 
-### Presentations (currently very incomplete)
+Presentations (currently very incomplete)
 
 <details>
 <summary>2017</summary>

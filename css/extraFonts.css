@@ -6,27 +6,60 @@
     font-family: "Inconsolata", monospace;
 }
 
-.denote:before, .denote:after {
-	  position: absolute;
-	  top: -9px; /* Value depends on your design. */
-	  color: transparent;/* It makes the curly brackets invisible at the beginning.*/
-}
-.brackets:hover:before, .brackets:hover:after {
-	  color: black; /* Or whatever colour you want. */
+/* .brackets:before, .denote:after { */
+/* 	  position: absolute; */
+/* 	  top: -9px; /\* Value depends on your design. *\/ */
+/* 	  color: transparent;/\* It makes the curly brackets invisible at the beginning.*\/ */
+/* } */
+
+/* .brackets:hover:before, .brackets:hover:after { */
+/* 	  color: white; /\* Or whatever colour you want. *\/ */
+/* } */
+
+/* /\* For movement *\/ */
+/* .brackets:before { */
+/* 	  left: -20px; */
+/* } */
+/* .brackets:hover:before { */
+/* 	  content: "⟦"; */
+/* 	  left: -15px; */
+/*     transform: translateX(0); */
+/* } */
+/* .brackets:after { */
+/* 	  right: -20px; */
+/* } */
+/* .brackets:hover:after { */
+/* 	  content: "⟧"; */
+/* 	  right: -15px; */
+/*     transform: translateX(0); */
+/* } */
+
+.cl-effect-1:before, .cl-effect-1:after {
+	  display: inline-block;
+    position: absolute;
+    margin-left:-14px;
+	  opacity: 0;
+	  -webkit-transition: opacity 0.5s;
+    /* -webkit-backface-visibility: hidden; */
+	  -moz-transition: opacity 0.5s;
+	  transition: opacity 0.5s;
 }
 
-/* For movement */
-.brackets:before {
-	  content: "{";
-	  left: -20px;
+.cl-effect-1:before {
+	  margin-right: 0px;
+    color: white;
+	  content: '⟦';
+    /* -webkit-backface-visibility: hidden; */
 }
-.brackets:hover:before {
-	  left: -15px;
+
+.cl-effect-1:after {
+	  margin-left: 0px;
+    color: white;
+	  content: '⟧';
+    /* -webkit-backface-visibility: hidden; */
 }
-.brackets:after {
-	  content: "}";
-	  right: -20px;
-}
-.brackets:hover:after {
-	  right: -15px;
+
+.cl-effect-1:hover:before, .cl-effect-1:hover:after, .cl-effect-1:focus:before, .cl-effect-1:focus:after {
+	  opacity: 1;
+    /* -webkit-backface-visibility: hidden; */
 }
