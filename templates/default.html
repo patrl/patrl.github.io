@@ -2,23 +2,19 @@
 <html lang="en">
     $partial("templates/head.html")$
     <body class="vh-100 w-100 bg-navy-gradient">
-        <nav class="flex justify-between bb b--white-10 inconsolata tracked-mega ttu">
-            <div class="flex items-center pa3">
-                <a class="f5 link dib white dim b ttl">λ</a>
-            </div>
-            <div class="flex-grow pa3 flex items-center">
-                <a class="f5 link dib white dim mr3 mr4-ns" href="#0">About</a>
-                <a class="f5 link dib white dim" href="#0">Sign In</a>
-            </div>
-
-        </nav>
-
-            <div class="dtc v-mid podkova f-headline ttu white tracked center tc">
-                Patrick<br>
-                David<br>
-                Elliott
+    $partial("templates/header.html")$
+        <!-- <div class="podkova f-headline ttu white tracked db tc pa4"> -->
+        <!-- Patrick<br> -->
+        <!-- David<br> -->
+        <!-- Elliott -->
+        <!-- </div> -->
+        <div class="white measure-wide f3 pa5 db mh7-l lh-copy">
+            <h1 class="f2 podkova ttu tracked normal bb b--white-10 pv3">$title$</h1>
+            <div class="inconsolata f5">
+           $body$ 
             </div>
         </div>
+    </body>
         <!-- <header class="vh-100 w-100 bg-navy-gradient white dt"> -->
         <!-- <div class="dtc tc center measure v-mid"> -->
         <!-- <h1 class="f-headline dim link lh-solid tracked podkova white normal ttu tracked">Patrick<br>David<br>Elliott</h1> -->

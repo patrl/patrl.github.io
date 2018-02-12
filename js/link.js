@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("a").addClass("link dim purple")
+    $("a").addClass("link dim silver")
 });
 
 
