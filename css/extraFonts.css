@@ -64,6 +64,7 @@
     /* -webkit-backface-visibility: hidden; */
 }
 
+
 body { counter-reset: sidenote-counter; }
 
 .sidenote, .marginnote { float: right;

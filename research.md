@@ -4,11 +4,10 @@ title: research
 
 Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/develop/bib/myWork.bib).
 
-<details>
-<summary>Upcoming talks</summary>
+<!-- <details> -->
+<!-- <summary>Upcoming talks</summary> -->
 
-November 13-15, 2017. "An algebraic theory of attitudes". *Logic and Engineering of Natural Language Semantics 14*, Tokyo.
-</details>
+<!-- </details> -->
 
 <details>
 <summary>Papers</summary>
@@ -69,6 +68,8 @@ Presentations (currently very incomplete)
 
 <details>
 <summary>2017</summary>
+
+@talk17lenls
 
 @talk17zas
 
