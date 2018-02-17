@@ -2,11 +2,6 @@
 title: research 
 ...
 
-<!-- <details> -->
-<!-- <summary>Upcoming talks</summary> -->
-
-<!-- </details> -->
-
 <details>
 <summary class="podkova f3 ttu tracked cl-effect-1 link dim">Papers</summary>
 
@@ -50,14 +45,6 @@ title: research
 @unpub12thesis
 
 </details>
-
-<!-- <details> -->
-<!-- <summary>Miscellaneous</summary> -->
-
-<!-- ... -->
-
-<!-- </details> -->
-<!-- Presentations (currently very incomplete) -->
 
 <details>
 <summary class="podkova f3 ttu tracked cl-effect-1 link dim">talks 2017</summary>
@@ -121,4 +108,7 @@ title: research
 
 </details>
 
+<div class="pt2">
 Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/develop/bib/myWork.bib)
+</div>
+
