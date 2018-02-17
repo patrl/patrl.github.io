@@ -2,15 +2,13 @@
 title: research 
 ...
 
-Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/develop/bib/myWork.bib).
-
 <!-- <details> -->
 <!-- <summary>Upcoming talks</summary> -->
 
 <!-- </details> -->
 
 <details>
-<summary>Papers</summary>
+<summary class="podkova f3 ttu tracked cl-effect-1 link dim">Papers</summary>
 
 @paper17jos <a href="https://patrl.keybase.pub/papers/PoRs.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
@@ -31,7 +29,7 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/d
 
 <details>
 
-<summary>Snippets</Summary>
+<summary class="podkova f3 ttu tracked cl-effect-1 link dim">Snippets</Summary>
 
 @snippet17 <a href="https://patrl.keybase.pub/snippets/snippet-superiority.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 
@@ -43,13 +41,9 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/d
 </details>
 
 <details>
-<summary>Unpublished</summary>
+<summary class="podkova f3 ttu tracked cl-effect-1 link dim">Unpublished</summary>
 
 @unpub17thesis
-
-
-
-
 
 @unpub13thesis
 
@@ -57,17 +51,16 @@ Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/d
 
 </details>
 
+<!-- <details> -->
+<!-- <summary>Miscellaneous</summary> -->
+
+<!-- ... -->
+
+<!-- </details> -->
+<!-- Presentations (currently very incomplete) -->
+
 <details>
-<summary>Miscellaneous</summary>
-
-...
-
-</details>
-
-Presentations (currently very incomplete)
-
-<details>
-<summary>2017</summary>
+<summary class="podkova f3 ttu tracked cl-effect-1 link dim">talks 2017</summary>
 
 @talk17lenls
 
@@ -76,7 +69,7 @@ Presentations (currently very incomplete)
 </details>
 
 <details>
-<summary>2016</summary>
+<summary class="podkova f3 ttu tracked cl-effect-1 link dim">talks 2016</summary>
 
 @talk16igg
 
@@ -85,7 +78,7 @@ Presentations (currently very incomplete)
 </details>
 
 <details>
-<summary>2015</summary>
+<summary class="podkova f3 ttu tracked cl-effect-1 link dim">talks 2015</summary>
 
 @poster15glow
 
@@ -106,16 +99,11 @@ Presentations (currently very incomplete)
 </details>
 
 <details>
-<summary>2014</summary>
+<summary class="podkova f3 ttu tracked cl-effect-1 link dim">talks older</summary>
 
 @talk14lagb
 
 @poster14salt
-
-</details>
-
-<details>
-<summary>2013</summary>
 
 @talk13mfil
 
@@ -129,26 +117,8 @@ Presentations (currently very incomplete)
 
 @talk13cls
 
-</details>
-
-<details>
-<summary>2012</summary>
-
 @talk12edin
 
 </details>
 
-<style type="text/css">
-
-DETAILS[open] SUMMARY ~ * 
-{
- animation: sweep .5s ease-in-out;
-}
-
-@keyframes sweep 
-{
- 0%    {opacity: 0; margin-left: -10px}
- 100%  {opacity: 1; margin-left: 0px}
-}
-
-</style>
+Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/develop/bib/myWork.bib)

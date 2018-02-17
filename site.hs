@@ -57,34 +57,19 @@ main = hakyllWith config $ do
 
     match "csl/*" $ compile cslCompiler
 
-    create ["archive.html"] $ do
+    create ["blog.html"] $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
             let archiveCtx =
                     listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "Archives"            `mappend`
+                    constField "title" "Pluralia Tantrum"            `mappend`
                     defaultContext
 
             makeItem ""
                 >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
                 >>= loadAndApplyTemplate "templates/default.html" archiveCtx
                 >>= relativizeUrls
-
-
-    -- match "index.html" $ do
-    --     route idRoute
-    --     compile $ do
-    --         posts <- recentFirst =<< loadAll "posts/*"
-    --         let indexCtx =
-    --                 listField "posts" postCtx (return posts) `mappend`
-    --                 constField "title" "Home"                `mappend`
-    --                 defaultContext
-
-    --         getResourceBody
-    --             >>= applyAsTemplate indexCtx
-    --             >>= loadAndApplyTemplate "templates/default.html" indexCtx
-    --             >>= relativizeUrls
 
     match "templates/*" $ compile templateBodyCompiler
 
