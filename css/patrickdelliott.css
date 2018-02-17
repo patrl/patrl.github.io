@@ -109,3 +109,33 @@ text-align: left; }
 #burgertwo:checked ~ .menu {
     max-height: 25rem;
 }
+
+/* The css below essentially adds the tachyons classes "link", "silver", and "dim" to all a elements. */
+
+a {
+    text-decoration: none;
+    transition: color .15s ease-in;
+    color: #999;
+    opacity: 1;
+    -webkit-transition: opacity .15s ease-in;
+    transition: opacity .15s ease-in;
+}
+
+a:link, a:visited {
+    transition: color .15s ease-in;
+}
+
+a:hover {
+    transition: color .15s ease-in;
+    opacity: .5; -webkit-transition: opacity .15s ease-in; transition: opacity .15s ease-in;
+}
+
+a:active {
+    transition: color .15s ease-in;
+    opacity: .8; -webkit-transition: opacity .15s ease-out; transition: opacity .15s ease-out;
+}
+
+a:focus {
+    transition: color .15s ease-in;
+    opacity: .5; -webkit-transition: opacity .15s ease-in; transition: opacity .15s ease-in;
+}
