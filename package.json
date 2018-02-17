@@ -12,7 +12,6 @@
   "homepage": "https://github.com/patrl/patrl.github.io#readme",
   "description": "",
   "dependencies": {
-    "jquery": "^3.2.1",
     "tachyons": "^4.7.2"
   },
   "devDependencies": {

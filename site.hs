@@ -21,9 +21,9 @@ main = hakyllWith config $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "js/*" $ do
-      route idRoute
-      compile copyFileCompiler
+    -- match "js/*" $ do
+    --   route idRoute
+    --   compile copyFileCompiler
 
     match "css/*" $ do
         route   idRoute
@@ -33,9 +33,9 @@ main = hakyllWith config $ do
         route $ customRoute (const "css/tachyons.min.css")
         compile copyFileCompiler
 
-    match "node_modules/jquery/dist/jquery.slim.min.js" $ do
-        route $ customRoute (const "js/jquery.slim.min.js")
-        compile copyFileCompiler
+    -- match "node_modules/jquery/dist/jquery.slim.min.js" $ do
+    --     route $ customRoute (const "js/jquery.slim.min.js")
+    --     compile copyFileCompiler
 
     match "node_modules/gradients/gradients.min.css" $ do
         route $ customRoute (const "css/gradients.min.css")
@@ -104,8 +104,4 @@ bibtexCompiler cslFileName bibFileName = do
 
 config :: Configuration
 config = defaultConfiguration
-    { deployCommand = "./deploy.sh"
-    }
-{-config = defaultConfiguration-}
-{-    { deployCommand = "git stash && git checkout develop && stack exec site clean && stack exec site build && git fetch --all && git checkout -b master --track origin/master && cp -a _site/. . && git add -A && git commit -m \"Publish.\" && git push origin master:master && git checkout develop && git branch -D master && git stash pop"-}
-{-    }-}
+    { deployCommand = "./deploy.sh" }
