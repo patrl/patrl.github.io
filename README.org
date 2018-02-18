@@ -1,5 +1,13 @@
 #+title: Readme
 
+http://patrickdelliott.com
+
+Features:
+- no javascript!
+- personal bibliography generated from a ~.bib~ file.
+- support for citations
+- blog entries written in markdown
+
 Dependencies:
 
 - [[https://nixos.org/nix/][nix]]
