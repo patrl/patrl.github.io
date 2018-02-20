@@ -49,7 +49,13 @@ main = hakyllWith config $ do
 
     match "posts/*" $ do
         route $ setExtension "html"
-        compile $ pandocCompiler
+        compile $ bibtexCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib"
+            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= relativizeUrls
+
+    match "drafts/*" $ do
+        route $ setExtension "html"
+        compile $ bibtexCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib"
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
