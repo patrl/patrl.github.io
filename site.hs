@@ -4,6 +4,7 @@ import           Control.Monad (liftM)
 import           Data.Monoid (mappend)
 import           Hakyll
 import           Text.Pandoc.Options
+{-import           Text.Pandoc.SideNote-}
 
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -43,19 +44,19 @@ main = hakyllWith config $ do
 
     match "*.md" $ do
         route   $ setExtension "html"
-        compile $ bibtexCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib"
+        compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib"
           >>= loadAndApplyTemplate "templates/default.html" defaultContext
           >>= relativizeUrls
 
     match "posts/*" $ do
         route $ setExtension "html"
-        compile $ bibtexCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib"
+        compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib"
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
     match "drafts/*" $ do
         route $ setExtension "html"
-        compile $ bibtexCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib"
+        compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib"
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
@@ -86,12 +87,12 @@ postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
 
-bibtexCompiler :: String -> String -> Compiler (Item String)
-bibtexCompiler cslFileName bibFileName = do
-    csl <- load $ fromFilePath cslFileName
-    bib <- load $ fromFilePath bibFileName
-    liftM writePandoc
-        (getResourceBody >>= readPandocBiblio def csl bib)
+-- bibtexCompiler :: String -> String -> Compiler (Item String)
+-- bibtexCompiler cslFileName bibFileName = do
+--     csl <- load $ fromFilePath cslFileName
+--     bib <- load $ fromFilePath bibFileName
+--     liftM writePandoc
+--         (getResourceBody >>= readPandocBiblio def csl bib)
 
 config :: Configuration
 config = defaultConfiguration
