@@ -1,5 +1,5 @@
 ---
-title: Introduction to the Dynamic Semantics 
+title: Introduction to Dynamic Semantics 
 author: Patrick D. Elliott
 ...
  
