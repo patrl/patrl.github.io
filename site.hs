@@ -4,7 +4,6 @@ import           Control.Monad (liftM)
 import           Data.Monoid (mappend)
 import           Hakyll
 import           Text.Pandoc.Options
-{-import           Text.Pandoc.SideNote-}
 
 --------------------------------------------------------------------------------
 main :: IO ()

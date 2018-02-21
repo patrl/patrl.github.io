@@ -1,5 +1,5 @@
 ---
-title: Introductory Semantics
+title: Introduction to the Dynamic Semantics 
 author: Patrick D. Elliott
 ...
  
@@ -9,8 +9,12 @@ This course will provide an introduction to the study of linguistic meaning thro
 
 Tentative course schedule:
 
- - session 1: why dynamic semantics
- - session 2: possible worlds and updates 
- - session 3: discourse referents
- - session 4: donkey anaphora
- - session 5: presupposition
+ - session 1: possible worlds and updates 
+ - session 2: discourse referents 
+ - session 3: donkey anaphora
+ - session 4 & 5: presupposition
+ 
+# Background
+
+I'll assume a basic knowledge of set theory and first-order logic in this course. Elizabeth Coppock and put together a useful primer, which you can find online [here](http://eecoppock.info/DynamicSemantics/Lectures/logic-2up.pdf).
+ 
