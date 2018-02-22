@@ -5,6 +5,7 @@ pkgs.haskell.lib.buildStackProject {
   inherit ghc;
   buildInputs = with pkgs; [ zlib gmp git imagemagick ghostscript (texlive.combine {
         inherit (texlive)
+         stmaryrd
          collection-basic
          collection-latex
          collection-pstricks

@@ -7,12 +7,13 @@ import           Text.Pandoc.Options
 import           Text.Pandoc.SideNote
 import           Hakyll.Contrib.LaTeX
 import           Image.LaTeX.Render
-import           Image.LaTeX.Render.Pandoc (defaultPandocFormulaOptions)
+import           Image.LaTeX.Render.Pandoc (defaultPandocFormulaOptions, formulaOptions)
+import           Text.Pandoc.Definition
 
 --------------------------------------------------------------------------------
 main :: IO ()
 main = do
-  renderFormulae <- initFormulaCompilerDataURI 1000 defaultEnv
+  renderFormulae <- initFormulaCompilerDataURI 1000 myEnv
 
   hakyllWith config $ do 
 
@@ -56,7 +57,7 @@ main = do
     match "formulaTest.md" $ do
        route $ setExtension "html"
        compile $ pandocCompilerWithTransformM defaultHakyllReaderOptions defaultHakyllWriterOptions
-               $ renderFormulae defaultPandocFormulaOptions
+               $ renderFormulae customPandocFormulaOptions
 
     match "tufteTest.md" $ do
       route $ setExtension "html"
@@ -125,3 +126,14 @@ customHakyllWriterOptions = defaultHakyllWriterOptions
       writerSectionDivs = True,
       writerHtml5 = True
     }
+
+myPreamble = "\\usepackage{stmaryrd}\\usepackage{amsmath}\\usepackage{amssymb}"
+
+customPandocFormulaOptions = defaultPandocFormulaOptions
+    { formulaOptions = \x -> case x of
+        InlineMath -> math { preamble = myPreamble }
+        DisplayMath -> displaymath { preamble = myPreamble }
+    }
+
+myEnv :: EnvironmentOptions
+myEnv = EnvironmentOptions "latex" "dvips" "convert" [] [] [] (UseSystemTempDir "latex-eqn-temp") "working"
