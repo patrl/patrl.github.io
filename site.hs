@@ -5,10 +5,17 @@ import           Data.Monoid (mappend)
 import           Hakyll
 import           Text.Pandoc.Options
 import           Text.Pandoc.SideNote
+import           Hakyll.Contrib.LaTeX
+import           Image.LaTeX.Render
+import           Image.LaTeX.Render.Pandoc (defaultPandocFormulaOptions)
 
 --------------------------------------------------------------------------------
 main :: IO ()
-main = hakyllWith config $ do
+main = do
+  renderFormulae <- initFormulaCompilerDataURI 1000 defaultEnv
+
+  hakyllWith config $ do 
+
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
@@ -30,6 +37,10 @@ main = hakyllWith config $ do
         route   idRoute
         compile compressCssCompiler
 
+    match "et-book/*/*" $ do
+      route idRoute
+      compile copyFileCompiler
+
     match "node_modules/tachyons/css/tachyons.min.css" $ do
         route $ customRoute (const "css/tachyons.min.css")
         compile copyFileCompiler
@@ -41,6 +52,17 @@ main = hakyllWith config $ do
     match "node_modules/gradients/gradients.min.css" $ do
         route $ customRoute (const "css/gradients.min.css")
         compile copyFileCompiler
+
+    match "formulaTest.md" $ do
+       route $ setExtension "html"
+       compile $ pandocCompilerWithTransformM defaultHakyllReaderOptions defaultHakyllWriterOptions
+               $ renderFormulae defaultPandocFormulaOptions
+
+    match "tufteTest.md" $ do
+      route $ setExtension "html"
+      compile $ pandocTufteCompiler
+        >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
+        >>= relativizeUrls
 
     match "*.md" $ do
         route   $ setExtension "html"
@@ -87,13 +109,19 @@ postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
 
--- bibtexCompiler :: String -> String -> Compiler (Item String)
--- bibtexCompiler cslFileName bibFileName = do
---     csl <- load $ fromFilePath cslFileName
---     bib <- load $ fromFilePath bibFileName
---     liftM writePandoc
---         (getResourceBody >>= readPandocBiblio def csl bib)
-
 config :: Configuration
 config = defaultConfiguration
     { deployCommand = "./deploy.sh" }
+
+pandocTufteCompiler :: Compiler (Item String)
+pandocTufteCompiler = pandocCompilerWithTransform
+    defaultHakyllReaderOptions
+    customHakyllWriterOptions
+    usingSideNotes
+
+customHakyllWriterOptions :: WriterOptions
+customHakyllWriterOptions = defaultHakyllWriterOptions
+    {
+      writerSectionDivs = True,
+      writerHtml5 = True
+    }

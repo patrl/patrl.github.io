@@ -3,7 +3,14 @@
 pkgs.haskell.lib.buildStackProject {
   name = "patrickdelliott.com";
   inherit ghc;
-  buildInputs = with pkgs; [ zlib gmp git ];
+  buildInputs = with pkgs; [ zlib gmp git imagemagick ghostscript (texlive.combine {
+        inherit (texlive)
+         collection-basic
+         collection-latex
+         collection-pstricks
+         collection-xetex;
+      })
+];
   LANG = "en_US.UTF-8";
   TMPDIR = "/tmp";
 }
