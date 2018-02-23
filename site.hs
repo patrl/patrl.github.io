@@ -55,18 +55,18 @@ main = do
         route $ customRoute (const "css/gradients.min.css")
         compile copyFileCompiler
 
-    match "formulaTest.md" $ do
+    match "formulaTest.markdown" $ do
        route $ setExtension "html"
        compile $ pandocCompilerWithTransformM defaultHakyllReaderOptions defaultHakyllWriterOptions
                $ renderFormulae customPandocFormulaOptions
 
-    match "tufteTest.md" $ do
+    match "tufteTest.markdown" $ do
       route $ setExtension "html"
       compile $ pandocTufteCompiler
         >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
         >>= relativizeUrls
 
-    match "*.md" $ do
+    match "*.markdown" $ do
         route   $ setExtension "html"
         compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib"
           >>= loadAndApplyTemplate "templates/default.html" defaultContext
@@ -128,7 +128,7 @@ customHakyllWriterOptions = defaultHakyllWriterOptions
                           Ext_latex_macros],
       writerSectionDivs = True,
       writerHtml5 = True,
-      -- writerHTMLMathMethod = GladTeX
+      writerHTMLMathMethod = KaTeX "" ""
     }
 
 myPreamble = "\\usepackage{stmaryrd}\\usepackage{amssymb}"
