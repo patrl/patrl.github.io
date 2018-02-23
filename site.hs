@@ -3,6 +3,7 @@
 import           Control.Monad (liftM)
 import           Data.Monoid (mappend)
 import           Hakyll
+import qualified Data.Set as S
 import           Text.Pandoc.Options
 import           Text.Pandoc.SideNote
 import           Hakyll.Contrib.LaTeX
@@ -123,11 +124,14 @@ pandocTufteCompiler = pandocCompilerWithTransform
 customHakyllWriterOptions :: WriterOptions
 customHakyllWriterOptions = defaultHakyllWriterOptions
     {
+      writerExtensions = foldr S.insert (writerExtensions defaultHakyllWriterOptions) [Ext_tex_math_dollars, Ext_tex_math_double_backslash,
+                          Ext_latex_macros],
       writerSectionDivs = True,
-      writerHtml5 = True
+      writerHtml5 = True,
+      -- writerHTMLMathMethod = GladTeX
     }
 
-myPreamble = "\\usepackage{stmaryrd}\\usepackage{amsmath}\\usepackage{amssymb}"
+myPreamble = "\\usepackage{stmaryrd}\\usepackage{amssymb}"
 
 customPandocFormulaOptions = defaultPandocFormulaOptions
     { formulaOptions = \x -> case x of

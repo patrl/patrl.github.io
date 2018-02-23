@@ -13,5 +13,6 @@ executable site
                   , latex-formulae-image == 0.1.1.3
                   , latex-formulae-pandoc == 0.2.0.5
                   , pandoc-types == 1.17.0.5
+                  , containers == 0.5.7.1
   ghc-options:      -threaded
   default-language: Haskell2010

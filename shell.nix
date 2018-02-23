@@ -7,9 +7,7 @@ pkgs.haskell.lib.buildStackProject {
         inherit (texlive)
          stmaryrd
          collection-basic
-         collection-latex
-         collection-pstricks
-         collection-xetex;
+         collection-latex;
       })
 ];
   LANG = "en_US.UTF-8";
