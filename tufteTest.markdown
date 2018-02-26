@@ -19,4 +19,10 @@ Tentative course schedule:
 # Background
 
 I'll assume a basic knowledge of set theory and first-order logic in this course. Elizabeth Coppock and put together a useful primer, which you can find online [here](http://eecoppock.info/DynamicSemantics/Lectures/logic-2up.pdf).
+
+# Background reading
+
+@heimThesis,[@chierchia_dynamics_1995] 
+
+# References 
  

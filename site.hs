@@ -57,30 +57,44 @@ main = do
 
     match "formulaTest.markdown" $ do
        route $ setExtension "html"
-       compile $ pandocCompilerWithTransformM defaultHakyllReaderOptions defaultHakyllWriterOptions
-               $ renderFormulae customPandocFormulaOptions
+       compile $ unifiedCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib" (renderFormulae customPandocFormulaOptionsBlack)
+         >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
+         >>= relativizeUrls
+
 
     match "tufteTest.markdown" $ do
       route $ setExtension "html"
-      compile $ pandocTufteCompiler
+      compile $ unifiedCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib" (renderFormulae customPandocFormulaOptionsBlack)
         >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
         >>= relativizeUrls
 
-    match "*.markdown" $ do
+    match "actlCourse.markdown" $ do
+      route $ setExtension "html"
+      compile $ unifiedCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib" (renderFormulae customPandocFormulaOptionsBlack)
+        >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
+        >>= relativizeUrls
+
+    match "index.markdown" $ do
         route   $ setExtension "html"
-        compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib"
+        compile $ unifiedCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib" (renderFormulae customPandocFormulaOptionsWhite)
+          >>= loadAndApplyTemplate "templates/default.html" defaultContext
+          >>= relativizeUrls
+
+    match "research.markdown" $ do
+        route   $ setExtension "html"
+        compile $ unifiedCompiler "csl/myBib.csl" "bib/myWork.bib" (renderFormulae customPandocFormulaOptionsWhite)
           >>= loadAndApplyTemplate "templates/default.html" defaultContext
           >>= relativizeUrls
 
     match "posts/*" $ do
         route $ setExtension "html"
-        compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib"
+        compile $ unifiedCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib" (renderFormulae customPandocFormulaOptionsWhite)
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
     match "drafts/*" $ do
         route $ setExtension "html"
-        compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/myWork.bib"
+        compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib"
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
@@ -127,17 +141,35 @@ customHakyllWriterOptions = defaultHakyllWriterOptions
       writerExtensions = foldr S.insert (writerExtensions defaultHakyllWriterOptions) [Ext_tex_math_dollars, Ext_tex_math_double_backslash,
                           Ext_latex_macros],
       writerSectionDivs = True,
-      writerHtml5 = True,
-      writerHTMLMathMethod = KaTeX "" ""
+      writerHtml5 = True
+      -- this isn't working
+      -- writerHTMLMathMethod = KaTeX "" ""
     }
 
-myPreamble = "\\usepackage{stmaryrd}\\usepackage{amssymb}"
+myPreambleWhite = "\\usepackage{stmaryrd}\\usepackage{amssymb}\\usepackage{color}\\color{white}"
 
-customPandocFormulaOptions = defaultPandocFormulaOptions
-    { formulaOptions = \x -> case x of
-        InlineMath -> math { preamble = myPreamble }
-        DisplayMath -> displaymath { preamble = myPreamble }
-    }
+myPreambleBlack = "\\usepackage{stmaryrd}\\usepackage{amssymb}\\usepackage{color}\\color{black}"
+
+customPandocFormulaOptionsWhite = defaultPandocFormulaOptions
+  { formulaOptions = \x -> case x of
+      InlineMath -> math { preamble = myPreambleWhite }
+      DisplayMath -> displaymath { preamble = myPreambleWhite }
+  }
+
+customPandocFormulaOptionsBlack = defaultPandocFormulaOptions
+  { formulaOptions = \x -> case x of
+      InlineMath -> math { preamble = myPreambleBlack }
+      DisplayMath -> displaymath { preamble = myPreambleBlack }
+  }
 
 myEnv :: EnvironmentOptions
-myEnv = EnvironmentOptions "latex" "dvips" "convert" [] [] [] (UseSystemTempDir "latex-eqn-temp") "working"
+myEnv = EnvironmentOptions "latex" "dvips" "convert" [ ] [] [] (UseSystemTempDir "latex-eqn-temp") "working"
+
+unifiedCompiler :: String -> String -> (Pandoc -> Compiler Pandoc ) -> Compiler (Item String)
+unifiedCompiler cslFileName bibFileName renderFunction = do
+    csl <- load $ fromFilePath cslFileName
+    bib <- load $ fromFilePath bibFileName
+    getResourceBody
+      >>= readPandocBiblio def csl bib
+      >>= traverse ( renderFunction . usingSideNotes )
+      >>= return . writePandocWith customHakyllWriterOptions
