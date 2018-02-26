@@ -68,9 +68,9 @@ main = do
         >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
         >>= relativizeUrls
 
-    match "actlCourse.markdown" $ do
+    match "actl2018.markdown" $ do
       route $ setExtension "html"
-      compile $ unifiedCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib" (renderFormulae customPandocFormulaOptionsBlack)
+      compile $ unifiedCompiler "csl/unified-style-linguistics.csl" "bib/actl2018.bib" (renderFormulae customPandocFormulaOptionsBlack)
         >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
         >>= relativizeUrls
 

@@ -9,7 +9,7 @@ When I'm not doing linguistics, I [code](https://github.com/patrl), [read](https
 Reach me at: [*myLastName*(at)leibniz-zas.de](mailto:elliott@leibniz-zas.de)
 Test:
 
-## Upcoming
+### Upcoming
 
 March 2018: I'm preparing a paper entitled "An algebraic theory of attitudes" for the proceedings of *Logic and Engineering of Natural Language Semantics 14*
 
