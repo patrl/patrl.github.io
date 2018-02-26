@@ -26,10 +26,6 @@ These facts are clearly telling us something interesting about the syntactic pro
 
 Moving on, *if*-questions show some extremely interesting behaviour under *responsive* predicates, such as *know* and *admit*. These facts were first uncovered and analysed in a 2001 paper by Adger & Quer[^paywallNote], who claim that *if*-questions exhibit polarity sensitivity under responsive predicates. The judgements are subtle, but the following contrast is fairly illustrative.[^AQNote]
 
-$$
-\llbracket x \rrbracket
-$$
-
 (@8a) *?Jeff told me if Britta left.
 (@8b) Jeff didn't tell me if Britta left.
 
