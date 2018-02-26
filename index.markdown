@@ -13,4 +13,4 @@ Test:
 
 March 2018: I'm preparing a paper entitled "An algebraic theory of attitudes" for the proceedings of *Logic and Engineering of Natural Language Semantics 14*
 
-June 25-29, 2018: I'll be teaching an Introduction to Dynamic Semantics at the ACTL Summer School, UCL, London. [Course page](https://actlblog.wordpress.com/introduction-to-dynamic-semantics/)
+June 25-29, 2018: I'll be teaching an Introduction to Dynamic Semantics at the ACTL Summer School, UCL, London. [Course page](http://patrickdelliott.com/actl2018.html)
