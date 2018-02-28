@@ -25,8 +25,10 @@ I'll assume a basic knowledge of set theory and first-order logic in this course
 
 # Reference material
 
-- @heimThesis, chapter 3
 - @chierchia_dynamics_1995
+- @heimThesis, chapter 3
+- @groenendijk_dynamic_1991
+- @beaver_presupposition_2001
 
 (more here soon)
 
