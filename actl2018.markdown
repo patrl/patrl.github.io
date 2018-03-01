@@ -25,7 +25,7 @@ I'll assume a basic knowledge of set theory and first-order logic in this course
 
 # Reference material
 
-All reference material can be found [here](https://patrl.keybase.pub/actl2018). More here soon.
+All reference material can be found [here](https://keybase.pub/patrl/actl2018/). More here soon.
 
 - @chierchia_dynamics_1995
 - @heimThesis, chapter 3
