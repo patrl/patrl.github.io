@@ -25,12 +25,12 @@ I'll assume a basic knowledge of set theory and first-order logic in this course
 
 # Reference material
 
+All reference material can be found [here](https://patrl.keybase.pub/actl2018). More here soon.
+
 - @chierchia_dynamics_1995
 - @heimThesis, chapter 3
 - @groenendijk_dynamic_1991
 - @beaver_presupposition_2001
-
-(more here soon)
 
 # Bibliography
 
