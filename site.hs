@@ -89,7 +89,7 @@ main = do
     match "posts/*" $ do
         route $ setExtension "html"
         compile $ unifiedCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib" (renderFormulae customPandocFormulaOptionsWhite)
-            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= loadAndApplyTemplate "templates/tufte.html" postCtx
             >>= relativizeUrls
 
     match "drafts/*" $ do
@@ -113,7 +113,7 @@ main = do
 
             makeItem ""
                 >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+                >>= loadAndApplyTemplate "templates/tufte.html" archiveCtx
                 >>= relativizeUrls
 
     match "templates/*" $ compile templateBodyCompiler

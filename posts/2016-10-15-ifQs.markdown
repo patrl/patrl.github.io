@@ -4,6 +4,8 @@ author: Patrick D. Elliott
 date: 2016-10-15
 ---
 
+# 
+
 *If*-clauses are weird. They have a couple of prominent uses: as the antecedent clause in a conditional *if...then...* statement (see (@1)), and as an embedded question (@2).
 
 (@1) If Britta is taking this class, then I'm not.
@@ -24,7 +26,7 @@ Furthermore, *if*-questions generally seem pretty bad as subjects, unlike both *
 
 These facts are clearly telling us something interesting about the syntactic properties of *if*-questions vis a vis other varieties of embedded clause, maybe specifically about their case properties. I don't want to speculate more about this here.
 
-Moving on, *if*-questions show some extremely interesting behaviour under *responsive* predicates, such as *know* and *admit*. These facts were first uncovered and analysed in a 2001 paper by Adger & Quer[^paywallNote], who claim that *if*-questions exhibit polarity sensitivity under responsive predicates. The judgements are subtle, but the following contrast is fairly illustrative.[^AQNote]
+Moving on, *if*-questions show some extremely interesting behaviour under *responsive* predicates, such as *know* and *admit*. These facts were first uncovered and analysed in a 2001 paper by @adger_syntax_2001[^paywallNote], who claim that *if*-questions exhibit polarity sensitivity under responsive predicates. The judgements are subtle, but the following contrast is fairly illustrative.[^AQNote]
 
 (@8a) *?Jeff told me if Britta left.
 (@8b) Jeff didn't tell me if Britta left.
@@ -42,10 +44,10 @@ Zooming out a bit, how the hell do kids acquire these kinds of subtle distributi
 
 More selectional puzzles soon! And, as always, my deepest apologies to the non-linguists.
 
+# References
 
-
-[^lahiriNote]: [Lahiri (2002)](https://global.oup.com/academic/product/questions-and-answers-in-embedded-contexts-9780199246526) classifies predicates that embed questions, broadly, as either *rogative* or *responsive*. *Rogative* predicates are those which may embed interrogative clauses, but not declaratives, like *wonder* and *ask*. *Responsive* predicates on the other hand may embed both interrogatives and declaratives, such as *know* and *tell*.
+[^lahiriNote]: @lahiri_questions_2002 classifies predicates that embed questions, broadly, as either *rogative* or *responsive*. *Rogative* predicates are those which may embed interrogative clauses, but not declaratives, like *wonder* and *ask*. *Responsive* predicates on the other hand may embed both interrogatives and declaratives, such as *know* and *tell*.
 
 [^paywallNote]: This is behind a paywall (https://www.jstor.org/stable/3087030), but you can apparenly download the .pdf [here](http://filcat.uab.cat/clt/publicacions/reports/pdf/GGT-99-2.pdf) for free.
 
-[^AQNote]: This isn't much discussed much by Adger & Quer, but (8a) is almost certainly acceptable under the reading that can be paraphrased as "If Britta left, then Jeff told me (that Britta left)". I assume that this is a possible analysis of (8a), since *tell* independently allows Null Complement Anaphora, as in "Britta left. Jeff told me."  
+[^AQNote]: This isn't much discussed much by @adger_syntax_2001, but (8a) is almost certainly acceptable under the reading that can be paraphrased as "If Britta left, then Jeff told me (that Britta left)". I assume that this is a possible analysis of (8a), since *tell* independently allows Null Complement Anaphora, as in "Britta left. Jeff told me."  

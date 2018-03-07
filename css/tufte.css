@@ -223,8 +223,9 @@ pre.code { font-size: 0.9rem;
 
 pre.code.fullwidth { width: 90%; }
 
-.fullwidth { max-width: 90%;
-             clear:both; }
+/* Added references class here. */
+.fullwidth, .references { max-width: 90%;
+                          clear:both; }
 
 span.newthought { font-variant: small-caps;
                   font-size: 1.2em; }
