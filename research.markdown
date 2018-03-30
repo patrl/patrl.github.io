@@ -5,6 +5,8 @@ title: research
 <details>
 <summary class="podkova f3 ttu tracked cl-effect-1 link dim">Papers</summary>
 
+@elliottEtAl2018simplex <a href="https://patrl.keybase.pub/papers/whoAndWhatMs.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
+
 <!-- @lenlsPaper18 -->
 @paper17jos <a href="https://patrl.keybase.pub/papers/PoRs.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
 
