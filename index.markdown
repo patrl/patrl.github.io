@@ -6,7 +6,7 @@ I'm a postdoctoral researcher at the [Leibniz-Zentrum für Allgemeine Sprachwiss
 
 When I'm not doing linguistics, I [code](https://github.com/patrl), [read](https://www.goodreads.com/user/show/59694544-patrick-elliott), and scale vertical walls. [Here](images/documenta.jpg) is a picture of me at documenta 14 in Kassel. 
 
-Reach me at: [*myLastName*(at)leibniz-zas.de](mailto:elliott@leibniz-zas.de)
+Reach me at: [patrick.d.elliott(at)gmail.com](mailto:patrick.d.elliott@gmail.com)
 Test:
 
 ### Upcoming
