@@ -1,11 +1,11 @@
-{ nixpkgs ? import <nixpkgs> {}, compiler ? "default", doBenchmark ? false }:
+{ nixpkgs ? import <nixos-unstable> {}, compiler ? "default", doBenchmark ? false }:
 
 let
 
   inherit (nixpkgs) pkgs;
 
-  f = { mkDerivation, base, hakyll, pandoc, pandoc-sidenote
-      , pandoc-types, stdenv
+  f = { mkDerivation, base, containers, hakyll, pandoc
+      , pandoc-sidenote, pandoc-types, stdenv
       }:
       mkDerivation {
         pname = "patrickdelliott";
@@ -14,7 +14,7 @@ let
         isLibrary = false;
         isExecutable = true;
         executableHaskellDepends = [
-          base hakyll pandoc pandoc-sidenote pandoc-types
+          base containers hakyll pandoc pandoc-sidenote pandoc-types
         ];
         license = stdenv.lib.licenses.unfree;
         hydraPlatforms = stdenv.lib.platforms.none;
