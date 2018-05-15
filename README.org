@@ -10,6 +10,7 @@ Features:
 
 Dependencies:
 
+- cabal
 - [[https://nixos.org/nix/][nix]]
 - [[https://www.npmjs.com/][npm]]
 
@@ -17,8 +18,8 @@ To build the site, take the following steps (in the develop branch):
 
   - ~npm install~
   - ~nix-shell~ to enter the development environment
-  - in the development environment, run ~stack build~ to compile the site executable
-  - ~stack exec site rebuild~ to build the site
-  - you can preview the site on a local server by running ~stack exec site watch~
+  - in the development environment, run ~cabal configure~ followed by ~cabal build~ to compile the site executable
+  - ~cabal run site rebuild~ to build the site
+  - you can preview the site on a local server by running ~cabal run site watch~
 
 To deploy the site to the ~master~ branch, exit the development environment and simply run ~./deploy.sh~.
