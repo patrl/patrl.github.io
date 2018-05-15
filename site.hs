@@ -69,7 +69,7 @@ main = do
 
     match "research.markdown" $ do
         route   $ setExtension "html"
-        compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib"
+        compile $ pandocBiblioCompiler "csl/myBib.csl" "bib/myWork.bib"
           >>= loadAndApplyTemplate "templates/default.html" defaultContext
           >>= relativizeUrls
 
@@ -125,8 +125,7 @@ pandocTufteCompiler = pandocCompilerWithTransform
 customHakyllWriterOptions :: WriterOptions
 customHakyllWriterOptions = defaultHakyllWriterOptions
     {
-      -- writerExtensions = foldr S.insert (writerExtensions defaultHakyllWriterOptions) [Ext_tex_math_dollars, Ext_tex_math_double_backslash,
-      --                     Ext_latex_macros],
+      writerExtensions = enableExtension Ext_raw_html pandocExtensions,
       writerSectionDivs = True
       -- writerHtml5 = True
       -- this isn't working
