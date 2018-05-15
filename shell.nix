@@ -4,8 +4,8 @@ let
 
   inherit (nixpkgs) pkgs;
 
-  f = { mkDerivation, base, hakyll, pandoc, pandoc-sidenote
-      , pandoc-types, stdenv
+  f = { mkDerivation, base, hakyll, node2nix, pandoc
+      , pandoc-sidenote, pandoc-types, stdenv
       }:
       mkDerivation {
         pname = "patrickdelliott";
@@ -16,6 +16,7 @@ let
         executableHaskellDepends = [
           base hakyll pandoc pandoc-sidenote pandoc-types
         ];
+        executableSystemDepends = [ node2nix ];
         license = stdenv.lib.licenses.unfree;
         hydraPlatforms = stdenv.lib.platforms.none;
       };

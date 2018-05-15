@@ -12,3 +12,4 @@ executable site
                   , pandoc-types
   ghc-options:      -threaded
   default-language: Haskell2010
+  extra-libraries: node2nix
