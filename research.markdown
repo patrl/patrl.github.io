@@ -52,6 +52,15 @@ title: research
 </details>
 
 <details>
+<summary class="podkova f3 ttu tracked cl-effect-1 link dim">talks 2018</summary>
+
+
+@talk18ucla
+
+</details>
+
+<details>
+
 <summary class="podkova f3 ttu tracked cl-effect-1 link dim">talks 2017</summary>
 
 @talk17lenls

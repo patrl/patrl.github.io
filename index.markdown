@@ -11,9 +11,8 @@ Test:
 
 ### Upcoming
 
-- March, 2018: new unpublished snippet -- "Collective predication and ellipsis: another case of ineffability". You can find it [here](https://patrl.keybase.pub/snippets/collectivePredSnippet.pdf).
-- March, 2018: new unpublished manuscript with Andreea Nicolae and Uli Sauerland -- "Who and what do *who* and *what* range over cross-linguistically". You can find it [here](https://patrl.keybase.pub/papers/whoAndWhatMs.pdf).
-- April 18, 2018: I'm giving a talk at University College London entitled "Embedded exhaustification and plurality: two case studies".
-- June 8, 2018: I'm giving a talk at the UCL workshop on attitude predicates, title TBA.
+- June 8, 2018: I'm giving a talk at the UCL workshop on attitude predicates entitled “On Prior’s substitution problem”.
 - June 25-29, 2018: I'll be teaching an Introduction to Dynamic Semantics at the ACTL Summer School, UCL, London. [Course page](https://patrickdelliott.com/actl2018.html)
-- July 30 - August 10, 2018: I’ll be teaching at the EGG summer school in Banja Luka. More details soon!
+- July 30 - August 10, 2018: I’ll be teaching intro and advanced semantics at the EGG summer school in Banja Luka.
+- September 5-7, 2018: I’ll be presenting a poster with Uli Sauerland on “Ineffability and Unexhaustification” at [Sinn und Bedeutung 23](https://sites.google.com/view/sub23/home) in Barcelona.
+- September 17-18, 2018: I’ll be giving a tutorial on conjoined wh-expressions with Andreea Nicolae, and a talk on intervention effects at the workshop [“Multiple *wh*-constructions and their kin”](https://anamariafalaus.org/workshop/) in Nantes.

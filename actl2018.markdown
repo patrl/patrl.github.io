@@ -14,9 +14,9 @@ date: 25-29 June 2018
 
 Tentative course schedule:
 
- - session 1: possible worlds and updates 
- - session 2: discourse referents 
- - session 3: donkey anaphora
+ - session 1: what do pronouns mean?
+ - session 2: from context-sensitivity to context change potentials
+ - session 3: possible worlds and updates
  - session 4 & 5: presupposition
  
 # Background
@@ -25,15 +25,4 @@ I'll assume a basic knowledge of set theory and first-order logic in this course
 
 # Reference material
 
-All reference material can be found [here](https://keybase.pub/patrl/actl2018/). More here soon.
-
-- @chierchia_dynamics_1995
-- @heimThesis, chapter 3
-- @groenendijk_dynamic_1991
-- @beaver_presupposition_2001
-
-# Bibliography
-
-
-
- 
+All reference material can be found [here](https://keybase.pub/patrl/actl2018/). More here soon. 
