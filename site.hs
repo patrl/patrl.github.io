@@ -1,12 +1,12 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
--- import           Control.Monad (liftM)
+
 import           Data.Monoid (mappend)
 import           Hakyll
 import           Text.Pandoc.Options
 import           Text.Pandoc.SideNote
+import           Control.Monad (liftM)
 import           Text.Pandoc.Definition
-import qualified Data.Set as S
 
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -39,7 +39,8 @@ main = do
 
     match "actl2018.markdown" $ do
       route $ setExtension "html"
-      compile $ tufteCompiler "csl/unified-style-linguistics.csl" "bib/actl2018.bib"
+      -- compile $ pandocBiblioCompiler "csl/myBib.csl" "bib/actl2018.bib"
+      compile $ pandocTufteNew
         >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
         >>= relativizeUrls
 
@@ -99,13 +100,16 @@ config = defaultConfiguration
     { deployCommand = "./deploy.sh" }
 
 customHakyllWriterOptions :: WriterOptions
-customHakyllWriterOptions = defaultHakyllWriterOptions
-    {
-      -- writerExtensions = foldr S.insert (writerExtensions defaultHakyllWriterOptions) [ Ext_raw_html, Ext_footnotes ],
-      writerSectionDivs = True,
-      -- this isn't working
-      writerHTMLMathMethod = KaTeX ""
-    }
+customHakyllWriterOptions =
+  let defaultExtensions = writerExtensions defaultHakyllWriterOptions
+      in defaultHakyllWriterOptions
+         {
+           writerExtensions = ((enableExtension Ext_raw_html) . (enableExtension Ext_example_lists)) defaultExtensions,
+           writerSectionDivs = True,
+           -- this isn't working
+           writerHTMLMathMethod = KaTeX ""
+         }
+
 tufteCompiler :: String -> String -> Compiler (Item String)
 tufteCompiler cslFileName bibFileName = do
     csl <- load $ fromFilePath cslFileName
@@ -114,3 +118,19 @@ tufteCompiler cslFileName bibFileName = do
       >>= readPandocBiblio def csl bib
       >>= traverse (return . usingSideNotes)
       >>= return . writePandocWith customHakyllWriterOptions
+
+pandocCompilerWithTransformM' :: ReaderOptions -> WriterOptions
+                    -> (Pandoc -> Compiler Pandoc)
+                    -> Compiler (Item String)
+pandocCompilerWithTransformM' ropt wopt f =
+    writePandocWith wopt <$>
+        (traverse f =<< readPandocWith ropt =<< getResourceBody)
+
+pandocBiblioCompiler' :: String -> String -> Compiler (Item String)
+pandocBiblioCompiler' cslFileName bibFileName = do
+            csl <- load $ fromFilePath cslFileName
+            bib <- load $ fromFilePath bibFileName
+            liftM writePandoc
+              (getResourceBody >>= readPandocBiblio def csl bib)
+
+pandocTufteNew = pandocCompilerWithTransformM defaultHakyllReaderOptions customHakyllWriterOptions (fmap return usingSideNotes)

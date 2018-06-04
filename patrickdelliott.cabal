@@ -6,8 +6,8 @@ cabal-version:      >= 1.10
 executable site
   main-is:          site.hs
   build-depends:    base<5
-                  , hakyll==4.12.2.0
-                  , pandoc>=2.0.5
+                  , hakyll>=4.12.2.0
+                  , pandoc<2.3
                   , pandoc-sidenote
                   , pandoc-types
                   , containers
