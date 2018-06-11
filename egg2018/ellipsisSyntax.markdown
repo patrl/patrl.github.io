@@ -1,6 +1,7 @@
 ---
 title: Current Research in the Syntax of Ellipsis
 date: 30 July - 3 August 2018
+author: Patrick D. Elliott \& Andrew Murphy
 ...
 
 # Description
