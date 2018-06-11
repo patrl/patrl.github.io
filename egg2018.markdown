@@ -1,0 +1,13 @@
+---
+title: The Syntax and Semantics of Ellipsis
+subtitle: EGG school, Banja Luka
+author: Patrick D. Elliott
+date: 25-29 June 2018
+...
+
+
+# Description
+
+[^mn]: {-} ![](/images/arctic.jpg)
+
+[^mn] This course will blah blah blah.
