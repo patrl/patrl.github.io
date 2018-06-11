@@ -37,7 +37,7 @@ main = do
         route $ customRoute (const "css/gradients.min.css")
         compile copyFileCompiler
 
-    match "actl2018.markdown" $ do
+    match ["actl2018.markdown","egg2018.markdown"] $ do
       route $ setExtension "html"
       -- compile $ pandocBiblioCompiler "csl/myBib.csl" "bib/actl2018.bib"
       compile $ pandocTufteNew
