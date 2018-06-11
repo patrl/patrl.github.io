@@ -44,7 +44,7 @@ main = do
         >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
         >>= relativizeUrls
 
-      match "egg2018.markdown" $ do
+      match "egg2018/*" $ do
         route $ setExtension "html"
         -- compile $ pandocBiblioCompiler "csl/myBib.csl" "bib/actl2018.bib"
         compile $ pandocTufteNew
