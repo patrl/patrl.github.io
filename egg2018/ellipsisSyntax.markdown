@@ -1,7 +1,7 @@
 ---
-title: Current Research in the Syntax of Ellipsis
+title: Topics in the Syntax of Ellipsis
 date: 30 July - 3 August 2018
-author: Patrick D. Elliott \& Andrew Murphy
+author: Patrick D. Elliott and Andrew Murphy
 ...
 
 # Description
@@ -13,6 +13,6 @@ author: Patrick D. Elliott \& Andrew Murphy
 # Tentative schedule
 
  - Day 1: VP ellipsis
- - Day 2 \& 3: sluicing
- - Day 4: NP ellipsis
- - Day 5: gapping
+ - Day 2: gapping 
+ - Day 3-4: sluicing and clausal ellipsis
+ - Day 5: NP ellipsis
