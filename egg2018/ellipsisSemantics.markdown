@@ -12,9 +12,21 @@ date: 6-10 August 2018
 
 # Tentative schedule
 
- - The strict/sloppy ambiguity
- - MaxElide and the re-binding problem
- - Dahl’s puzzle
- - Beyond strict/sloppy: the sticky reading and dynamic binding
- - Ellipsis as binding
+ - 06.8: *The strict/sloppy ambiguity*  
+   - Tomioka (1999)
+   - Nicolae, Elliott, and Sudo (2015)
+ - 07.8: *MaxElide and the re-binding problem*  
+   - Takahashi and Fox (2005)
+ - 08.8: *Dahl’s puzzle*
+   - Roelofsen (2011)
+ - 09.8: *Beyond strict/sloppy: the sticky reading and dynamic binding*
+   - Elliott and Sudo (2016)
+ - 10.8: *Ellipsis as binding*
+   - Hardt (1999)
+   - Charlow (2011)
+   
+# Readings
+
+Readings for each session will be uploaded [here](https://keybase.pub/patrl/egg2018/ellipsisBinding/).
+
 
