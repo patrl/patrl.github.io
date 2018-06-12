@@ -12,7 +12,12 @@ author: Patrick D. Elliott and Andrew Murphy
 
 # Tentative schedule
 
- - Day 1: VP ellipsis
- - Day 2: gapping 
- - Day 3-4: sluicing and clausal ellipsis
- - Day 5: NP ellipsis
+ - 30.7: *VP ellipsis*
+ - 31.7: *gapping* 
+ - 01.8: *sluicing and clausal ellipsis*
+ - 02.8: *more on sluicing*
+ - 03.8: *NP ellipsis*
+ 
+# Readings
+
+Readings for each session will be uploaded [here](https://keybase.pub/patrl/egg2018/ellipsisSyntax).
