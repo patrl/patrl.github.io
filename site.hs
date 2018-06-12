@@ -63,6 +63,13 @@ main = do
           >>= loadAndApplyTemplate "templates/default.html" defaultContext
           >>= relativizeUrls
 
+    match "teaching.markdown" $ do
+      route   $ setExtension "html"
+      compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib"
+        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= relativizeUrls
+
+
     match "posts/*" $ do
         route $ setExtension "html"
         compile $ tufteCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib"

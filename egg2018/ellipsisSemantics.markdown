@@ -28,5 +28,3 @@ date: 6-10 August 2018
 # Readings
 
 Readings for each session will be uploaded [here](https://keybase.pub/patrl/egg2018/ellipsisBinding/).
-
-
