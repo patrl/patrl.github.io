@@ -44,6 +44,14 @@ main = do
         >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
         >>= relativizeUrls
 
+    match "actl2018notes.markdown" $ do
+      route $ setExtension "html"
+      -- compile $ pandocBiblioCompiler "csl/myBib.csl" "bib/actl2018.bib"
+      compile $ pandocTufteNew
+        >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
+        >>= relativizeUrls
+
+
       match "egg2018/*" $ do
         route $ setExtension "html"
         -- compile $ pandocBiblioCompiler "csl/myBib.csl" "bib/actl2018.bib"
@@ -121,8 +129,11 @@ customHakyllWriterOptions =
            writerExtensions = ((enableExtension Ext_raw_html) . (enableExtension Ext_example_lists)) defaultExtensions,
            writerSectionDivs = True,
            -- this isn't working
-           writerHTMLMathMethod = KaTeX ""
+           writerHTMLMathMethod = MathJax ""
          }
+
+readerOpts :: ReaderOptions
+readerOpts = def { readerExtensions = pandocExtensions }
 
 tufteCompiler :: String -> String -> Compiler (Item String)
 tufteCompiler cslFileName bibFileName = do
@@ -147,4 +158,4 @@ pandocBiblioCompiler' cslFileName bibFileName = do
             liftM writePandoc
               (getResourceBody >>= readPandocBiblio def csl bib)
 
-pandocTufteNew = pandocCompilerWithTransformM defaultHakyllReaderOptions customHakyllWriterOptions (fmap return usingSideNotes)
+pandocTufteNew = pandocCompilerWithTransformM readerOpts customHakyllWriterOptions (fmap return usingSideNotes)
