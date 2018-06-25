@@ -14,7 +14,79 @@ $$
 \newcommand{\metalang}[1]{{\textbf{#1}}}
 $$
 
-# Perspectives on semantics
+# Lecture 1: Pronouns, quantification, and assignment sensitivity 
+
+## Slides
+
+- pdf: <https://patrl.keybase.pub/actl2018/lecture1.pdf>
+- html (sketchy): 
+
+## Roadmap
+
+- An overview of what semanticists are interested in.
+
+- A lightning-fast overview of some basic formal machinery: sets, functions, and lambdas.
+
+- Constructing our first formal language L~1~.
+
+- *First Order Logic* (FOL)
+
+- Next week: *Dynamic Predicate Logic* (DPL)
+
+## Formal semantics
+
+ - This class is going to provide you with an introduction to *formal
+   semantics*.
+   
+ - What formal semantics is *not*:
+   - A theory of the connotations and cultural associations of particular words and phrases. 
+   - A theory of how we communicate through language.
+   - A theory of concepts, and how we acquire them.
+   
+ - Rather formal semantics is typically concerned with the *logical* (i.e.
+   *formal*) properties of language. Arguably, a theory of formal semantics
+   should inform all of the above.
+   
+## Formal semantics ii
+   
+ - But...why isn't this class called *Introduction to Formal Semantics*?
+ 
+ - The particular perspective we're going to work towards is that of *dynamic
+   semantics*, a family of theories developed in the eighties and nineties by
+   Irene Heim, Hans Kamp, Jeroen Groenendijk, Martin Stokhof, Paul Dekker, and others.
+   
+## Dynamic Semantics
+
+ - Dynamic semantics is an approach to formal semantics which provides a unified
+   perspective on anaphora, quantification, and the flow of discourse.
+   
+ - In the first part of the class, we're going to work towards an analysis of
+   *donkey anaphora*, illustrated by the famous example sentence in (@donkey),
+   using Groenendijk and Stokhof's theory *Dynamic Predicate Logic*.
+   
+   (@donkey) every farmer who owns a donkey$^x$ hits it$_x$
+   
+## Dynamic semantics ii
+
+ - In most introductory classes, what is taught is a strictly *static*
+   semantics, where the unit of analysis is strictly the *sentence*.
+   
+ - One of the key insights of dynamic semantics is that, not just sentences, but
+   *discourses* can be assigned truth-conditions.
+   
+   (@disc) A man$^x$ walked in the room. He$_x$ sat down.
+   
+ - (@disc) is true iff there is a man $x$, s.t. $x$ walked in the room and $x$.
+ 
+## Dynamic semantics iii
+
+- One thing we're going to be thinking through is the relationship between a
+  static semantics a dynamic semantics.
+  
+- In today's class, we're going to work towards a formal, static semantics of English,
+  using First Order Logic as our tool.
+  
+- But first, some broad perspectives on the study of meaning in natural language.
 
 ## In the beginning, there was syntax
 
@@ -29,8 +101,8 @@ $$
   just a useful abstraction over a set of sufficiently similar $L$s. 
   
 - The question syntacticians ask themselves is:
-  how can we specify what the possible sentences of $L$ are?[^mn]
-   
+  how can we specify what the possible sentences of $L$ are?
+  
 ## Syntactic methodology
   
 - Typically, syntacticians do this by giving a *grammar* of $L$.
@@ -168,6 +240,10 @@ $$
 
 ## Interpretation as a *process*
 
+ - The *dynamic turn* in formal semantics: meaning doesn't lie in *truth
+   conditions*, but rather in how a given sentence changes the beliefs of the
+   participants (Stalnaker, Heim, Kamp, Groenendijk and Stokhof, etc.).
+
 ![the philosopher Robert Stalnaker](images/stalnaker.jpg){ width=50% }
 
 ## the semantics of programming languages
@@ -183,9 +259,7 @@ $$
 - The meaning of a program, therefore, can be thought of as an *instruction for
   changing the current state*.
   
-- We'll see examples of this later on.
-
-# A refresher of first-order logic
+- We'll see examples of this next week.
 
 ## Reference
 
@@ -193,7 +267,9 @@ $$
  
 - <http://eecoppock.info/DynamicSemantics/Lectures/logic-2up.pdf>
 
-- If I go too fast for you today, please go back and work through this.
+- If I go too fast for you today, please go back and work through this. The
+  majority of
+  what I'll go through is here, in a condensed format.
 
 # Some background, lightning fast
 
@@ -347,6 +423,74 @@ $$
 
   $$\Set{⟨x,y⟩|x\text{ is an integer and }y = x + 1}$$
   
+## Anonymous functions with lambdas
+
+- When we wrote the function $f$, we had to give it a name...$f$.
+
+- There's another way to write $f$ without naming it, using a *lambda
+  expression*.
+  
+$$λ x . x + 1$$
+
+- A lambda expression consists of a *head* (the bit before the dot), and the
+  *body* (the bit after the dot).
+  
+- The function head consists of a $λ$ and an accompanying variable, which tells
+  us where the argument slots into the function body.
+  
+- The function body tells us what to do with our argument.
+
+## Application
+
+- We *apply* lambda expressions to values like so:
+
+$$
+[λ x . x + 1](4)
+$$
+
+- When we apply a lambda expression to an argument, we delete the function head,
+  and substitute all matching occurrences of the variable with the argument, so:
+  
+  $$
+   \begin{aligned}[t]
+   &̱= 4 + 1\\
+   &= 5
+   \end{aligned}
+  $$
+
+## Nested lambda expressions
+
+- What if we have a function $\textit{subtract}$ that takes two arguments?
+
+$$\textit{subtract}(x,y) = y - x$$
+
+- We can write this as a *curried* (nested) lambda expression, like so:
+
+$$
+λx . λ y . y - x
+$$
+
+## Nested lambda expressions ii
+
+- Application is left-associative:
+
+$$
+\begin{aligned}[t]
+&[λ x . λ y . y - x](4)(5)\\
+&= [λ y . y - 4](5)\\
+&= 5 - 4\\
+&= 1
+\end{aligned}
+$$
+
+- Note that out the output of applying our function to $4$ is *itself* a function:
+$λ y . y - 4$.
+
+- Lambda expressions come from the *lambda calculus* – a formal system for
+  expressing computation. It's something of a lingua franca in formal semantics,
+  but it's a big topic, and I'll try to avoid using it in this class.
+
+  
 # Our first formal language: L~1~
 
 ## First-order logic without variables
@@ -483,7 +627,23 @@ $$
 
 ## Questions on syntax of L~1~ 
 
- - TODO: insert questions.
+ - Given a suitable vocabulary, which of the following are formulae of L~1~?
+
+1. $¬¬\metalang{happy}(M)$
+
+2. $\metalang{happy}(A)$
+
+3. $\metalang{happy}(M,J)$
+
+4. $\metalang{loves}(J,M) ∨ \metalang{loves}(M,M)$
+
+5. $[\metalang{loves}(J,M) ↔ \metalang{loves}(M,J)]$
+
+6. $[\metalang{kissed}(M) ↔ \metalang{loves}(M,J)]$
+
+7. $¬[\metalang{loves}(J,M) ← ¬\metalang{loves}(M,J)]$
+
+
 
 ## Semantics
 
@@ -521,6 +681,25 @@ $$
   
   e.g., the interpretation of *hugs* is the set of ordered pairs $⟨x,y⟩$, such
   that $x$ hugs $y$.
+  
+## A note on type-setting conventions
+
+- When we think though the meaning of the English NP "Homer", we need to
+  distinguish three levels:
+  
+  - The object-language expression "Homer", which will be set in the same
+    typeface as my notes. This is an NP/DP in the natural language English.
+    
+  - The metalanguage expression $\metalang{Homer}$, which is an individual
+    constant in the vocabulary of our formal language – I'll set metalanguage
+    expressions in a serif typeface.
+    
+  - The person $\entity{Homer}$, who is an entity in our domain. I'll typeset
+    entities in the domain in a fixed-width typeface. 
+    
+- It's important to be mindful of these distinctions as we move forwards...I'm
+not perfect, and I might typeset things incorrectly sometimes. It's good
+practice for you to correct me if/when this happens!
   
 ## Semantics iv
 
@@ -710,9 +889,23 @@ and compute their truth-conditions.
 
 ## Open vs. closed formulae
 
-- TODO add something here.
+- A formula is *open* if it contains free variables, and *closed* otherwise.
 
-## Semantics of FOL
+- Free variables are those that are not *bound*.
+
+- A variable is *bound* by the closest matching quantifier.
+
+- Task: for each of the following formulae, is it open or closed:
+
+1. $∃ y[\metalang{likes}(x,y)]$
+
+2. $∀ x[\metalang{happy}(x)] ∧ \metalang{arrived}(x)$
+
+3. $∃ z[\metalang{hugs}(z)(z)]$
+
+
+
+## Towards a semantics of FOL
 
 - Before we get into the formal nitty-gritty, I want you to think about the
   meaning of the following sentence. Is it possible to express in terms of
@@ -764,22 +957,22 @@ $$
 the pronoun refers to?
 
 - We're going to *relativise* truth, to a *context* $g$. Formally, $g$ is a
-  function from variables to individual constants, i.e., an *assignment function*.
+  function from variables to objects, i.e., an *assignment function*.
   
 ## Assignments v
 
 $$
 g₁ = \left[\begin{aligned}[c]
-    &x &↦ &\metalang{Melania}\\
-    &y &↦ &\metalang{Hilary}\\
+    &x &↦ &\entity{Melania}\\
+    &y &↦ &\entity{Hilary}\\
     &...
     \end{aligned}\right]
 $$
 
 $$
 g₂ = \left[\begin{aligned}[c]
-    &x &↦ &\metalang{Hilary}\\
-    &y &↦ &\metalang{Melania}\\
+    &x &↦ &\entity{Hilary}\\
+    &y &↦ &\entity{Melania}\\
     &...
     \end{aligned}\right]
 $$
@@ -801,288 +994,368 @@ it to.
 
 - $\evalM[M,g]{x} = g(x)$
 
-- $\evalM[M,g₁]{x} = \metalang{Melania}$;  $\evalM[M,g₂]{x} = \metalang{Hilary}$ 
+- $\evalM[M,g₁]{x} = \entity{Melania}$;  $\evalM[M,g₂]{x} = \entity{Hilary}$ 
 
-# Discourse referents
+## Semantics of FOL
 
-## Variables in programming languages
+- The most important new rule we'll be dealing with is the following:
 
-- In the vast majority of programming languages, *variables*, such as `x`, `y`,
-  `z`, etc., can be used as placeholders for values.
+- If $α$ is a variable, then $\evalM[M,g]{α} = g(α)$
+
+- Most of the rest of our semantic rules will be identical to those of L~1~, but
+  with an additional parameter for the assignment $g$.
   
-- Consider the following program `main` (written in the `Rust` programming language).
+## Semantics of FOL ii
 
-- Ignoring the boilerplate, `main` introduces a variable named `x`, sets `x`'s
-  value to the integer `5`, and prints the result of `x + 1`.
+- If $α$ is a predicate or an individual constant, then:
+   - $\evalM[M,g]{α} = I(α)$.
+   
+ - If $π$ is a unary predicate and $α$ is a individual constant, then:
+    - $\evalM[M,g]{ϕ(α)} = 1\text{ if }\evalM[M,g]{α} ∈ \evalM[M,g]{π}$
+    - $\evalM[M,g]{ϕ(α)} = 0$ otherwise
+    
+ - if $π$ is a binary predicate, and $α$ and $β$ are terms, then:
+   - $\evalM[M,g]{π(α,β)} = 1 \metalang{iff} ⟨\evalM[M,g]{α},\evalM[M,g]{β}⟩ ∈ \evalM[M,g]{π}$
+   
+## Semantics of FOL iii
 
-```
-fn main() {
-    let x = 5;
-    println!("{}", x + 1);
-    }
-```
+- $\evalM[M,g]{¬ϕ} = 1  \metalang{iff} \evalM[M,g]{ϕ} = 0$
 
-- Q: what value gets printed when we run `main`? Let's find out...
+- $\evalM[M,g]{ϕ ∧ ψ} = 1 \metalang{iff} \evalM[M,g]{ϕ} = 1 \metalang{and} \evalM[M,g]{ψ}
+  = 1$
+- $\evalM[M,g]{ϕ ∨ ψ} = 1 \metalang{iff} \evalM[M,g]{ϕ} = 1 \metalang{or} \evalM[M,g]{ψ}
+  = 1$
+- $\evalM[M,g]{ϕ → ψ} = 1 \metalang{unless} \evalM[M,g]{ϕ} = 1 \metalang{and} \evalM[M,g]{ψ}
+  = 0$
+- $\evalM[M,g]{ϕ ↔ ψ} = 1 \metalang{iff} \evalM[M,g]{ϕ} = \evalM[M,g]{ψ}$
 
-## Variables ii
+## Pronouns
 
-- Unsurprisingly, `main` returns `6` -- in the argument to `println!`, `x` is
-replaced by the stored value `5`:
-
-```
-println!("{}", x + 1)
-println!("{}", 5 + 1)
-println!("{}", 6)
-```
-
-## Variables iii
-
-- Now let's change `main` a bit.
-
-```
-fn main() {
-    let x = 5;
-    x = x + 4;
-    println!("{}", x + 1);
-    }
-```
-
-- what happens when we run `main`?
-
-
-## Variables iv
-
-- Whoops! the `Rust` compiler throws out an error:
-
-```
-let x = 5;
-    - first assignment to `x`
-
-x = x + 4;
-^^^^^^^^^ cannot assign twice to immutable variable
-```
-
-- what went wrong?
-
-## (Im)mutability
-
-- In `Rust` (and several other programming languages), variables are by default
-  `immutable` (i.e., unchangeable). This means that they are simply *names for values*.
+- We now have all of the resources we need for translating a subset of sentences
+  of English with pronouns into FOL, and assigning them truth-conditions. Do
+  this for the following sentence:
   
-- It simply doesn't make sense to write `x = x + 4`, since we're essentially
-  assigning two different values to `x`.
+  (@indices) She arrived and she sat down.
   
-- What we need in order to make sense of this program is the concept of a *mutable variable* --
-  rather than acting as a name for a value, we want our variable to act as an
-  *address for a potentially changeable value*.
-  
-- Conveniently for our purposes, variables in `Rust` can be rendered mutable via
-  the `mut` keyword.
-  
-- OK, let's try that again:
+ - Make a note of the decisions you have to make when you translate (@indices)
+   into FOL.
+   - What do you notice?
+   - How does it affect the truth conditions.
+   
+## Pronouns ii
 
-## (Im)mutability II
-
-- Let's try running `main`, but now let's explicitly state that `x` is
-  *mutable*.
-  
-  ```
-fn main() {
-    let mut x = 5;
-    x = x + 4;
-    println!("{}", x + 1);
-    }
-```
-
-- returns: `10`!
-
-- Let's see what's going on here in a little more detail.
-
-## (Im)mutability III
-
-First we introduce a *mutable* variable `x`, and set its value to `5`.
-
-`let mut x = 5;`
-
-Next we retrieve `x`, and set its new value to its old value (`5`) `+ 1`.
-
-```
-x = x + 4
-x = 5 + 4
-x = 9
-```
-
-Now we retrieve `x` and print the result of `x + 1`
-
-```
-println!("{}", x + 1)
-println!("{}", 9 + 1)
-println!("{}", 10)
-println!("10")
-```
-
-## Order sensitivity
-
-Once we introduce mutability, our programs become *order
-  sensitive*:
-  
-```
-let mut x = 5;
-x = x * 2
-x = x - 1
-println!("{}", x)
-```
-prints: `9`
-
-```
-let mut x = 5;
-x = x - 1
-x = x * 2
-println!("{}", x)
-```
-prints: `8`
-
-## Back to natural language
-
-- Think of \alert{a number}.
-
-- Now, multiply \alert{it} by two.
-
-- Now, subtract one from \alert{it}.
-
-- Now, tell me \alert{it}.
-
-## Back to natural language
-
-- Think of \alert{a number}  
-  `let mut x = 5`.
-
-- Now, multiply \alert{it} by two.  
-  `x = x * 2`  
-  `x = 10`
-  
-- Now, subtract one from \alert{it}.  
-  `x = x - 1`  
-  `x = 9`
-
-- Now, tell me \alert{it}.  
-  `println!("9")`
-  
-## Back to natural language
-
-- Whoa - we've just made a major discovery! Natural language makes use of
-  (something like) *mutable variables*, otherwise the preceding discourse
-  wouldn't make sense.
-  
-- We can think of indefinites like *a number* as introducing new *mutable variables*.
-  
-- Pronouns, like *it*, refer back to an already-introduced variable.
-
-- The value assigned to a variable can change over the course of a discourse.
-
-## Karttunen's discourse referents
-
-- The idea that indefinites introduce mutable variables is an insight originally
-  due to semanticist and computational linguist Lauri Karttunen (although he doesn't use this idiom).
-  
-![Lauri Karttunen (src: Stefan Müller)](images/karttunen.jpg){ width=40% }
-
-## Karttunen's discourse referents ii
-
-> "Consider a device designed to read a text in some natural language, interpret
-> it, and store the content in some manner, say, for the purpose of being able
-> to answer questions about it. To accomplish this task, the machine will have
-> to filfull at least the following basic requirement. It has to be able to
-> build a file that consists of records of alll the individuals, that is,
-> events, objects, etc., mentioned in the text and, for each individual, record
-> whatever is said about it." ([@karttunen1976])
+ - There are two candidate translations (Logical Forms) for (@indices):
  
-## Cont.
+ (@indices1) $\metalang{arrived}(x) ∧ \metalang{satDown}(x)$
  
-  > "I intend to discuss one particular feature a text interpreter must have:
-  > that it must be able to recognize when a novel individual is mentioned in
-  > the input text and to store it along with its characterization for future
-  > reference."
-  
-## Cont
-  
-  > "We found that in simple sentences [...] an indefinite NP establishes a
-  > \alert{discourse referent} just in case the sentence is an affirmative
-  > assertion. By "establishes a discourse referent", we meant that there may be
-  > a coreferential pronoun or definite noun phrase later in the discourse."
-  
-## The dynamic turn
-
-- Karttunen's promise of a text interpreter that keeps track of novel
-  individuals mentioned over the course of a discourse (text) was made good upon
-  in the eighties, by a new family of semantic theories. Developed independently
-  by two linguists: Irene Heim and Hans Kamp.
+ (@indices2) $\metalang{arrived}(x) ∧ \metalang{satDown}(y)$
  
-## Discourse Representation Theory
+## Co-indexation
 
-- Hans Kamp introduced *Discourse Representation Theory* (DRT) in his 1981 paper
-  *A theory of truth and semantic representation*, as a general theory of anaphora and tense.
+$$\begin{aligned}[t]
+\evalM[M,g]{\metalang{arrived}(x) ∧ \metalang{satDown}(x)} = 1\metalang{ iff }\\
+g(x) ∈ I(\metalang{arrived})\text{ and }g(x) ∈ I(\metalang{satDown})
+\end{aligned}$$
 
-![Hans Kamp](images/kamp.jpg){ width=50% }
+- Since an *assignment function* is a *function*, when we map two pronouns to
+  the same variable, they are *guaranteed* to pick out the same individual
+  relative to any assignment.
+  
+## Contra-indexation
+
+$$\begin{aligned}[t]
+\evalM[M,g]{\metalang{arrived}(x) ∧ \metalang{satDown}(y)} = 1\metalang{ iff }\\
+g(x) ∈ I(\metalang{arrived})\text{ and }g(y) ∈ I(\metalang{satDown})
+\end{aligned}$$
+
+ - when we map two pronouns to distinct variables, is it *guaranteed* that they
+   pick out distinct variables, relative to any assignment?
+   
+## Contra-indexation ii
+
+ - no.
  
-## File Change Semantics
+ - Consider the assignment $g_c = \left[\begin{aligned}[c]
+   &x &↦ &\entity{Hilary}\\
+   &y &↦ &\entity{Hilary}\\
+ \end{aligned}\right]$
+ 
+$$\begin{aligned}[t]
+\evalM[M,g_c]{\metalang{arrived}(x) ∧ \metalang{satDown}(y)} = 1\metalang{ iff }\\
+\entity{Hilary} ∈ I(\metalang{arrived})\text{ and }\entity{Hilary} ∈ I(\metalang{satDown})
+\end{aligned}$$
 
-- Irene Heim hit upon a similar theory, *File Change Semantics* (FCS) in chapter
-  3 of her classic 1982 dissertation *The
-  semantics of definite and indefinite noun phrases*. 
+## Contra-indexation iii
 
-![Irene Heim](images/heim.jpg){ width=25% }
+- but, if we map two pronouns to distinct variables, we make it *possible* for
+  them to pick out distinct individuals. Consider the following assignment $g_d = \left[\begin{aligned}[c]
+   &x &↦ &\entity{Hilary}\\
+   &y &↦ &\entity{Melania}\\
+ \end{aligned}\right]$
+ 
+$$\begin{aligned}[t]
+\evalM[M,g_d]{\metalang{arrived}(x) ∧ \metalang{satDown}(y)} = 1\metalang{ iff }\\
+\entity{Hilary} ∈ I(\metalang{arrived})\text{ and }\entity{Melania} ∈ I(\metalang{satDown})
+\end{aligned}$$
 
-## The two souls of dynamic semantics
+## Assignments and contexts
 
-- In his 1995 textbook, *Dynamics of meaning*, Gennaro Chierchia describes these
-  approaches as "the two souls" of dynamic semantics.
+- We can think of an assignment $g$ as formalising aspects of the *context of
+  utterance*.
   
-- In these classes, we're going to be developing a fragment closer to File
-  Change Semantics, and this is for largely contingent reasons (it's the approach 
-  I'm more familiar with).
-
-# Motivating dynamic semantics
-
-## Anaphora across conjunction
-
-- Fact: indefinites differ from other quantifiers in their anaphoric potential.
-
-(@every1) \# The dean introduced every new student^*x*^ to Jeff, and the janitor introduced
-her~*x*~ to Britta.
-
-(@indef1) The dean introduced a new student^*x*^ to Jeff, and the janitor introduced
-her~*x*~ to Britta.
-
-- N.b. I'll use \# as an indictor that a sentence is judged to be *infelicitous*
-  or *odd* by a native speaker under the intended reading.
-
-## Placeholder
-
-If (@every1) were acceptable, what would it mean? We can approximate its meaning using
-FoL.
-
-$$
-∀x\left[\textsf{student}(x) →
-\begin{aligned}[c]
-&\textsf{introduced}(\textsf{Dean},x,\textsf{Jeff})\\
-&\wedge \textsf{introduce}(\textsf{Janitor},x,\textsf{Britta}) 
-\end{aligned}\right]
-$$
-
-This is a totally sensible meaning. We can even express it in a different way.
-
-(@) For every student, it's the case that the dean introduced her to Jeff and
-the Janitor introduced her to Britta.
-
-## Anaphora across sentence boundaries
-
-(@) \# The dean introduced every new student^*x*^ to Jeff.  
-The janitor introduced her~*x*~ to Britta.
-
-(@) The dean introduced a new student^*x*^ to Jeff.  
-The janitor introduced her~*x*~ to Britta.
+- $g_c$ represents a context in which both "she$ₓ$" and "she$_y$" are intended
+  to pick out $\entity{Hilary}$.
   
-[^mn]: {} here is a footnote test. 
+- $g_d$ represents a context in which "she$ₓ$" is intended to pick out
+  $\entity{Hilary}$, and "she$_y$" is intended to pick out $\entity{Melania}$.
+  
+## Assignments and the global environment
+
+- Computer programs often need access to a *global environment*.
+
+- For example, imagine a program that pull's a user's first name and surname
+  from a database, and concatenates them.
+  
+- The *meaning* of this program can be thought of as assignment sensitive:
+
+```
+query g  
+println (g(firstName) ++ g(surname))
+```
+
+- $g$ here is an assignment function, standing in for an entry in a database
+  specifying an individuals first name and surname.
+  
+## Assignments and the global environment ii
+
+- The formal tools computer programmers use for thinking about the role the
+  global environment plays look *extremely* similar to the tools we're using to
+  analyse the *context*.
+  
+- If you have some background in programming, take a look at the *Reader* monad
+  in functional languages like *Haskell*.
+  
+- If not don't worry - hopefully the basic idea is intuitive enough.
+  
+## Back to quantificational NPs
+
+- we still haven't said anything about the meaning of sentences like the
+  following:
+  
+  (@) Someone arrived.
+  
+  (@) Everyone arrived.
+  
+- It turns out that *assignments* provide us with the machinery to analyse these
+cases too.
+
+## The informal idea
+
+(@exist1) Someone arrived.
+
+(@exist2) $\evalM[M,g]{∃ x[\metalang{arrived}(x)]}$
+
+- When is (@exist2) true relative to an assignment $g$?
+
+- Intuitively, it's truth is *assignment-invariant* – that is to say that it
+  doesn't depend on what the context of utterance is.
+  
+- It's true just in case we can find *any* assignment $g'$, which is identical
+  to $g$ except for what it assigns $x$ to, which makes (@exist2) true.
+  
+## Illustration
+
+(@) $\entity{arrive} = \Set{\entity{Melania}}$
+
+(@) $g = \left[\begin{aligned}[c]
+&x &↦ &\entity{Hilary}\\
+&y &↦ &\entity{Melania}
+\end{aligned}\right]$
+
+- the truth of $\evalM[M,g]{∃ x[\metalang{arrived}(x)]}$ doesn't depend on what
+  $g$ maps $x$ to, but rather if we can find a $g'$ that maps $x$ to someone
+  that arrived.
+  
+- We can find such a $g'$: $\left[\begin{aligned}[c]
+&x &↦ &\entity{Melania}\\
+&y &↦ &\entity{Melania}
+\end{aligned}\right]$
+
+## Formalism
+
+- We can state the rule for quantificational sentences more formally like so;
+
+- $\evalM[M,g]{∃ v ϕ} = 1$ iff there is at least one $g'$ s.t. $g[v]g'$ and $\evalM[M,g']{∃ v ϕ} = 1$
+
+- $\evalM[M,g]{∀ v ϕ} = 1$ iff for every $g'$ s.t. $g[v]g'$, $\evalM[M,g']{∃ v ϕ} = 1$
+
+## Minimally differing assignments
+
+- Why do we look at only *minimally* differing assignments?
+
+(@) $∃ x[\metalang{arrive}(x) ∧ \metalang{satDown}(y)]$
+
+- Let's say that we're in a context with the following $g$:
+$\left[\begin{aligned}[c]
+&x &↦ &\entity{Melania}\\
+&y &↦ &\entity{Hilary}
+\end{aligned}\right]$
+
+- And let's say that it's true that Hilary arrived but only Melania sat down.
+
+## Minimally differing assignments ii
+
+- Well, if we're allowed to look at assignments that differ in more than just
+  what $x$ gets mapped to, then we *can* find an assignment $g'$ which makes the
+  formula true.
+  
+  $$
+  g' = \left[\begin{aligned}[c]
+  &x &↦ &\entity{Hilary}\\
+  &y &↦ &\entity{Melania}
+  \end{aligned}\right]
+  $$
+  
+- This is clearly a bad prediction though – the truth of the previous formula
+should depend on who $y$ picks out in the context of utterance.
+
+    
+## Non-determinism
+
+- We can think of existential quantifiers as triggering a *non-deterministic computation*. When
+  considering the truth of $∃x[\metalang{arrive}(x)]$, we compute the truth of
+  statements of the form $α ∈ I(\metalang{arrive})$, where $α$ is some object.
+  
+- As soon as we find one that is true, we travel back to a deterministic world,
+  by stating that the formula is true.
+  
+## Non-determinism ii
+  
+- This is going to be important once we start looking at dynamic semantics. 
+
+- For now it is important to remember that this is just a metaphor to help you
+  think about what existential quantification is doing. See Simon Charlow's
+  dissertation for some (very advanced) reading on the connections between
+  existential quantification and non-determinism.
+  
+## Exercises
+
+- Translate the following sentences of English into FOL and compute their
+  truth-conditions. To make life easier for you, I'm going to diambiguate
+  indexation.
+  
+  (@) It's not the case that someone$^x$ likes themselves$_x$.
+  
+  (@) If someone is upset, then everyone is unhappy.
+  
+  (@scopeAmbig) Someone danced with everyone.
+  
+- Note all of these sentences are ambiguous. Think about how we can use FOL to
+  represent the ambiguity.
+
+## Towards a semantics of discourses
+
+- Translate the following into FOL:
+
+(@) Someone$ˣ$ walked in. She$ₓ$ sat down.
+
+- You can assume that two consectutive sentences are *conjoined*.
+
+## Two candidate translations
+
+- Conjunction scopes over existential: 
+
+(@) $[∃ x[\metalang{walkedIn}(x)]] ∧ \metalang{satDown}(x)]$
+
+- Existential scopes over conjunction:
+
+(@) $∃x[\metalang{walkedIn}(x) ∧ \metalang{satDown}(x)]$
+
+- *Exercise:* Compute the truth conditions of both formulae. What do you notice?
+
+## Conjunction scopes over existential
+
+(@) $\begin{aligned}[t]
+&\evalM[M,g]{∃x[\metalang{walkedIn}(x)] ∧ \metalang{satDown}(x)} = 1\text{ iff
+}\\
+&∃ g'[g[x]g' ∧ g'(x) ∈ I(\metalang{walkedIn})] ∧ (g(x) ∈ I(\metalang{satDown}))
+\end{aligned}$
+
+- This seems like a *bad* translation. It can be true, e.g., if only Hilary
+  walked in, and only Melania sat down.
+  
+- Intuitively, it doesn't matter than the two variables are the same, since the
+  second variable is outside of the scope of the existential quantifier.
+
+## Existential scopes over conjunction
+
+(@) $\begin{aligned}[t]
+&\evalM[M,g]{∃x[\metalang{walkedIn}(x) ∧ \metalang{satDown}(x)]} = 1\text{ iff
+}\\
+&∃ g'[g[x]g' ∧ g'(x) ∈ I(\metalang{walkedIn}) ∧ g'(x) ∈ I(\metalang{satDown})]
+\end{aligned}$
+
+- This seems like a good translation – it is only true the same person both
+  walked in and sat down. This is because both variables are within the scope of
+  the existential quantifier.
+  
+## Whats's the problem
+
+- Well, why don't we just allow existential quantifiers to scope out of the
+  sentences which contain them?
+  
+- Problem 1: other quantificational NP's don't behave like this.
+
+    (@) Everyone$ˣ$ walked in. He$ₓ$ sat down.
+    
+    This cannot be translated as:  
+    
+    (@) $∀ x[\metalang{walkedIn}(x) → \metalang{satDown}(x)]$
+    
+## What's the problem ii
+
+- The most robust methodological principle in formal semantics is Frege's
+  *principle of compositionality*.
+  
+![the philosopher Gottlob Frege (1848-1925)](images/frege.jpg){ width=30% }
+
+## What's the problem iii
+
+- Frege's principle of compostionality has had innumerable reformulations, and I
+  won't bore you with the original German. In its essence, it says:
+  
+  *The meaning of a sentence is a function of \alert{the meaning of its parts}
+  and \alert{how they are put together}*.
+  
+- Let's think about how we would translate the *parts* of the following
+  sentence:
+  
+(@) Someone walked in and he sat down.
+
+## What's the problem iv
+
+ - conjunct 1: $∃ x[\metalang{walkedIn}(x)]$
+ 
+ - conjunct 2: $\metalang{satDown}(x)$
+ 
+ - The principle of compositionality tells us that the meaning of a
+   *conjunctive* sentence should be the conjunction of the meaning of its parts,
+   so we get:
+   
+ - $∃x[\metalang{walkedIn}(x)] ∧ \metalang{SatDown}(x)$
+ 
+ - our more successful translation violates the principle of compositionality!
+ 
+## What's the problem v
+
+ - It's important to state that, in practice, the principle of compositionality
+   is a *methodological* principle, and is not always inviolable.
+   
+ - However, all else being equal, it would be nice to be able to account for the
+   data we've just been considering in a way consistent with the principle of
+   compositionality.
+   
+ - *Dynamic semantics* will allow us to do just that!
+
 
 
