@@ -12,6 +12,7 @@ $$
 \newcommand{\lam}[1]{{\lambda #1\,.\,}}
 \newcommand{\type}[1]{{\mathtt{#1}}}
 \newcommand{\metalang}[1]{{\textbf{#1}}}
+\newcommand{\entity}[1]{{\texttt{#1}}}
 $$
 
 # Lecture 1: Pronouns, quantification, and assignment sensitivity 
@@ -19,7 +20,7 @@ $$
 ## Slides
 
 - pdf: <https://patrl.keybase.pub/actl2018/lecture1.pdf>
-- html (sketchy): 
+- html (sketchy): <https://patrickdelliott.com/actl2018notes.html>
 
 ## Roadmap
 
