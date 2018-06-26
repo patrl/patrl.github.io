@@ -15,12 +15,12 @@ $$
 \newcommand{\entity}[1]{{\texttt{#1}}}
 $$
 
-# Lecture 1: Pronouns, quantification, and assignment sensitivity 
+# Lecture 1: The Formal Semanticist's Toolkit
 
 ## Slides
 
-- pdf: <https://patrl.keybase.pub/actl2018/lecture1.pdf>
-- html (sketchy): <https://patrickdelliott.com/actl2018notes.html>
+- pdf: <https://patrl.keybase.pub/actl2018/slides.pdf>
+- html (support here still sketchy!): <https://patrickdelliott.com/actl2018notes.html> 
 
 ## Roadmap
 
@@ -159,28 +159,7 @@ $$
   
 - Is this just stating the obvious?
 
-## Syntactic intuitions 
-
-- (Generative) syntax, when you really get down to it, is the study of
-  an individual language (or idiolect) $L$. The question we ask ourselves is - how
-  can we specify what the possible sentences of $L$ are?
-  
-- Typically, we do this by giving a *grammar* of $L$. Depending on your theory,
-  a grammar can be a set of rewrite rules, a recursive procedure for building
-  structured representations, a combinatorial logic, etc etc. It all amounts to
-  more-or-less the same thing at the end of day.
-
-## Syntactic intuitions ii
-
-- How do we know what a possible sentence of $L$ is?
-  - If we're a native speaker of $L$, we can consult our own intuitions about
-    the acceptability of a given sentence.
-  - We can consult a native speaker of $L$.
-
-- The vast majority of the raw data syntacticians deal with is *speaker
-  acceptability judgements*, be they collected informally or experimentally.
-
-## Back to semantics
+## Semantic intuitions 
 
  - Let's say we're studying the semantics of a given language $L$, and we have
    the syntax of $L$ pretty well-worked out. 
@@ -260,7 +239,7 @@ $$
 - The meaning of a program, therefore, can be thought of as an *instruction for
   changing the current state*.
   
-- We'll see examples of this next week.
+- We'll see examples of this in the next session.
 
 ## Reference
 
@@ -268,9 +247,7 @@ $$
  
 - <http://eecoppock.info/DynamicSemantics/Lectures/logic-2up.pdf>
 
-- If I go too fast for you today, please go back and work through this. The
-  majority of
-  what I'll go through is here, in a condensed format.
+- If I go too fast for you today, please go back and work through this. The majority of what I'll go through is there, in a condensed format.
 
 # Some background, lightning fast
 
@@ -324,9 +301,9 @@ $$
 \begin{aligned}[t]
 &P &Q & &P ↔ Q\\
 &1 &1 & &1\\
-&1 &0 & &1\\
+&1 &0 & &0\\
 &0 &1 & &0\\
-&0 &0 & &0
+&0 &0 & &1
 \end{aligned}
 $$
 
@@ -894,7 +871,8 @@ and compute their truth-conditions.
 
 - Free variables are those that are not *bound*.
 
-- A variable is *bound* by the closest matching quantifier.
+- A variable is *bound* by the closest matching quantifier that
+ takes scope over it.
 
 - Task: for each of the following formulae, is it open or closed:
 
@@ -903,8 +881,6 @@ and compute their truth-conditions.
 2. $∀ x[\metalang{happy}(x)] ∧ \metalang{arrived}(x)$
 
 3. $∃ z[\metalang{hugs}(z)(z)]$
-
-
 
 ## Towards a semantics of FOL
 
@@ -929,7 +905,7 @@ and compute their truth-conditions.
  - We can use multiple occurrences of the same pronoun to refer to different
    individuals.
    
-   (@) She is Donalid Trump's wife and *she* is Bill Clinton's wife.
+   (@) She is Donald Trump's wife and *she* is Bill Clinton's wife.
    
  - For this reason, we have to relativize the truth of a sentence to who the
    speaker intended each *tokening* of a pronoun to refer to.
@@ -1012,8 +988,7 @@ it to.
    - $\evalM[M,g]{α} = I(α)$.
    
  - If $π$ is a unary predicate and $α$ is a individual constant, then:
-    - $\evalM[M,g]{ϕ(α)} = 1\text{ if }\evalM[M,g]{α} ∈ \evalM[M,g]{π}$
-    - $\evalM[M,g]{ϕ(α)} = 0$ otherwise
+    - $\evalM[M,g]{ϕ(α)} = 1\text{ iff }\evalM[M,g]{α} ∈ \evalM[M,g]{π}$
     
  - if $π$ is a binary predicate, and $α$ and $β$ are terms, then:
    - $\evalM[M,g]{π(α,β)} = 1 \metalang{iff} ⟨\evalM[M,g]{α},\evalM[M,g]{β}⟩ ∈ \evalM[M,g]{π}$
@@ -1089,10 +1064,12 @@ $$\begin{aligned}[t]
 ## Contra-indexation iii
 
 - but, if we map two pronouns to distinct variables, we make it *possible* for
-  them to pick out distinct individuals. Consider the following assignment $g_d = \left[\begin{aligned}[c]
+  them to pick out distinct individuals. Consider the following assignment:
+  
+  $$g_d = \left[\begin{aligned}[c]
    &x &↦ &\entity{Hilary}\\
    &y &↦ &\entity{Melania}\\
- \end{aligned}\right]$
+ \end{aligned}\right]$$
  
 $$\begin{aligned}[t]
 \evalM[M,g_d]{\metalang{arrived}(x) ∧ \metalang{satDown}(y)} = 1\metalang{ iff }\\
@@ -1186,9 +1163,9 @@ cases too.
 
 - We can state the rule for quantificational sentences more formally like so;
 
-- $\evalM[M,g]{∃ v ϕ} = 1$ iff there is at least one $g'$ s.t. $g[v]g'$ and $\evalM[M,g']{∃ v ϕ} = 1$
+- $\evalM[M,g]{∃ v ϕ} = 1$ iff there is at least one $g'$ s.t. $g'[v]g$ and $\evalM[M,g']{∃ v ϕ} = 1$
 
-- $\evalM[M,g]{∀ v ϕ} = 1$ iff for every $g'$ s.t. $g[v]g'$, $\evalM[M,g']{∃ v ϕ} = 1$
+- $\evalM[M,g]{∀ v ϕ} = 1$ iff for every $g'$ s.t. $g'[v]g$, $\evalM[M,g']{∃ v ϕ} = 1$
 
 ## Minimally differing assignments
 
@@ -1239,6 +1216,47 @@ should depend on who $y$ picks out in the context of utterance.
   dissertation for some (very advanced) reading on the connections between
   existential quantification and non-determinism.
   
+## Binding
+
+- The fact that quantificational operators manipulate the assignment function
+  can be used to analyse the fact that quantifiers can *bind* pronouns,
+  reflexives, and other anaphora in
+  natural language.
+  
+  (@) Someone$^x$ likes themselves$ₓ$.
+  
+  (@) $∃ \alert{x}[\metalang{likes}(x,\alert{x})]$
+  
+- Binding obtains just in case the variable introduced by the quantificational
+  operator matches the variable introduced by the pronoun.
+  
+## Interpreting binding
+
+- $\evalM[M,g]{∃ x[\metalang{likes}(x,x)]} = 1$ iff...
+- $∃ g'[g[x]g'$ and $\evalM[M,g']{\metalang{likes}(x,x)} = 1$
+- $∃ g'[g[x]g'$ and $⟨g'(x),g'(x)⟩ ∈ I(\metalang{likes})$
+
+- This is true, if we're in a model, e.g., where..
+
+$$
+I(\metalang{likes}) = \Set{⟨\metalang{Melania},\metalang{Melania}⟩, ⟨\metalang{Melania},\metalang{Hilary}⟩}
+$$
+
+- and an assignment $g$, s.t. $g(x) = \metalang{Hilary}$
+
+- Since we can find an assignment $g[x]g'$ which makes the embedded formulae
+  true. Namely $g'$ s.t., $g'(x) = \metalang{Melania}$.
+
+## A note on crossover
+
+- The classical conception of binding gives rise to the *crossover* problem.
+
+- The following is an example of *strong crossover*.
+
+(@) She$_x$ likes someone$^x$.
+
+- Why can we not translate this as: $∃ \alert{x}[\metalang{likes}(\alert{x},x)]$
+  
 ## Exercises
 
 - Translate the following sentences of English into FOL and compute their
@@ -1251,8 +1269,8 @@ should depend on who $y$ picks out in the context of utterance.
   
   (@scopeAmbig) Someone danced with everyone.
   
-- Note all of these sentences are ambiguous. Think about how we can use FOL to
-  represent the ambiguity.
+- Note all of these sentences are ambiguous. Pick a reading when you translate.
+Think about how FOL represents the ambiguity.
 
 ## Towards a semantics of discourses
 
@@ -1262,11 +1280,11 @@ should depend on who $y$ picks out in the context of utterance.
 
 - You can assume that two consectutive sentences are *conjoined*.
 
-## Two candidate translations
+## Candidate translations
 
 - Conjunction scopes over existential: 
 
-(@) $[∃ x[\metalang{walkedIn}(x)]] ∧ \metalang{satDown}(x)]$
+(@) $[∃ x[\metalang{walkedIn}(x)]] ∧ \metalang{satDown}(x)$
 
 - Existential scopes over conjunction:
 
@@ -1358,5 +1376,810 @@ should depend on who $y$ picks out in the context of utterance.
    
  - *Dynamic semantics* will allow us to do just that!
 
+# Lecture 2: Dynamic Predicate Logic
+
+## The empirical challenge
+
+ > "If we use standard first-order predicate logic [...] in translating a
+ > natural language sentence or discourse, anaphoric pronouns will turn up as
+ > bound variables. In many cases, this means that in order to arrive at
+ > formulas which are good translations, i.e., which express the right meaning,
+ > we have to be pretty inventive, and should not pay too much attention to the
+ > way in which the natural language sentence or discourse is built up."
+ > ([@groenendijk_dynamic_1991])
+ 
+## Cross-sentential anaphora
+
+(@clauses) A man$^x$ walks in the park. He$_x$ whistles.
+
+(@) $∃ x[\metalang{man}(x) ∧ \metalang{walkInThePark}(x) ∧ \metalang{whistle}(x)]$
+
+- BUT
+
+(@subclause1) A man$ˣ$ walks in the park – $∃ x[\metalang{man}(x) ∧ \metalang{walkedInThePark}(x)]$
+
+(@subclause2) He$ₓ$ whistles. – $\metalang{whistles}(x)$
+
+- (@clauses) $≠$ (@subclause1) $∧$ (@subclause2)
+
+## Donkey sentences
+
+(@donkey1) If a farmer$ˣ$ owns a donkey$ʸ$, he$ₓ$ beats it$_y$. 
+
+(@donkey2) Every farmer who owns a donkey$ʸ$ beats it$_y$.
+
+$$
+∀ x∀y\left[
+\begin{aligned}[c]
+&[\metalang{farmer}(x) ∧ \metalang{donkey}(y) ∧ \metalang{own}(x,y)]\\
+&→ \metalang{beat}(x,y)
+\end{aligned}\right]
+$$
+
+- what happened to translating indefinites like *a donkey* using existential quantification?
+
+## The DPL answer
+
+ > "The general starting point of the kind of semantics that DPL is an instance
+ > of, is that the meaning of a sentence does not lie in its truth-conditions,
+ > but rather in the way it changes (the representation of) the information of
+ > the interpreter" ([@groenendijk_dynamic_1991])
+ 
+## The syntax of DPL
+
+ - The syntax of DPL is more-or-less identical to the syntax of FOL!
+ 
+ - Let's have a brief refresher.
+ 
+## The syntax of DPL ii
+
+1. If $π$ is a unary predicate and $α$ is a \alert{term}, then $π(α)$ is a formula.
+
+2. If $π$ is a binary predicate and α and β are \alert{terms}, then $π(α,β)$ is a formula.
+
+3. If $ϕ$ is a formula, then $¬ϕ$ is a formula.
+
+4. If $ϕ$ and $ψ$ are formulas, then $[ϕ ∧ ψ]$ is a formula.
+
+5. If $ϕ$ and $ψ$ are formulas, then $[ϕ ∨ ψ]$ is a formula.
+
+6. If $ϕ$ and $ψ$ are formulas, then $[ϕ → ψ]$ is a formula.
+
+7. If $ϕ$ and ψ$ are formulas, then $[ϕ ↔ ψ]$ is a formula.
+
+8. If $u$ is a variable and $ϕ$ is a formula, then $∃uϕ$ is a formula.
+
+9. If $u$ is a variable and $ϕ$ is a formula, then $∀uϕ$ is a formula.
+
+## The syntax of DPL iii
+
+- The difference between DPL and FOL is going to lie in the *semantics*.
+
+- Concretely, formulae like (@dynamicBinding) are going to receive sensible
+  interpretations.
+  
+(@dynamicBinding)  $∃ x[\metalang{man}(x) ∧ \metalang{walkedIn}(x)] ∧ \metalang{satDown}(x)$
+
+- First we need some background on characteristic functions and sets.
+
+- We're also going to develop a slightly different perspective on the meanings
+  of FOL formulae.
+
+## Prelude to the semantics of DPL: Characteristic functions
+
+- Let's say we have a function $\entity{run'}$ from objects to truth values.
+
+- $\entity{run'}$ maps an object $x$ to true ($1$) just in case $x$ runs, and to
+false ($0$) just in case $x$ doesn't run.
+
+- Let's say we're in a world where Jeff runs, but Britta and Annie don't run.
+
+(@) $\entity{run'}(\entity{Jeff}) = 1$
+
+(@) $\entity{run'}(\entity{Britta}) = 0$
+
+(@) $\entity{run'}(\entity{Annie}) = 0$
+
+## Characteristic functions ii
+
+ - The graph of $\entity{run'}$ in this world is:
+  
+$$
+\Set{⟨\metalang{Jeff},1⟩, ⟨\metalang{Britta},0⟩, ⟨\metalang{Annie},0 ⟩}
+$$
+
+- We could convey the same information by simply gathering together every object
+  for which $\entity{run'}$ returns true:
+  
+$$
+\Set{\metalang{Jeff}}
+$$
+
+- This is the meaning we assume for predicates in FOL. $\entity{run'}$ is the
+  *characteristic function* of this set.
+  
+- Functions from a set of objects to truth values can equivalenty be expressed
+  as sets of objects.
+  
+## Sentences express sets of assignments
+
+- Recall in FOL we considered truth-conditions to be relative to an assignment
+  $g$.
+  
+$$
+\evalM[M,g]{\metalang{left}(x)} = 1\text{ iff }g(x) ∈ \entity{left}
+$$
+
+- Let's say that only Donald left. If we have an assignment $g₁$ s.t. $g₁(x) =
+  \metalang{Donald}$ then the formula is true. If we have an assignment $g₂$ s.t.
+  $g₂(x) = \metalang{Melania}$ then the formula is false.
+  
+- In FOL, then, formulae are *functions* from assignments to truth values.
+
+- That means that we can identity the meaning of a formula relative to a model with the set of
+  assignments that make it true.
+  
+## Sentences express sets of assignments
+
+- Let's say we've in a model where only Jeff and Britta run, and only Britta and
+  Annie swim.
+
+$$
+\evalM[M]{\metalang{run}(x)} = \Set{\begin{aligned}[c]
+&[x &↦ &\entity{Jeff}],\\
+&[x &↦ &\entity{Britta}]
+\end{aligned}}
+$$
+
+## The flow of information
+
+- This allows us to observe the flow of information as we added conjucts
+  especially clearly.
+  
+$$
+\evalM[M]{\metalang{run}(x)} = \Set{\begin{aligned}[c]
+&[x &↦ &\entity{Jeff}],\\
+&[x &↦ &\entity{Britta}]
+\end{aligned}}
+$$
+
+$$
+\evalM[M]{\metalang{swim}(x)} = \Set{\begin{aligned}[c]
+&[x &↦ &\entity{Britta}],\\
+&[x &↦ &\entity{Annie}]
+\end{aligned}}
+$$
+
+$$
+\evalM[M]{\metalang{run}(x) ∧ \metalang{swim}(x)} = \Set{[x ↦ \entity{Britta}]}
+$$
+
+- Formulae involving pronouns makes the set of assignments at which the sentence
+  is true *shrink*.
+  
+## Notation for assignments
+  
+- I'm going to start using more concise notation for assignment functions now.
+  $j b j$ is the assignment that maps $x₁$ to $\entity{Jeff}$, $x₂$ to
+  $\entity{Britta}$ and $x₃$ to $\entity{Jeff}$.
+  
+- The assignment $j b j$ is equivalent to the following:
+
+$$
+\left[\begin{aligned}[c]
+&x₁ &↦ &\entity{Jeff}\\
+&x₂ &↦ &\entity{Britta}\\
+&x₃ &↦ &\entity{Jeff}
+\end{aligned}\right]
+$$
+
+## Notation for assignments ii
+
+- $\Set{\begin{aligned}[c]
+ j j\\
+ j b\\
+ j a
+\end{aligned}}$ is the set of assignments which always map $x₁$ to
+ $\entity{Jeff}$. 
+ 
+- Intuitively we can think of this as a context where the value of $x₁$ is known.
+
+## Notation for assignments iii
+
+- This notation will help us see more clearly how, as we add conjuncts with free
+  variables, the level of uncertainty is reduced. Let's say there are two 
+  variables, $x₁$, $x₂$.
+  
+$$
+\evalM[M]{\metalang{run}(x₁)} = \Set{\begin{aligned}[c]
+j j \\
+j b \\
+j a \\
+b b \\
+b j \\
+b a
+\end{aligned}}; \evalM[M]{\metalang{swim}(x₁)} = \Set{\begin{aligned}[c]
+b b\\
+b j\\
+b a\\
+a a\\
+a b\\
+a j
+\end{aligned}}
+$$
+
+## Notation for assignments ii
+
+\evalM[M]{\metalang{run}(x₁) ∧ \metalang{swim}(x₁)} = \Set{\begin{aligned}[c]
+b b\\
+b j\\
+b a
+\end{aligned}}
+
+- Conjoining the two statements about $x₁$ means that we can only be in a
+  context where we're completely certain that $x₁$ picks out $\entity{Britta}$.
+
+## The flow of information ii
+
+- Existential statements, on the other hand, don't have the same effect as
+  statements with free variables. Let's
+  say we have two variables to consider, $x₁$ and $x₂$, and the world is as
+  before.
+  
+## The flow of information iii
+
+$$
+\evalM[M]{∃ x₁[\metalang{run}(x₁)]} = \Set{
+\begin{aligned}[c]
+&j j, j b, b j,\\
+&b b, b a, a b,\\
+&a a, j a, a j
+\end{aligned}
+}
+$$
+
+$$
+\evalM[M]{∃ x₂[\metalang{swim}(x₂)]} = \Set{
+\begin{aligned}[c]
+&j j, j b, b j,\\
+&b b, b a, a b,\\
+&a a, j a, a j
+\end{aligned}
+}
+$$
+
+## The flow of information iv
+
+- Existential statements then, take all possible assignments, and just return
+  them if the existential statement is true in the model, and reject them otherwise.
+
+$$
+\evalM[M]{∃ x₁[\metalang{run}(x₁)] ∧ ∃ x₂[\metalang{swim}(x₂)]} = \Set{
+\begin{aligned}[c]
+&j j, j b, b j,\\
+&b b, b a, a b,\\
+&a a, j a, a j
+\end{aligned}
+}
+$$
+
+- If nobody runs, there is no assigment $g$ which will make the conjunctive
+  statement true, so:
+  
+$$
+\evalM[M]{∃ x₁[\metalang{run}(x₁)] ∧ ∃ x₂[\metalang{swim}(x₂)]} = ∅
+$$
+  
+## The flow of information v
+
+- Generally speaking, thinking of formula of FOL as sets of assignments helps us
+  understand the following intuitive generalizations:
+  
+- Formulae with free variables typically *reduce uncertainty* about intended
+  reference.
+  
+- Formulae with no free variables don't reduce uncertainty about intended
+  reference.
+  
+- Intuitively, this links up with the *impossibility*, in a static setting, of
+  an existential quantifier binding a variable outside of it's scope.
+  
+## Back to DPL
+
+- In FOL, the interpretation of a formula in a given model can be thought of as
+  a set of assignments $g$ – those which make the formula true.
+  
+- In DPL, the interpretation of a formula in a given model is rather going to be
+  sets of *pairs* of assignments $⟨i,o⟩$.
+  
+- $i$ represents an input assignment, and $o$ represents the output assignment
+  resulting from the interpretation procedure.
+  
+## Dynamic Existential Quantification
+
+$$\evalM{∃x ϕ} = \Set{⟨i,o⟩| ∃k: k[x]i\metalang{ and }⟨k,o⟩ ∈ \evalM{ϕ}}$$
+
+- Existential quantification then, takes an input assignment $i$ and returns an
+  output assignment $o$, where $o$ is the result of interpreting $ϕ$ relative to
+  a shifted assignment $k$.
+  
+- Don't worry too much about exactly how this works. We'll go through some
+  derivations in detail in a little while.
+  
+- Since assignments represent the *context of utterance*, existentials are
+  interpreted as *instructions for updating the context of utterance*.
+  
+## Semantics of DPL
+
+- If $π$ is a unary predicate and $α$ is a term, then $\evalM{π(α)} =
+  \Set{⟨i,o⟩| i = o \metalang{ and } \evalM[o]{α} ∈ \evalM{π}}$.
+  
+- If $π$ is a binary predicate and $α$ and $β$ terms, then $\evalM{π(α,β)} =
+  \Set{⟨i,o⟩| i = o \metalang{ and } ⟨\evalM[o]{α},\evalM[o]{β}⟩ ∈ \evalM{π}}$.
+  
+## Exercise
+
+- Assume a model where:
+  - $D = \Set{\metalang{Jeff},\metalang{Annie},\metalang{Britta}}$
+  - Jeff hugs everyone, everyone hugs themselves, and nobody hugs anyone else.
+  - Only Jeff is happy.
+  - There are two variables $x₁$ and $x₂$.
+  
+- Compute the meanings of the following formulae as sets of ordered pairs of
+  assignments:
+  
+(@) $\metalang{hugs}(x₁,x₂)$
+
+(@) $\metalang{happy}(\metalang{Annie})$
+
+(@) $\metalang{hugs}(\metalang{Jeff},x₂)$
+
+## Example solution
+
+$$
+\begin{aligned}[t]
+&\evalM[M]{\metalang{hugs}(x₁,x₁)} = \\
+&\Set{⟨i,o⟩| i = o \metalang{ and }⟨o(x₁),o(x₂)⟩ ∈ I(\metalang{hugs})}
+\end{aligned}
+$$
+
+- If we're in a model with Jeff, Britta, and Annie, where everybody hugs themselves, and nobody hugs anybody
+  else, this is the following set:
+  
+$$
+\Set{
+\begin{aligned}[c]
+⟨[j j],[j j]⟩,\\
+⟨[b b],[b b]⟩,\\
+⟨[a a],[a a]⟩
+\end{aligned}
+}
+$$
+
+## Tests
+
+> "[..] atomic formulas do not have dynamic effects of their own. Rather, they
+> function as a kind of "test" on incoming assignments. An atomic formula tests
+> whether an input assignment satisfies the condition it embodies. If so, the
+> assignment is passed on as an output, if not, it is rejected." (G&S, 1991)
+
+## Exercise
+
+$$\evalM{∃x ϕ} = \Set{⟨i,o⟩| ∃k: k[x]i\metalang{ and }⟨k,o⟩ ∈ \evalM{ϕ}}$$
+
+- Compute the meaning of the following formula:
+
+(@) $∃ x[\metalang{hugs}(x₁,\metalang{Annie})]$
+
+- If $π$ is a binary predicate and $α$ and $β$ terms, then $\evalM{π(α,β)} =
+  \Set{⟨i,o⟩| i = o \metalang{ and } ⟨\evalM[o]{α},\evalM[o]{β}⟩ ∈ \evalM{π}}$.
+
+## Solution
+
+ - The set of possible assignments:
+ 
+$$
+\Set{
+\begin{aligned}[c]
+&j j, j b,b j\\
+&b b, b a,a b\\
+&a a, a j,j a
+\end{aligned}
+}
+$$
+
+## Solution ii
+ 
+$$\begin{aligned}[t]
+&\evalM{∃ x₁[\metalang{hugs}(x₁,\metalang{Annie})]}\\
+&= \Set{⟨i,o⟩| ∃ k[x₁]i\metalang{ and }⟨k,o⟩ ∈ \evalM{\metalang{hugs}(x₁,\metalang{Annie})}}\\
+&= \Set{⟨i,o⟩| ∃ k[x₁]i\metalang{ and }⟨k,o⟩ ∈ \Set{⟨i',o'⟩|i' = o'\metalang{ and
+}⟨o'(x₁),\metalang{Annie}⟩ ∈ \entity{hugs}}}\\
+&= \Set{⟨i,o⟩| ∃ k[x₁]i\metalang{ and }⟨k,o⟩ ∈ \Set{\begin{aligned}[c]
+⟨[j j],[j j]⟩,⟨[j b],[j b]⟩,\\
+⟨[a b],[a b]⟩,⟨[a a],[a a]⟩,\\
+⟨[a j],[a j]⟩,⟨[j a],[j a]⟩
+\end{aligned}}}\\
+&= \Set{
+\begin{aligned}[c]
+⟨[j j],[j j]⟩,⟨[j j],[a j]⟩,⟨[j b],[j b]⟩,⟨[j b],[a b]⟩\\
+⟨[b j],[j j]⟩,⟨[b j],[a j]⟩,⟨[b b],[j b]⟩,⟨[b b],[b a]⟩\\
+⟨[b a],[j a]⟩,⟨[b a],[a a]⟩,⟨[a b],[a b]⟩,⟨[a b],[j b]⟩\\
+⟨[a a],[a a]⟩,⟨[a a],[j a]⟩,⟨[a j],[a j]⟩,⟨[a j],[j a]⟩\\
+⟨[j a],[j a]⟩,⟨[j a],[a a]⟩
+\end{aligned}
+}
+\end{aligned}$$
+
+## Solution iii
+
+- Existential quantification is *dynamic*, since it potentially changes the
+  input assignment.
+  
+- We can see more clearly what the existential statement does by gathering together the set
+  of input assignments and the set of output assignments:
+  
+  $$
+  \left⟨ \Set{
+\begin{aligned}[c]
+&j j, j b,b j\\
+&b b, b a,a b\\
+&a a, a j,j a
+\end{aligned}},
+\Set{
+\begin{aligned}[c]
+&j j, j b,a b\\
+&a a, a j,j a
+\end{aligned}}
+\right⟩
+ $$
+ 
+- $\exists x₁[\metalang{hugs}(x₁,\metalang{Annie})]$ takes all assignments as
+  its input, and outputs those assignments where $x₁$ is mapped to someone who
+  hugged Annie – namely, Jeff or Annie.
+  
+## Dynamic conjunction
+
+- $\evalM{[ϕ ∧ ψ]} = \Set{⟨i,o⟩|∃ k:⟨i,k⟩ ∈ \evalM{ϕ}\text{ and }⟨k,o⟩ ∈ \evalM{ψ}}$
+
+- Our definition for dynamic conjunction evaluates the first conjunct $ϕ$
+  relative to the input assignment $i$, resulting in $k$, then threads $k$ into $ψ$.
+  
+## Dynamic conjunction ii
+
+(@) Someone$^{x¹}$ hugged Annie. They$ₓ$ are happy.
+
+(@) $∃ x₁[\metalang{hugged}(x₁,\metalang{Annie})] ∧ \metalang{happy}(x₁)$
+
+## Dynamic conjunction iii
+
+- We know how the first conjunct is evaluated:
+
+$$
+\begin{aligned}[t]
+&\evalM{∃x₁[\metalang{hugged}(x₁,\metalang{Annie})]}\\
+&=\Set{
+\begin{aligned}[c]
+⟨[j j],[j j]⟩,⟨[j j],[a j]⟩,⟨[j b],[j b]⟩,⟨[j b],[a b]⟩\\
+⟨[b j],[j j]⟩,⟨[b j],[a j]⟩,⟨[b b],[j b]⟩,⟨[b b],[b a]⟩\\
+⟨[b a],[j a]⟩,⟨[b a],[a a]⟩,⟨[a b],[a b]⟩,⟨[a b],[j b]⟩\\
+⟨[a a],[a a]⟩,⟨[a a],[j a]⟩,⟨[a j],[a j]⟩,⟨[a j],[j a]⟩\\
+⟨[j a],[j a]⟩,⟨[j a],[a a]⟩
+\end{aligned}
+}
+\end{aligned}
+$$
+
+## Dynamic conjunction iv
+
+- And we know how the second conjunct should be evaluated:
+
+$$
+\begin{aligned}[t]
+&\evalM{\metalang{happy}(x₁)}\\
+&=\Set{
+\begin{aligned}[c]
+⟨[j j],[j j]⟩,⟨[j b],[j b]⟩,⟨[j a],[j a]⟩
+\end{aligned}
+}
+\end{aligned}
+$$
+
+## Dynamic conjunction v
 
 
+- $\evalM{[ϕ ∧ ψ]} = \Set{⟨i,o⟩|∃ k:⟨i,k⟩ ∈ \evalM{ϕ}\text{ and }⟨k,o⟩ ∈ \evalM{ψ}}$
+
+$$
+\begin{aligned}[t]
+&\evalM{∃x₁[\metalang{hugged}(x₁,\metalang{Annie})] ∧ \metalang{happy}(x₁)}\\
+&= \Set{
+\begin{aligned}[c]
+⟨[j j],[j j]⟩,⟨[j b],[j b]⟩\\
+⟨[b j],[j j]⟩,⟨[b b],[j b]⟩\\
+⟨[b a],[j a]⟩,⟨[a b],[j b]⟩\\
+⟨[a a],[j a]⟩,⟨[a j],[j a]⟩\\
+⟨[j a],[j a]⟩
+\end{aligned}
+}
+\end{aligned}$$
+
+# Lecture 3: Discourse referents
+
+## Variables in programming languages
+
+- In the vast majority of programming languages, *variables*, such as `x`, `y`,
+  `z`, etc., can be used as placeholders for values.
+  
+- Consider the following program `main` (written in the `Rust` programming language).
+
+- Ignoring the boilerplate, `main` introduces a variable named `x`, sets `x`'s
+  value to the integer `5`, and prints the result of `x + 1`.
+
+```
+fn main() {
+    let x = 5;
+    println!("{}", x + 1);
+    }
+```
+
+- Q: what value gets printed when we run `main`? Let's find out...
+
+## Variables ii
+
+- Unsurprisingly, `main` returns `6` -- in the argument to `println!`, `x` is
+replaced by the stored value `5`:
+
+```
+println!("{}", x + 1)
+println!("{}", 5 + 1)
+println!("{}", 6)
+```
+
+## Variables iii
+
+- Now let's change `main` a bit.
+
+```
+fn main() {
+    let x = 5;
+    x = x + 4;
+    println!("{}", x + 1);
+    }
+```
+
+- what happens when we run `main`?
+
+
+## Variables iv
+
+- Whoops! the `Rust` compiler throws out an error:
+
+```
+let x = 5;
+    - first assignment to `x`
+
+x = x + 4;
+^^^^^^^^^ cannot assign twice to immutable variable
+```
+
+- what went wrong?
+
+## (Im)mutability
+
+- In `Rust` (and several other programming languages), variables are by default
+  `immutable` (i.e., unchangeable). This means that they are simply *names for values*.
+  
+- It simply doesn't make sense to write `x = x + 4`, since we're essentially
+  assigning two different values to `x`.
+  
+- What we need in order to make sense of this program is the concept of a *mutable variable* --
+  rather than acting as a name for a value, we want our variable to act as an
+  *address for a potentially changeable value*.
+  
+- Conveniently for our purposes, variables in `Rust` can be rendered mutable via
+  the `mut` keyword.
+  
+- OK, let's try that again:
+
+## (Im)mutability II
+
+- Let's try running `main`, but now let's explicitly state that `x` is
+  *mutable*.
+  
+  ```
+fn main() {
+    let mut x = 5;
+    x = x + 4;
+    println!("{}", x + 1);
+    }
+```
+
+- returns: `10`!
+
+- Let's see what's going on here in a little more detail.
+
+## (Im)mutability III
+
+First we introduce a *mutable* variable `x`, and set its value to `5`.
+
+`let mut x = 5;`
+
+Next we retrieve `x`, and set its new value to its old value (`5`) `+ 1`.
+
+```
+x = x + 4
+x = 5 + 4
+x = 9
+```
+
+Now we retrieve `x` and print the result of `x + 1`
+
+```
+println!("{}", x + 1)
+println!("{}", 9 + 1)
+println!("{}", 10)
+println!("10")
+```
+
+## Order sensitivity
+
+Once we introduce mutability, our programs become *order
+  sensitive*:
+  
+```
+let mut x = 5;
+x = x * 2
+x = x - 1
+println!("{}", x)
+```
+prints: `9`
+
+```
+let mut x = 5;
+x = x - 1
+x = x * 2
+println!("{}", x)
+```
+prints: `8`
+
+## Back to natural language
+
+- Think of \alert{a number}.
+
+- Now, multiply \alert{it} by two.
+
+- Now, subtract one from \alert{it}.
+
+- Now, tell me \alert{it}.
+
+## Back to natural language
+
+- Think of \alert{a number}  
+  `let mut x = 5`.
+
+- Now, multiply \alert{it} by two.  
+  `x = x * 2`  
+  `x = 10`
+  
+- Now, subtract one from \alert{it}.  
+  `x = x - 1`  
+  `x = 9`
+
+- Now, tell me \alert{it}.  
+  `println!("9")`
+  
+## Back to natural language
+
+- Whoa - we've just made a major discovery! Natural language makes use of
+  (something like) *mutable variables*, otherwise the preceding discourse
+  wouldn't make sense.
+  
+- We can think of indefinites like *a number* as introducing new *mutable variables*.
+  
+- Pronouns, like *it*, refer back to an already-introduced variable.
+
+- The value assigned to a variable can change over the course of a discourse.
+
+## Karttunen's discourse referents
+
+- The idea that indefinites introduce mutable variables is an insight originally
+  due to semanticist and computational linguist Lauri Karttunen (although he doesn't use this idiom).
+  
+![Lauri Karttunen (src: Stefan Müller)](images/karttunen.jpg){ width=40% }
+
+## Karttunen's discourse referents ii
+
+> "Consider a device designed to read a text in some natural language, interpret
+> it, and store the content in some manner, say, for the purpose of being able
+> to answer questions about it. To accomplish this task, the machine will have
+> to filfull at least the following basic requirement. It has to be able to
+> build a file that consists of records of alll the individuals, that is,
+> events, objects, etc., mentioned in the text and, for each individual, record
+> whatever is said about it." ([@karttunen1976])
+ 
+## Cont.
+ 
+  > "I intend to discuss one particular feature a text interpreter must have:
+  > that it must be able to recognize when a novel individual is mentioned in
+  > the input text and to store it along with its characterization for future
+  > reference."
+  
+## Cont
+  
+  > "We found that in simple sentences [...] an indefinite NP establishes a
+  > \alert{discourse referent} just in case the sentence is an affirmative
+  > assertion. By "establishes a discourse referent", we meant that there may be
+  > a coreferential pronoun or definite noun phrase later in the discourse."
+  
+## The dynamic turn
+
+- Karttunen's promise of a text interpreter that keeps track of novel
+  individuals mentioned over the course of a discourse (text) was made good upon
+  in the eighties, by a new family of semantic theories. Developed independently
+  by two linguists: Irene Heim and Hans Kamp.
+ 
+## Discourse Representation Theory
+
+- Hans Kamp introduced *Discourse Representation Theory* (DRT) in his 1981 paper
+  *A theory of truth and semantic representation*, as a general theory of anaphora and tense.
+
+![Hans Kamp](images/kamp.jpg){ width=50% }
+ 
+## File Change Semantics
+
+- Irene Heim hit upon a similar theory, *File Change Semantics* (FCS) in chapter
+  3 of her classic 1982 dissertation *The
+  semantics of definite and indefinite noun phrases*. 
+
+![Irene Heim](images/heim.jpg){ width=25% }
+
+## The two souls of dynamic semantics
+
+- In his 1995 textbook, *Dynamics of meaning*, Gennaro Chierchia describes these
+  approaches as "the two souls" of dynamic semantics.
+  
+- In these classes, we're going to be developing a fragment closer to File
+  Change Semantics, and this is for largely contingent reasons (it's the approach 
+  I'm more familiar with).
+
+# Motivating dynamic semantics
+
+## Anaphora across conjunction
+
+- Fact: indefinites differ from other quantifiers in their anaphoric potential.
+
+(@every1) \# The dean introduced every new student^*x*^ to Jeff, and the janitor introduced
+her~*x*~ to Britta.
+
+(@indef1) The dean introduced a new student^*x*^ to Jeff, and the janitor introduced
+her~*x*~ to Britta.
+
+- N.b. I'll use \# as an indictor that a sentence is judged to be *infelicitous*
+  or *odd* by a native speaker under the intended reading.
+
+## Placeholder
+
+If (@every1) were acceptable, what would it mean? We can approximate its meaning using
+FoL.
+
+$$
+∀x\left[\textsf{student}(x) →
+\begin{aligned}[c]
+&\textsf{introduced}(\textsf{Dean},x,\textsf{Jeff})\\
+&\wedge \textsf{introduce}(\textsf{Janitor},x,\textsf{Britta}) 
+\end{aligned}\right]
+$$
+
+This is a totally sensible meaning. We can even express it in a different way.
+
+(@) For every student, it's the case that the dean introduced her to Jeff and
+the Janitor introduced her to Britta.
+
+## Anaphora across sentence boundaries
+
+(@) \# The dean introduced every new student^*x*^ to Jeff.  
+The janitor introduced her~*x*~ to Britta.
+
+(@) The dean introduced a new student^*x*^ to Jeff.  
+The janitor introduced her~*x*~ to Britta.
