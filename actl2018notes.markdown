@@ -19,7 +19,7 @@ $$
 
 ## Slides
 
-- pdf: <https://patrl.keybase.pub/actl2018/slides.pdf>
+- pdf: <https://patrl.keybase.pub/actl2018/lecture1.pdf>
 - html (support here still sketchy!): <https://patrickdelliott.com/actl2018notes.html> 
 
 ## Roadmap
@@ -1163,9 +1163,9 @@ cases too.
 
 - We can state the rule for quantificational sentences more formally like so;
 
-- $\evalM[M,g]{∃ v ϕ} = 1$ iff there is at least one $g'$ s.t. $g'[v]g$ and $\evalM[M,g']{∃ v ϕ} = 1$
+- $\evalM[M,g]{∃ v ϕ} = 1$ iff there is at least one $g'$ s.t. $g'[v]g$ and $\evalM[M,g']{ϕ} = 1$
 
-- $\evalM[M,g]{∀ v ϕ} = 1$ iff for every $g'$ s.t. $g'[v]g$, $\evalM[M,g']{∃ v ϕ} = 1$
+- $\evalM[M,g]{∀ v ϕ} = 1$ iff for every $g'$ s.t. $g'[v]g$, $\evalM[M,g']{ϕ} = 1$
 
 ## Minimally differing assignments
 
@@ -1709,6 +1709,43 @@ $$\evalM{∃x ϕ} = \Set{⟨i,o⟩| ∃k: k[x]i\metalang{ and }⟨k,o⟩ ∈ \
 - Since assignments represent the *context of utterance*, existentials are
   interpreted as *instructions for updating the context of utterance*.
   
+## Sets vs. functions
+
+- Recall, we've been representing *relations*, like $\entity{hugs}$, as
+  *sets of ordered pairs*, i.e. $\Set{\langle x,y \rangle| x\text{ hugs }y}$.
+
+- Intuitively then, dynamic sentence meanings are *relations* between assignments.
+
+- Another way of expressing a relation, is as a function from two arguments to a
+  truth value, i.e.
+  
+  $$
+  λ x . λ y . \begin{cases}
+  1\text{ if }x\text{ hugs }y\\ 
+  0\text{ otherwise}
+  \end{cases}
+  $$
+  
+- This expresses the *same information* as the set of ordered pairs.
+
+## Equivalence
+
+- We can translate then, from formulae of DPL meanings to Gennaro's dynamic
+  calculus, and back again.
+
+(@) Someone$^{x^1}$ left.
+
+$$
+\begin{aligned}[t]
+&\Set{⟨i,o⟩| ∃k: k[x₁]i\metalang{ and }k = o\text{ and }\metalang{left}(o(x₁))}\\
+&≡\\
+&λ ω . λ ω' . ∃k[k[x₁]ω ∧ k = ω' ∧ \metalang{left}(ω'(x₁))]
+\end{aligned}
+$$
+
+- These are just two different ways of expressing the same abstract concept – a
+  relation between assignments.
+  
 ## Semantics of DPL
 
 - If $π$ is a unary predicate and $α$ is a term, then $\evalM{π(α)} =
@@ -1802,16 +1839,45 @@ $$\begin{aligned}[t]
 \end{aligned}}}\\
 &= \Set{
 \begin{aligned}[c]
-⟨[j j],[j j]⟩,⟨[j j],[a j]⟩,⟨[j b],[j b]⟩,⟨[j b],[a b]⟩\\
-⟨[b j],[j j]⟩,⟨[b j],[a j]⟩,⟨[b b],[j b]⟩,⟨[b b],[b a]⟩\\
-⟨[b a],[j a]⟩,⟨[b a],[a a]⟩,⟨[a b],[a b]⟩,⟨[a b],[j b]⟩\\
-⟨[a a],[a a]⟩,⟨[a a],[j a]⟩,⟨[a j],[a j]⟩,⟨[a j],[j a]⟩\\
-⟨[j a],[j a]⟩,⟨[j a],[a a]⟩
+⟨[\alert{j} j],[\alert{j} j]⟩,⟨[\alert{j} j],[\alert{a} j]⟩,⟨[\alert{j} b],[\alert{j} b]⟩,⟨[\alert{j} b],[\alert{a} b]⟩\\
+⟨[\alert{b} j],[\alert{j} j]⟩,⟨[\alert{b} j],[\alert{a} j]⟩,⟨[\alert{b} b],[\alert{j} b]⟩,⟨[\alert{b} b],[\alert{a} b]⟩\\
+⟨[\alert{b} a],[\alert{j} a]⟩,⟨[\alert{b} a],[\alert{a} a]⟩,⟨[\alert{a} b],[\alert{a} b]⟩,⟨[\alert{a} b],[\alert{j} b]⟩\\
+⟨[\alert{a} a],[\alert{a} a]⟩,⟨[\alert{a} a],[\alert{j} a]⟩,⟨[\alert{a} j],[\alert{a} j]⟩,⟨[\alert{a} j],[\alert{j} j]⟩\\
+⟨[\alert{j} a],[\alert{j} a]⟩,⟨[\alert{j} a],[\alert{a} a]⟩
 \end{aligned}
 }
 \end{aligned}$$
 
-## Solution iii
+## Solution iii: the result reformatted
+
+\begin{tiny}
+$$
+\evalM{∃ x₁[\metalang{hugs}(x₁,\metalang{Annie})]} = \Set{
+\begin{aligned}[c]
+⟨[\alert{j} j],[\alert{j} j]⟩\\
+⟨[\alert{b} j],[\alert{j} j]⟩\\
+⟨[\alert{a} j],[\alert{j} j]⟩\\ 
+⟨[\alert{j} j],[\alert{a} j]⟩\\
+⟨[\alert{b} j],[\alert{a} j]⟩\\
+⟨[\alert{a} j],[\alert{a} j]⟩\\
+⟨[\alert{j} a],[\alert{j} a]⟩\\
+⟨[\alert{b} a],[\alert{j} a]⟩\\
+⟨[\alert{a} a],[\alert{j} a]⟩\\
+⟨[\alert{j} b],[\alert{j} b]⟩\\
+⟨[\alert{b} b],[\alert{j} b]⟩\\
+⟨[\alert{a} b],[\alert{j} b]⟩\\
+⟨[\alert{j} b],[\alert{a} b]⟩\\
+⟨[\alert{b} b],[\alert{a} b]⟩\\
+⟨[\alert{a} b],[\alert{a} b]⟩\\
+⟨[\alert{j} a],[\alert{a} a]⟩\\
+⟨[\alert{b} a],[\alert{a} a]⟩\\
+⟨[\alert{a} a],[\alert{a} a]⟩
+\end{aligned}
+}
+$$
+\end{tiny}
+
+## Solution iv
 
 - Existential quantification is *dynamic*, since it potentially changes the
   input assignment.
@@ -1828,8 +1894,8 @@ $$\begin{aligned}[t]
 \end{aligned}},
 \Set{
 \begin{aligned}[c]
-&j j, j b,a b\\
-&a a, a j,j a
+&j j, j b,j a\\
+&a a,a b, a j
 \end{aligned}}
 \right⟩
  $$
@@ -1840,6 +1906,14 @@ $$\begin{aligned}[t]
   
 ## Dynamic conjunction
 
+- Unlike in classical semantics, we now have a theory of existential
+  quantification according to which it *reduces uncertainty* about intended reference.
+  
+- But hang on, we still need to say something about conjunction DPL to derive
+  cross-sentential anaphora.
+  
+- Here is the rule for conjunction in DPL:
+
 - $\evalM{[ϕ ∧ ψ]} = \Set{⟨i,o⟩|∃ k:⟨i,k⟩ ∈ \evalM{ϕ}\text{ and }⟨k,o⟩ ∈ \evalM{ψ}}$
 
 - Our definition for dynamic conjunction evaluates the first conjunct $ϕ$
@@ -1847,9 +1921,16 @@ $$\begin{aligned}[t]
   
 ## Dynamic conjunction ii
 
-(@) Someone$^{x¹}$ hugged Annie. They$ₓ$ are happy.
+- We can assume that successive sentences are interpreted as *conjoined*. This
+  will give us a uniform account of anaphora across conjoined clauses, and
+  cross-sentential anaphora.
+
+(@) Someone$^{x¹}$ hugged Annie. They$_{x_1}$ are happy.
 
 (@) $∃ x₁[\metalang{hugged}(x₁,\metalang{Annie})] ∧ \metalang{happy}(x₁)$
+
+ - Recall that we're in a model where everyone only hugs themselves, except for
+   Jeff, who also hugs Annie, and only Jeff is happy.
 
 ## Dynamic conjunction iii
 
@@ -1860,11 +1941,11 @@ $$
 &\evalM{∃x₁[\metalang{hugged}(x₁,\metalang{Annie})]}\\
 &=\Set{
 \begin{aligned}[c]
-⟨[j j],[j j]⟩,⟨[j j],[a j]⟩,⟨[j b],[j b]⟩,⟨[j b],[a b]⟩\\
-⟨[b j],[j j]⟩,⟨[b j],[a j]⟩,⟨[b b],[j b]⟩,⟨[b b],[b a]⟩\\
-⟨[b a],[j a]⟩,⟨[b a],[a a]⟩,⟨[a b],[a b]⟩,⟨[a b],[j b]⟩\\
-⟨[a a],[a a]⟩,⟨[a a],[j a]⟩,⟨[a j],[a j]⟩,⟨[a j],[j a]⟩\\
-⟨[j a],[j a]⟩,⟨[j a],[a a]⟩
+⟨[\alert{j} j],[\alert{j} j]⟩,⟨[\alert{j} j],[\alert{a} j]⟩,⟨[\alert{j} b],[\alert{j} b]⟩,⟨[\alert{j} b],[\alert{a} b]⟩\\
+⟨[\alert{b} j],[\alert{j} j]⟩,⟨[\alert{b} j],[\alert{a} j]⟩,⟨[\alert{b} b],[\alert{j} b]⟩,⟨[\alert{b} b],[\alert{a} b]⟩\\
+⟨[\alert{b} a],[\alert{j} a]⟩,⟨[\alert{b} a],[\alert{a} a]⟩,⟨[\alert{a} b],[\alert{a} b]⟩,⟨[\alert{a} b],[\alert{j} b]⟩\\
+⟨[\alert{a} a],[\alert{a} a]⟩,⟨[\alert{a} a],[\alert{j} a]⟩,⟨[\alert{a} j],[\alert{a} j]⟩,⟨[\alert{a} j],[\alert{j} j]⟩\\
+⟨[\alert{j} a],[\alert{j} a]⟩,⟨[\alert{j} a],[\alert{a} a]⟩
 \end{aligned}
 }
 \end{aligned}
@@ -1885,6 +1966,10 @@ $$
 \end{aligned}
 $$
 
+- If $π$ is a unary predicate and $α$ is a term, then $\evalM{π(α)} =
+  \Set{⟨i,o⟩| i = o \metalang{ and } \evalM[o]{α} ∈ \evalM{π}}$.
+
+
 ## Dynamic conjunction v
 
 
@@ -1904,7 +1989,427 @@ $$
 }
 \end{aligned}$$
 
+- The prediction is, that *someone hugged Annie. They are happy.* should update
+  a context where we're uncertain about who $x_1$ picks out, to one where
+  we're certain about who $x_1$ picks out -- namely, Jeff.
+  
+## Associativity of $∃v$ and $∧$
+
+- In fact, $∃x₁[\metalang{hugged}(x₁,\metalang{Annie})] ∧ \metalang{happy}(x₁)$
+  turns out to be *equivalent* to the formula: $∃x₁[\metalang{hugged}(x₁,\metalang{Annie}) ∧ \metalang{happy}(x₁)]$
+  
+- *Exercise:* Compute the meaning of each of the conjuncts in DPL, and compute
+  the result of dynamic conjunction:
+  
+- $\evalM{[ϕ ∧ ψ]} = \Set{⟨i,o⟩|∃ k:⟨i,k⟩ ∈ \evalM{ϕ}\text{ and }⟨k,o⟩ ∈ \evalM{ψ}}$
+  
+## Binding failure
+
+- Let's double check that this is genuinely binding. What happens when the
+  existential and the pronoun in the second clause are contra-indexed?
+  
+(@) $∃ x₁[\metalang{hugged}(x₁,\metalang{Annie})] ∧ \metalang{happy}(x_2)$
+
+## Binding failure ii
+
+- Again, we know how the first conjunct should be evaluated:
+
+$$
+\begin{aligned}[t]
+&\evalM{∃x₁[\metalang{hugged}(x₁,\metalang{Annie})]}\\
+&=\Set{
+\begin{aligned}[c]
+⟨[\alert{j} j],[\alert{j} j]⟩,⟨[\alert{j} j],[\alert{a} j]⟩,⟨[\alert{j} b],[\alert{j} b]⟩,⟨[\alert{j} b],[\alert{a} b]⟩\\
+⟨[\alert{b} j],[\alert{j} j]⟩,⟨[\alert{b} j],[\alert{a} j]⟩,⟨[\alert{b} b],[\alert{j} b]⟩,⟨[\alert{b} b],[\alert{a} b]⟩\\
+⟨[\alert{b} a],[\alert{j} a]⟩,⟨[\alert{b} a],[\alert{a} a]⟩,⟨[\alert{a} b],[\alert{a} b]⟩,⟨[\alert{a} b],[\alert{j} b]⟩\\
+⟨[\alert{a} a],[\alert{a} a]⟩,⟨[\alert{a} a],[\alert{j} a]⟩,⟨[\alert{a} j],[\alert{a} j]⟩,⟨[\alert{a} j],[\alert{j} j]⟩\\
+⟨[\alert{j} a],[\alert{j} a]⟩,⟨[\alert{j} a],[\alert{a} a]⟩
+\end{aligned}
+}
+\end{aligned}
+$$
+
+## Binding failure iii
+
+- The second conjunct is evaluated differently -- it is a *test* on a context
+  where $x_2$ picks out someone who is happy.
+
+$$
+\begin{aligned}[t]
+&\evalM{\metalang{happy}(x_2)}\\
+&=\Set{
+\begin{aligned}[c]
+⟨[j \alert{j}],[j \alert{j}]⟩,⟨[a \alert{j}],[a \alert{j}]⟩,⟨[b \alert{j}],[b \alert{j}]⟩
+\end{aligned}
+}
+\end{aligned}
+$$
+
+- If $π$ is a unary predicate and $α$ is a term, then $\evalM{π(α)} =
+  \Set{⟨i,o⟩| i = o \metalang{ and } \evalM[o]{α} ∈ \evalM{π}}$.
+  
+## Binding failure iv
+
+- $\evalM{[ϕ ∧ ψ]} = \Set{⟨i,o⟩|∃ k:⟨i,k⟩ ∈ \evalM{ϕ}\text{ and }⟨k,o⟩ ∈ \evalM{ψ}}$
+
+$$
+\begin{aligned}[t]
+&\evalM{∃x₁[\metalang{hugged}(x₁,\metalang{Annie})] ∧ \metalang{happy}(x_2)}\\
+&= \Set{
+\begin{aligned}[c]
+⟨[\alert{j} j],[\alert{j} j]⟩\\
+⟨[\alert{j} j],[\alert{a} j]⟩\\
+⟨[\alert{b} j],[\alert{j} j]⟩\\
+⟨[\alert{b} j],[\alert{a} j]⟩\\
+⟨[\alert{a} j],[\alert{a} j]⟩\\
+⟨[\alert{a} j],[\alert{j} j]⟩
+\end{aligned}
+}
+\end{aligned}$$
+
+- Great! this sentence is correctly interpreted to *reduce certainty* about who
+  $x_1$ picks out *and* to act as a test on who $x_2$ picks out.
+  
+## Cross-sentential crossover i
+
+- Remember, one of the candidate Logical Forms for cross-sentential anaphora we
+  considered involved a genuinely wide-scope existential.
+  
+(@) Someone$^1$ hugged Annie and they$_1$ are happy.
+
+(@) $∃ x₁[\metalang{hugged}(x₁,\metalang{Annie}) ∧ \metalang{happy}(x₁)]$
+
+- If we were to allow such a Logical Form, we need to rule out the following:
+
+(@) They$₁$ are happy and someone¹ hugged Annie.
+
+- Why can't this receive the following Logical Form, and get a sensible interpretation?
+
+(@) $∃ x₁[\metalang{happy}(x₁) ∧ \metalang{hugged}(x₁,\metalang{Annie})]$
+
+## Cross-sentential crossover ii
+
+- DPL (and dynamic semantics more generally) solves this completely
+  straightforwardly.
+   
+- According to Dynamic Semantics, the Logical Form should really be the
+  following:
+  
+(@) $\metalang{happy}(x₁) ∧ ∃x₁[\metalang{hugged}(x₁,\metalang{Annie})]$
+
+- Because of how dynamic conjunction works, binding won't obtain.
+
+## Cross-sentential crossover iii
+
+- Again, we know how the first conjunct is interpreted:
+
+$$
+\begin{aligned}[t]
+&\evalM{\metalang{happy}(x₁)}\\
+&=\Set{
+\begin{aligned}[c]
+⟨[j j],[j j]⟩,⟨[j b],[j b]⟩,⟨[j a],[j a]⟩
+\end{aligned}
+}
+\end{aligned}
+$$
+
+## Cross-sentential crossover iv
+
+- We know how the second conjunct is interpreted:
+
+$$
+\begin{aligned}[t]
+&\evalM{∃x₁[\metalang{hugged}(x₁,\metalang{Annie})]}\\
+&=\Set{
+\begin{aligned}[c]
+⟨[\alert{j} j],[\alert{j} j]⟩,⟨[\alert{j} j],[\alert{a} j]⟩,⟨[\alert{j} b],[\alert{j} b]⟩,⟨[\alert{j} b],[\alert{a} b]⟩\\
+⟨[\alert{b} j],[\alert{j} j]⟩,⟨[\alert{b} j],[\alert{a} j]⟩,⟨[\alert{b} b],[\alert{j} b]⟩,⟨[\alert{b} b],[\alert{a} b]⟩\\
+⟨[\alert{b} a],[\alert{j} a]⟩,⟨[\alert{b} a],[\alert{a} a]⟩,⟨[\alert{a} b],[\alert{a} b]⟩,⟨[\alert{a} b],[\alert{j} b]⟩\\
+⟨[\alert{a} a],[\alert{a} a]⟩,⟨[\alert{a} a],[\alert{j} a]⟩,⟨[\alert{a} j],[\alert{a} j]⟩,⟨[\alert{a} j],[\alert{j} j]⟩\\
+⟨[\alert{j} a],[\alert{j} a]⟩,⟨[\alert{j} a],[\alert{a} a]⟩
+\end{aligned}
+}
+\end{aligned}
+$$
+
+## Cross-sentential crossover v
+
+- $\evalM{[ϕ ∧ ψ]} = \Set{⟨i,o⟩|∃ k:⟨i,k⟩ ∈ \evalM{ϕ}\text{ and }⟨k,o⟩ ∈ \evalM{ψ}}$
+
+- We're only allowed to take *input-output* pairs, where the output of threading
+  the input into $ϕ$ creates a valid input for $ψ$.
+  
+$$
+\begin{aligned}[t]
+&\evalM{\metalang{happy}(x₁) ∧ ∃x₁[\metalang{hugged}(x₁,\metalang{Annie})]}\\
+&=\Set{
+\begin{aligned}[c]
+⟨[\alert{j} j],[\alert{j} j]⟩,⟨[\alert{j} j],[\alert{a} j]⟩,\\
+⟨[\alert{j} b],[\alert{j} b]⟩,⟨[\alert{j} b],[\alert{a} b]⟩\\
+⟨[\alert{j} a],[\alert{j} a]⟩,⟨[\alert{j} a],[\alert{a} a]⟩
+\end{aligned}
+}
+\end{aligned}
+$$
+
+## Cross-sentential crossover vi
+
+- if $x₁$ were bound, then the effect of the sentence on the context should be
+  to fully reduce uncertainty about who $x₁$ is intended to pick out – namely
+  Jeff.
+  
+- Instead, the sentence is interpreted as a transition from a context in which
+  we *know* that $x₁$ is intended to pick out Jeff, to one where $x₁$ is
+  "re-opened", and could pick out anyone who hugs Annie.
+  
+- This is because the meaning given for dynamic conjunction is *inherently*
+  asymmetric and specifically left-to-right: first we thread the input into
+  the first conjunct, and then we thread the result into the second conjunct.
+
+- $\evalM{[ϕ ∧ ψ]} = \Set{⟨i,o⟩|∃ k:⟨i,\alert{k}⟩ ∈ \evalM{ϕ}\text{ and }⟨\alert{k},o⟩ ∈ \evalM{ψ}}$
+
+## Logical properties of DPL
+
+- So, we've shown that, in DPL, conjunction is asymmetric:
+
+- $\evalM{ϕ ∧ ψ} ≢ \evalM{ψ ∧ ϕ}$
+
+- It's worth stressing just how much of a radical departure from classical
+  semantics this is!
+  
+- In DPL, the dynamic, left-to-right nature of conjunction is really built into
+  the *semantics* of the operator -- this is by no means a byproduct of a
+  pragmatic mechanism.
+  
+## External vs. internal dynamicity
+
+- Conjunction passes on variable binding from its left conjunct to its right.
+
+- In DPL, connectives of this kind are called *internally dynamic*. This is out
+  basic case: *Someone walked in and they sat down*.
+  
+- A conjunctive formula can keep passing on variable bindings to conjuncts yet
+  to come, i.e. *Someone walked in and they sat down. They got a drink.*
+  
+- In DPL, connectives of this kind are called *externally dynamic*.
+
+## Donkey sentences
+
+- We still haven't given a treatment of donkey sentences.
+
+(@) If a farmer$ˣ$ owns a donkey$ʸ$, he$ₓ$ hits it$_y$.
+
+- Remember that, in FOL, the correct translation would seem to involve universal
+  quantification.
+  
+$$
+∀ x,y[\metalang{farmer}(x) ∧ \metalang{donkey}(y) ∧ \metalang{own}(x,y) → \metalang{hits}(x,y)]
+$$
+
+- Unlike previously, the trick of scoping out an existential quantifier doesn't
+  have a chance of working, since we'd end up talking about a specific farmer and donkey.
+
+## Donkey sentences ii
+
+(@) \*If a farmer$ˣ$ owns a donkey$ʸ$, he$ₓ$ hits it$_y$. It$_y$ yelps.
+
+(@) \*If a farmer$ˣ$ owns a donkey$ʸ$, he$ₓ$ hits it$_y$. he$_y$ gets thirsty.
+
+- Is *implication* ($→$)..
+  - externally dynamic?
+  - internally dynamic?
+  
+## Exercise
+
+- For *disjunction* ($∨$), come up with data which show whether it is...
+  - externally dynamic?
+  - internally dynamic?
+  
+## Dynamic implication
+
+- The fact that implication is not externally dynamic, means that overall, an
+  implciational formula should be a *test*, i.e., it shouldn't alter the input context.
+
+- But, it should pass variable binding on from the antecedent to the consequent.
+
+- Here is the entry for dynamic implication:
+
+- $\evalM{ϕ → ψ} = \Set{⟨i,o⟩|o = i \metalang{ and }∀ k:⟨o,k⟩ ∈ \evalM{ϕ} ⇒ ∃
+  j:⟨k,j⟩ ∈ \evalM{ψ}}$
+  
+- An implicational statement is a *test* on an assignment $o$, where every
+  result of threading $o$ into the antecedent can be threaded into the consequent. 
+  
+## Donkey derivation
+
+(@) If a farmer$¹$ owns a donkey$²$, he$₁$ hits it$₂$.
+
+(@) $(∃x₁,x₂[\metalang{farmer}(x₁) ∧ \metalang{donkey}(x₂) ∧
+\metalang{owns}(x₁,x₂)]) → \metalang{hits}(x₁)(x₂)$
+
+- $\entity{farmer} = \Set{a,b}$
+
+- $\entity{donkey} = \Set{c,d,e}$
+
+- $a$ owns $c$, $b$ owns $d$ and $e$.
+
+## Donkey derivation ii
+
+- First let's compute the meaning of the antecedent.
+
+$$
+\begin{aligned}[t]
+&\evalM{∃x₁,x₂[\metalang{farmer}(x₁) ∧ \metalang{donkey}(x₂) ∧
+\metalang{owns}(x₁,x₂)]}
+\end{aligned}
+$$
+
+- Informally, this will end up expressing a transition from an *input* to an
+  output that maps $x₁$ to a farmer, and $x₂$ to a donkey that he owns.
+  
+$$
+\begin{aligned}[c]
+\Set{
+⟨[a c],[a c]⟩,⟨[a d],[a c]⟩,⟨[a e],[a c]⟩\\
+⟨[b c],[a c]⟩,⟨[b b],[b e]⟩\\
+...
+}
+\end{aligned}
+$$
+
+etc.
+
+## Donkey derivation iii
+
+- Holding fixed that $x₁$ is a farmer and $x₂$ is a donkey:
+
+$$
+\left\langle
+\Set{
+\begin{aligned}[c]
+[a c], [a d], [a e],\\
+[b c], [b d], [b e],\\
+...
+\end{aligned}
+}
+,
+\Set{
+\begin{aligned}[c]
+[a c],\\
+[b d],\\
+[b e]
+\end{aligned}
+}
+\right\rangle
+$$
+  
+  
+## Donkey derivation iv
+
+- The meaning of the consequent is just a test on assignments where $x₁$ owns
+  $x₂$:
+  
+$$
+\begin{aligned}[c]
+\Set{⟨[a c],[a c]⟩,⟨[b d],[b d]⟩,⟨[b e],[b e]⟩}
+\end{aligned}
+$$
+
+- $\evalM{ϕ → ψ} = \Set{⟨i,o⟩|o = i \metalang{ and }∀ k:⟨o,k⟩ ∈ \evalM{ϕ} ⇒ ∃
+  j:⟨k,j⟩ ∈ \evalM{ψ}}$
+  
+- So the implicational statement as a whole is a *test*, where we inspect the
+  outputs of the antecedent, and ensure that they're valid inputs to the consequent.
+  
+## Weak vs. strong donkeys
+
+ - DPL generates a so-called *strong* reading for donkey anaphora. 
+ 
+ (@) If a farmer owns a donkey, he beats it.
+ 
+ - In DPL, this expresses that a farmer beats *every* donkey that he owns -- in
+   the previous example, $b$ must beat $d$ and $e$ for the test to pass.
+   
+ - However, there are contexts where it looks like we need to be able to derive
+   a *weak* reading.
+   
+## Weak donkeys
+
+(@) Yesterday, every person who had a credit card$^y$ paid his
+bill with it$_y$.  
+(R. Cooper, according to Chierchia 1995)
+
+- The most salient reading of the above does not require each person to use
+  every credit card they have to pay their bill, rather each person must use at
+  least one of their credit cards to pay their bill.
+  
+- Traditional dynamic semantic accounts, such as DPL, don't derive this *weak*
+  donkey reading.
+  
+## Negation
+
+- Consider the following.
+
+(@) \*It's not the case that someone$^x$ hugged Annie. They$_x$ sat down.
+
+(@) \*Nobody$^x$ hugged Annie. They$_x$ sat down.
+
+- Negation *blocks* dynamic binding, i.e., it closes off the anaphoric potential
+  introduced by the existential.
+  
+## Negation ii
+
+- Here is our rule for dynamic negation:
+
+- $\evalM{\neg\phi} = \Set{⟨i,o⟩| o = i ∧ ¬∃ k:⟨o,k⟩ ∈ \evalM{ϕ}}$
+
+- Negation is a *test* on assignments $o$, such that feeding $o$ into $ϕ$ gives
+  rise to no outputs.
+  
+- Since negation is a test, it must be externally static.
+
+- Let's check that negation blocks binding.
+
+## Negation iii
+
+(@) It's not the case that someone$ˣ$ hugged Annie. They$ₓ$ sat down.
+
+- If at least one person hugged Annie, the first sentence will always return
+  $∅$.
+  
+- If nobody hugged Annie, the first sentence will just be a test on the set of assignments.
+
+- *Exercise:* show this by going through the computation.
+
+## Problems for dynamic semantics
+
+(@) If a client$ˣ$ turns up, you treat him$ₓ$ politely. You offer him$ₓ$ a cup of coffee
+and his him$ₓ$ to wait.
+
+(@) Every player$ʸ$ chooses a pawn$ˣ$. He$_y$ puts it$ₓ$ on square one.
+
+(@) It is not true that John doesn't own a car$ˣ$. It$ₓ$ is red, and it$ₓ$ is parked in
+from of his house.
+
+(@) Either there is no bathroom here, or it is in a funny place. In any case, it
+is not on the first floor.
+
+- All examples from G&S 1991.
+
 # Lecture 3: Discourse referents
+
+## Outline
+
+- In the first part of the class, we'll explore the parallel between dynamic
+  sentence meanings, and the meanings of computer programs in more detail.
+  
+- In the second part of the class, we'll formulate an alternative dynamic
+  semantics, based on Dekker's *Predicate Logic with Anaphora*, according to
+  which indefinites add discourse referents to a *stack*.
+  
+- This will result in an arguably more elegant system in which the notion of
+  *discourse referent* is reified.
 
 ## Variables in programming languages
 
@@ -2093,8 +2598,8 @@ prints: `8`
 > "Consider a device designed to read a text in some natural language, interpret
 > it, and store the content in some manner, say, for the purpose of being able
 > to answer questions about it. To accomplish this task, the machine will have
-> to filfull at least the following basic requirement. It has to be able to
-> build a file that consists of records of alll the individuals, that is,
+> to fulfill at least the following basic requirement. It has to be able to
+> build a file that consists of records of all the individuals, that is,
 > events, objects, etc., mentioned in the text and, for each individual, record
 > whatever is said about it." ([@karttunen1976])
  
@@ -2112,74 +2617,615 @@ prints: `8`
   > assertion. By "establishes a discourse referent", we meant that there may be
   > a coreferential pronoun or definite noun phrase later in the discourse."
   
-## The dynamic turn
+# Predicate Logic with Anaphora 
 
-- Karttunen's promise of a text interpreter that keeps track of novel
-  individuals mentioned over the course of a discourse (text) was made good upon
-  in the eighties, by a new family of semantic theories. Developed independently
-  by two linguists: Irene Heim and Hans Kamp.
- 
-## Discourse Representation Theory
+## Overview
 
-- Hans Kamp introduced *Discourse Representation Theory* (DRT) in his 1981 paper
-  *A theory of truth and semantic representation*, as a general theory of anaphora and tense.
+- In our previous logical system, DPL, formulae could either:
 
-![Hans Kamp](images/kamp.jpg){ width=50% }
- 
-## File Change Semantics
-
-- Irene Heim hit upon a similar theory, *File Change Semantics* (FCS) in chapter
-  3 of her classic 1982 dissertation *The
-  semantics of definite and indefinite noun phrases*. 
-
-![Irene Heim](images/heim.jpg){ width=25% }
-
-## The two souls of dynamic semantics
-
-- In his 1995 textbook, *Dynamics of meaning*, Gennaro Chierchia describes these
-  approaches as "the two souls" of dynamic semantics.
+    - Act as tests on input assignments, returning the same assignments.
+    - Shrink the set of assignments, taking a set of assignments, and returning
+    a subset.
+    
+- The latter case represented the contribution of existentially quantified
+  sentences.
   
-- In these classes, we're going to be developing a fragment closer to File
-  Change Semantics, and this is for largely contingent reasons (it's the approach 
-  I'm more familiar with).
+- The notion of a *discourse referent* has no direct correlate.
 
-# Motivating dynamic semantics
 
-## Anaphora across conjunction
+## PLA via \texttt{DyS}
 
-- Fact: indefinites differ from other quantifiers in their anaphoric potential.
+- PLA simplifies things somewhat by having semantic objects
+  which correspond directly to *discourse referents*.
+  
+- N.b. the version of PLA I'm presenting is simplified relative @dekker1994, and
+corresponds more closely to @Charlowc's \texttt{DyS}.
 
-(@every1) \# The dean introduced every new student^*x*^ to Jeff, and the janitor introduced
-her~*x*~ to Britta.
+- The basic ideas are the same, but unlike PLA, \texttt{DyS} doesn't make use of
+  *assignments*. This makes it a little easier to reason about.
 
-(@indef1) The dean introduced a new student^*x*^ to Jeff, and the janitor introduced
-her~*x*~ to Britta.
+## Stacks
 
-- N.b. I'll use \# as an indictor that a sentence is judged to be *infelicitous*
-  or *odd* by a native speaker under the intended reading.
+- The current state of the discourse is represented as a *stack*, which is just
+  going to be a (potentially empty) sequence of objects.
+  
+  $$
+  s = a...xyz
+  $$
+  
+- The objects in the stack represent the *discourse referents* which have been
+  introduced over the course of the discourse so far.
 
-## Placeholder
+## Stacks ii
 
-If (@every1) were acceptable, what would it mean? We can approximate its meaning using
-FoL.
+- Stacks can be *extended* with additional drefs, simply by adding them to (the
+  end of) the stack.
+  
+$$
+s = jb
+$$
+
+- We define a primitive binary operation that takes a stack $s$, and an object
+  $m$, and pushes $m$ to $s$.
 
 $$
-∀x\left[\textsf{student}(x) →
-\begin{aligned}[c]
-&\textsf{introduced}(\textsf{Dean},x,\textsf{Jeff})\\
-&\wedge \textsf{introduce}(\textsf{Janitor},x,\textsf{Britta}) 
-\end{aligned}\right]
+\widehat{sm} = hbm
 $$
 
-This is a totally sensible meaning. We can even express it in a different way.
+## Stacks iii
 
-(@) For every student, it's the case that the dean introduced her to Jeff and
-the Janitor introduced her to Britta.
+- We're also going to define a primitive unary operation $\tau$, which returns
+  the last element to be added to a stack.
+  
+$$
+s' = hbm
+$$
 
-## Anaphora across sentence boundaries
+$$
+s'_τ = m
+$$
 
-(@) \# The dean introduced every new student^*x*^ to Jeff.  
-The janitor introduced her~*x*~ to Britta.
+## Syntax of \texttt{DyS}
 
-(@) The dean introduced a new student^*x*^ to Jeff.  
-The janitor introduced her~*x*~ to Britta.
+- For simplicity, I'll take the syntax of \texttt{DyS} to be identical to the
+  syntax of \texttt{FOL} (and hence DPL).
+  
+- With one exception - we have a new syntactic expression $\textit{pro}$,
+  which has the same distribution as individual constants and variables – namely
+  it can appear as an argument to predicates, e.g.,
+  
+- $\metalang{hugs}(\metalang{Annie},\textit{pro})$
+  
+- Unlike in DPL, sentence meanings in \texttt{DyS} are going to be additionally
+  relativised to an assignment $g$. We'll see the relevance of this later.
+
+## Semantics of \texttt{DyS}
+
+- Sentence meanings in \texttt{DyS} are going to express *relations between
+  stacks*, rather than relations between assignment functions. 
+  
+- Here's the interpretation rule for a unary predicate:
+
+- If $π$ is a unary predicate and $α$ is an individual constant, then $\evalM[g]{π(α)} =
+  \Set{⟨s,s'⟩| s' = \widehat{s\evalM[g]{α}} \metalang{ and } \evalM[g]{α} ∈ \evalM{π}}$
+  
+- If $π$ is a unary predicate and $α$ is a variable, then $\evalM[g]{π(α)} =
+  \Set{⟨s,s'⟩| s' = s \metalang{ and } \evalM[g]{α} ∈ \evalM{π}}$
+
+## Semantics of \texttt{Dys}
+
+- For binary predicates we now technically need four rules, since individual
+  constants update the stack, whereas variables don't quantifiers don't:
+
+- If $π$ is a binary predicate and $α,β$ are individual constants, then $\evalM[g]{π(α,β)} =
+  \Set{⟨s,s'⟩| s' = \widehat{s\evalM[g]{β}\evalM[g]{α}} \metalang{ and } ⟨\evalM[g]{α},\evalM[g]{β}⟩ ∈ \evalM[g]{π}}$
+  
+- If $π$ is a binary predicate and $α$ is an individual constants, and $β$ is a variable, then $\evalM[g]{π(α,β)} =
+  \Set{⟨s,s'⟩| s' = \widehat{s\evalM[g]{α}} \metalang{ and } ⟨\evalM[g]{α},\evalM[g]{β}⟩ ∈ \evalM[g]{π}}$
+  
+- If $π$ is a binary predicate and $α$ is a variable, and $β$ is an individual constant, then $\evalM[g]{π(α,β)} =
+  \Set{⟨s,s'⟩| s' = \widehat{s\evalM[g]{β}} \metalang{ and } ⟨\evalM[g]{α},\evalM[g]{β}⟩ ∈ \evalM[g]{π}}$
+  
+- If $π$ is a binary predicate and $α$ and $β$ are variables, then $\evalM[g]{π(α,β)} =
+  \Set{⟨s,s'⟩| s' = s \metalang{ and } ⟨\evalM[g]{α},\evalM[g]{β}⟩ ∈ \evalM[g]{π}}$
+  
+## Semantics of \textt{Dys}
+
+- The general rule is: *individual constants* trigger a push to the output
+  stack, whereas *variables* do not.
+  
+## Semantics of \texttt{DyS}
+
+- Assume a model with *Jeff*, *Britta*, and *Annie*.
+
+- Only *Jeff is happy*, and nobody else is happy.
+
+- *Everyone hugged themselves*, and nobody else hugged anybody else.
+
+- Task: compute the interpretation of the following formulas:
+
+(@) $\metalang{happy}(\metalang{Jeff})$
+
+(@) $\metalang{hugs}(\metalang{Annie},\metalang{Annie})$
+
+## Solution
+
+$$
+&\begin{aligned}[t]
+&\evalM[g]{\metalang{happy}(\metalang{Jeff})}\\
+&=\Set{⟨s,s'⟩|s' = \widehat{sj} ∧ j ∈ \entity{happy}}\\
+&=\Set{⟨[],[j]⟩,⟨[x],[xj]⟩,⟨[xy],[xyj]⟩,...}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}[t]
+&\evalM[g]{\metalang{hugs}(\metalang{Annie},\metalang{Annie})}\\
+&=\Set{⟨s,s'⟩|s' = \widehat{saa} ∧ ⟨a,a⟩ ∈ \entity{hugs}}\\
+&= \Set{⟨[],[aa]⟩,⟨[x],[xaa]⟩,⟨[xy],[xyaa]⟩,...}
+\end{aligned}
+$$
+
+## Variables
+
+- Sentences with variables are just going to be tests on stacks.
+
+$$
+&\begin{aligned}[t]
+&\evalM[g]{\metalang{happy}(x)}\\
+&=\Set{⟨s,s'⟩|s' = s ∧ g(x) ∈ \entity{happy}}\\
+&\metalang{if }g(x) = j\metalang{ then
+}=\Set{⟨[],[]⟩,⟨[x],[x]⟩,⟨[xy],[xy]⟩,...}\\
+&\metalang{else }∅
+\end{aligned}
+$$
+
+## Falsity
+
+- Just like in DPL, if an atomic formula is false in the model, it returns the
+  empty set.
+  
+$$
+&\begin{aligned}[t]
+&\metalang{happy}(\metalang{Britta})\\
+&=\Set{⟨s,s'⟩|s' = \widehat{sb} ∧ b ∈ \entity{happy}}\\
+&=∅
+\end{aligned}
+$$
+
+## Existential quantification
+
+- Existentially quantified statement $∃v ϕ$ in this setting, are interpreted as
+  instructions to update a stack $s$ with a random individual $x$, just so long
+  as the embedded formula $ϕ$ is true relative to $g$, modified so that it maps
+  $v$ to $x$.
+
+- $\evalM[g]{∃ v ϕ} = \Set{⟨s,s'⟩|∃ x[s' = \widehat{sx} ∧ \evalM[g^{[v →
+  x]}]{ϕ}]}$
+  
+- The idea is that existential quantifiers represent a *refusal to choose
+  between different possible referents*
+  
+## Illustration
+
+- Let's say we're in a model, again with $j$, $b$, and $a$, and only $j$ and $b$ arrived.
+ 
+$$
+\begin{aligned}[t]
+&\evalM[g]{∃ v[\metalang{arrive}(v)]}\\
+&= \Set{⟨s,s'⟩| ∃ x[s' = \widehat{sx} ∧ \evalM[g^{[v →
+x]}]{\metalang{arrive}(v)}]}\\
+&=\Set{⟨s,s'⟩| ∃ x[s' = \widehat{sx} ∧ x ∈ \entity{arrive}]}\\
+&=\Set{\begin{aligned}[c]
+&⟨[],[j]⟩\\
+&⟨[],[b]⟩\\
+&⟨[x],[xj]⟩\\
+&⟨[x],[xb]⟩\\
+&⟨[xy],[xyj]⟩\\
+&⟨[xy],[xyb]⟩
+\end{aligned}}
+\end{aligned}
+$$
+
+## Pronouns
+
+- How do pronouns pick up referents?
+
+- Unlike DPL, we distinguish both syntactically and semantically between pronoun
+  binding and variable binding.
+  
+- The rule for formulas with $\textit{pro}$ is going to be the following:
+
+- If $π$ is a unary predicate, then $\evalM[g]{π(\textit{pro})} =
+  \Set{⟨s,s'⟩| s' = s \metalang{ and } s'_τ ∈ \evalM{π}}$
+  
+- The idea is that pronouns return *the last object to be added to the stack*.
+
+## Pronouns
+
+- Of course this means we'll need to multiply our rules for binary connectives, so that we can deal with combinations of proper names and pronouns (and variables and pronouns, but I won't show that here).
+
+- If $π$ is a binary predicate and $α$ is an individual constants, then $\evalM[g]{π(α,\textit{pro})} =
+  \Set{⟨s,s'⟩| s' = \widehat{s\evalM[g]{α}} \metalang{ and } ⟨\evalM[g]{α},s'_τ⟩ ∈ \evalM[g]{π}}$
+  
+- If $π$ is a binary predicate and $α$ is an individual constant, then $\evalM[g]{π(\textit{pro},α)} =
+    \Set{⟨s,s'⟩| s' = \widehat{s\evalM[g]{α}} \metalang{ and } ⟨s_τ,\evalM[g]{α}⟩
+    \in \evalM[g]{\pi}}$
+    
+- Notice that our interpretation rules for binary predicates with $\textit{pro}$
+  are *internally dynamic* -- when $\textit{pro}$ is the object, it picks up the
+  referent pushed to the stack by the subject.
+  
+- Because of the way the rules are defined, the reverse doesn't go through.
+
+## Pronouns ii
+
+(@) Annie hugged herself -- $\metalang{hugged}(\metalang{Annie},\textit{pro})$
+
+$$
+= \Set{⟨s,s'⟩ | s' = \widehat{sa} ∧ ⟨a,s'_τ⟩ ∈ \entity{hug}}
+$$
+
+- This is guaranteed to be true in our model, since the pronoun picks up the
+  discourse referent introduced by the subject.
+
+(@) She hugged Annie. – $\metalang{hugged}(\textit{pro},\metalang{Annie})$
+
+- The meaning here is dependent on the incoming stack $s$.
+
+$$
+= \Set{⟨s,s'⟩ | s' = \widehat{sa} ∧ ⟨a,s_τ⟩ ∈ \entity{hug}}
+$$
+
+## Pronouns iii
+
+- Oh look! We've derived a basic version of Condition C of the binding theory.
+
+(@) Annie$^1$ loves herself$₁$.
+
+(@) \*she$_1$ loves Annie$^1$.
+
+- Of course we need to refine the theory to get a broad empirical converage.
+
+- In particular, we probably want to allow pronouns to pick up not just the last
+  discourse referent added to the stack, to account for binding of pronouns
+  across other NPs.
+  
+(@) Annie$^1$ thinks that Bill$^2$ hugged her$_1$.
+
+## Dynamic binding
+
+- Existential quantifiers can bind an object $\textit{pro}$ in exactly the same
+  way.
+  
+$$
+\begin{aligned}[t]
+&\evalM[g]{∃ v[\metalang{hugged}(v,\textit{pro})]}\\
+&= \Set{⟨s,s'⟩|∃ x[s' = \widehat{sx} ∧ \evalM[g^{[v → x]}]{\metalang{hugged}(v,\textit{pro})}]}\\
+&= \Set{⟨s,s'⟩|∃ x[s' = \widehat{sx} ∧ ⟨x,s'_τ⟩ ∈ \entity{hugged}]}\\
+&= \Set{\begin{aligned}[c]
+&⟨[],[j]⟩\\
+&⟨[],[b]⟩\\
+&⟨[],[a]⟩\\
+&⟨[x],[xj]⟩\\
+&⟨[x],[xb]⟩\\
+&⟨[x],[aa]⟩\\
+...
+\end{aligned}}
+\end{aligned}
+$$
+
+## Dynamic binding and crossover
+
+- But not a subject $\textit{pro}$!
+
+$$
+\begin{aligned}[t]
+&\evalM[g]{∃ v[\metalang{hugged}(\textit{pro},v)]}\\
+&= \Set{⟨s,s'⟩|∃ x[s' = \widehat{sx} ∧ \evalM[g^{[v → x]}]{\metalang{hugged}(\textit{pro},v)}]}\\
+&= \Set{⟨s,s'⟩|∃ x[s' = \widehat{sx} ∧ ⟨s_τ,x⟩ ∈ \entity{hugged}]}\\
+&= \Set{\begin{aligned}[c]
+&⟨[j],[jj]⟩\\
+&⟨[a],[aa]⟩\\
+&⟨[b],[bb]⟩\\
+&⟨[xj],[xjj]⟩\\
+&⟨[xa],[xaa]⟩\\
+&⟨[xb],[xbb]⟩\\
+...
+\end{aligned}}
+\end{aligned}
+$$
+
+- The truth of this formula is dependent on the incoming stack already
+  containing an individual that hugged themselves.
+  
+## Dynamic relations
+
+- Without even saying anything about conjunction, we've already captured the
+  fact that *binary predicates are internally dynamic*, something not captured
+  by DPL.
+  
+- We did this, essentially, by lexical stipulation, but there are ways of
+  reformulating \texttt{DyS} which make this more principled.
+  
+## Dynamic conjunction
+
+- Conjunction in \texttt{DyS} is defined in the same way as DPL, but in terms of
+  stacks rather than assignments:
+
+- $\evalM[g]{[ϕ ∧ ψ]} = \Set{⟨s,s'⟩|∃ k:⟨s,k⟩ ∈ \evalM[g]{ϕ}\text{ and }⟨k,s'⟩ ∈ \evalM{ψ}}$
+
+- We feed our input stack $s$ into the first conjunct, and return the result of
+  feeding the output into the second conjunct.
+  
+## Cross-sentential binding
+
+- Cross-sentential binding is captured in a totally straightforward way. Let's
+  say that $j$ hugged $a$, everyone hugged themselves, nobody hugged anyone
+  else, and only $j$ is happy.
+  
+(@) $∃ v[\metalang{hug}(v,\metalang{Annie})] ∧ \metalang{happy}(\textit{pro})$
+
+$$
+\begin{aligned}[t]
+&\evalM[g]{∃ v[\metalang{\metalang{hug}(v,\metalang{Annie})}]}\\
+&= \Set{⟨s,s'⟩|∃ x[s' = \widehat{sax} ∧ ⟨x,a⟩ ∈ \entity{hug}]}\\
+&= \Set{⟨[],\alert{[aj]}⟩,⟨[],[aa]⟩,...}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}[t]
+&\evalM[g]{\metalang{happy}(\textit{pro})}\\
+&= \Set{⟨s,s'⟩|s = s' ∧ s_τ ∈ \metalang{happy}}\\
+&= \Set{⟨[j],[j]⟩,⟨\alert{[aj]},[aj]⟩,...}
+\end{aligned}
+$$
+
+## Cross-sentential binding ii
+
+
+$$
+\begin{aligned}[t]
+&\evalM[g]{∃ v[\metalang{hug}(v,\metalang{Annie})] ∧ \metalang{happy}(\textit{pro})}\\
+&=\Set{⟨[],[aj]⟩,...}
+\end{aligned}
+$$
+
+- Notice that the last discourse referent pushed to the stack is $j$.
+
+- Binding isn't going to work in the other direction...
+
+## Cross-sentential binding iii
+
+$$
+\begin{aligned}[t]
+&\evalM[g]{\metalang{happy}(\textit{pro})}\\
+&= \Set{⟨s,s'⟩|s = s' ∧ s_τ ∈ \metalang{happy}}\\
+&= \Set{⟨[j],\alert{[j]}⟩,..}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}[t]
+&\evalM[g]{∃ v[\metalang{\metalang{hug}(v,\metalang{Annie})}]}\\
+&= \Set{⟨s,s'⟩|∃ x[s' = \widehat{sax} ∧ ⟨x,a⟩ ∈ \entity{hug}]}\\
+&= \Set{⟨[],[aj]⟩,⟨[],[aa]⟩,⟨\alert{[j]},[jaj]⟩,⟨\alert{[j]},[jaa]⟩,...}
+\end{aligned}
+$$
+
+- It's obvious here that we're just going to get something with dynamic effects
+equivalent to *someone hugged Annie*. 
+
+## Backwards binding
+
+- Note the predictions out theory makes:
+
+(@) Someone$ˣ$ arrived. They$ₓ$ sat down.
+
+(@) \*They$ₓ$ sat down and someone$ˣ$ arrived.
+
+(@) Someone$ˣ$ likes themselves$ₓ$.
+
+(@) \*They$ₓ$ like someone$ˣ$.
+
+## Trace binding
+
+ -  If traces are interpreted as variables, rather than as
+    $\textit{pro}$, \texttt{DyS} predicts that traces cannot be
+    dynamically bound.
+    
+ - It's difficult to come up with examples to test this but maybe something like
+   the following. Although note that this would typically be rules out
+   syntactically.
+    
+(@trace) Does John know who$ˣ$ left and $tₓ$ like Mary?
+
+## Features of \texttt{DyS}
+
+- Some interesting features of \texttt{DyS}:
+
+    - We don't require co-indexation between pronouns and their binders, only
+      between quantifiers and their traces.
+      
+    - Coreference and binding are not syntactically distinguished.
+    
+    - Stack updates are always monotonic – we can always add individuals to the
+      stack, but never reduce it.
+      
+## Negation
+
+- In \texttt{DyS}, additional operators can be added to achieve the same results
+  as DPL.
+  
+- $\evalM[g]{\neg\phi} = \Set{⟨s,s'⟩| s = s' ∧ ¬∃ k:⟨s',k⟩ ∈ \evalM[g]{ϕ}}$
+
+- $¬ϕ$ is interpreted as a test on stacks that *fail* to return a valid output
+  when threaded into $ϕ$.
+  
+## Negation ii
+
+- We can see how negation is going to block dynamic binding
+
+- Since every stack is a possible input to the existential statement, negation
+  is going to return the empty set.
+
+ $$
+\begin{aligned}[t]
+&\evalM[g]{¬∃ v[\metalang{happy}(v)]}\\
+&=\Set{⟨s,s'⟩| s = s' ∧ ¬k:⟨s',k⟩ ∈ \Set{⟨t,t'⟩|∃ x[t' = \widehat{tx} ∧ x ∈ \entity{happy}]}}\\
+&=\Set{⟨s,s'⟩| s = s' ∧ ¬k:⟨s',k⟩ ∈ \Set{⟨[],[j]⟩,⟨[a],[aj]⟩,⟨[j],[jj]⟩,...}}\\
+&=∅
+ \end{aligned}
+ $$
+ 
+## Exercise
+
+- Define the rule for dynamic implication in \texttt{DyS}. Here is the rule from
+  DPL to help you:
+  
+  - $\evalM{ϕ → ψ} = \Set{⟨i,o⟩|o = i \metalang{ and }∀ k:⟨o,k⟩ ∈ \evalM{ϕ} ⇒ ∃
+  j:⟨k,j⟩ ∈ \evalM{ψ}}$
+
+- Once you've done that, compute the meaning of the following.
+
+(@) If someone$ˣ$ hugs Annie, they$ₓ$ are happy.
+
+- Again, assume a model where Jeff hugs Annie, everyone hugs themselves, nobody
+  else hugs anybody else, and only Jeff is happy.
+
+ 
+## The novelty condition
+
+- Heim proposed the *novely condition* to rule out cases like the following:
+
+(@) Someone$^1$ walked in. Someone$^1$ sat down.
+
+- In frameworks like DPL, the second conjunct "resets" the value of $x_1$,
+  predicting that the sentence as a whole should just introduce a discourse referent
+  that sat down.
+  
+- \texttt{DyS} doesn't have any need for the novely condition, since each
+  existential statement adds a new discourse referent to the stack. Indices are irrelevant.
+
+## The novelty condition ii
+  
+$$
+\begin{aligned}[t]
+&\evalM[g]{∃ v[\metalang{walkedIn}(v)]}\\
+&=\Set{⟨t,t'⟩|∃ x[t' = \widehat{tx} ∧ x ∈ \entity{walkedIn}]}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}[t]
+&\evalM[g]{∃ v[\metalang{satDown}(v)]}\\
+&=\Set{⟨t,t'⟩|∃ y[t' = \widehat{ty} ∧ y ∈ \entity{satDown}]}\\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}[t]
+&\evalM[g]{∃ v[\metalang{walkedIn}(v)] ∧ ∃ v[\metalang{satDown}(v)]}\\
+&=\Set{⟨t,t'⟩|∃ xy[t' = \widehat{txy} ∧ x ∈ \entity{walkedIn} ∧ y ∈ \entity{satDown}]}\\
+\end{aligned}
+$$
+
+## The familiarity condition
+
+- Heim also proposed the familiarity condition, to capture the fact that
+  pronominals seem to presuppose the existence of a familiar discourse referent.
+  
+  
+  (@) (In an out-of-the-blue context) \*He sat down.
+  
+- The way that Heim accomplishes this is by making assignments partial, and
+  introducing a syntactic condition stating that
+  pronouns should re-use an index that has already been introduced.
+  
+## The familiarity condition
+
+- \texttt{DyS} can capture something like the familiarity condition.
+
+- If $π$ is a unary predicate, then $\evalM[g]{π(\textit{pro})} =
+  \Set{⟨s,s'⟩| s' = s \metalang{ and } s'_τ ∈ \evalM{π}}$
+  
+  - Recall that formulas with pronouns are tests on a stack $s'$, just in case
+    $s'_τ$ satisfies the predicate.
+    
+  - $τ$ is a partial function that is only defined for stacks that have at least
+    one discourse referent. If the input stack is empty, i.e., if there are no
+    salient discourse referents, then $τ$ is undefined.
+    
+## Further directions
+
+- Dynamic semantics was initially motivated by basic data concerning the
+  interaction between scope and pronominal binding.
+
+- But the empirical reach of dynamic semantics extends beyond this domain.
+
+- Dynamic semantics is especially well-suited to analyzing phenomena which
+  display a *dynamic signature* -- i.e., phenomena which display a linear
+  asymmetry.
+
+## Tense
+
+ - Partee (1973) observed that their are parallels between tense and pronouns.
+ 
+ - Consider the following data:
+ 
+ (@) Pedro owns a donkey$^x$. He beats it$_x$.
+ 
+ (@) Yesterday, Pedro tried to kiss Juanita. She slapped him.
+ 
+ - The first sentence is a standard case of *donkey anaphora*. We are already
+   equipped with the necessary tools to analyse this. 
+   
+- The second sentence shows a similar phenomenon, but it the temporal domain --
+  the past tense interpretation of the second clause is anaphorically dependent
+  on the first. The sentence is conveys that Juanita slapped Pedro *right after*
+  he tried to kiss her.
+  
+## Tense ii
+
+- The idea informally, is as follows. Action sentences are existentially
+  quantified statements about events (Davidson, 1967). As well as more
+  metaphysically conventional entities, we also have events in our domain.
+  
+(@) Pedro tried to kiss Juanita. -- $∃ e₁[\metalang{tryToKiss}(p,j,e₁) ∧ e₁ ≤ e]$
+  
+(@) She slapped him -- $∃ e₂[\metalang{slapped}(x,y,e₂) ∧ e₂ ≤ e₁]$
+  
+(@) Pedro tried to kiss Juanita and she slapped him.
+
+$$
+∃ \alert{e₁}[\metalang{tryToKiss}(p,j,e₁) ∧ e₁ ≤ e] ∧ ∃ e₂[\metalang{slapped}(x,y,e₂) ∧ e₂ ≤ \alert{e₁}]
+$$
+
+## Donkey tense
+
+- As well as cross-sentential tense anaphora, we can also create examples which
+  exhibit the correlate of donkey anaphora in the temporal domain.
+  
+(@) Eevery farmer who owns a donkey beat it.
+
+(@) Whenever Pedro tried to kiss Juanita, she slapped him.
+
+$$
+(∃ e₁[\metalang{tryToKiss}(p,j,e₁) ∧ e₁ ≤ e]) → (∃e₂[\metalang{slap}(x,y,e₂) ∧
+e₂ ≤ e₁])
+$$
+
+# Presupposition
+    
+ - Certain expressions in natural language seem to carry preconditions.
+ 
+ (@) Mary stopped smoking
+ 
+ - Sounds fine in a context where it's know that Mary 
+ 
+ - Sounds weird in a context where it's known that Mary has never smoked before.
+ 
+ - I'll write the presupposition of a predicte $P$ as $Π(P)$.
+ 
+ - $π = x$ used to smoke

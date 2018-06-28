@@ -14,16 +14,19 @@ date: 25-29 June 2018
 
 Tentative course schedule (allowing for some slippage):
 
- - session 1: Pronouns, quantification, and assignment sensitivity
- - session 2: From First Order Logic to Dynamic Predicate Logic
- - session 3: Discourse Referents and File Change Semantics
- - session 4 & 5: Updates and Presupposition
- 
+ - session 1: The formal semanticist's toolkit
+ - session 2: First order logic
+ - session 3: Dynamic predicate logic
+ - session 4: Predicate logic with anaphora 
+ - session 5: presupposition
+
 # Background
 
 I'll assume a basic knowledge of set theory and first-order logic in this course. Elizabeth Coppock has put together a useful primer, which you can find online [here](http://eecoppock.info/DynamicSemantics/Lectures/logic-2up.pdf).
 
 # Notes and Reference Material
+
+Slides can be found [here](https://keybase.pub/patrl/actl2018/slides.pdf)
 
 Course notes will be dynamically-updated [here](/actl2018notes.html)
 
