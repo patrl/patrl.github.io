@@ -10,7 +10,18 @@ date: 25-29 June 2018
 
 [^mn]: {-} ![](/images/cyclist.jpg)
 
-[^mn]This course will provide an introduction to the study of linguistic meaning through the lens of *dynamic semantics* - an approach to semantics developed primarily during the 80s by Irene Heim and Hans Kamp. The central claim of dynamic semantics is that the meaning of a sentence consists of a set of instructions for updating the common ground. As such, dynamic semantics emphasises the flow of information over the course of a discourse, as opposed to concentrating only the meaning of a sentence taken in isolation. Starting from some basic building blocks, we'll put together a version of dynamic semantics, and use it to analyse the behaviour of indefinites ("a dog"), definites ("the cat"), and pronouns ("they/"them"/"she"/"her" etc.). Time permitting, we'll also discuss the dynamic approach to presuppositions.
+[^mn]This course will provide an introduction to the study of linguistic meaning
+through the lens of *dynamic semantics* 
+- an approach to semantics developed primarily during the 80s by Irene Heim and
+Hans Kamp. 
+The central claim of dynamic semantics is that the meaning of a sentence
+consists of a set of instructions for updating the common ground. 
+As such, dynamic semantics emphasises the flow of information over the course of
+a discourse, as opposed to concentrating only the meaning of a sentence taken in
+isolation.
+Starting from some basic building blocks, we'll put together a version of
+dynamic semantics, and use it to analyse the behaviour of definites, indefinites
+, and pronouns. Time permitting, we'll also discuss the dynamic approach to presuppositions.
 
 Tentative course schedule (allowing for some slippage):
 
@@ -18,7 +29,7 @@ Tentative course schedule (allowing for some slippage):
  - session 2: First order logic
  - session 3: Dynamic predicate logic
  - session 4: Predicate logic with anaphora 
- - session 5: presupposition
+ - session 5: Presupposition
 
 # Background
 
@@ -27,7 +38,5 @@ I'll assume a basic knowledge of set theory and first-order logic in this course
 # Notes and Reference Material
 
 Slides can be found [here](https://keybase.pub/patrl/actl2018/slides.pdf)
-
-Course notes will be dynamically-updated [here](/actl2018notes.html)
 
 All reference material can be found [here](https://keybase.pub/patrl/actl2018/). More here soon. 
