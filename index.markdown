@@ -11,7 +11,6 @@ Reach me at: [patrick.d.elliott(at)gmail.com](mailto:patrick.d.elliott@gmail.com
 
 ### Upcoming
 
-- June 8, 2018: I'm giving a talk at the UCL workshop on attitude predicates entitled “On Prior’s substitution problem”.
 - June 25-29, 2018: I'll be teaching an Introduction to Dynamic Semantics at the ACTL Summer School, UCL, London. [Course page](https://patrickdelliott.com/actl2018.html)
 - July 30 - August 10, 2018: I’ll be teaching intro and advanced semantics at the EGG summer school in Banja Luka.
 - September 5-7, 2018: I’ll be presenting a poster with Uli Sauerland on “Ineffability and Unexhaustification” at [Sinn und Bedeutung 23](https://sites.google.com/view/sub23/home) in Barcelona.
