@@ -4,4 +4,6 @@ _site/
 .#*
 node_modules/
 bib/auto/
+bib/.auctex-auto/
 dist/
+
