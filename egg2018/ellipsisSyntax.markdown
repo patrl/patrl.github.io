@@ -12,10 +12,10 @@ author: Patrick D. Elliott and Andrew Murphy
 
 # Tentative schedule
 
- - 30.7: *VP ellipsis*
- - 31.7: *gapping* 
- - 01.8: *sluicing and clausal ellipsis*
- - 02.8: *more on sluicing*
+ - 30.7: *Sluicing*
+ - 31.7: *Sluicing ii* 
+ - 01.8: *VP ellipsis*
+ - 02.8: *Gapping*
  - 03.8: *NP ellipsis*
  
 # Readings
