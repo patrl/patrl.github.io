@@ -7,5 +7,5 @@ bib/auto/
 bib/.auctex-auto/
 dist/
 
-.dat*
+.dat/
 
