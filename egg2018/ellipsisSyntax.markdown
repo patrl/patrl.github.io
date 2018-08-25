@@ -12,8 +12,7 @@ author: Patrick D. Elliott and Andrew Murphy
 
 # Tentative schedule
 
- - 30.7: *Sluicing*
- - 31.7: *Sluicing ii* 
+ - 30-31.7: [*Sluicing*](https://keybase.pub/patrl/egg2018/ellipsisSyntax/1-2-slides.pdf)
  - 01.8: *VP ellipsis*
  - 02.8: *Gapping*
  - 03.8: *NP ellipsis*
