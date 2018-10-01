@@ -11,5 +11,7 @@ Reach me at: [patrick.d.elliott(at)gmail.com](mailto:patrick.d.elliott@gmail.com
 
 ### Upcoming
 
-- September 17-18, 2018: I’ll be giving a tutorial on conjoined wh-expressions with Andreea Nicolae, and an invited talk on intervention effects at the workshop [“Multiple *wh*-constructions and their kin”](https://anamariafalaus.org/workshop/) in Nantes.
+- November 12-14: I'll be giving a solo talk entitled "Applicatives for anaphora
+  and presupposition", and a joint talk with Yasu sudo entitled "Binding *ex
+  post facto*" at LENLS15, Yokohama.
 - March 6-8, 2019: I’ll be giving an invited talk at the DGfS workshop “Encoding emotive attitudes in non-truth conditional meaning” in Bremen.
