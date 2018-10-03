@@ -29,6 +29,10 @@ title: research
 
 <summary class="podkova f3 ttu tracked cl-effect-1 link dim">Snippets</Summary>
 
+@snippet18uncond <a href="https://patrl.keybase.pub/snippets/whSnippet.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
+
+@snippet18wh <a href="https://patrl.keybase.pub/snippets/uncondSnippet.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
+
 @snippet18zero <a href="https://patrl.keybase.pub/snippets/zeroSnippet.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
 
 @snippet18collectivePred <a href="https://patrl.keybase.pub/snippets/collectivePredSnippet.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
