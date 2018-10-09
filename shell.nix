@@ -1,4 +1,4 @@
-{ nixpkgs ? import <nixos-unstable> {}, compiler ? "default", doBenchmark ? false }:
+{ nixpkgs ? import <nixpkgs> {}, compiler ? "default", doBenchmark ? false }:
 
 let
 

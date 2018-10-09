@@ -12,7 +12,7 @@
   "homepage": "https://github.com/patrl/patrl.github.io#readme",
   "description": "",
   "dependencies": {
-    "tachyons": "^4.7.2"
+    "tachyons": "^4.11.1"
   },
   "devDependencies": {
     "gradients": "^1.0.1"
