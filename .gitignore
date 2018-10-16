@@ -1,0 +1,8 @@
+_cache/
+_site/
+.stack-work/
+.#*
+node_modules/
+bib/auto/
+bib/.auctex-auto/
+dist/
