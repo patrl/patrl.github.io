@@ -1,0 +1,11 @@
+#+TITLE: Hakyll with org-mode
+#+AUTHOR: Patrick D. Elliott
+
+* Markup
+
+- /Italics/
+- *Bold*
+
+* Citations
+
+- cite:heimThesis
