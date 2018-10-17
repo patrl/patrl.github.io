@@ -1,0 +1,23 @@
+---
+title: About
+author: Patrick D. Elliott
+---
+
+* About
+
+I'm a postdoctoral researcher at the [[https://www.zas.gwz-berlin.de][Leibniz-Zentrum Allgemeine
+Sprachwissenschaft]] in Berlin, associated with the semantics and pragmatics
+research group. I'm a theoretical linguist, which means that my work involves
+developing formal models of what we know when we know a language. Mostly, I do
+semantics, but I'm also interested in syntax, morphology, pragmatics, and their interfaces with semantics.
+
+When I'm not doing linguistics, I [[https://github.com/patrl][code]], [[https://www.goodreads.com/user/show/59694544-patrick-elliott][read]], and scale vertical walls.
+
+Reach me at: [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott(at)gmail.com]]
+
+** Upcoming
+
+- November 12-14: I'll be giving a solo talk entitled [[https://keybase.pub/patrl/abstracts/applicatives.pdf][Applicatives for anaphora
+  and presupposition]], and a joint talk with Yasu sudo entitled [[https://keybase.pub/patrl/abstracts/bindingExPostFacto.pdf][Binding Ex Post Facto]] at LENLS15, Yokohama.
+- March 6-8, 2019: I'll be giving an invited talk at the DGfS workshop "Encoding
+  emotive attitudes in non-truth conditional meaning" in Bremen.
