@@ -6,36 +6,8 @@
     font-family: "Inconsolata", monospace;
 }
 
-/* .brackets:before, .denote:after { */
-/* 	  position: absolute; */
-/* 	  top: -9px; /\* Value depends on your design. *\/ */
-/* 	  color: transparent;/\* It makes the curly brackets invisible at the beginning.*\/ */
-/* } */
-
-/* .brackets:hover:before, .brackets:hover:after { */
-/* 	  color: white; /\* Or whatever colour you want. *\/ */
-/* } */
-
-/* /\* For movement *\/ */
-/* .brackets:before { */
-/* 	  left: -20px; */
-/* } */
-/* .brackets:hover:before { */
-/* 	  content: "⟦"; */
-/* 	  left: -15px; */
-/*     transform: translateX(0); */
-/* } */
-/* .brackets:after { */
-/* 	  right: -20px; */
-/* } */
-/* .brackets:hover:after { */
-/* 	  content: "⟧"; */
-/* 	  right: -15px; */
-/*     transform: translateX(0); */
-/* } */
-
 .cl-effect-1:before, .cl-effect-1:after {
-	  display: inline-block;
+    display: inline-block;
     position: absolute;
     margin-left:-14px;
 	  opacity: 0;

@@ -88,14 +88,14 @@ main = do
         route $ setExtension "html"
         compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib"
         -- compile $ tufteCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib"
-            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= loadAndApplyTemplate "templates/tufte2.html" postCtx
             >>= relativizeUrls
 
     match "drafts/*" $ do
         route $ setExtension "html"
         compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib"
         -- compile $ tufteCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib"
-            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= loadAndApplyTemplate "templates/tufte2.html" postCtx
             >>= relativizeUrls
 
     match "bib/*" $ compile biblioCompiler

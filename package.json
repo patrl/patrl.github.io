@@ -12,6 +12,7 @@
   "homepage": "https://github.com/patrl/patrl.github.io#readme",
   "description": "",
   "dependencies": {
+    "@ibm/plex": "^1.2.0",
     "tachyons": "^4.11.1"
   },
   "devDependencies": {

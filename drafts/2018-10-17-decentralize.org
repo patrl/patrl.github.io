@@ -2,9 +2,9 @@
 title: Publishing on the decentralised web
 author: Patrick D. Elliott
 toc: true
+lang: english
+highlight-style: haddock
 ---
-
-* Publishing on the decentralised web
 
 [[https://dat-project.org][Dat]] and [[https://ipfs.io][IPFS]] are two relatively young protocols at the heart of the so-called
 /decentralized web/ (see also: /distributed web/, /immutable web/, /permanent

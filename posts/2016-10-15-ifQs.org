@@ -2,9 +2,8 @@
 title: A note on if-questions
 author: Patrick D. Elliott
 date: 2016-10-15
+lang: english
 ---
-
-* A note on /if/-questions
 
 /If/-clauses are weird. They have a couple of prominent uses: as the
 antecedent clause in a conditional /if...then.../ statement (see (1)),
