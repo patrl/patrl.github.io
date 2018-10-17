@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="english" xml:lang="english">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+        <meta name="author" content="Patrick D. Elliott" />
+        <meta name="dcterms.date" content="October 17, 2018" />
+        
+        <title>Publishing on the decentralised web</title>
+        <style type="text/css">
+         code{white-space: pre-wrap;}
+         span.smallcaps{font-variant: small-caps;}
+         span.underline{text-decoration: underline;}
+         div.column{display: inline-block; vertical-align: top; width: 50%;}
+         
+        </style>
+        
+        <link rel="stylesheet" href="../css/syntax.css" />
+        <link rel="stylesheet" href="../css/tufte2.css" />
+        
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        
+        <header id="title-block-header">
+            <h1 class="title">Publishing on the decentralised web</h1>
+            
+            
+            <p class="author">Patrick D. Elliott</p>
+            
+            
+            <p class="date">October 17, 2018</p>
+            
+        </header>
+        
+        
+        <p><a href="https://dat-project.org">Dat</a> and <a href="https://ipfs.io">IPFS</a> are two relatively young protocols at the heart of the so-called <em>decentralized web</em> (see also: <em>distributed web</em>, <em>immutable web</em>, <em>permanent web</em>, etc.). The decentralization movement, broadly construed, aims to free us from the shackles of the traditional client/server architecture by marshalling contemporary peer-to-peer technologies. In other words, the aim is to develop an alternative to huge cloud-based companies like google and facebook, and return power and control over information to the user. In theory, the decentralised web means that information can live on even if servers come and go – <em>everyone</em> is a node.</p>
+<p>Dat and IPFS (which stands for Inter-Planetary File System) have relatively similar aims – they both provide a protocol and tooling for sharing content-addressable information between peers, with no single point of failure. Dat was originally developed as a means for scientists to share large datasets, but the ecosystem has however grown quite a bit beyond this initial remit – see, e.g., <a href="https://beakerbrowser.com/">the Beaker Browser</a>. IPFS on the other hand was pretty much always intended as a distributed alternative to the web, and there’s already an <a href="https://github.com/ipfs-shipyard/ipfs-companion">extension</a> to integrate modern browsers with the IPFS protocol. There are of course other technologies on the scene, such as <a href="https://www.scuttlebutt.nz/">scuttlebutt</a> (which I’ll probably write about some other time), and Tim Berners-Lee’s new <a href="https://solid.mit.edu/">solid</a> platform, but for now dat and IPFS seem the most mature and usable.</p>
+<p>In what follows, I’ll explain how I publish my <a href="https://patrickdelliott.com">homepage</a> – a static site built with <a href="https://jaspervdj.be/hakyll/">hakyll</a> and <a href="github:patrl/patrl.github.io">hosted on github</a> – via IPFS at <em>ipns/patrickdelliott.com</em> and dat at <a href="dat://patrl.hashbase.io" class="uri">dat://patrl.hashbase.io</a>. There wasn’t any real necessity to publish this site on the decentralized web – after all, the number of users who are going to visit this page via dat/ipfs is probably vanishingly small – but I thought it would be a fun (and very nerdy) experiment, and an opportunity to learn a little more about these emerging technologies, which I think are independently quite exciting.</p>
+<h2 id="ipfs">IPFS</h2>
+<h3 id="running-an-ipfs-node-locally">Running an IPFS node locally</h3>
+<p>Before doing anything else, I needed to install ipfs, initialize the repository, and start the ipfs daemon. On the off-chance you happen to be another NixOS user, this is as simple as adding the following line to your <code>configuration.nix</code>!</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode nix"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="ex">services.enable.ifps</span> = true<span class="kw">;</span></a></code></pre></div>
+<p>Otherwise, you can follow the instructions <a href="https://docs.ipfs.io/introduction/usage">here</a>. After starting the ipfs daemon, you can check whether or not you’re connected to the network by running <code>ipfs
+swarm peers</code>, which should return the ipfs addresses of your peers.</p>
+<h3 id="publishing-on-ipfs">Publishing on IPFS</h3>
+<p>First, we retrieve the peer ID of the local ipfs node:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="va">peerid=$(</span><span class="ex">ipfs</span> id -f<span class="st">&quot;&lt;id&gt;&quot;</span><span class="va">)</span></a></code></pre></div>
+<p>On my local machine, my website, built by hakyll, can be found at <code>~GitHub/patrl.github.io/_site/</code>. I ran the following, which adds the website to IPFS and retrieves the hash of the directory root:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="va">siteloc=</span>~/GitHub/patrl.github.io/_site</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="va">dirhash=$(</span><span class="ex">ipfs</span> add -r <span class="va">$(</span><span class="ex">siteloc</span><span class="va">)</span>/ <span class="kw">|</span> <span class="fu">grep</span> <span class="va">$(</span><span class="ex">siteloc</span><span class="va">)</span>$ <span class="kw">|</span> <span class="fu">cut</span> -d<span class="st">&quot; &quot;</span> -f2<span class="va">)</span></a></code></pre></div>
+<p>Finally, we publish the directory to our nodes <code>ipns</code> entry:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="ex">ipfs</span> name publish <span class="va">$dirhash</span></a></code></pre></div>
+<h3 id="ipfs-redirect">IPFS redirect</h3>
+<h2 id="dat">Dat</h2>
+<p>Before talking about dat, a little background: what got me started with this whole endeavour was an (in hindsight, overly ambitious) attempt to migrate this site from gh-pages pages to a personal web server, and publish to both <a href="https://patrickdelliott.com" class="uri">https://patrickdelliott.com</a> and <a href="dat://patrickdelliott.com" class="uri">dat://patrickdelliott.com</a> via <a href="https://github.com/beakerbrowser/homebase">homebase</a>. I managed to get this working after jumping through quite a few hoops, but found that homebase wouldn’t reliably sync with my website’s dat repository, and the whole setup required too much manual intervention to be really worthwhile. I’ll take another look at homebase once it’s a bit more mature.</p>
+<h1 id="resources">Resources</h1>
+<ul>
+<li><a href="dat://patrl.hashbase.io" class="uri">dat://patrl.hashbase.io</a></li>
+<li><em>ipns/patrickdelliott.com</em></li>
+</ul>
+    </body>
+</html>
