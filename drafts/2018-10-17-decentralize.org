@@ -1,0 +1,92 @@
+---
+title: Publishing on the decentralised web
+author: Patrick D. Elliott
+toc: true
+---
+
+* Publishing on the decentralised web
+
+[[https://dat-project.org][Dat]] and [[https://ipfs.io][IPFS]] are two relatively young protocols at the heart of the so-called
+/decentralized web/ (see also: /distributed web/, /immutable web/, /permanent
+web/, etc.). The decentralization movement, broadly construed, aims to free us
+from the shackles of the traditional client/server architecture by marshalling
+contemporary peer-to-peer technologies. In other words, the aim is to develop an
+alternative to huge cloud-based companies like google and facebook, and return
+power and control over information to the user. In theory, the decentralised web
+means that information can live on even if servers come and go -- /everyone/ is
+a node.
+
+Dat and IPFS (which stands for Inter-Planetary File System) have relatively similar aims -- they both provide a protocol and tooling for
+sharing content-addressable information between peers, with no single point of failure. Dat was originally developed as a means for
+scientists to share large datasets, but the ecosystem has however grown quite a bit beyond this
+initial remit -- see, e.g., [[https://beakerbrowser.com/][the Beaker Browser]]. IPFS on the other hand was
+pretty much always intended as a distributed alternative to the web, and there's
+already an [[https://github.com/ipfs-shipyard/ipfs-companion][extension]] to integrate modern browsers with the IPFS protocol. There
+are of course other technologies on the scene, such as [[https://www.scuttlebutt.nz/][scuttlebutt]] (which I'll
+probably write about some other time), and Tim Berners-Lee's new [[https://solid.mit.edu/][solid]] platform,
+but for now dat and IPFS seem the most mature and usable.
+
+In what follows, I'll explain how I publish my [[https://patrickdelliott.com][homepage]] -- a static site built with
+[[https://jaspervdj.be/hakyll/][hakyll]] and [[github:patrl/patrl.github.io][hosted on github]] -- via IPFS at [[ipns/patrickdelliott.com]] and dat at [[dat://patrl.hashbase.io]]. There wasn't any real necessity to publish this site on the decentralized web --
+after all, the number of users who are going to visit this page via dat/ipfs is
+probably vanishingly small -- but I thought it would be a fun (and very nerdy)
+experiment, and an opportunity to learn a little more about these emerging
+technologies, which I think are independently quite exciting.
+
+** IPFS
+
+*** Running an IPFS node locally
+
+Before doing anything else, I needed to install ipfs, initialize the repository,
+and start the ipfs daemon. On the off-chance you happen to be another NixOS
+user, this is as simple as adding the following line to your
+~configuration.nix~!
+
+#+BEGIN_SRC nix
+services.enable.ifps = true;
+#+END_SRC
+
+Otherwise, you can follow the instructions [[https://docs.ipfs.io/introduction/usage][here]]. After starting the ipfs daemon,
+you can check whether or not you're connected to the network by running ~ipfs
+swarm peers~, which should return the ipfs addresses of your peers.
+
+*** Publishing on IPFS
+
+First, we retrieve the peer ID of the local ipfs node:
+
+#+BEGIN_SRC bash
+peerid=$(ipfs id -f"<id>")
+#+END_SRC
+
+On my local machine, my website, built by hakyll, can be found at
+~~GitHub/patrl.github.io/_site/~. I ran the
+following, which adds the website to IPFS and retrieves the hash of the directory root:
+
+#+BEGIN_SRC bash
+siteloc=~/GitHub/patrl.github.io/_site
+dirhash=$(ipfs add -r $(siteloc)/ | grep $(siteloc)$ | cut -d" " -f2)
+#+END_SRC
+
+Finally, we publish the directory to our nodes ~ipns~ entry:
+
+#+BEGIN_SRC bash
+ipfs name publish $dirhash
+#+END_SRC
+
+*** IPFS redirect
+
+** Dat
+
+Before talking about dat, a little background: what got me started with this
+whole endeavour was an (in hindsight, overly ambitious) attempt to migrate this
+site from gh-pages pages to a personal web server, and publish to both
+[[https://patrickdelliott.com]] and [[dat://patrickdelliott.com]]
+via [[https://github.com/beakerbrowser/homebase][homebase]]. I managed to get this working after jumping through quite a few
+hoops, but found that homebase wouldn't reliably sync with my website's dat
+repository, and the whole setup required too much manual intervention to be
+really worthwhile. I'll take another look at homebase once it's a bit more mature.
+
+* Resources
+
+- [[dat://patrl.hashbase.io]]
+- [[ipns/patrickdelliott.com]]

@@ -37,6 +37,12 @@ main = do
         route $ customRoute (const "css/gradients.min.css")
         compile copyFileCompiler
 
+    match "org-test.org" $ do
+      route $ setExtension "html"
+      compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib"
+        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= relativizeUrls
+
     match "actl2018.markdown" $ do
       route $ setExtension "html"
       -- compile $ pandocBiblioCompiler "csl/myBib.csl" "bib/actl2018.bib"
@@ -59,7 +65,7 @@ main = do
           >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
           >>= relativizeUrls
 
-    match "index.markdown" $ do
+    match "index.org" $ do
         route   $ setExtension "html"
         compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib"
           >>= loadAndApplyTemplate "templates/default.html" defaultContext
@@ -80,13 +86,15 @@ main = do
 
     match "posts/*" $ do
         route $ setExtension "html"
-        compile $ tufteCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib"
-            >>= loadAndApplyTemplate "templates/tufte.html" postCtx
+        compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib"
+        -- compile $ tufteCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib"
+            >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
     match "drafts/*" $ do
         route $ setExtension "html"
         compile $ pandocBiblioCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib"
+        -- compile $ tufteCompiler "csl/unified-style-linguistics.csl" "bib/refs.bib"
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
@@ -105,7 +113,7 @@ main = do
 
             makeItem ""
                 >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-                >>= loadAndApplyTemplate "templates/tufte.html" archiveCtx
+                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
                 >>= relativizeUrls
 
     match "templates/*" $ compile templateBodyCompiler
