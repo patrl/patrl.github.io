@@ -2,6 +2,8 @@
 title: teaching
 ...
 
+# Teaching
+
  - 25-29 June, ACTL Summer School, London: [Introduction to Dynamic Semantics](/actl2018.html)
  
  - 30 July – 10 August, EGG Summer School, Banja Luka:
