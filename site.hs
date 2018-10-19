@@ -155,7 +155,7 @@ main = do
         posts <- recentFirst =<< loadAll "posts/*"
         let archiveCtx =
               listField "posts" postCtx (return posts)
-                `mappend` constField "title" "Pluralia Tantrum"
+                -- `mappend` constField "title" "Pluralia Tantrum"
                 `mappend` defaultContext
 
         makeItem ""

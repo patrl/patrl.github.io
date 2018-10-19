@@ -3,7 +3,6 @@ title: Publishing on the decentralised web
 author: Patrick D. Elliott
 toc: true
 lang: english
-highlight-style: haddock
 ---
 
 [[https://dat-project.org][Dat]] and [[https://ipfs.io][IPFS]] are two relatively young protocols at the heart of the so-called
@@ -13,7 +12,7 @@ from the shackles of the traditional client/server architecture by marshalling
 contemporary peer-to-peer technologies. In other words, the aim is to develop an
 alternative to huge cloud-based companies like google and facebook, and return
 power and control over information to the user. In theory, the decentralised web
-means that information can live on even if servers come and go -- /everyone/ is
+means that information can live on even if servers come and go - /everyone/ is
 a node.
 
 Dat and IPFS (which stands for Inter-Planetary File System) have relatively similar aims -- they both provide a protocol and tooling for
@@ -26,8 +25,8 @@ are of course other technologies on the scene, such as [[https://www.scuttlebutt
 probably write about some other time), and Tim Berners-Lee's new [[https://solid.mit.edu/][solid]] platform,
 but for now dat and IPFS seem the most mature and usable.
 
-In what follows, I'll explain how I publish my [[https://patrickdelliott.com][homepage]] -- a static site built with
-[[https://jaspervdj.be/hakyll/][hakyll]] and [[github:patrl/patrl.github.io][hosted on github]] -- via IPFS at [[ipns/patrickdelliott.com]] and dat at [[dat://patrl.hashbase.io]]. There wasn't any real necessity to publish this site on the decentralized web --
+In what follows, I'll explain how I publish my [[https://patrickdelliott.com][homepage]] - a static site built with
+[[https://jaspervdj.be/hakyll/][hakyll]] and [[github:patrl/patrl.github.io][hosted on github]] -- via IPFS at [[ipns/patrickdelliott.com]] and dat at [[dat://patrl.hashbase.io]]. There wasn't any real necessity to publish this site on the decentralized web -
 after all, the number of users who are going to visit this page via dat/ipfs is
 probably vanishingly small -- but I thought it would be a fun (and very nerdy)
 experiment, and an opportunity to learn a little more about these emerging
@@ -73,18 +72,30 @@ Finally, we publish the directory to our nodes ~ipns~ entry:
 ipfs name publish $dirhash
 #+END_SRC
 
-*** IPFS redirect
+It should now be possible to access the site via, e.g., a public gateway such as
+[[https://ipfs.io]]. Even without running an IPFS node, you can access my site over
+the IPFS network by navigating to [[https://ipfs.io/ipns/patrickdelliott.com]].
+[[https//ipfs.io]] can of course be replaced by a link to any public IPFS gateway.
+
+*** TODO IPFS redirect
+
+It's possible to ensure that someone running an IPFS node locally be
+automatically redirected to the site on IPFS by using a dns ~TXT~ record.
 
 ** Dat
 
 Before talking about dat, a little background: what got me started with this
 whole endeavour was an (in hindsight, overly ambitious) attempt to migrate this
-site from gh-pages pages to a personal web server, and publish to both
+site from GitHub pages to a personal web server, and publish to both
 [[https://patrickdelliott.com]] and [[dat://patrickdelliott.com]]
 via [[https://github.com/beakerbrowser/homebase][homebase]]. I managed to get this working after jumping through quite a few
 hoops, but found that homebase wouldn't reliably sync with my website's dat
 repository, and the whole setup required too much manual intervention to be
 really worthwhile. I'll take another look at homebase once it's a bit more mature.
+
+In the meantime, I decided that a much more manageable solution would be to
+continue to host my site at ~https://patrickdelliott.com~, while simultaneously
+making it accessible via IPFS and dat.
 
 * Resources
 
