@@ -1,110 +1,21 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="English" xml:lang="English">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="generator" content="pandoc" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-        <meta name="author" content="Patrick D. Elliott" />
-        <!-- <meta name="dcterms.date" content="2016-10-15" /> -->
-        
-        <!-- <title>A note on if-questions</title> -->
-        <style type="text/css">
-         @font-face {
-             font-family: 'IBM Plex Sans';
-             font-style: normal;
-             font-weight: 400;
-             src: url("/fonts/IBMPlexSans-Regular.woff2") format("woff2"); }
-
-         @font-face {
-             font-family: 'IBM Plex Sans';
-             font-style: normal;
-             font-weight: 700;
-             src: url("/fonts/IBMPlexSans-Bold.woff2") format("woff2"); }
-
-         @font-face {
-             font-family: 'IBM Plex Sans';
-             font-style: italic;
-             font-weight: 400;
-             src: url("/fonts/IBMPlexSans-Italic.woff2") format("woff2"); }
-
-         @font-face {
-             font-family: 'IBM Plex Sans';
-             font-style: italic;
-             font-weight: 700;
-             src: url("/fonts/IBMPlexSans-BoldItalic.woff2") format("woff2"); }
-
-         @font-face {
-             font-family: 'IBM Plex Serif';
-             font-style: normal;
-             font-weight: 400;
-             src: url("/fonts/IBMPlexSerif-Regular.woff2") format("woff2"); }
-
-         @font-face {
-             font-family: 'IBM Plex Serif';
-             font-style: normal;
-             font-weight: 700;
-             src: url("/fonts/IBMPlexSerif-Bold.woff2") format("woff2"); }
-
-         @font-face {
-             font-family: 'IBM Plex Serif';
-             font-style: italic;
-             font-weight: 400;
-             src: url("/fonts/IBMPlexSerif-Italic.woff2") format("woff2"); }
-
-         @font-face {
-             font-family: 'IBM Plex Serif';
-             font-style: italic;
-             font-weight: 700;
-             src: url("/fonts/IBMPlexSerif-BoldItalic.woff2") format("woff2"); }
-
-         @font-face {
-             font-family: 'IBM Plex Mono';
-             font-style: normal;
-             font-weight: 400;
-             src: url("/fonts/IBMPlexMono-Regular.woff2") format("woff2"); }
-
-         @font-face {
-             font-family: 'IBM Plex Mono';
-             font-style: normal;
-             font-weight: 700;
-             src: url("/fonts/IBMPlexMono-Bold.woff2") format("woff2"); }
-
-         @font-face {
-             font-family: 'IBM Plex Mono';
-             font-style: italic;
-             font-weight: 400;
-             src: url("/fonts/IBMPlexMono-Italic.woff2") format("woff2"); }
-
-         @font-face {
-             font-family: 'IBM Plex Mono';
-             font-style: italic;
-             font-weight: 700;
-             src: url("/fonts/IBMPlexMono-BoldItalic.woff2") format("woff2"); }
-        </style>
-        <link rel="stylesheet" href="../css/patrickdelliott.css" />
-        <link rel="stylesheet" href="../css/syntax.css" />
-        <link rel="stylesheet" href="../css/gradients.min.css" />
-    </head>
-    <body>
-        <div class="cf ph3 ph5-ns pv5">
-            <header class="fn fl-ns w-third-ns pr4-ns">
-            <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
-                <a href="../" title="home" class="black link normal">
-                    Patrick D. Elliott
-                </a>
-            </h1>
-            <nav class="f4 mid-gray lh-copy ttu tracked plex-sans" role="navigation">
-                <a class="link dim mid-gray db" href="https://patrl.keybase.pub/cv.pdf" title="CV">vitæ</a>
-                <a class="link dim mid-gray db" href="../research.html" title="Research">research</a>
-                <a class="link dim mid-gray db" href="../teaching.html" title="Teaching">teaching</a>
-                <a class="link dim mid-gray db" href="../blog.html" title="Blog">blog</a>
-            </nav>
-        </header>
-        <div class="fn fl-ns w-two-thirds-ns">
-        <h1 class="f-headline f1-ns">A note on if-questions</h1>
-<span class="f6 mid-gray ttu tracked plex-sans">October 15, 2016</span>
-<article>
-<p><em>If</em>-clauses are weird. They have a couple of prominent uses: as the antecedent clause in a conditional <em>if…then…</em> statement (see (1)), and as an embedded question (<a href="#1">1</a>).</p>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Pluralia Tantrum</title>
+    <link href="http://patrickdelliott.com/atom.xml" rel="self" />
+    <link href="http://patrickdelliott.com" />
+    <id>http://patrickdelliott.com/atom.xml</id>
+    <author>
+        <name>Patrick Elliott</name>
+        <email>patrick.d.elliott@gmail.com</email>
+    </author>
+    <updated>2016-10-15T00:00:00Z</updated>
+    <entry>
+    <title>A note on if-questions</title>
+    <link href="http://patrickdelliott.com/posts/2016-10-15-ifQs.html" />
+    <id>http://patrickdelliott.com/posts/2016-10-15-ifQs.html</id>
+    <published>2016-10-15T00:00:00Z</published>
+    <updated>2016-10-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<p><em>If</em>-clauses are weird. They have a couple of prominent uses: as the antecedent clause in a conditional <em>if…then…</em> statement (see (1)), and as an embedded question (<a href="#1">1</a>).</p>
 <ol>
 <li><span id="1"></span>If Britta is taking this class, then I’m not.</li>
 <li><span id="2"></span>Jeff asked if Britta is taking this class.</li>
@@ -154,31 +65,7 @@
 <li id="fn2"><p>This is behind a paywall (<a href="https://www.jstor.org/stable/3087030" class="uri">https://www.jstor.org/stable/3087030</a>), but you can apparenly download the .pdf <a href="http://filcat.uab.cat/clt/publicacions/reports/pdf/GGT-99-2.pdf">here</a> for free.<a href="#fnref2" class="footnote-back">↩</a></p></li>
 <li id="fn3"><p>This isn’t much discussed much by <span class="citation" data-cites="adger_syntax_2001">Adger &amp; Quer (2001)</span>, but (8a) is almost certainly acceptable under the reading that can be paraphrased as “If Britta left, then Jeff told me (that Britta left)”. I assume that this is a possible analysis of (8a), since <em>tell</em> independently allows Null Complement Anaphora, as in “Britta left. Jeff told me.”<a href="#fnref3" class="footnote-back">↩</a></p></li>
 </ol>
-</section>
-</article>
+</section>]]></summary>
+</entry>
 
-        </div>
-        </div>
-<footer class="bt b--light-gray f6 gray pa5">
-    <div class="measure-wide tc center ph2">
-        <a class="link dim hover-silver dib h2 w2 mr3" href="https://twitter.com/patrickdelliott" title="Twitter">
-            <img src="../images/twitter.svg" />
-        </a>
-        <a class="link dim hover-silver dib h2 w2 mr3" href="https://keybase.io/patrl" title="Keybase">
-            <img src="../images/keybase.svg" />
-        </a>
-        <a class="link dim hover-silver dib h2 w2 mr3" href="https://github.com/patrl" title="GitHub">
-            <img src="../images/github.svg" />
-        </a>
-    </div>
-    <div class="measure-wide tc center ph2 lh-copy">
-        <p>
-            @ 2018 Patrick D. Elliott
-        </p>
-        <p>
-            Built with λove using <a class="link dim purple" href="https://jaspervdj.be/hakyll/">hakyll</a> and <a class="link dim purple" href="http://tachyons.io/">tachyons</a>. <a class="link dim purple" href="https://github.com/patrl/patrl.github.io/tree/develop">Source</a>
-        </p>
-    </div>
-</footer>
-    </body>
-</html>
+</feed>

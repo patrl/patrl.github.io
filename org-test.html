@@ -1,53 +1,147 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="English" xml:lang="English">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Patrick D. Elliott - org-test</title>
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Podkova" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-        <link rel="stylesheet" href="./css/patrickdelliott.css" />
-        <link rel="stylesheet" href="./css/tachyons.min.css" />
-        <link rel="stylesheet" href="./css/gradients.min.css" />
-</head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+        <meta name="author" content="Patrick D. Elliott" />
+        <!-- <meta name="dcterms.date" content="19.10.2018" /> -->
+        
+        <!-- <title>Hakyll with org-mode</title> -->
+        <style type="text/css">
+         @font-face {
+             font-family: 'IBM Plex Sans';
+             font-style: normal;
+             font-weight: 400;
+             src: url("/fonts/IBMPlexSans-Regular.woff2") format("woff2"); }
 
+         @font-face {
+             font-family: 'IBM Plex Sans';
+             font-style: normal;
+             font-weight: 700;
+             src: url("/fonts/IBMPlexSans-Bold.woff2") format("woff2"); }
+
+         @font-face {
+             font-family: 'IBM Plex Sans';
+             font-style: italic;
+             font-weight: 400;
+             src: url("/fonts/IBMPlexSans-Italic.woff2") format("woff2"); }
+
+         @font-face {
+             font-family: 'IBM Plex Sans';
+             font-style: italic;
+             font-weight: 700;
+             src: url("/fonts/IBMPlexSans-BoldItalic.woff2") format("woff2"); }
+
+         @font-face {
+             font-family: 'IBM Plex Serif';
+             font-style: normal;
+             font-weight: 400;
+             src: url("/fonts/IBMPlexSerif-Regular.woff2") format("woff2"); }
+
+         @font-face {
+             font-family: 'IBM Plex Serif';
+             font-style: normal;
+             font-weight: 700;
+             src: url("/fonts/IBMPlexSerif-Bold.woff2") format("woff2"); }
+
+         @font-face {
+             font-family: 'IBM Plex Serif';
+             font-style: italic;
+             font-weight: 400;
+             src: url("/fonts/IBMPlexSerif-Italic.woff2") format("woff2"); }
+
+         @font-face {
+             font-family: 'IBM Plex Serif';
+             font-style: italic;
+             font-weight: 700;
+             src: url("/fonts/IBMPlexSerif-BoldItalic.woff2") format("woff2"); }
+
+         @font-face {
+             font-family: 'IBM Plex Mono';
+             font-style: normal;
+             font-weight: 400;
+             src: url("/fonts/IBMPlexMono-Regular.woff2") format("woff2"); }
+
+         @font-face {
+             font-family: 'IBM Plex Mono';
+             font-style: normal;
+             font-weight: 700;
+             src: url("/fonts/IBMPlexMono-Bold.woff2") format("woff2"); }
+
+         @font-face {
+             font-family: 'IBM Plex Mono';
+             font-style: italic;
+             font-weight: 400;
+             src: url("/fonts/IBMPlexMono-Italic.woff2") format("woff2"); }
+
+         @font-face {
+             font-family: 'IBM Plex Mono';
+             font-style: italic;
+             font-weight: 700;
+             src: url("/fonts/IBMPlexMono-BoldItalic.woff2") format("woff2"); }
+        </style>
+        <link rel="stylesheet" href="./css/patrickdelliott.css" />
+        <link rel="stylesheet" href="./css/syntax.css" />
+        <link rel="stylesheet" href="./css/gradients.min.css" />
+    </head>
     <body>
-        <div class="measure-wide center pt4 ph2 pb5 mw100">
-        <header class="pv2 pv4-ns plex-sans ttu tracked">
-            <h1 class="f2 lh-title fw9 mb3 mt0 pt3">
-                <a href="./" title="home" class="black link">
+        <div class="cf ph3 ph5-ns pv5">
+            <header class="fn fl-ns w-third-ns pr4-ns">
+            <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
+                <a href="./" title="home" class="black link normal">
                     Patrick D. Elliott
                 </a>
             </h1>
-            <nav class="f6 mid-gray lh-title" role="navigation">
-                <a class="link dim mid-gray" href="https://patrl.keybase.pub/cv.pdf" title="CV">vitæ</a>
-                <a class="link dim mid-gray" href="./research.html" title="Research">research</a>
-                <a class="link dim mid-gray" href="./teaching.html" title="Teaching">teaching</a>
-                <a class="link dim mid-gray" href="./blog.html" title="Blog">blog</a>
+            <nav class="f4 mid-gray lh-copy ttu tracked plex-sans" role="navigation">
+                <a class="link dim mid-gray db" href="https://patrl.keybase.pub/cv.pdf" title="CV">vitæ</a>
+                <a class="link dim mid-gray db" href="./research.html" title="Research">research</a>
+                <a class="link dim mid-gray db" href="./teaching.html" title="Teaching">teaching</a>
+                <a class="link dim mid-gray db" href="./blog.html" title="Blog">blog</a>
             </nav>
         </header>
-
-        <div class="pt2 pt4-ns plex-serif">
-        <h1 id="markup">Markup</h1>
+        <div class="fn fl-ns w-two-thirds-ns">
+        <h1 class="f-headline f1-ns">Hakyll with org-mode</h1>
+<span class="f6 mid-gray ttu tracked plex-sans">19.10.2018</span>
+<article>
+<h1 id="test">Test</h1>
+<h2 id="test-2">Test 2</h2>
+<h3 id="test-3">Test 3</h3>
 <ul>
-<li><em>Italics</em></li>
-<li><strong>Bold</strong></li>
+<li>hi</li>
+<li>there</li>
+<li>my name</li>
 </ul>
-<h1 id="citations">Citations</h1>
-<ul>
-<li><span class="citation" data-cites="heimThesis">Heim (1982)</span></li>
-</ul>
+<p>This is a test to allow me to figure out some things. Here is a test of <em>italics</em>, and here is a test of <strong>bold</strong>, and finally, here is a test of <strong><em>bold italics</em></strong>, and here is a test of <code>code</code>, what about <code>/italics/ in code 0</code>.</p>
+<p>Here is a test of a <a href="https://www.google.com">link</a>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><a class="sourceLine" id="cb1-1" data-line-number="1">id<span class="ot"> ::</span> a <span class="ot">-&gt;</span> a</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">id x <span class="fu">=</span> x</a></code></pre></div>
+<p>Here is a test of a citation <span class="citation" data-cites="heimThesis">Heim (1982)</span>.</p>
+<h2 id="math-test">Math test</h2>
+<p><span class="math inline"><em>λ</em><em>x</em>.<em>λ</em><em>y</em>.<em>y</em> = <em>x</em></span></p>
+<p>Something else.</p>
+<h2 id="references" class="unnumbered">References</h2>
 <div id="refs" class="references">
 <div id="ref-heimThesis">
 <p>Heim, Irene Roswitha. 1982. The semantics of definite and indefinite noun phrases. PhD thesis.</p>
 </div>
 </div>
+</article>
+
         </div>
         </div>
-        <footer class="bt b--light-gray f6 gray pa5">
+<footer class="bt b--light-gray f6 gray pa5">
+    <div class="measure-wide tc center ph2">
+        <a class="link dim hover-silver dib h2 w2 mr3" href="https://twitter.com/patrickdelliott" title="Twitter">
+            <img src="./images/twitter.svg" />
+        </a>
+        <a class="link dim hover-silver dib h2 w2 mr3" href="https://keybase.io/patrl" title="Keybase">
+            <img src="./images/keybase.svg" />
+        </a>
+        <a class="link dim hover-silver dib h2 w2 mr3" href="https://github.com/patrl" title="GitHub">
+            <img src="./images/github.svg" />
+        </a>
+    </div>
     <div class="measure-wide tc center ph2 lh-copy">
         <p>
             @ 2018 Patrick D. Elliott
@@ -57,6 +151,5 @@
         </p>
     </div>
 </footer>
-
     </body>
 </html>
