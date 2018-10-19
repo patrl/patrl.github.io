@@ -2,6 +2,7 @@
 title: About
 author: Patrick D. Elliott
 lang: English
+date: 19.10.2018
 ---
 
 I'm a postdoctoral researcher at the [[https://www.zas.gwz-berlin.de][Leibniz-Zentrum Allgemeine

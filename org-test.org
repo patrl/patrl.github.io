@@ -1,11 +1,36 @@
-#+TITLE: Hakyll with org-mode
-#+AUTHOR: Patrick D. Elliott
+---
+title: Hakyll with org-mode
+author: Patrick D. Elliott
+date: 19.10.2018
+---
 
-* Markup
+* Test
 
-- /Italics/
-- *Bold*
+** Test 2
 
-* Citations
+*** Test 3
 
-- cite:heimThesis
+- hi
+- there
+- my name
+
+This is a test to allow me to figure out some things. Here is a test of
+/italics/, and here is a test of *bold*, and finally, here is a test of */bold
+italics/*, and here is a test of ~code~, what about ~/italics/ in code 0~.
+
+Here is a test of a [[https://www.google.com][link]].
+
+#+BEGIN_SRC haskell
+id :: a -> a
+id x = x
+#+END_SRC
+
+Here is a test of a citation cite:heimThesis.
+
+** Math test
+
+$λ x . λ y . y = x$
+
+Something else.
+
+** References

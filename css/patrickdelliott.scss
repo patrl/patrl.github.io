@@ -36,7 +36,7 @@ h1, h2, h3 {
     @extend .lh-title, .ttu, .tracked, .plex-sans, .normal, .measure-wide;
 }
 
-p, ul {
+p, ul, ol {
   @extend .plex-serif, .lh-copy, .measure-wide;
 }
 

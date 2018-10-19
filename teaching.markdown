@@ -1,5 +1,7 @@
 ---
 title: teaching
+author: Patrick D. Elliott
+date: 19.10.2018
 ...
 
  - 25-29 June, ACTL Summer School, London: [Introduction to Dynamic Semantics](/actl2018.html)

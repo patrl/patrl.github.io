@@ -1,6 +1,7 @@
 ---
 title: research 
 author: Patrick D. Elliott
+date: 19.10.2018
 ...
 
 <div class="lh-copy">
