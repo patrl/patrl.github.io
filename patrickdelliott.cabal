@@ -9,6 +9,7 @@ executable site
                   , hakyll>=4.12.3.0
                   , pandoc<2.3
                   , pandoc-sidenote
+                  , hakyll-sass
                   , pandoc-types
                   , containers
   ghc-options:      -threaded
