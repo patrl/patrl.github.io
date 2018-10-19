@@ -1,11 +1,13 @@
 ---
 title: research 
+author: Patrick D. Elliott
 ...
 
 # Research
 
+<div class="lh-copy">
 <details>
-<summary class="podkova f3 ttu tracked cl-effect-1 link dim">Papers</summary>
+<summary>Papers</summary>
 
 @elliottEtAl2018simplex <a href="https://patrl.keybase.pub/papers/whoAndWhatMs.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
 
@@ -133,5 +135,6 @@ title: research
 
 <div class="pt2">
 Auto-generated from [myWork.bib](https://github.com/patrl/patrl.github.io/blob/develop/bib/myWork.bib)
+</div>
 </div>
 
