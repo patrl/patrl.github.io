@@ -66,20 +66,12 @@ main = do
         >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
         >>= relativizeUrls
 
-    match "actl2018notes.markdown" $ do
+    match "egg2018/*" $ do
       route $ setExtension "html"
       compile
         $   pandocTufteNew
-        >>= loadAndApplyTemplate "templates/test-post.html" defaultContext
+        >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
         >>= relativizeUrls
-
-
-      match "egg2018/*" $ do
-        route $ setExtension "html"
-        compile
-          $   pandocTufteNew
-          >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
-          >>= relativizeUrls
 
     match "index.org" $ do
       route $ setExtension "html"
@@ -143,11 +135,11 @@ main = do
         posts <- recentFirst =<< loadAll "posts/*"
         let archiveCtx =
               listField "posts" postCtx (return posts)
-                `mappend` constField "date" "%B %e, %Y"
                 `mappend` constField "author" "Patrick D. Elliott"
                 `mappend` constField "title" "Pluralia Tantrum"
+                `mappend` constField "date" ""
 
-                                                       `mappend` defaultContext
+                                                       `mappend` postCtx
 
         makeItem ""
           >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
