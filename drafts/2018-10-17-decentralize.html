@@ -1,43 +1,40 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="english" xml:lang="english">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English" xml:lang="English">
     <head>
-        <meta charset="utf-8" />
-        <meta name="generator" content="pandoc" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-        <meta name="author" content="Patrick D. Elliott" />
-        <meta name="dcterms.date" content="October 17, 2018" />
-        
-        <title>Publishing on the decentralised web</title>
-        <style type="text/css">
-         code{white-space: pre-wrap;}
-         span.smallcaps{font-variant: small-caps;}
-         span.underline{text-decoration: underline;}
-         div.column{display: inline-block; vertical-align: top; width: 50%;}
-         
-        </style>
-        
-        <link rel="stylesheet" href="../css/syntax.css" />
-        <link rel="stylesheet" href="../css/tufte2.css" />
-        
-        <!--[if lt IE 9]>
-            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-        
-        <header id="title-block-header">
-            <h1 class="title">Publishing on the decentralised web</h1>
-            
-            
-            <p class="author">Patrick D. Elliott</p>
-            
-            
-            <p class="date">October 17, 2018</p>
-            
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Patrick D. Elliott - Publishing on the decentralised web</title>
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Podkova" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+        <link rel="stylesheet" href="../css/patrickdelliott.css" />
+        <link rel="stylesheet" href="../css/tachyons.min.css" />
+        <link rel="stylesheet" href="../css/gradients.min.css" />
+</head>
+
+    <body class="bg-washed-yellow">
+        <div class="center pt4 ph2 pb5 mw100 measure-wide">
+            <header class="pv2 pv4-ns plex-sans ttu tracked">
+            <h1 class="f2 lh-title fw9 mb3 mt0 pt3">
+                <a href="../" title="home" class="black link">
+                    Patrick D. Elliott
+                </a>
+            </h1>
+            <nav class="f6 mid-gray lh-title" role="navigation">
+                <a class="link dim mid-gray" href="https://patrl.keybase.pub/cv.pdf" title="CV">vitæ</a>
+                <a class="link dim mid-gray" href="../research.html" title="Research">research</a>
+                <a class="link dim mid-gray" href="../teaching.html" title="Teaching">teaching</a>
+                <a class="link dim mid-gray" href="../blog.html" title="Blog">blog</a>
+            </nav>
         </header>
-        
-        
-        <p><a href="https://dat-project.org">Dat</a> and <a href="https://ipfs.io">IPFS</a> are two relatively young protocols at the heart of the so-called <em>decentralized web</em> (see also: <em>distributed web</em>, <em>immutable web</em>, <em>permanent web</em>, etc.). The decentralization movement, broadly construed, aims to free us from the shackles of the traditional client/server architecture by marshalling contemporary peer-to-peer technologies. In other words, the aim is to develop an alternative to huge cloud-based companies like google and facebook, and return power and control over information to the user. In theory, the decentralised web means that information can live on even if servers come and go – <em>everyone</em> is a node.</p>
+
+            <div class="pt2 pt4-ns plex-serif">
+                <h1 class="f-headline measure f1-ns ttu tracked plex-sans">Publishing on the decentralised web</h1>
+                <span class="f6 mid-gray ttu tracked plex-sans">October 17, 2018</span>
+                <article>
+                    <p><a href="https://dat-project.org">Dat</a> and <a href="https://ipfs.io">IPFS</a> are two relatively young protocols at the heart of the so-called <em>decentralized web</em> (see also: <em>distributed web</em>, <em>immutable web</em>, <em>permanent web</em>, etc.). The decentralization movement, broadly construed, aims to free us from the shackles of the traditional client/server architecture by marshalling contemporary peer-to-peer technologies. In other words, the aim is to develop an alternative to huge cloud-based companies like google and facebook, and return power and control over information to the user. In theory, the decentralised web means that information can live on even if servers come and go – <em>everyone</em> is a node.</p>
 <p>Dat and IPFS (which stands for Inter-Planetary File System) have relatively similar aims – they both provide a protocol and tooling for sharing content-addressable information between peers, with no single point of failure. Dat was originally developed as a means for scientists to share large datasets, but the ecosystem has however grown quite a bit beyond this initial remit – see, e.g., <a href="https://beakerbrowser.com/">the Beaker Browser</a>. IPFS on the other hand was pretty much always intended as a distributed alternative to the web, and there’s already an <a href="https://github.com/ipfs-shipyard/ipfs-companion">extension</a> to integrate modern browsers with the IPFS protocol. There are of course other technologies on the scene, such as <a href="https://www.scuttlebutt.nz/">scuttlebutt</a> (which I’ll probably write about some other time), and Tim Berners-Lee’s new <a href="https://solid.mit.edu/">solid</a> platform, but for now dat and IPFS seem the most mature and usable.</p>
 <p>In what follows, I’ll explain how I publish my <a href="https://patrickdelliott.com">homepage</a> – a static site built with <a href="https://jaspervdj.be/hakyll/">hakyll</a> and <a href="github:patrl/patrl.github.io">hosted on github</a> – via IPFS at <em>ipns/patrickdelliott.com</em> and dat at <a href="dat://patrl.hashbase.io" class="uri">dat://patrl.hashbase.io</a>. There wasn’t any real necessity to publish this site on the decentralized web – after all, the number of users who are going to visit this page via dat/ipfs is probably vanishingly small – but I thought it would be a fun (and very nerdy) experiment, and an opportunity to learn a little more about these emerging technologies, which I think are independently quite exciting.</p>
 <h2 id="ipfs">IPFS</h2>
@@ -62,5 +59,19 @@ swarm peers</code>, which should return the ipfs addresses of your peers.</p>
 <li><a href="dat://patrl.hashbase.io" class="uri">dat://patrl.hashbase.io</a></li>
 <li><em>ipns/patrickdelliott.com</em></li>
 </ul>
+                </article>
+            </div>
+        </div>
+        <footer class="bt b--light-gray f6 gray pa5">
+    <div class="measure-wide tc center ph2 lh-copy">
+        <p>
+            @ 2018 Patrick D. Elliott
+        </p>
+        <p>
+            Built with λove using <a class="link dim purple" href="https://jaspervdj.be/hakyll/">hakyll</a> and <a class="link dim purple" href="http://tachyons.io/">tachyons</a>. <a class="link dim purple" href="https://github.com/patrl/patrl.github.io/tree/develop">Source</a>
+        </p>
+    </div>
+</footer>
+
     </body>
 </html>

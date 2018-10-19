@@ -1153,4 +1153,1802 @@ g' = \left[\begin{aligned}[c]
 <li><p>This is true, if we’re in a model, e.g., where..</p></li>
 </ul>
 <p><span class="math display">\[
-I(\metalang{likes}) = \Set{⟨\metalang{Melania},\metalang{Melania}
+I(\metalang{likes}) = \Set{⟨\metalang{Melania},\metalang{Melania}⟩, ⟨\metalang{Melania},\metalang{Hilary}⟩}
+\]</span></p>
+<ul>
+<li><p>and an assignment <span class="math inline">\(g\)</span>, s.t. <span class="math inline">\(g(x) = \metalang{Hilary}\)</span></p></li>
+<li><p>Since we can find an assignment <span class="math inline">\(g[x]g'\)</span> which makes the embedded formulae true. Namely <span class="math inline">\(g'\)</span> s.t., <span class="math inline">\(g'(x) = \metalang{Melania}\)</span>.</p></li>
+</ul>
+</section>
+<section id="a-note-on-crossover" class="level2">
+<h2>A note on crossover</h2>
+<ul>
+<li><p>The classical conception of binding gives rise to the <em>crossover</em> problem.</p></li>
+<li><p>The following is an example of <em>strong crossover</em>.</p></li>
+</ul>
+<ol start="35" class="example" type="1">
+<li>She<span class="math inline">\(_x\)</span> likes someone<span class="math inline">\(^x\)</span>.</li>
+</ol>
+<ul>
+<li>Why can we not translate this as: <span class="math inline">\(∃ \alert{x}[\metalang{likes}(\alert{x},x)]\)</span></li>
+</ul>
+</section>
+<section id="exercises" class="level2">
+<h2>Exercises</h2>
+<ul>
+<li><p>Translate the following sentences of English into FOL and compute their truth-conditions. To make life easier for you, I’m going to diambiguate indexation.</p>
+<ol start="36" class="example" type="1">
+<li><p>It’s not the case that someone<span class="math inline">\(^x\)</span> likes themselves<span class="math inline">\(_x\)</span>.</p></li>
+<li><p>If someone is upset, then everyone is unhappy.</p></li>
+<li><p>Someone danced with everyone.</p></li>
+</ol></li>
+<li><p>Note all of these sentences are ambiguous. Pick a reading when you translate. Think about how FOL represents the ambiguity.</p></li>
+</ul>
+</section>
+<section id="towards-a-semantics-of-discourses" class="level2">
+<h2>Towards a semantics of discourses</h2>
+<ul>
+<li>Translate the following into FOL:</li>
+</ul>
+<ol start="39" class="example" type="1">
+<li>Someone<span class="math inline">\(ˣ\)</span> walked in. She<span class="math inline">\(ₓ\)</span> sat down.</li>
+</ol>
+<ul>
+<li>You can assume that two consectutive sentences are <em>conjoined</em>.</li>
+</ul>
+</section>
+<section id="candidate-translations" class="level2">
+<h2>Candidate translations</h2>
+<ul>
+<li>Conjunction scopes over existential:</li>
+</ul>
+<ol start="40" class="example" type="1">
+<li><span class="math inline">\([∃ x[\metalang{walkedIn}(x)]] ∧ \metalang{satDown}(x)\)</span></li>
+</ol>
+<ul>
+<li>Existential scopes over conjunction:</li>
+</ul>
+<ol start="41" class="example" type="1">
+<li><span class="math inline">\(∃x[\metalang{walkedIn}(x) ∧ \metalang{satDown}(x)]\)</span></li>
+</ol>
+<ul>
+<li><em>Exercise:</em> Compute the truth conditions of both formulae. What do you notice?</li>
+</ul>
+</section>
+<section id="conjunction-scopes-over-existential" class="level2">
+<h2>Conjunction scopes over existential</h2>
+<ol start="42" class="example" type="1">
+<li><span class="math inline">\(\begin{aligned}[t] &amp;\evalM[M,g]{∃x[\metalang{walkedIn}(x)] ∧ \metalang{satDown}(x)} = 1\text{ iff
+}\\ &amp;∃ g'[g[x]g' ∧ g'(x) ∈ I(\metalang{walkedIn})] ∧ (g(x) ∈ I(\metalang{satDown})) \end{aligned}\)</span></li>
+</ol>
+<ul>
+<li><p>This seems like a <em>bad</em> translation. It can be true, e.g., if only Hilary walked in, and only Melania sat down.</p></li>
+<li><p>Intuitively, it doesn’t matter than the two variables are the same, since the second variable is outside of the scope of the existential quantifier.</p></li>
+</ul>
+</section>
+<section id="existential-scopes-over-conjunction" class="level2">
+<h2>Existential scopes over conjunction</h2>
+<ol start="43" class="example" type="1">
+<li><span class="math inline">\(\begin{aligned}[t] &amp;\evalM[M,g]{∃x[\metalang{walkedIn}(x) ∧ \metalang{satDown}(x)]} = 1\text{ iff
+}\\ &amp;∃ g'[g[x]g' ∧ g'(x) ∈ I(\metalang{walkedIn}) ∧ g'(x) ∈ I(\metalang{satDown})] \end{aligned}\)</span></li>
+</ol>
+<ul>
+<li>This seems like a good translation – it is only true the same person both walked in and sat down. This is because both variables are within the scope of the existential quantifier.</li>
+</ul>
+</section>
+<section id="whatss-the-problem" class="level2">
+<h2>Whats’s the problem</h2>
+<ul>
+<li><p>Well, why don’t we just allow existential quantifiers to scope out of the sentences which contain them?</p></li>
+<li><p>Problem 1: other quantificational NP’s don’t behave like this.</p>
+<ol start="44" class="example" type="1">
+<li>Everyone<span class="math inline">\(ˣ\)</span> walked in. He<span class="math inline">\(ₓ\)</span> sat down.</li>
+</ol>
+<p>This cannot be translated as:</p>
+<ol start="45" class="example" type="1">
+<li><span class="math inline">\(∀ x[\metalang{walkedIn}(x) → \metalang{satDown}(x)]\)</span></li>
+</ol></li>
+</ul>
+</section>
+<section id="whats-the-problem-ii" class="level2">
+<h2>What’s the problem ii</h2>
+<ul>
+<li>The most robust methodological principle in formal semantics is Frege’s <em>principle of compositionality</em>.</li>
+</ul>
+<figure>
+<img src="images/frege.jpg" alt="the philosopher Gottlob Frege (1848-1925)" style="width:30.0%" /><figcaption>the philosopher Gottlob Frege (1848-1925)</figcaption>
+</figure>
+</section>
+<section id="whats-the-problem-iii" class="level2">
+<h2>What’s the problem iii</h2>
+<ul>
+<li><p>Frege’s principle of compostionality has had innumerable reformulations, and I won’t bore you with the original German. In its essence, it says:</p>
+<p><em>The meaning of a sentence is a function of  and </em>.</p></li>
+<li><p>Let’s think about how we would translate the <em>parts</em> of the following sentence:</p></li>
+</ul>
+<ol start="46" class="example" type="1">
+<li>Someone walked in and he sat down.</li>
+</ol>
+</section>
+<section id="whats-the-problem-iv" class="level2">
+<h2>What’s the problem iv</h2>
+<ul>
+<li><p>conjunct 1: <span class="math inline">\(∃ x[\metalang{walkedIn}(x)]\)</span></p></li>
+<li><p>conjunct 2: <span class="math inline">\(\metalang{satDown}(x)\)</span></p></li>
+<li><p>The principle of compositionality tells us that the meaning of a <em>conjunctive</em> sentence should be the conjunction of the meaning of its parts, so we get:</p></li>
+<li><p><span class="math inline">\(∃x[\metalang{walkedIn}(x)] ∧ \metalang{SatDown}(x)\)</span></p></li>
+<li><p>our more successful translation violates the principle of compositionality!</p></li>
+</ul>
+</section>
+<section id="whats-the-problem-v" class="level2">
+<h2>What’s the problem v</h2>
+<ul>
+<li><p>It’s important to state that, in practice, the principle of compositionality is a <em>methodological</em> principle, and is not always inviolable.</p></li>
+<li><p>However, all else being equal, it would be nice to be able to account for the data we’ve just been considering in a way consistent with the principle of compositionality.</p></li>
+<li><p><em>Dynamic semantics</em> will allow us to do just that!</p></li>
+</ul>
+</section>
+</section>
+<section id="lecture-2-dynamic-predicate-logic" class="level1">
+<h1>Lecture 2: Dynamic Predicate Logic</h1>
+<section id="the-empirical-challenge" class="level2">
+<h2>The empirical challenge</h2>
+<blockquote>
+<p>“If we use standard first-order predicate logic […] in translating a natural language sentence or discourse, anaphoric pronouns will turn up as bound variables. In many cases, this means that in order to arrive at formulas which are good translations, i.e., which express the right meaning, we have to be pretty inventive, and should not pay too much attention to the way in which the natural language sentence or discourse is built up.” (<span class="citation" data-cites="groenendijk_dynamic_1991">[@groenendijk_dynamic_1991]</span>)</p>
+</blockquote>
+</section>
+<section id="cross-sentential-anaphora" class="level2">
+<h2>Cross-sentential anaphora</h2>
+<ol start="47" class="example" type="1">
+<li><p>A man<span class="math inline">\(^x\)</span> walks in the park. He<span class="math inline">\(_x\)</span> whistles.</p></li>
+<li><p><span class="math inline">\(∃ x[\metalang{man}(x) ∧ \metalang{walkInThePark}(x) ∧ \metalang{whistle}(x)]\)</span></p></li>
+</ol>
+<ul>
+<li>BUT</li>
+</ul>
+<ol start="49" class="example" type="1">
+<li><p>A man<span class="math inline">\(ˣ\)</span> walks in the park – <span class="math inline">\(∃ x[\metalang{man}(x) ∧ \metalang{walkedInThePark}(x)]\)</span></p></li>
+<li><p>He<span class="math inline">\(ₓ\)</span> whistles. – <span class="math inline">\(\metalang{whistles}(x)\)</span></p></li>
+</ol>
+<ul>
+<li><ol start="51" class="example" type="1">
+<li><span class="math inline">\(≠\)</span> (49) <span class="math inline">\(∧\)</span> (50)</li>
+</ol></li>
+</ul>
+</section>
+<section id="donkey-sentences" class="level2">
+<h2>Donkey sentences</h2>
+<ol start="52" class="example" type="1">
+<li><p>If a farmer<span class="math inline">\(ˣ\)</span> owns a donkey<span class="math inline">\(ʸ\)</span>, he<span class="math inline">\(ₓ\)</span> beats it<span class="math inline">\(_y\)</span>.</p></li>
+<li><p>Every farmer who owns a donkey<span class="math inline">\(ʸ\)</span> beats it<span class="math inline">\(_y\)</span>.</p></li>
+</ol>
+<p><span class="math display">\[
+∀ x∀y\left[
+\begin{aligned}[c]
+&amp;[\metalang{farmer}(x) ∧ \metalang{donkey}(y) ∧ \metalang{own}(x,y)]\\
+&amp;→ \metalang{beat}(x,y)
+\end{aligned}\right]
+\]</span></p>
+<ul>
+<li>what happened to translating indefinites like <em>a donkey</em> using existential quantification?</li>
+</ul>
+</section>
+<section id="the-dpl-answer" class="level2">
+<h2>The DPL answer</h2>
+<blockquote>
+<p>“The general starting point of the kind of semantics that DPL is an instance of, is that the meaning of a sentence does not lie in its truth-conditions, but rather in the way it changes (the representation of) the information of the interpreter” (<span class="citation" data-cites="groenendijk_dynamic_1991">[@groenendijk_dynamic_1991]</span>)</p>
+</blockquote>
+</section>
+<section id="the-syntax-of-dpl" class="level2">
+<h2>The syntax of DPL</h2>
+<ul>
+<li><p>The syntax of DPL is more-or-less identical to the syntax of FOL!</p></li>
+<li><p>Let’s have a brief refresher.</p></li>
+</ul>
+</section>
+<section id="the-syntax-of-dpl-ii" class="level2">
+<h2>The syntax of DPL ii</h2>
+<ol type="1">
+<li><p>If <span class="math inline">\(π\)</span> is a unary predicate and <span class="math inline">\(α\)</span> is a , then <span class="math inline">\(π(α)\)</span> is a formula.</p></li>
+<li><p>If <span class="math inline">\(π\)</span> is a binary predicate and α and β are , then <span class="math inline">\(π(α,β)\)</span> is a formula.</p></li>
+<li><p>If <span class="math inline">\(ϕ\)</span> is a formula, then <span class="math inline">\(¬ϕ\)</span> is a formula.</p></li>
+<li><p>If <span class="math inline">\(ϕ\)</span> and <span class="math inline">\(ψ\)</span> are formulas, then <span class="math inline">\([ϕ ∧ ψ]\)</span> is a formula.</p></li>
+<li><p>If <span class="math inline">\(ϕ\)</span> and <span class="math inline">\(ψ\)</span> are formulas, then <span class="math inline">\([ϕ ∨ ψ]\)</span> is a formula.</p></li>
+<li><p>If <span class="math inline">\(ϕ\)</span> and <span class="math inline">\(ψ\)</span> are formulas, then <span class="math inline">\([ϕ → ψ]\)</span> is a formula.</p></li>
+<li><p>If <span class="math inline">\(ϕ\)</span> and ψ$ are formulas, then <span class="math inline">\([ϕ ↔ ψ]\)</span> is a formula.</p></li>
+<li><p>If <span class="math inline">\(u\)</span> is a variable and <span class="math inline">\(ϕ\)</span> is a formula, then <span class="math inline">\(∃uϕ\)</span> is a formula.</p></li>
+<li><p>If <span class="math inline">\(u\)</span> is a variable and <span class="math inline">\(ϕ\)</span> is a formula, then <span class="math inline">\(∀uϕ\)</span> is a formula.</p></li>
+</ol>
+</section>
+<section id="the-syntax-of-dpl-iii" class="level2">
+<h2>The syntax of DPL iii</h2>
+<ul>
+<li><p>The difference between DPL and FOL is going to lie in the <em>semantics</em>.</p></li>
+<li><p>Concretely, formulae like (54) are going to receive sensible interpretations.</p></li>
+</ul>
+<ol start="54" class="example" type="1">
+<li><span class="math inline">\(∃ x[\metalang{man}(x) ∧ \metalang{walkedIn}(x)] ∧ \metalang{satDown}(x)\)</span></li>
+</ol>
+<ul>
+<li><p>First we need some background on characteristic functions and sets.</p></li>
+<li><p>We’re also going to develop a slightly different perspective on the meanings of FOL formulae.</p></li>
+</ul>
+</section>
+<section id="prelude-to-the-semantics-of-dpl-characteristic-functions" class="level2">
+<h2>Prelude to the semantics of DPL: Characteristic functions</h2>
+<ul>
+<li><p>Let’s say we have a function <span class="math inline">\(\entity{run'}\)</span> from objects to truth values.</p></li>
+<li><p><span class="math inline">\(\entity{run'}\)</span> maps an object <span class="math inline">\(x\)</span> to true (<span class="math inline">\(1\)</span>) just in case <span class="math inline">\(x\)</span> runs, and to false (<span class="math inline">\(0\)</span>) just in case <span class="math inline">\(x\)</span> doesn’t run.</p></li>
+<li><p>Let’s say we’re in a world where Jeff runs, but Britta and Annie don’t run.</p></li>
+</ul>
+<ol start="55" class="example" type="1">
+<li><p><span class="math inline">\(\entity{run'}(\entity{Jeff}) = 1\)</span></p></li>
+<li><p><span class="math inline">\(\entity{run'}(\entity{Britta}) = 0\)</span></p></li>
+<li><p><span class="math inline">\(\entity{run'}(\entity{Annie}) = 0\)</span></p></li>
+</ol>
+</section>
+<section id="characteristic-functions-ii" class="level2">
+<h2>Characteristic functions ii</h2>
+<ul>
+<li>The graph of <span class="math inline">\(\entity{run'}\)</span> in this world is:</li>
+</ul>
+<p><span class="math display">\[
+\Set{⟨\metalang{Jeff},1⟩, ⟨\metalang{Britta},0⟩, ⟨\metalang{Annie},0 ⟩}
+\]</span></p>
+<ul>
+<li>We could convey the same information by simply gathering together every object for which <span class="math inline">\(\entity{run'}\)</span> returns true:</li>
+</ul>
+<p><span class="math display">\[
+\Set{\metalang{Jeff}}
+\]</span></p>
+<ul>
+<li><p>This is the meaning we assume for predicates in FOL. <span class="math inline">\(\entity{run'}\)</span> is the <em>characteristic function</em> of this set.</p></li>
+<li><p>Functions from a set of objects to truth values can equivalenty be expressed as sets of objects.</p></li>
+</ul>
+</section>
+<section id="sentences-express-sets-of-assignments" class="level2">
+<h2>Sentences express sets of assignments</h2>
+<ul>
+<li>Recall in FOL we considered truth-conditions to be relative to an assignment <span class="math inline">\(g\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+\evalM[M,g]{\metalang{left}(x)} = 1\text{ iff }g(x) ∈ \entity{left}
+\]</span></p>
+<ul>
+<li><p>Let’s say that only Donald left. If we have an assignment <span class="math inline">\(g₁\)</span> s.t. <span class="math inline">\(g₁(x) = \metalang{Donald}\)</span> then the formula is true. If we have an assignment <span class="math inline">\(g₂\)</span> s.t. <span class="math inline">\(g₂(x) = \metalang{Melania}\)</span> then the formula is false.</p></li>
+<li><p>In FOL, then, formulae are <em>functions</em> from assignments to truth values.</p></li>
+<li><p>That means that we can identity the meaning of a formula relative to a model with the set of assignments that make it true.</p></li>
+</ul>
+</section>
+<section id="sentences-express-sets-of-assignments-1" class="level2">
+<h2>Sentences express sets of assignments</h2>
+<ul>
+<li>Let’s say we’ve in a model where only Jeff and Britta run, and only Britta and Annie swim.</li>
+</ul>
+<p><span class="math display">\[
+\evalM[M]{\metalang{run}(x)} = \Set{\begin{aligned}[c]
+&amp;[x &amp;↦ &amp;\entity{Jeff}],\\
+&amp;[x &amp;↦ &amp;\entity{Britta}]
+\end{aligned}}
+\]</span></p>
+</section>
+<section id="the-flow-of-information" class="level2">
+<h2>The flow of information</h2>
+<ul>
+<li>This allows us to observe the flow of information as we added conjucts especially clearly.</li>
+</ul>
+<p><span class="math display">\[
+\evalM[M]{\metalang{run}(x)} = \Set{\begin{aligned}[c]
+&amp;[x &amp;↦ &amp;\entity{Jeff}],\\
+&amp;[x &amp;↦ &amp;\entity{Britta}]
+\end{aligned}}
+\]</span></p>
+<p><span class="math display">\[
+\evalM[M]{\metalang{swim}(x)} = \Set{\begin{aligned}[c]
+&amp;[x &amp;↦ &amp;\entity{Britta}],\\
+&amp;[x &amp;↦ &amp;\entity{Annie}]
+\end{aligned}}
+\]</span></p>
+<p><span class="math display">\[
+\evalM[M]{\metalang{run}(x) ∧ \metalang{swim}(x)} = \Set{[x ↦ \entity{Britta}]}
+\]</span></p>
+<ul>
+<li>Formulae involving pronouns makes the set of assignments at which the sentence is true <em>shrink</em>.</li>
+</ul>
+</section>
+<section id="notation-for-assignments" class="level2">
+<h2>Notation for assignments</h2>
+<ul>
+<li><p>I’m going to start using more concise notation for assignment functions now. <span class="math inline">\(j b j\)</span> is the assignment that maps <span class="math inline">\(x₁\)</span> to <span class="math inline">\(\entity{Jeff}\)</span>, <span class="math inline">\(x₂\)</span> to <span class="math inline">\(\entity{Britta}\)</span> and <span class="math inline">\(x₃\)</span> to <span class="math inline">\(\entity{Jeff}\)</span>.</p></li>
+<li><p>The assignment <span class="math inline">\(j b j\)</span> is equivalent to the following:</p></li>
+</ul>
+<p><span class="math display">\[
+\left[\begin{aligned}[c]
+&amp;x₁ &amp;↦ &amp;\entity{Jeff}\\
+&amp;x₂ &amp;↦ &amp;\entity{Britta}\\
+&amp;x₃ &amp;↦ &amp;\entity{Jeff}
+\end{aligned}\right]
+\]</span></p>
+</section>
+<section id="notation-for-assignments-ii" class="level2">
+<h2>Notation for assignments ii</h2>
+<ul>
+<li><p><span class="math inline">\(\Set{\begin{aligned}[c]  j j\\  j b\\  j a \end{aligned}}\)</span> is the set of assignments which always map <span class="math inline">\(x₁\)</span> to <span class="math inline">\(\entity{Jeff}\)</span>.</p></li>
+<li><p>Intuitively we can think of this as a context where the value of <span class="math inline">\(x₁\)</span> is known.</p></li>
+</ul>
+</section>
+<section id="notation-for-assignments-iii" class="level2">
+<h2>Notation for assignments iii</h2>
+<ul>
+<li>This notation will help us see more clearly how, as we add conjuncts with free variables, the level of uncertainty is reduced. Let’s say there are two variables, <span class="math inline">\(x₁\)</span>, <span class="math inline">\(x₂\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+\evalM[M]{\metalang{run}(x₁)} = \Set{\begin{aligned}[c]
+j j \\
+j b \\
+j a \\
+b b \\
+b j \\
+b a
+\end{aligned}}; \evalM[M]{\metalang{swim}(x₁)} = \Set{\begin{aligned}[c]
+b b\\
+b j\\
+b a\\
+a a\\
+a b\\
+a j
+\end{aligned}}
+\]</span></p>
+</section>
+<section id="notation-for-assignments-ii-1" class="level2">
+<h2>Notation for assignments ii</h2>
+<p> = </p>
+<ul>
+<li>Conjoining the two statements about <span class="math inline">\(x₁\)</span> means that we can only be in a context where we’re completely certain that <span class="math inline">\(x₁\)</span> picks out <span class="math inline">\(\entity{Britta}\)</span>.</li>
+</ul>
+</section>
+<section id="the-flow-of-information-ii" class="level2">
+<h2>The flow of information ii</h2>
+<ul>
+<li>Existential statements, on the other hand, don’t have the same effect as statements with free variables. Let’s say we have two variables to consider, <span class="math inline">\(x₁\)</span> and <span class="math inline">\(x₂\)</span>, and the world is as before.</li>
+</ul>
+</section>
+<section id="the-flow-of-information-iii" class="level2">
+<h2>The flow of information iii</h2>
+<p><span class="math display">\[
+\evalM[M]{∃ x₁[\metalang{run}(x₁)]} = \Set{
+\begin{aligned}[c]
+&amp;j j, j b, b j,\\
+&amp;b b, b a, a b,\\
+&amp;a a, j a, a j
+\end{aligned}
+}
+\]</span></p>
+<p><span class="math display">\[
+\evalM[M]{∃ x₂[\metalang{swim}(x₂)]} = \Set{
+\begin{aligned}[c]
+&amp;j j, j b, b j,\\
+&amp;b b, b a, a b,\\
+&amp;a a, j a, a j
+\end{aligned}
+}
+\]</span></p>
+</section>
+<section id="the-flow-of-information-iv" class="level2">
+<h2>The flow of information iv</h2>
+<ul>
+<li>Existential statements then, take all possible assignments, and just return them if the existential statement is true in the model, and reject them otherwise.</li>
+</ul>
+<p><span class="math display">\[
+\evalM[M]{∃ x₁[\metalang{run}(x₁)] ∧ ∃ x₂[\metalang{swim}(x₂)]} = \Set{
+\begin{aligned}[c]
+&amp;j j, j b, b j,\\
+&amp;b b, b a, a b,\\
+&amp;a a, j a, a j
+\end{aligned}
+}
+\]</span></p>
+<ul>
+<li>If nobody runs, there is no assigment <span class="math inline">\(g\)</span> which will make the conjunctive statement true, so:</li>
+</ul>
+<p><span class="math display">\[
+\evalM[M]{∃ x₁[\metalang{run}(x₁)] ∧ ∃ x₂[\metalang{swim}(x₂)]} = ∅
+\]</span></p>
+</section>
+<section id="the-flow-of-information-v" class="level2">
+<h2>The flow of information v</h2>
+<ul>
+<li><p>Generally speaking, thinking of formula of FOL as sets of assignments helps us understand the following intuitive generalizations:</p></li>
+<li><p>Formulae with free variables typically <em>reduce uncertainty</em> about intended reference.</p></li>
+<li><p>Formulae with no free variables don’t reduce uncertainty about intended reference.</p></li>
+<li><p>Intuitively, this links up with the <em>impossibility</em>, in a static setting, of an existential quantifier binding a variable outside of it’s scope.</p></li>
+</ul>
+</section>
+<section id="back-to-dpl" class="level2">
+<h2>Back to DPL</h2>
+<ul>
+<li><p>In FOL, the interpretation of a formula in a given model can be thought of as a set of assignments <span class="math inline">\(g\)</span> – those which make the formula true.</p></li>
+<li><p>In DPL, the interpretation of a formula in a given model is rather going to be sets of <em>pairs</em> of assignments <span class="math inline">\(⟨i,o⟩\)</span>.</p></li>
+<li><p><span class="math inline">\(i\)</span> represents an input assignment, and <span class="math inline">\(o\)</span> represents the output assignment resulting from the interpretation procedure.</p></li>
+</ul>
+</section>
+<section id="dynamic-existential-quantification" class="level2">
+<h2>Dynamic Existential Quantification</h2>
+<p><span class="math display">\[\evalM{∃x ϕ} = \Set{⟨i,o⟩| ∃k: k[x]i\metalang{ and }⟨k,o⟩ ∈ \evalM{ϕ}}\]</span></p>
+<ul>
+<li><p>Existential quantification then, takes an input assignment <span class="math inline">\(i\)</span> and returns an output assignment <span class="math inline">\(o\)</span>, where <span class="math inline">\(o\)</span> is the result of interpreting <span class="math inline">\(ϕ\)</span> relative to a shifted assignment <span class="math inline">\(k\)</span>.</p></li>
+<li><p>Don’t worry too much about exactly how this works. We’ll go through some derivations in detail in a little while.</p></li>
+<li><p>Since assignments represent the <em>context of utterance</em>, existentials are interpreted as <em>instructions for updating the context of utterance</em>.</p></li>
+</ul>
+</section>
+<section id="sets-vs.functions" class="level2">
+<h2>Sets vs. functions</h2>
+<ul>
+<li><p>Recall, we’ve been representing <em>relations</em>, like <span class="math inline">\(\entity{hugs}\)</span>, as <em>sets of ordered pairs</em>, i.e. <span class="math inline">\(\Set{\langle x,y \rangle| x\text{ hugs }y}\)</span>.</p></li>
+<li><p>Intuitively then, dynamic sentence meanings are <em>relations</em> between assignments.</p></li>
+<li><p>Another way of expressing a relation, is as a function from two arguments to a truth value, i.e.</p>
+<p><span class="math display">\[
+λ x . λ y . \begin{cases}
+1\text{ if }x\text{ hugs }y\\ 
+0\text{ otherwise}
+\end{cases}
+\]</span></p></li>
+<li><p>This expresses the <em>same information</em> as the set of ordered pairs.</p></li>
+</ul>
+</section>
+<section id="equivalence" class="level2">
+<h2>Equivalence</h2>
+<ul>
+<li>We can translate then, from formulae of DPL meanings to Gennaro’s dynamic calculus, and back again.</li>
+</ul>
+<ol start="58" class="example" type="1">
+<li>Someone<span class="math inline">\(^{x^1}\)</span> left.</li>
+</ol>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\Set{⟨i,o⟩| ∃k: k[x₁]i\metalang{ and }k = o\text{ and }\metalang{left}(o(x₁))}\\
+&amp;≡\\
+&amp;λ ω . λ ω' . ∃k[k[x₁]ω ∧ k = ω' ∧ \metalang{left}(ω'(x₁))]
+\end{aligned}
+\]</span></p>
+<ul>
+<li>These are just two different ways of expressing the same abstract concept – a relation between assignments.</li>
+</ul>
+</section>
+<section id="semantics-of-dpl" class="level2">
+<h2>Semantics of DPL</h2>
+<ul>
+<li><p>If <span class="math inline">\(π\)</span> is a unary predicate and <span class="math inline">\(α\)</span> is a term, then <span class="math inline">\(\evalM{π(α)} = \Set{⟨i,o⟩| i = o \metalang{ and } \evalM[o]{α} ∈ \evalM{π}}\)</span>.</p></li>
+<li><p>If <span class="math inline">\(π\)</span> is a binary predicate and <span class="math inline">\(α\)</span> and <span class="math inline">\(β\)</span> terms, then <span class="math inline">\(\evalM{π(α,β)} = \Set{⟨i,o⟩| i = o \metalang{ and } ⟨\evalM[o]{α},\evalM[o]{β}⟩ ∈ \evalM{π}}\)</span>.</p></li>
+</ul>
+</section>
+<section id="exercise-1" class="level2">
+<h2>Exercise</h2>
+<ul>
+<li>Assume a model where:
+<ul>
+<li><span class="math inline">\(D = \Set{\metalang{Jeff},\metalang{Annie},\metalang{Britta}}\)</span></li>
+<li>Jeff hugs everyone, everyone hugs themselves, and nobody hugs anyone else.</li>
+<li>Only Jeff is happy.</li>
+<li>There are two variables <span class="math inline">\(x₁\)</span> and <span class="math inline">\(x₂\)</span>.</li>
+</ul></li>
+<li>Compute the meanings of the following formulae as sets of ordered pairs of assignments:</li>
+</ul>
+<ol start="59" class="example" type="1">
+<li><p><span class="math inline">\(\metalang{hugs}(x₁,x₂)\)</span></p></li>
+<li><p><span class="math inline">\(\metalang{happy}(\metalang{Annie})\)</span></p></li>
+<li><p><span class="math inline">\(\metalang{hugs}(\metalang{Jeff},x₂)\)</span></p></li>
+</ol>
+</section>
+<section id="example-solution" class="level2">
+<h2>Example solution</h2>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM[M]{\metalang{hugs}(x₁,x₁)} = \\
+&amp;\Set{⟨i,o⟩| i = o \metalang{ and }⟨o(x₁),o(x₂)⟩ ∈ I(\metalang{hugs})}
+\end{aligned}
+\]</span></p>
+<ul>
+<li>If we’re in a model with Jeff, Britta, and Annie, where everybody hugs themselves, and nobody hugs anybody else, this is the following set:</li>
+</ul>
+<p><span class="math display">\[
+\Set{
+\begin{aligned}[c]
+⟨[j j],[j j]⟩,\\
+⟨[b b],[b b]⟩,\\
+⟨[a a],[a a]⟩
+\end{aligned}
+}
+\]</span></p>
+</section>
+<section id="tests" class="level2">
+<h2>Tests</h2>
+<blockquote>
+<p>“[..] atomic formulas do not have dynamic effects of their own. Rather, they function as a kind of”test&quot; on incoming assignments. An atomic formula tests whether an input assignment satisfies the condition it embodies. If so, the assignment is passed on as an output, if not, it is rejected.&quot; (G&amp;S, 1991)</p>
+</blockquote>
+</section>
+<section id="exercise-2" class="level2">
+<h2>Exercise</h2>
+<p><span class="math display">\[\evalM{∃x ϕ} = \Set{⟨i,o⟩| ∃k: k[x]i\metalang{ and }⟨k,o⟩ ∈ \evalM{ϕ}}\]</span></p>
+<ul>
+<li>Compute the meaning of the following formula:</li>
+</ul>
+<ol start="62" class="example" type="1">
+<li><span class="math inline">\(∃ x[\metalang{hugs}(x₁,\metalang{Annie})]\)</span></li>
+</ol>
+<ul>
+<li>If <span class="math inline">\(π\)</span> is a binary predicate and <span class="math inline">\(α\)</span> and <span class="math inline">\(β\)</span> terms, then <span class="math inline">\(\evalM{π(α,β)} = \Set{⟨i,o⟩| i = o \metalang{ and } ⟨\evalM[o]{α},\evalM[o]{β}⟩ ∈ \evalM{π}}\)</span>.</li>
+</ul>
+</section>
+<section id="solution" class="level2">
+<h2>Solution</h2>
+<ul>
+<li>The set of possible assignments:</li>
+</ul>
+<p><span class="math display">\[
+\Set{
+\begin{aligned}[c]
+&amp;j j, j b,b j\\
+&amp;b b, b a,a b\\
+&amp;a a, a j,j a
+\end{aligned}
+}
+\]</span></p>
+</section>
+<section id="solution-ii" class="level2">
+<h2>Solution ii</h2>
+<p>  <span class="math display">\[\begin{aligned}[t]
+&amp;\evalM{∃ x₁[\metalang{hugs}(x₁,\metalang{Annie})]}\\
+&amp;= \Set{⟨i,o⟩| ∃ k[x₁]i\metalang{ and }⟨k,o⟩ ∈ \evalM{\metalang{hugs}(x₁,\metalang{Annie})}}\\
+&amp;= \Set{⟨i,o⟩| ∃ k[x₁]i\metalang{ and }⟨k,o⟩ ∈ \Set{⟨i',o'⟩|i' = o'\metalang{ and
+}⟨o'(x₁),\metalang{Annie}⟩ ∈ \entity{hugs}}}\\
+&amp;= \Set{⟨i,o⟩| ∃ k[x₁]i\metalang{ and }⟨k,o⟩ ∈ \Set{\begin{aligned}[c]
+⟨[j j],[j j]⟩,⟨[j b],[j b]⟩,\\
+⟨[a b],[a b]⟩,⟨[a a],[a a]⟩,\\
+⟨[a j],[a j]⟩,⟨[j a],[j a]⟩
+\end{aligned}}}\\
+&amp;= \Set{
+\begin{aligned}[c]
+⟨[\alert{j} j],[\alert{j} j]⟩,⟨[\alert{j} j],[\alert{a} j]⟩,⟨[\alert{j} b],[\alert{j} b]⟩,⟨[\alert{j} b],[\alert{a} b]⟩\\
+⟨[\alert{b} j],[\alert{j} j]⟩,⟨[\alert{b} j],[\alert{a} j]⟩,⟨[\alert{b} b],[\alert{j} b]⟩,⟨[\alert{b} b],[\alert{a} b]⟩\\
+⟨[\alert{b} a],[\alert{j} a]⟩,⟨[\alert{b} a],[\alert{a} a]⟩,⟨[\alert{a} b],[\alert{a} b]⟩,⟨[\alert{a} b],[\alert{j} b]⟩\\
+⟨[\alert{a} a],[\alert{a} a]⟩,⟨[\alert{a} a],[\alert{j} a]⟩,⟨[\alert{a} j],[\alert{a} j]⟩,⟨[\alert{a} j],[\alert{j} j]⟩\\
+⟨[\alert{j} a],[\alert{j} a]⟩,⟨[\alert{j} a],[\alert{a} a]⟩
+\end{aligned}
+}
+\end{aligned}\]</span></p>
+</section>
+<section id="solution-iii-the-result-reformatted" class="level2">
+<h2>Solution iii: the result reformatted</h2>
+
+</section>
+<section id="solution-iv" class="level2">
+<h2>Solution iv</h2>
+<ul>
+<li><p>Existential quantification is <em>dynamic</em>, since it potentially changes the input assignment.</p></li>
+<li><p>We can see more clearly what the existential statement does by gathering together the set of input assignments and the set of output assignments:</p>
+<p><span class="math display">\[
+\left⟨ \Set{
+\begin{aligned}[c]
+&amp;j j, j b,b j\\
+&amp;b b, b a,a b\\
+&amp;a a, a j,j a
+\end{aligned}},
+\Set{
+\begin{aligned}[c]
+&amp;j j, j b,j a\\
+&amp;a a,a b, a j
+\end{aligned}}
+\right⟩
+ \]</span></p></li>
+<li><p><span class="math inline">\(\exists x₁[\metalang{hugs}(x₁,\metalang{Annie})]\)</span> takes all assignments as its input, and outputs those assignments where <span class="math inline">\(x₁\)</span> is mapped to someone who hugged Annie – namely, Jeff or Annie.</p></li>
+</ul>
+</section>
+<section id="dynamic-conjunction" class="level2">
+<h2>Dynamic conjunction</h2>
+<ul>
+<li><p>Unlike in classical semantics, we now have a theory of existential quantification according to which it <em>reduces uncertainty</em> about intended reference.</p></li>
+<li><p>But hang on, we still need to say something about conjunction DPL to derive cross-sentential anaphora.</p></li>
+<li><p>Here is the rule for conjunction in DPL:</p></li>
+<li><p><span class="math inline">\(\evalM{[ϕ ∧ ψ]} = \Set{⟨i,o⟩|∃ k:⟨i,k⟩ ∈ \evalM{ϕ}\text{ and }⟨k,o⟩ ∈ \evalM{ψ}}\)</span></p></li>
+<li><p>Our definition for dynamic conjunction evaluates the first conjunct <span class="math inline">\(ϕ\)</span> relative to the input assignment <span class="math inline">\(i\)</span>, resulting in <span class="math inline">\(k\)</span>, then threads <span class="math inline">\(k\)</span> into <span class="math inline">\(ψ\)</span>.</p></li>
+</ul>
+</section>
+<section id="dynamic-conjunction-ii" class="level2">
+<h2>Dynamic conjunction ii</h2>
+<ul>
+<li>We can assume that successive sentences are interpreted as <em>conjoined</em>. This will give us a uniform account of anaphora across conjoined clauses, and cross-sentential anaphora.</li>
+</ul>
+<ol start="63" class="example" type="1">
+<li><p>Someone<span class="math inline">\(^{x¹}\)</span> hugged Annie. They<span class="math inline">\(_{x_1}\)</span> are happy.</p></li>
+<li><p><span class="math inline">\(∃ x₁[\metalang{hugged}(x₁,\metalang{Annie})] ∧ \metalang{happy}(x₁)\)</span></p></li>
+</ol>
+<ul>
+<li>Recall that we’re in a model where everyone only hugs themselves, except for Jeff, who also hugs Annie, and only Jeff is happy.</li>
+</ul>
+</section>
+<section id="dynamic-conjunction-iii" class="level2">
+<h2>Dynamic conjunction iii</h2>
+<ul>
+<li>We know how the first conjunct is evaluated:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM{∃x₁[\metalang{hugged}(x₁,\metalang{Annie})]}\\
+&amp;=\Set{
+\begin{aligned}[c]
+⟨[\alert{j} j],[\alert{j} j]⟩,⟨[\alert{j} j],[\alert{a} j]⟩,⟨[\alert{j} b],[\alert{j} b]⟩,⟨[\alert{j} b],[\alert{a} b]⟩\\
+⟨[\alert{b} j],[\alert{j} j]⟩,⟨[\alert{b} j],[\alert{a} j]⟩,⟨[\alert{b} b],[\alert{j} b]⟩,⟨[\alert{b} b],[\alert{a} b]⟩\\
+⟨[\alert{b} a],[\alert{j} a]⟩,⟨[\alert{b} a],[\alert{a} a]⟩,⟨[\alert{a} b],[\alert{a} b]⟩,⟨[\alert{a} b],[\alert{j} b]⟩\\
+⟨[\alert{a} a],[\alert{a} a]⟩,⟨[\alert{a} a],[\alert{j} a]⟩,⟨[\alert{a} j],[\alert{a} j]⟩,⟨[\alert{a} j],[\alert{j} j]⟩\\
+⟨[\alert{j} a],[\alert{j} a]⟩,⟨[\alert{j} a],[\alert{a} a]⟩
+\end{aligned}
+}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="dynamic-conjunction-iv" class="level2">
+<h2>Dynamic conjunction iv</h2>
+<ul>
+<li>And we know how the second conjunct should be evaluated:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM{\metalang{happy}(x₁)}\\
+&amp;=\Set{
+\begin{aligned}[c]
+⟨[j j],[j j]⟩,⟨[j b],[j b]⟩,⟨[j a],[j a]⟩
+\end{aligned}
+}
+\end{aligned}
+\]</span></p>
+<ul>
+<li>If <span class="math inline">\(π\)</span> is a unary predicate and <span class="math inline">\(α\)</span> is a term, then <span class="math inline">\(\evalM{π(α)} = \Set{⟨i,o⟩| i = o \metalang{ and } \evalM[o]{α} ∈ \evalM{π}}\)</span>.</li>
+</ul>
+</section>
+<section id="dynamic-conjunction-v" class="level2">
+<h2>Dynamic conjunction v</h2>
+<ul>
+<li><span class="math inline">\(\evalM{[ϕ ∧ ψ]} = \Set{⟨i,o⟩|∃ k:⟨i,k⟩ ∈ \evalM{ϕ}\text{ and }⟨k,o⟩ ∈ \evalM{ψ}}\)</span></li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM{∃x₁[\metalang{hugged}(x₁,\metalang{Annie})] ∧ \metalang{happy}(x₁)}\\
+&amp;= \Set{
+\begin{aligned}[c]
+⟨[j j],[j j]⟩,⟨[j b],[j b]⟩\\
+⟨[b j],[j j]⟩,⟨[b b],[j b]⟩\\
+⟨[b a],[j a]⟩,⟨[a b],[j b]⟩\\
+⟨[a a],[j a]⟩,⟨[a j],[j a]⟩\\
+⟨[j a],[j a]⟩
+\end{aligned}
+}
+\end{aligned}\]</span></p>
+<ul>
+<li>The prediction is, that <em>someone hugged Annie. They are happy.</em> should update a context where we’re uncertain about who <span class="math inline">\(x_1\)</span> picks out, to one where we’re certain about who <span class="math inline">\(x_1\)</span> picks out – namely, Jeff.</li>
+</ul>
+</section>
+<section id="associativity-of-v-and" class="level2">
+<h2>Associativity of <span class="math inline">\(∃v\)</span> and <span class="math inline">\(∧\)</span></h2>
+<ul>
+<li><p>In fact, <span class="math inline">\(∃x₁[\metalang{hugged}(x₁,\metalang{Annie})] ∧ \metalang{happy}(x₁)\)</span> turns out to be <em>equivalent</em> to the formula: <span class="math inline">\(∃x₁[\metalang{hugged}(x₁,\metalang{Annie}) ∧ \metalang{happy}(x₁)]\)</span></p></li>
+<li><p><em>Exercise:</em> Compute the meaning of each of the conjuncts in DPL, and compute the result of dynamic conjunction:</p></li>
+<li><p><span class="math inline">\(\evalM{[ϕ ∧ ψ]} = \Set{⟨i,o⟩|∃ k:⟨i,k⟩ ∈ \evalM{ϕ}\text{ and }⟨k,o⟩ ∈ \evalM{ψ}}\)</span></p></li>
+</ul>
+</section>
+<section id="binding-failure" class="level2">
+<h2>Binding failure</h2>
+<ul>
+<li>Let’s double check that this is genuinely binding. What happens when the existential and the pronoun in the second clause are contra-indexed?</li>
+</ul>
+<ol start="65" class="example" type="1">
+<li><span class="math inline">\(∃ x₁[\metalang{hugged}(x₁,\metalang{Annie})] ∧ \metalang{happy}(x_2)\)</span></li>
+</ol>
+</section>
+<section id="binding-failure-ii" class="level2">
+<h2>Binding failure ii</h2>
+<ul>
+<li>Again, we know how the first conjunct should be evaluated:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM{∃x₁[\metalang{hugged}(x₁,\metalang{Annie})]}\\
+&amp;=\Set{
+\begin{aligned}[c]
+⟨[\alert{j} j],[\alert{j} j]⟩,⟨[\alert{j} j],[\alert{a} j]⟩,⟨[\alert{j} b],[\alert{j} b]⟩,⟨[\alert{j} b],[\alert{a} b]⟩\\
+⟨[\alert{b} j],[\alert{j} j]⟩,⟨[\alert{b} j],[\alert{a} j]⟩,⟨[\alert{b} b],[\alert{j} b]⟩,⟨[\alert{b} b],[\alert{a} b]⟩\\
+⟨[\alert{b} a],[\alert{j} a]⟩,⟨[\alert{b} a],[\alert{a} a]⟩,⟨[\alert{a} b],[\alert{a} b]⟩,⟨[\alert{a} b],[\alert{j} b]⟩\\
+⟨[\alert{a} a],[\alert{a} a]⟩,⟨[\alert{a} a],[\alert{j} a]⟩,⟨[\alert{a} j],[\alert{a} j]⟩,⟨[\alert{a} j],[\alert{j} j]⟩\\
+⟨[\alert{j} a],[\alert{j} a]⟩,⟨[\alert{j} a],[\alert{a} a]⟩
+\end{aligned}
+}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="binding-failure-iii" class="level2">
+<h2>Binding failure iii</h2>
+<ul>
+<li>The second conjunct is evaluated differently – it is a <em>test</em> on a context where <span class="math inline">\(x_2\)</span> picks out someone who is happy.</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM{\metalang{happy}(x_2)}\\
+&amp;=\Set{
+\begin{aligned}[c]
+⟨[j \alert{j}],[j \alert{j}]⟩,⟨[a \alert{j}],[a \alert{j}]⟩,⟨[b \alert{j}],[b \alert{j}]⟩
+\end{aligned}
+}
+\end{aligned}
+\]</span></p>
+<ul>
+<li>If <span class="math inline">\(π\)</span> is a unary predicate and <span class="math inline">\(α\)</span> is a term, then <span class="math inline">\(\evalM{π(α)} = \Set{⟨i,o⟩| i = o \metalang{ and } \evalM[o]{α} ∈ \evalM{π}}\)</span>.</li>
+</ul>
+</section>
+<section id="binding-failure-iv" class="level2">
+<h2>Binding failure iv</h2>
+<ul>
+<li><span class="math inline">\(\evalM{[ϕ ∧ ψ]} = \Set{⟨i,o⟩|∃ k:⟨i,k⟩ ∈ \evalM{ϕ}\text{ and }⟨k,o⟩ ∈ \evalM{ψ}}\)</span></li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM{∃x₁[\metalang{hugged}(x₁,\metalang{Annie})] ∧ \metalang{happy}(x_2)}\\
+&amp;= \Set{
+\begin{aligned}[c]
+⟨[\alert{j} j],[\alert{j} j]⟩\\
+⟨[\alert{j} j],[\alert{a} j]⟩\\
+⟨[\alert{b} j],[\alert{j} j]⟩\\
+⟨[\alert{b} j],[\alert{a} j]⟩\\
+⟨[\alert{a} j],[\alert{a} j]⟩\\
+⟨[\alert{a} j],[\alert{j} j]⟩
+\end{aligned}
+}
+\end{aligned}\]</span></p>
+<ul>
+<li>Great! this sentence is correctly interpreted to <em>reduce certainty</em> about who <span class="math inline">\(x_1\)</span> picks out <em>and</em> to act as a test on who <span class="math inline">\(x_2\)</span> picks out.</li>
+</ul>
+</section>
+<section id="cross-sentential-crossover-i" class="level2">
+<h2>Cross-sentential crossover i</h2>
+<ul>
+<li>Remember, one of the candidate Logical Forms for cross-sentential anaphora we considered involved a genuinely wide-scope existential.</li>
+</ul>
+<ol start="66" class="example" type="1">
+<li><p>Someone<span class="math inline">\(^1\)</span> hugged Annie and they<span class="math inline">\(_1\)</span> are happy.</p></li>
+<li><p><span class="math inline">\(∃ x₁[\metalang{hugged}(x₁,\metalang{Annie}) ∧ \metalang{happy}(x₁)]\)</span></p></li>
+</ol>
+<ul>
+<li>If we were to allow such a Logical Form, we need to rule out the following:</li>
+</ul>
+<ol start="68" class="example" type="1">
+<li>They<span class="math inline">\(₁\)</span> are happy and someone¹ hugged Annie.</li>
+</ol>
+<ul>
+<li>Why can’t this receive the following Logical Form, and get a sensible interpretation?</li>
+</ul>
+<ol start="69" class="example" type="1">
+<li><span class="math inline">\(∃ x₁[\metalang{happy}(x₁) ∧ \metalang{hugged}(x₁,\metalang{Annie})]\)</span></li>
+</ol>
+</section>
+<section id="cross-sentential-crossover-ii" class="level2">
+<h2>Cross-sentential crossover ii</h2>
+<ul>
+<li><p>DPL (and dynamic semantics more generally) solves this completely straightforwardly.</p></li>
+<li><p>According to Dynamic Semantics, the Logical Form should really be the following:</p></li>
+</ul>
+<ol start="70" class="example" type="1">
+<li><span class="math inline">\(\metalang{happy}(x₁) ∧ ∃x₁[\metalang{hugged}(x₁,\metalang{Annie})]\)</span></li>
+</ol>
+<ul>
+<li>Because of how dynamic conjunction works, binding won’t obtain.</li>
+</ul>
+</section>
+<section id="cross-sentential-crossover-iii" class="level2">
+<h2>Cross-sentential crossover iii</h2>
+<ul>
+<li>Again, we know how the first conjunct is interpreted:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM{\metalang{happy}(x₁)}\\
+&amp;=\Set{
+\begin{aligned}[c]
+⟨[j j],[j j]⟩,⟨[j b],[j b]⟩,⟨[j a],[j a]⟩
+\end{aligned}
+}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="cross-sentential-crossover-iv" class="level2">
+<h2>Cross-sentential crossover iv</h2>
+<ul>
+<li>We know how the second conjunct is interpreted:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM{∃x₁[\metalang{hugged}(x₁,\metalang{Annie})]}\\
+&amp;=\Set{
+\begin{aligned}[c]
+⟨[\alert{j} j],[\alert{j} j]⟩,⟨[\alert{j} j],[\alert{a} j]⟩,⟨[\alert{j} b],[\alert{j} b]⟩,⟨[\alert{j} b],[\alert{a} b]⟩\\
+⟨[\alert{b} j],[\alert{j} j]⟩,⟨[\alert{b} j],[\alert{a} j]⟩,⟨[\alert{b} b],[\alert{j} b]⟩,⟨[\alert{b} b],[\alert{a} b]⟩\\
+⟨[\alert{b} a],[\alert{j} a]⟩,⟨[\alert{b} a],[\alert{a} a]⟩,⟨[\alert{a} b],[\alert{a} b]⟩,⟨[\alert{a} b],[\alert{j} b]⟩\\
+⟨[\alert{a} a],[\alert{a} a]⟩,⟨[\alert{a} a],[\alert{j} a]⟩,⟨[\alert{a} j],[\alert{a} j]⟩,⟨[\alert{a} j],[\alert{j} j]⟩\\
+⟨[\alert{j} a],[\alert{j} a]⟩,⟨[\alert{j} a],[\alert{a} a]⟩
+\end{aligned}
+}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="cross-sentential-crossover-v" class="level2">
+<h2>Cross-sentential crossover v</h2>
+<ul>
+<li><p><span class="math inline">\(\evalM{[ϕ ∧ ψ]} = \Set{⟨i,o⟩|∃ k:⟨i,k⟩ ∈ \evalM{ϕ}\text{ and }⟨k,o⟩ ∈ \evalM{ψ}}\)</span></p></li>
+<li><p>We’re only allowed to take <em>input-output</em> pairs, where the output of threading the input into <span class="math inline">\(ϕ\)</span> creates a valid input for <span class="math inline">\(ψ\)</span>.</p></li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM{\metalang{happy}(x₁) ∧ ∃x₁[\metalang{hugged}(x₁,\metalang{Annie})]}\\
+&amp;=\Set{
+\begin{aligned}[c]
+⟨[\alert{j} j],[\alert{j} j]⟩,⟨[\alert{j} j],[\alert{a} j]⟩,\\
+⟨[\alert{j} b],[\alert{j} b]⟩,⟨[\alert{j} b],[\alert{a} b]⟩\\
+⟨[\alert{j} a],[\alert{j} a]⟩,⟨[\alert{j} a],[\alert{a} a]⟩
+\end{aligned}
+}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="cross-sentential-crossover-vi" class="level2">
+<h2>Cross-sentential crossover vi</h2>
+<ul>
+<li><p>if <span class="math inline">\(x₁\)</span> were bound, then the effect of the sentence on the context should be to fully reduce uncertainty about who <span class="math inline">\(x₁\)</span> is intended to pick out – namely Jeff.</p></li>
+<li><p>Instead, the sentence is interpreted as a transition from a context in which we <em>know</em> that <span class="math inline">\(x₁\)</span> is intended to pick out Jeff, to one where <span class="math inline">\(x₁\)</span> is “re-opened”, and could pick out anyone who hugs Annie.</p></li>
+<li><p>This is because the meaning given for dynamic conjunction is <em>inherently</em> asymmetric and specifically left-to-right: first we thread the input into the first conjunct, and then we thread the result into the second conjunct.</p></li>
+<li><p><span class="math inline">\(\evalM{[ϕ ∧ ψ]} = \Set{⟨i,o⟩|∃ k:⟨i,\alert{k}⟩ ∈ \evalM{ϕ}\text{ and }⟨\alert{k},o⟩ ∈ \evalM{ψ}}\)</span></p></li>
+</ul>
+</section>
+<section id="logical-properties-of-dpl" class="level2">
+<h2>Logical properties of DPL</h2>
+<ul>
+<li><p>So, we’ve shown that, in DPL, conjunction is asymmetric:</p></li>
+<li><p><span class="math inline">\(\evalM{ϕ ∧ ψ} ≢ \evalM{ψ ∧ ϕ}\)</span></p></li>
+<li><p>It’s worth stressing just how much of a radical departure from classical semantics this is!</p></li>
+<li><p>In DPL, the dynamic, left-to-right nature of conjunction is really built into the <em>semantics</em> of the operator – this is by no means a byproduct of a pragmatic mechanism.</p></li>
+</ul>
+</section>
+<section id="external-vs.internal-dynamicity" class="level2">
+<h2>External vs. internal dynamicity</h2>
+<ul>
+<li><p>Conjunction passes on variable binding from its left conjunct to its right.</p></li>
+<li><p>In DPL, connectives of this kind are called <em>internally dynamic</em>. This is out basic case: <em>Someone walked in and they sat down</em>.</p></li>
+<li><p>A conjunctive formula can keep passing on variable bindings to conjuncts yet to come, i.e. <em>Someone walked in and they sat down. They got a drink.</em></p></li>
+<li><p>In DPL, connectives of this kind are called <em>externally dynamic</em>.</p></li>
+</ul>
+</section>
+<section id="donkey-sentences-1" class="level2">
+<h2>Donkey sentences</h2>
+<ul>
+<li>We still haven’t given a treatment of donkey sentences.</li>
+</ul>
+<ol start="71" class="example" type="1">
+<li>If a farmer<span class="math inline">\(ˣ\)</span> owns a donkey<span class="math inline">\(ʸ\)</span>, he<span class="math inline">\(ₓ\)</span> hits it<span class="math inline">\(_y\)</span>.</li>
+</ol>
+<ul>
+<li>Remember that, in FOL, the correct translation would seem to involve universal quantification.</li>
+</ul>
+<p><span class="math display">\[
+∀ x,y[\metalang{farmer}(x) ∧ \metalang{donkey}(y) ∧ \metalang{own}(x,y) → \metalang{hits}(x,y)]
+\]</span></p>
+<ul>
+<li>Unlike previously, the trick of scoping out an existential quantifier doesn’t have a chance of working, since we’d end up talking about a specific farmer and donkey.</li>
+</ul>
+</section>
+<section id="donkey-sentences-ii" class="level2">
+<h2>Donkey sentences ii</h2>
+<ol start="72" class="example" type="1">
+<li><p>*If a farmer<span class="math inline">\(ˣ\)</span> owns a donkey<span class="math inline">\(ʸ\)</span>, he<span class="math inline">\(ₓ\)</span> hits it<span class="math inline">\(_y\)</span>. It<span class="math inline">\(_y\)</span> yelps.</p></li>
+<li><p>*If a farmer<span class="math inline">\(ˣ\)</span> owns a donkey<span class="math inline">\(ʸ\)</span>, he<span class="math inline">\(ₓ\)</span> hits it<span class="math inline">\(_y\)</span>. he<span class="math inline">\(_y\)</span> gets thirsty.</p></li>
+</ol>
+<ul>
+<li>Is <em>implication</em> (<span class="math inline">\(→\)</span>)..
+<ul>
+<li>externally dynamic?</li>
+<li>internally dynamic?</li>
+</ul></li>
+</ul>
+</section>
+<section id="exercise-3" class="level2">
+<h2>Exercise</h2>
+<ul>
+<li>For <em>disjunction</em> (<span class="math inline">\(∨\)</span>), come up with data which show whether it is…
+<ul>
+<li>externally dynamic?</li>
+<li>internally dynamic?</li>
+</ul></li>
+</ul>
+</section>
+<section id="dynamic-implication" class="level2">
+<h2>Dynamic implication</h2>
+<ul>
+<li><p>The fact that implication is not externally dynamic, means that overall, an implciational formula should be a <em>test</em>, i.e., it shouldn’t alter the input context.</p></li>
+<li><p>But, it should pass variable binding on from the antecedent to the consequent.</p></li>
+<li><p>Here is the entry for dynamic implication:</p></li>
+<li><p><span class="math inline">\(\evalM{ϕ → ψ} = \Set{⟨i,o⟩|o = i \metalang{ and }∀ k:⟨o,k⟩ ∈ \evalM{ϕ} ⇒ ∃ j:⟨k,j⟩ ∈ \evalM{ψ}}\)</span></p></li>
+<li><p>An implicational statement is a <em>test</em> on an assignment <span class="math inline">\(o\)</span>, where every result of threading <span class="math inline">\(o\)</span> into the antecedent can be threaded into the consequent.</p></li>
+</ul>
+</section>
+<section id="donkey-derivation" class="level2">
+<h2>Donkey derivation</h2>
+<ol start="74" class="example" type="1">
+<li><p>If a farmer<span class="math inline">\(¹\)</span> owns a donkey<span class="math inline">\(²\)</span>, he<span class="math inline">\(₁\)</span> hits it<span class="math inline">\(₂\)</span>.</p></li>
+<li><p><span class="math inline">\((∃x₁,x₂[\metalang{farmer}(x₁) ∧ \metalang{donkey}(x₂) ∧ \metalang{owns}(x₁,x₂)]) → \metalang{hits}(x₁)(x₂)\)</span></p></li>
+</ol>
+<ul>
+<li><p><span class="math inline">\(\entity{farmer} = \Set{a,b}\)</span></p></li>
+<li><p><span class="math inline">\(\entity{donkey} = \Set{c,d,e}\)</span></p></li>
+<li><p><span class="math inline">\(a\)</span> owns <span class="math inline">\(c\)</span>, <span class="math inline">\(b\)</span> owns <span class="math inline">\(d\)</span> and <span class="math inline">\(e\)</span>.</p></li>
+</ul>
+</section>
+<section id="donkey-derivation-ii" class="level2">
+<h2>Donkey derivation ii</h2>
+<ul>
+<li>First let’s compute the meaning of the antecedent.</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM{∃x₁,x₂[\metalang{farmer}(x₁) ∧ \metalang{donkey}(x₂) ∧
+\metalang{owns}(x₁,x₂)]}
+\end{aligned}
+\]</span></p>
+<ul>
+<li>Informally, this will end up expressing a transition from an <em>input</em> to an output that maps <span class="math inline">\(x₁\)</span> to a farmer, and <span class="math inline">\(x₂\)</span> to a donkey that he owns.</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[c]
+\Set{
+⟨[a c],[a c]⟩,⟨[a d],[a c]⟩,⟨[a e],[a c]⟩\\
+⟨[b c],[a c]⟩,⟨[b b],[b e]⟩\\
+...
+}
+\end{aligned}
+\]</span></p>
+<p>etc.</p>
+</section>
+<section id="donkey-derivation-iii" class="level2">
+<h2>Donkey derivation iii</h2>
+<ul>
+<li>Holding fixed that <span class="math inline">\(x₁\)</span> is a farmer and <span class="math inline">\(x₂\)</span> is a donkey:</li>
+</ul>
+<p><span class="math display">\[
+\left\langle
+\Set{
+\begin{aligned}[c]
+[a c], [a d], [a e],\\
+[b c], [b d], [b e],\\
+...
+\end{aligned}
+}
+,
+\Set{
+\begin{aligned}[c]
+[a c],\\
+[b d],\\
+[b e]
+\end{aligned}
+}
+\right\rangle
+\]</span></p>
+</section>
+<section id="donkey-derivation-iv" class="level2">
+<h2>Donkey derivation iv</h2>
+<ul>
+<li>The meaning of the consequent is just a test on assignments where <span class="math inline">\(x₁\)</span> owns <span class="math inline">\(x₂\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[c]
+\Set{⟨[a c],[a c]⟩,⟨[b d],[b d]⟩,⟨[b e],[b e]⟩}
+\end{aligned}
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(\evalM{ϕ → ψ} = \Set{⟨i,o⟩|o = i \metalang{ and }∀ k:⟨o,k⟩ ∈ \evalM{ϕ} ⇒ ∃ j:⟨k,j⟩ ∈ \evalM{ψ}}\)</span></p></li>
+<li><p>So the implicational statement as a whole is a <em>test</em>, where we inspect the outputs of the antecedent, and ensure that they’re valid inputs to the consequent.</p></li>
+</ul>
+</section>
+<section id="weak-vs.strong-donkeys" class="level2">
+<h2>Weak vs. strong donkeys</h2>
+<ul>
+<li>DPL generates a so-called <em>strong</em> reading for donkey anaphora.</li>
+</ul>
+<ol start="76" class="example" type="1">
+<li>If a farmer owns a donkey, he beats it.</li>
+</ol>
+<ul>
+<li><p>In DPL, this expresses that a farmer beats <em>every</em> donkey that he owns – in the previous example, <span class="math inline">\(b\)</span> must beat <span class="math inline">\(d\)</span> and <span class="math inline">\(e\)</span> for the test to pass.</p></li>
+<li><p>However, there are contexts where it looks like we need to be able to derive a <em>weak</em> reading.</p></li>
+</ul>
+</section>
+<section id="weak-donkeys" class="level2">
+<h2>Weak donkeys</h2>
+<ol start="77" class="example" type="1">
+<li>Yesterday, every person who had a credit card<span class="math inline">\(^y\)</span> paid his bill with it<span class="math inline">\(_y\)</span>.<br />
+(R. Cooper, according to Chierchia 1995)</li>
+</ol>
+<ul>
+<li><p>The most salient reading of the above does not require each person to use every credit card they have to pay their bill, rather each person must use at least one of their credit cards to pay their bill.</p></li>
+<li><p>Traditional dynamic semantic accounts, such as DPL, don’t derive this <em>weak</em> donkey reading.</p></li>
+</ul>
+</section>
+<section id="negation" class="level2">
+<h2>Negation</h2>
+<ul>
+<li>Consider the following.</li>
+</ul>
+<ol start="78" class="example" type="1">
+<li><p>*It’s not the case that someone<span class="math inline">\(^x\)</span> hugged Annie. They<span class="math inline">\(_x\)</span> sat down.</p></li>
+<li><p>*Nobody<span class="math inline">\(^x\)</span> hugged Annie. They<span class="math inline">\(_x\)</span> sat down.</p></li>
+</ol>
+<ul>
+<li>Negation <em>blocks</em> dynamic binding, i.e., it closes off the anaphoric potential introduced by the existential.</li>
+</ul>
+</section>
+<section id="negation-ii" class="level2">
+<h2>Negation ii</h2>
+<ul>
+<li><p>Here is our rule for dynamic negation:</p></li>
+<li><p><span class="math inline">\(\evalM{\neg\phi} = \Set{⟨i,o⟩| o = i ∧ ¬∃ k:⟨o,k⟩ ∈ \evalM{ϕ}}\)</span></p></li>
+<li><p>Negation is a <em>test</em> on assignments <span class="math inline">\(o\)</span>, such that feeding <span class="math inline">\(o\)</span> into <span class="math inline">\(ϕ\)</span> gives rise to no outputs.</p></li>
+<li><p>Since negation is a test, it must be externally static.</p></li>
+<li><p>Let’s check that negation blocks binding.</p></li>
+</ul>
+</section>
+<section id="negation-iii" class="level2">
+<h2>Negation iii</h2>
+<ol start="80" class="example" type="1">
+<li>It’s not the case that someone<span class="math inline">\(ˣ\)</span> hugged Annie. They<span class="math inline">\(ₓ\)</span> sat down.</li>
+</ol>
+<ul>
+<li><p>If at least one person hugged Annie, the first sentence will always return <span class="math inline">\(∅\)</span>.</p></li>
+<li><p>If nobody hugged Annie, the first sentence will just be a test on the set of assignments.</p></li>
+<li><p><em>Exercise:</em> show this by going through the computation.</p></li>
+</ul>
+</section>
+<section id="problems-for-dynamic-semantics" class="level2">
+<h2>Problems for dynamic semantics</h2>
+<ol start="81" class="example" type="1">
+<li><p>If a client<span class="math inline">\(ˣ\)</span> turns up, you treat him<span class="math inline">\(ₓ\)</span> politely. You offer him<span class="math inline">\(ₓ\)</span> a cup of coffee and his him<span class="math inline">\(ₓ\)</span> to wait.</p></li>
+<li><p>Every player<span class="math inline">\(ʸ\)</span> chooses a pawn<span class="math inline">\(ˣ\)</span>. He<span class="math inline">\(_y\)</span> puts it<span class="math inline">\(ₓ\)</span> on square one.</p></li>
+<li><p>It is not true that John doesn’t own a car<span class="math inline">\(ˣ\)</span>. It<span class="math inline">\(ₓ\)</span> is red, and it<span class="math inline">\(ₓ\)</span> is parked in from of his house.</p></li>
+<li><p>Either there is no bathroom here, or it is in a funny place. In any case, it is not on the first floor.</p></li>
+</ol>
+<ul>
+<li>All examples from G&amp;S 1991.</li>
+</ul>
+</section>
+</section>
+<section id="lecture-3-discourse-referents" class="level1">
+<h1>Lecture 3: Discourse referents</h1>
+<section id="outline" class="level2">
+<h2>Outline</h2>
+<ul>
+<li><p>In the first part of the class, we’ll explore the parallel between dynamic sentence meanings, and the meanings of computer programs in more detail.</p></li>
+<li><p>In the second part of the class, we’ll formulate an alternative dynamic semantics, based on Dekker’s <em>Predicate Logic with Anaphora</em>, according to which indefinites add discourse referents to a <em>stack</em>.</p></li>
+<li><p>This will result in an arguably more elegant system in which the notion of <em>discourse referent</em> is reified.</p></li>
+</ul>
+</section>
+<section id="variables-in-programming-languages" class="level2">
+<h2>Variables in programming languages</h2>
+<ul>
+<li><p>In the vast majority of programming languages, <em>variables</em>, such as <code>x</code>, <code>y</code>, <code>z</code>, etc., can be used as placeholders for values.</p></li>
+<li><p>Consider the following program <code>main</code> (written in the <code>Rust</code> programming language).</p></li>
+<li><p>Ignoring the boilerplate, <code>main</code> introduces a variable named <code>x</code>, sets <code>x</code>’s value to the integer <code>5</code>, and prints the result of <code>x + 1</code>.</p></li>
+</ul>
+<pre><code>fn main() {
+    let x = 5;
+    println!(&quot;{}&quot;, x + 1);
+    }</code></pre>
+<ul>
+<li>Q: what value gets printed when we run <code>main</code>? Let’s find out…</li>
+</ul>
+</section>
+<section id="variables-ii" class="level2">
+<h2>Variables ii</h2>
+<ul>
+<li>Unsurprisingly, <code>main</code> returns <code>6</code> – in the argument to <code>println!</code>, <code>x</code> is replaced by the stored value <code>5</code>:</li>
+</ul>
+<pre><code>println!(&quot;{}&quot;, x + 1)
+println!(&quot;{}&quot;, 5 + 1)
+println!(&quot;{}&quot;, 6)</code></pre>
+</section>
+<section id="variables-iii" class="level2">
+<h2>Variables iii</h2>
+<ul>
+<li>Now let’s change <code>main</code> a bit.</li>
+</ul>
+<pre><code>fn main() {
+    let x = 5;
+    x = x + 4;
+    println!(&quot;{}&quot;, x + 1);
+    }</code></pre>
+<ul>
+<li>what happens when we run <code>main</code>?</li>
+</ul>
+</section>
+<section id="variables-iv" class="level2">
+<h2>Variables iv</h2>
+<ul>
+<li>Whoops! the <code>Rust</code> compiler throws out an error:</li>
+</ul>
+<pre><code>let x = 5;
+    - first assignment to `x`
+
+x = x + 4;
+^^^^^^^^^ cannot assign twice to immutable variable</code></pre>
+<ul>
+<li>what went wrong?</li>
+</ul>
+</section>
+<section id="immutability" class="level2">
+<h2>(Im)mutability</h2>
+<ul>
+<li><p>In <code>Rust</code> (and several other programming languages), variables are by default <code>immutable</code> (i.e., unchangeable). This means that they are simply <em>names for values</em>.</p></li>
+<li><p>It simply doesn’t make sense to write <code>x = x + 4</code>, since we’re essentially assigning two different values to <code>x</code>.</p></li>
+<li><p>What we need in order to make sense of this program is the concept of a <em>mutable variable</em> – rather than acting as a name for a value, we want our variable to act as an <em>address for a potentially changeable value</em>.</p></li>
+<li><p>Conveniently for our purposes, variables in <code>Rust</code> can be rendered mutable via the <code>mut</code> keyword.</p></li>
+<li><p>OK, let’s try that again:</p></li>
+</ul>
+</section>
+<section id="immutability-ii" class="level2">
+<h2>(Im)mutability II</h2>
+<ul>
+<li><p>Let’s try running <code>main</code>, but now let’s explicitly state that <code>x</code> is <em>mutable</em>.</p>
+<pre><code>fn main() {
+  let mut x = 5;
+  x = x + 4;
+  println!(&quot;{}&quot;, x + 1);
+  }</code></pre></li>
+<li><p>returns: <code>10</code>!</p></li>
+<li><p>Let’s see what’s going on here in a little more detail.</p></li>
+</ul>
+</section>
+<section id="immutability-iii" class="level2">
+<h2>(Im)mutability III</h2>
+<p>First we introduce a <em>mutable</em> variable <code>x</code>, and set its value to <code>5</code>.</p>
+<p><code>let mut x = 5;</code></p>
+<p>Next we retrieve <code>x</code>, and set its new value to its old value (<code>5</code>) <code>+ 1</code>.</p>
+<pre><code>x = x + 4
+x = 5 + 4
+x = 9</code></pre>
+<p>Now we retrieve <code>x</code> and print the result of <code>x + 1</code></p>
+<pre><code>println!(&quot;{}&quot;, x + 1)
+println!(&quot;{}&quot;, 9 + 1)
+println!(&quot;{}&quot;, 10)
+println!(&quot;10&quot;)</code></pre>
+</section>
+<section id="order-sensitivity" class="level2">
+<h2>Order sensitivity</h2>
+<p>Once we introduce mutability, our programs become <em>order sensitive</em>:</p>
+<pre><code>let mut x = 5;
+x = x * 2
+x = x - 1
+println!(&quot;{}&quot;, x)</code></pre>
+<p>prints: <code>9</code></p>
+<pre><code>let mut x = 5;
+x = x - 1
+x = x * 2
+println!(&quot;{}&quot;, x)</code></pre>
+<p>prints: <code>8</code></p>
+</section>
+<section id="back-to-natural-language" class="level2">
+<h2>Back to natural language</h2>
+<ul>
+<li><p>Think of .</p></li>
+<li><p>Now, multiply  by two.</p></li>
+<li><p>Now, subtract one from .</p></li>
+<li><p>Now, tell me .</p></li>
+</ul>
+</section>
+<section id="back-to-natural-language-1" class="level2">
+<h2>Back to natural language</h2>
+<ul>
+<li><p>Think of <br />
+<code>let mut x = 5</code>.</p></li>
+<li><p>Now, multiply  by two.<br />
+<code>x = x * 2</code><br />
+<code>x = 10</code></p></li>
+<li><p>Now, subtract one from .<br />
+<code>x = x - 1</code><br />
+<code>x = 9</code></p></li>
+<li><p>Now, tell me .<br />
+<code>println!(&quot;9&quot;)</code></p></li>
+</ul>
+</section>
+<section id="back-to-natural-language-2" class="level2">
+<h2>Back to natural language</h2>
+<ul>
+<li><p>Whoa - we’ve just made a major discovery! Natural language makes use of (something like) <em>mutable variables</em>, otherwise the preceding discourse wouldn’t make sense.</p></li>
+<li><p>We can think of indefinites like <em>a number</em> as introducing new <em>mutable variables</em>.</p></li>
+<li><p>Pronouns, like <em>it</em>, refer back to an already-introduced variable.</p></li>
+<li><p>The value assigned to a variable can change over the course of a discourse.</p></li>
+</ul>
+</section>
+<section id="karttunens-discourse-referents" class="level2">
+<h2>Karttunen’s discourse referents</h2>
+<ul>
+<li>The idea that indefinites introduce mutable variables is an insight originally due to semanticist and computational linguist Lauri Karttunen (although he doesn’t use this idiom).</li>
+</ul>
+<figure>
+<img src="images/karttunen.jpg" alt="Lauri Karttunen (src: Stefan Müller)" style="width:40.0%" /><figcaption>Lauri Karttunen (src: Stefan Müller)</figcaption>
+</figure>
+</section>
+<section id="karttunens-discourse-referents-ii" class="level2">
+<h2>Karttunen’s discourse referents ii</h2>
+<blockquote>
+<p>“Consider a device designed to read a text in some natural language, interpret it, and store the content in some manner, say, for the purpose of being able to answer questions about it. To accomplish this task, the machine will have to fulfill at least the following basic requirement. It has to be able to build a file that consists of records of all the individuals, that is, events, objects, etc., mentioned in the text and, for each individual, record whatever is said about it.” (<span class="citation" data-cites="karttunen1976">[@karttunen1976]</span>)</p>
+</blockquote>
+</section>
+<section id="cont." class="level2">
+<h2>Cont.</h2>
+<blockquote>
+<p>“I intend to discuss one particular feature a text interpreter must have: that it must be able to recognize when a novel individual is mentioned in the input text and to store it along with its characterization for future reference.”</p>
+</blockquote>
+</section>
+<section id="cont" class="level2">
+<h2>Cont</h2>
+<blockquote>
+<p>“We found that in simple sentences […] an indefinite NP establishes a  just in case the sentence is an affirmative assertion. By”establishes a discourse referent“, we meant that there may be a coreferential pronoun or definite noun phrase later in the discourse.”</p>
+</blockquote>
+</section>
+</section>
+<section id="predicate-logic-with-anaphora" class="level1">
+<h1>Predicate Logic with Anaphora</h1>
+<section id="overview" class="level2">
+<h2>Overview</h2>
+<ul>
+<li><p>In our previous logical system, DPL, formulae could either:</p>
+<ul>
+<li>Act as tests on input assignments, returning the same assignments.</li>
+<li>Shrink the set of assignments, taking a set of assignments, and returning a subset.</li>
+</ul></li>
+<li><p>The latter case represented the contribution of existentially quantified sentences.</p></li>
+<li><p>The notion of a <em>discourse referent</em> has no direct correlate.</p></li>
+</ul>
+</section>
+<section id="pla-via" class="level2">
+<h2>PLA via </h2>
+<ul>
+<li><p>PLA simplifies things somewhat by having semantic objects which correspond directly to <em>discourse referents</em>.</p></li>
+<li><p>N.b. the version of PLA I’m presenting is simplified relative <span class="citation" data-cites="dekker1994">@dekker1994</span>, and corresponds more closely to <span class="citation" data-cites="Charlowc">@Charlowc</span>’s .</p></li>
+<li><p>The basic ideas are the same, but unlike PLA,  doesn’t make use of <em>assignments</em>. This makes it a little easier to reason about.</p></li>
+</ul>
+</section>
+<section id="stacks" class="level2">
+<h2>Stacks</h2>
+<ul>
+<li><p>The current state of the discourse is represented as a <em>stack</em>, which is just going to be a (potentially empty) sequence of objects.</p>
+<p><span class="math display">\[
+s = a...xyz
+\]</span></p></li>
+<li><p>The objects in the stack represent the <em>discourse referents</em> which have been introduced over the course of the discourse so far.</p></li>
+</ul>
+</section>
+<section id="stacks-ii" class="level2">
+<h2>Stacks ii</h2>
+<ul>
+<li>Stacks can be <em>extended</em> with additional drefs, simply by adding them to (the end of) the stack.</li>
+</ul>
+<p><span class="math display">\[
+s = jb
+\]</span></p>
+<ul>
+<li>We define a primitive binary operation that takes a stack <span class="math inline">\(s\)</span>, and an object <span class="math inline">\(m\)</span>, and pushes <span class="math inline">\(m\)</span> to <span class="math inline">\(s\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+\widehat{sm} = hbm
+\]</span></p>
+</section>
+<section id="stacks-iii" class="level2">
+<h2>Stacks iii</h2>
+<ul>
+<li>We’re also going to define a primitive unary operation <span class="math inline">\(\tau\)</span>, which returns the last element to be added to a stack.</li>
+</ul>
+<p><span class="math display">\[
+s' = hbm
+\]</span></p>
+<p><span class="math display">\[
+s'_τ = m
+\]</span></p>
+</section>
+<section id="syntax-of" class="level2">
+<h2>Syntax of </h2>
+<ul>
+<li><p>For simplicity, I’ll take the syntax of  to be identical to the syntax of  (and hence DPL).</p></li>
+<li><p>With one exception - we have a new syntactic expression <span class="math inline">\(\textit{pro}\)</span>, which has the same distribution as individual constants and variables – namely it can appear as an argument to predicates, e.g.,</p></li>
+<li><p><span class="math inline">\(\metalang{hugs}(\metalang{Annie},\textit{pro})\)</span></p></li>
+<li><p>Unlike in DPL, sentence meanings in  are going to be additionally relativised to an assignment <span class="math inline">\(g\)</span>. We’ll see the relevance of this later.</p></li>
+</ul>
+</section>
+<section id="semantics-of" class="level2">
+<h2>Semantics of </h2>
+<ul>
+<li><p>Sentence meanings in  are going to express <em>relations between stacks</em>, rather than relations between assignment functions.</p></li>
+<li><p>Here’s the interpretation rule for a unary predicate:</p></li>
+<li><p>If <span class="math inline">\(π\)</span> is a unary predicate and <span class="math inline">\(α\)</span> is an individual constant, then <span class="math inline">\(\evalM[g]{π(α)} = \Set{⟨s,s'⟩| s' = \widehat{s\evalM[g]{α}} \metalang{ and } \evalM[g]{α} ∈ \evalM{π}}\)</span></p></li>
+<li><p>If <span class="math inline">\(π\)</span> is a unary predicate and <span class="math inline">\(α\)</span> is a variable, then <span class="math inline">\(\evalM[g]{π(α)} = \Set{⟨s,s'⟩| s' = s \metalang{ and } \evalM[g]{α} ∈ \evalM{π}}\)</span></p></li>
+</ul>
+</section>
+<section id="semantics-of-1" class="level2">
+<h2>Semantics of </h2>
+<ul>
+<li><p>For binary predicates we now technically need four rules, since individual constants update the stack, whereas variables don’t quantifiers don’t:</p></li>
+<li><p>If <span class="math inline">\(π\)</span> is a binary predicate and <span class="math inline">\(α,β\)</span> are individual constants, then <span class="math inline">\(\evalM[g]{π(α,β)} = \Set{⟨s,s'⟩| s' = \widehat{s\evalM[g]{β}\evalM[g]{α}} \metalang{ and } ⟨\evalM[g]{α},\evalM[g]{β}⟩ ∈ \evalM[g]{π}}\)</span></p></li>
+<li><p>If <span class="math inline">\(π\)</span> is a binary predicate and <span class="math inline">\(α\)</span> is an individual constants, and <span class="math inline">\(β\)</span> is a variable, then <span class="math inline">\(\evalM[g]{π(α,β)} = \Set{⟨s,s'⟩| s' = \widehat{s\evalM[g]{α}} \metalang{ and } ⟨\evalM[g]{α},\evalM[g]{β}⟩ ∈ \evalM[g]{π}}\)</span></p></li>
+<li><p>If <span class="math inline">\(π\)</span> is a binary predicate and <span class="math inline">\(α\)</span> is a variable, and <span class="math inline">\(β\)</span> is an individual constant, then <span class="math inline">\(\evalM[g]{π(α,β)} = \Set{⟨s,s'⟩| s' = \widehat{s\evalM[g]{β}} \metalang{ and } ⟨\evalM[g]{α},\evalM[g]{β}⟩ ∈ \evalM[g]{π}}\)</span></p></li>
+<li><p>If <span class="math inline">\(π\)</span> is a binary predicate and <span class="math inline">\(α\)</span> and <span class="math inline">\(β\)</span> are variables, then <span class="math inline">\(\evalM[g]{π(α,β)} = \Set{⟨s,s'⟩| s' = s \metalang{ and } ⟨\evalM[g]{α},\evalM[g]{β}⟩ ∈ \evalM[g]{π}}\)</span></p></li>
+</ul>
+</section>
+<section id="semantics-of-2" class="level2">
+<h2>Semantics of </h2>
+<ul>
+<li>The general rule is: <em>individual constants</em> trigger a push to the output stack, whereas <em>variables</em> do not.</li>
+</ul>
+</section>
+<section id="semantics-of-3" class="level2">
+<h2>Semantics of </h2>
+<ul>
+<li><p>Assume a model with <em>Jeff</em>, <em>Britta</em>, and <em>Annie</em>.</p></li>
+<li><p>Only <em>Jeff is happy</em>, and nobody else is happy.</p></li>
+<li><p><em>Everyone hugged themselves</em>, and nobody else hugged anybody else.</p></li>
+<li><p>Task: compute the interpretation of the following formulas:</p></li>
+</ul>
+<ol start="85" class="example" type="1">
+<li><p><span class="math inline">\(\metalang{happy}(\metalang{Jeff})\)</span></p></li>
+<li><p><span class="math inline">\(\metalang{hugs}(\metalang{Annie},\metalang{Annie})\)</span></p></li>
+</ol>
+</section>
+<section id="solution-1" class="level2">
+<h2>Solution</h2>
+<p><span class="math display">\[
+&amp;\begin{aligned}[t]
+&amp;\evalM[g]{\metalang{happy}(\metalang{Jeff})}\\
+&amp;=\Set{⟨s,s'⟩|s' = \widehat{sj} ∧ j ∈ \entity{happy}}\\
+&amp;=\Set{⟨[],[j]⟩,⟨[x],[xj]⟩,⟨[xy],[xyj]⟩,...}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM[g]{\metalang{hugs}(\metalang{Annie},\metalang{Annie})}\\
+&amp;=\Set{⟨s,s'⟩|s' = \widehat{saa} ∧ ⟨a,a⟩ ∈ \entity{hugs}}\\
+&amp;= \Set{⟨[],[aa]⟩,⟨[x],[xaa]⟩,⟨[xy],[xyaa]⟩,...}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="variables" class="level2">
+<h2>Variables</h2>
+<ul>
+<li>Sentences with variables are just going to be tests on stacks.</li>
+</ul>
+<p><span class="math display">\[
+&amp;\begin{aligned}[t]
+&amp;\evalM[g]{\metalang{happy}(x)}\\
+&amp;=\Set{⟨s,s'⟩|s' = s ∧ g(x) ∈ \entity{happy}}\\
+&amp;\metalang{if }g(x) = j\metalang{ then
+}=\Set{⟨[],[]⟩,⟨[x],[x]⟩,⟨[xy],[xy]⟩,...}\\
+&amp;\metalang{else }∅
+\end{aligned}
+\]</span></p>
+</section>
+<section id="falsity" class="level2">
+<h2>Falsity</h2>
+<ul>
+<li>Just like in DPL, if an atomic formula is false in the model, it returns the empty set.</li>
+</ul>
+<p><span class="math display">\[
+&amp;\begin{aligned}[t]
+&amp;\metalang{happy}(\metalang{Britta})\\
+&amp;=\Set{⟨s,s'⟩|s' = \widehat{sb} ∧ b ∈ \entity{happy}}\\
+&amp;=∅
+\end{aligned}
+\]</span></p>
+</section>
+<section id="existential-quantification" class="level2">
+<h2>Existential quantification</h2>
+<ul>
+<li><p>Existentially quantified statement <span class="math inline">\(∃v ϕ\)</span> in this setting, are interpreted as instructions to update a stack <span class="math inline">\(s\)</span> with a random individual <span class="math inline">\(x\)</span>, just so long as the embedded formula <span class="math inline">\(ϕ\)</span> is true relative to <span class="math inline">\(g\)</span>, modified so that it maps <span class="math inline">\(v\)</span> to <span class="math inline">\(x\)</span>.</p></li>
+<li><p><span class="math inline">\(\evalM[g]{∃ v ϕ} = \Set{⟨s,s'⟩|∃ x[s' = \widehat{sx} ∧ \evalM[g^{[v → x]}]{ϕ}]}\)</span></p></li>
+<li><p>The idea is that existential quantifiers represent a <em>refusal to choose between different possible referents</em></p></li>
+</ul>
+</section>
+<section id="illustration-1" class="level2">
+<h2>Illustration</h2>
+<ul>
+<li>Let’s say we’re in a model, again with <span class="math inline">\(j\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(a\)</span>, and only <span class="math inline">\(j\)</span> and <span class="math inline">\(b\)</span> arrived.</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM[g]{∃ v[\metalang{arrive}(v)]}\\
+&amp;= \Set{⟨s,s'⟩| ∃ x[s' = \widehat{sx} ∧ \evalM[g^{[v →
+x]}]{\metalang{arrive}(v)}]}\\
+&amp;=\Set{⟨s,s'⟩| ∃ x[s' = \widehat{sx} ∧ x ∈ \entity{arrive}]}\\
+&amp;=\Set{\begin{aligned}[c]
+&amp;⟨[],[j]⟩\\
+&amp;⟨[],[b]⟩\\
+&amp;⟨[x],[xj]⟩\\
+&amp;⟨[x],[xb]⟩\\
+&amp;⟨[xy],[xyj]⟩\\
+&amp;⟨[xy],[xyb]⟩
+\end{aligned}}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="pronouns-1" class="level2">
+<h2>Pronouns</h2>
+<ul>
+<li><p>How do pronouns pick up referents?</p></li>
+<li><p>Unlike DPL, we distinguish both syntactically and semantically between pronoun binding and variable binding.</p></li>
+<li><p>The rule for formulas with <span class="math inline">\(\textit{pro}\)</span> is going to be the following:</p></li>
+<li><p>If <span class="math inline">\(π\)</span> is a unary predicate, then <span class="math inline">\(\evalM[g]{π(\textit{pro})} = \Set{⟨s,s'⟩| s' = s \metalang{ and } s'_τ ∈ \evalM{π}}\)</span></p></li>
+<li><p>The idea is that pronouns return <em>the last object to be added to the stack</em>.</p></li>
+</ul>
+</section>
+<section id="pronouns-2" class="level2">
+<h2>Pronouns</h2>
+<ul>
+<li><p>Of course this means we’ll need to multiply our rules for binary connectives, so that we can deal with combinations of proper names and pronouns (and variables and pronouns, but I won’t show that here).</p></li>
+<li><p>If <span class="math inline">\(π\)</span> is a binary predicate and <span class="math inline">\(α\)</span> is an individual constants, then <span class="math inline">\(\evalM[g]{π(α,\textit{pro})} = \Set{⟨s,s'⟩| s' = \widehat{s\evalM[g]{α}} \metalang{ and } ⟨\evalM[g]{α},s'_τ⟩ ∈ \evalM[g]{π}}\)</span></p></li>
+<li><p>If <span class="math inline">\(π\)</span> is a binary predicate and <span class="math inline">\(α\)</span> is an individual constant, then <span class="math inline">\(\evalM[g]{π(\textit{pro},α)} =  \Set{⟨s,s'⟩| s' = \widehat{s\evalM[g]{α}} \metalang{ and } ⟨s_τ,\evalM[g]{α}⟩  \in \evalM[g]{\pi}}\)</span></p></li>
+<li><p>Notice that our interpretation rules for binary predicates with <span class="math inline">\(\textit{pro}\)</span> are <em>internally dynamic</em> – when <span class="math inline">\(\textit{pro}\)</span> is the object, it picks up the referent pushed to the stack by the subject.</p></li>
+<li><p>Because of the way the rules are defined, the reverse doesn’t go through.</p></li>
+</ul>
+</section>
+<section id="pronouns-ii-1" class="level2">
+<h2>Pronouns ii</h2>
+<ol start="87" class="example" type="1">
+<li>Annie hugged herself – <span class="math inline">\(\metalang{hugged}(\metalang{Annie},\textit{pro})\)</span></li>
+</ol>
+<p><span class="math display">\[
+= \Set{⟨s,s'⟩ | s' = \widehat{sa} ∧ ⟨a,s'_τ⟩ ∈ \entity{hug}}
+\]</span></p>
+<ul>
+<li>This is guaranteed to be true in our model, since the pronoun picks up the discourse referent introduced by the subject.</li>
+</ul>
+<ol start="88" class="example" type="1">
+<li>She hugged Annie. – <span class="math inline">\(\metalang{hugged}(\textit{pro},\metalang{Annie})\)</span></li>
+</ol>
+<ul>
+<li>The meaning here is dependent on the incoming stack <span class="math inline">\(s\)</span>.</li>
+</ul>
+<p><span class="math display">\[
+= \Set{⟨s,s'⟩ | s' = \widehat{sa} ∧ ⟨a,s_τ⟩ ∈ \entity{hug}}
+\]</span></p>
+</section>
+<section id="pronouns-iii" class="level2">
+<h2>Pronouns iii</h2>
+<ul>
+<li>Oh look! We’ve derived a basic version of Condition C of the binding theory.</li>
+</ul>
+<ol start="89" class="example" type="1">
+<li><p>Annie<span class="math inline">\(^1\)</span> loves herself<span class="math inline">\(₁\)</span>.</p></li>
+<li><p>*she<span class="math inline">\(_1\)</span> loves Annie<span class="math inline">\(^1\)</span>.</p></li>
+</ol>
+<ul>
+<li><p>Of course we need to refine the theory to get a broad empirical converage.</p></li>
+<li><p>In particular, we probably want to allow pronouns to pick up not just the last discourse referent added to the stack, to account for binding of pronouns across other NPs.</p></li>
+</ul>
+<ol start="91" class="example" type="1">
+<li>Annie<span class="math inline">\(^1\)</span> thinks that Bill<span class="math inline">\(^2\)</span> hugged her<span class="math inline">\(_1\)</span>.</li>
+</ol>
+</section>
+<section id="dynamic-binding" class="level2">
+<h2>Dynamic binding</h2>
+<ul>
+<li>Existential quantifiers can bind an object <span class="math inline">\(\textit{pro}\)</span> in exactly the same way.</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM[g]{∃ v[\metalang{hugged}(v,\textit{pro})]}\\
+&amp;= \Set{⟨s,s'⟩|∃ x[s' = \widehat{sx} ∧ \evalM[g^{[v → x]}]{\metalang{hugged}(v,\textit{pro})}]}\\
+&amp;= \Set{⟨s,s'⟩|∃ x[s' = \widehat{sx} ∧ ⟨x,s'_τ⟩ ∈ \entity{hugged}]}\\
+&amp;= \Set{\begin{aligned}[c]
+&amp;⟨[],[j]⟩\\
+&amp;⟨[],[b]⟩\\
+&amp;⟨[],[a]⟩\\
+&amp;⟨[x],[xj]⟩\\
+&amp;⟨[x],[xb]⟩\\
+&amp;⟨[x],[aa]⟩\\
+...
+\end{aligned}}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="dynamic-binding-and-crossover" class="level2">
+<h2>Dynamic binding and crossover</h2>
+<ul>
+<li>But not a subject <span class="math inline">\(\textit{pro}\)</span>!</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM[g]{∃ v[\metalang{hugged}(\textit{pro},v)]}\\
+&amp;= \Set{⟨s,s'⟩|∃ x[s' = \widehat{sx} ∧ \evalM[g^{[v → x]}]{\metalang{hugged}(\textit{pro},v)}]}\\
+&amp;= \Set{⟨s,s'⟩|∃ x[s' = \widehat{sx} ∧ ⟨s_τ,x⟩ ∈ \entity{hugged}]}\\
+&amp;= \Set{\begin{aligned}[c]
+&amp;⟨[j],[jj]⟩\\
+&amp;⟨[a],[aa]⟩\\
+&amp;⟨[b],[bb]⟩\\
+&amp;⟨[xj],[xjj]⟩\\
+&amp;⟨[xa],[xaa]⟩\\
+&amp;⟨[xb],[xbb]⟩\\
+...
+\end{aligned}}
+\end{aligned}
+\]</span></p>
+<ul>
+<li>The truth of this formula is dependent on the incoming stack already containing an individual that hugged themselves.</li>
+</ul>
+</section>
+<section id="dynamic-relations" class="level2">
+<h2>Dynamic relations</h2>
+<ul>
+<li><p>Without even saying anything about conjunction, we’ve already captured the fact that <em>binary predicates are internally dynamic</em>, something not captured by DPL.</p></li>
+<li><p>We did this, essentially, by lexical stipulation, but there are ways of reformulating  which make this more principled.</p></li>
+</ul>
+</section>
+<section id="dynamic-conjunction-1" class="level2">
+<h2>Dynamic conjunction</h2>
+<ul>
+<li><p>Conjunction in  is defined in the same way as DPL, but in terms of stacks rather than assignments:</p></li>
+<li><p><span class="math inline">\(\evalM[g]{[ϕ ∧ ψ]} = \Set{⟨s,s'⟩|∃ k:⟨s,k⟩ ∈ \evalM[g]{ϕ}\text{ and }⟨k,s'⟩ ∈ \evalM{ψ}}\)</span></p></li>
+<li><p>We feed our input stack <span class="math inline">\(s\)</span> into the first conjunct, and return the result of feeding the output into the second conjunct.</p></li>
+</ul>
+</section>
+<section id="cross-sentential-binding" class="level2">
+<h2>Cross-sentential binding</h2>
+<ul>
+<li>Cross-sentential binding is captured in a totally straightforward way. Let’s say that <span class="math inline">\(j\)</span> hugged <span class="math inline">\(a\)</span>, everyone hugged themselves, nobody hugged anyone else, and only <span class="math inline">\(j\)</span> is happy.</li>
+</ul>
+<ol start="92" class="example" type="1">
+<li><span class="math inline">\(∃ v[\metalang{hug}(v,\metalang{Annie})] ∧ \metalang{happy}(\textit{pro})\)</span></li>
+</ol>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM[g]{∃ v[\metalang{\metalang{hug}(v,\metalang{Annie})}]}\\
+&amp;= \Set{⟨s,s'⟩|∃ x[s' = \widehat{sax} ∧ ⟨x,a⟩ ∈ \entity{hug}]}\\
+&amp;= \Set{⟨[],\alert{[aj]}⟩,⟨[],[aa]⟩,...}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM[g]{\metalang{happy}(\textit{pro})}\\
+&amp;= \Set{⟨s,s'⟩|s = s' ∧ s_τ ∈ \metalang{happy}}\\
+&amp;= \Set{⟨[j],[j]⟩,⟨\alert{[aj]},[aj]⟩,...}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="cross-sentential-binding-ii" class="level2">
+<h2>Cross-sentential binding ii</h2>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM[g]{∃ v[\metalang{hug}(v,\metalang{Annie})] ∧ \metalang{happy}(\textit{pro})}\\
+&amp;=\Set{⟨[],[aj]⟩,...}
+\end{aligned}
+\]</span></p>
+<ul>
+<li><p>Notice that the last discourse referent pushed to the stack is <span class="math inline">\(j\)</span>.</p></li>
+<li><p>Binding isn’t going to work in the other direction…</p></li>
+</ul>
+</section>
+<section id="cross-sentential-binding-iii" class="level2">
+<h2>Cross-sentential binding iii</h2>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM[g]{\metalang{happy}(\textit{pro})}\\
+&amp;= \Set{⟨s,s'⟩|s = s' ∧ s_τ ∈ \metalang{happy}}\\
+&amp;= \Set{⟨[j],\alert{[j]}⟩,..}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM[g]{∃ v[\metalang{\metalang{hug}(v,\metalang{Annie})}]}\\
+&amp;= \Set{⟨s,s'⟩|∃ x[s' = \widehat{sax} ∧ ⟨x,a⟩ ∈ \entity{hug}]}\\
+&amp;= \Set{⟨[],[aj]⟩,⟨[],[aa]⟩,⟨\alert{[j]},[jaj]⟩,⟨\alert{[j]},[jaa]⟩,...}
+\end{aligned}
+\]</span></p>
+<ul>
+<li>It’s obvious here that we’re just going to get something with dynamic effects equivalent to <em>someone hugged Annie</em>.</li>
+</ul>
+</section>
+<section id="backwards-binding" class="level2">
+<h2>Backwards binding</h2>
+<ul>
+<li>Note the predictions out theory makes:</li>
+</ul>
+<ol start="93" class="example" type="1">
+<li><p>Someone<span class="math inline">\(ˣ\)</span> arrived. They<span class="math inline">\(ₓ\)</span> sat down.</p></li>
+<li><p>*They<span class="math inline">\(ₓ\)</span> sat down and someone<span class="math inline">\(ˣ\)</span> arrived.</p></li>
+<li><p>Someone<span class="math inline">\(ˣ\)</span> likes themselves<span class="math inline">\(ₓ\)</span>.</p></li>
+<li><p>*They<span class="math inline">\(ₓ\)</span> like someone<span class="math inline">\(ˣ\)</span>.</p></li>
+</ol>
+</section>
+<section id="trace-binding" class="level2">
+<h2>Trace binding</h2>
+<ul>
+<li><p>If traces are interpreted as variables, rather than as <span class="math inline">\(\textit{pro}\)</span>,  predicts that traces cannot be dynamically bound.</p></li>
+<li><p>It’s difficult to come up with examples to test this but maybe something like the following. Although note that this would typically be rules out syntactically.</p></li>
+</ul>
+<ol start="97" class="example" type="1">
+<li>Does John know who<span class="math inline">\(ˣ\)</span> left and <span class="math inline">\(tₓ\)</span> like Mary?</li>
+</ol>
+</section>
+<section id="features-of" class="level2">
+<h2>Features of </h2>
+<ul>
+<li><p>Some interesting features of :</p>
+<ul>
+<li><p>We don’t require co-indexation between pronouns and their binders, only between quantifiers and their traces.</p></li>
+<li><p>Coreference and binding are not syntactically distinguished.</p></li>
+<li><p>Stack updates are always monotonic – we can always add individuals to the stack, but never reduce it.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="negation-1" class="level2">
+<h2>Negation</h2>
+<ul>
+<li><p>In , additional operators can be added to achieve the same results as DPL.</p></li>
+<li><p><span class="math inline">\(\evalM[g]{\neg\phi} = \Set{⟨s,s'⟩| s = s' ∧ ¬∃ k:⟨s',k⟩ ∈ \evalM[g]{ϕ}}\)</span></p></li>
+<li><p><span class="math inline">\(¬ϕ\)</span> is interpreted as a test on stacks that <em>fail</em> to return a valid output when threaded into <span class="math inline">\(ϕ\)</span>.</p></li>
+</ul>
+</section>
+<section id="negation-ii-1" class="level2">
+<h2>Negation ii</h2>
+<ul>
+<li><p>We can see how negation is going to block dynamic binding</p></li>
+<li><p>Since every stack is a possible input to the existential statement, negation is going to return the empty set.</p></li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM[g]{¬∃ v[\metalang{happy}(v)]}\\
+&amp;=\Set{⟨s,s'⟩| s = s' ∧ ¬k:⟨s',k⟩ ∈ \Set{⟨t,t'⟩|∃ x[t' = \widehat{tx} ∧ x ∈ \entity{happy}]}}\\
+&amp;=\Set{⟨s,s'⟩| s = s' ∧ ¬k:⟨s',k⟩ ∈ \Set{⟨[],[j]⟩,⟨[a],[aj]⟩,⟨[j],[jj]⟩,...}}\\
+&amp;=∅
+ \end{aligned}
+ \]</span></p>
+</section>
+<section id="exercise-4" class="level2">
+<h2>Exercise</h2>
+<ul>
+<li><p>Define the rule for dynamic implication in . Here is the rule from DPL to help you:</p>
+<ul>
+<li><span class="math inline">\(\evalM{ϕ → ψ} = \Set{⟨i,o⟩|o = i \metalang{ and }∀ k:⟨o,k⟩ ∈ \evalM{ϕ} ⇒ ∃ j:⟨k,j⟩ ∈ \evalM{ψ}}\)</span></li>
+</ul></li>
+<li><p>Once you’ve done that, compute the meaning of the following.</p></li>
+</ul>
+<ol start="98" class="example" type="1">
+<li>If someone<span class="math inline">\(ˣ\)</span> hugs Annie, they<span class="math inline">\(ₓ\)</span> are happy.</li>
+</ol>
+<ul>
+<li>Again, assume a model where Jeff hugs Annie, everyone hugs themselves, nobody else hugs anybody else, and only Jeff is happy.</li>
+</ul>
+</section>
+<section id="the-novelty-condition" class="level2">
+<h2>The novelty condition</h2>
+<ul>
+<li>Heim proposed the <em>novely condition</em> to rule out cases like the following:</li>
+</ul>
+<ol start="99" class="example" type="1">
+<li>Someone<span class="math inline">\(^1\)</span> walked in. Someone<span class="math inline">\(^1\)</span> sat down.</li>
+</ol>
+<ul>
+<li><p>In frameworks like DPL, the second conjunct “resets” the value of <span class="math inline">\(x_1\)</span>, predicting that the sentence as a whole should just introduce a discourse referent that sat down.</p></li>
+<li><p> doesn’t have any need for the novely condition, since each existential statement adds a new discourse referent to the stack. Indices are irrelevant.</p></li>
+</ul>
+</section>
+<section id="the-novelty-condition-ii" class="level2">
+<h2>The novelty condition ii</h2>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM[g]{∃ v[\metalang{walkedIn}(v)]}\\
+&amp;=\Set{⟨t,t'⟩|∃ x[t' = \widehat{tx} ∧ x ∈ \entity{walkedIn}]}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM[g]{∃ v[\metalang{satDown}(v)]}\\
+&amp;=\Set{⟨t,t'⟩|∃ y[t' = \widehat{ty} ∧ y ∈ \entity{satDown}]}\\
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}[t]
+&amp;\evalM[g]{∃ v[\metalang{walkedIn}(v)] ∧ ∃ v[\metalang{satDown}(v)]}\\
+&amp;=\Set{⟨t,t'⟩|∃ xy[t' = \widehat{txy} ∧ x ∈ \entity{walkedIn} ∧ y ∈ \entity{satDown}]}\\
+\end{aligned}
+\]</span></p>
+</section>
+<section id="the-familiarity-condition" class="level2">
+<h2>The familiarity condition</h2>
+<ul>
+<li><p>Heim also proposed the familiarity condition, to capture the fact that pronominals seem to presuppose the existence of a familiar discourse referent.</p>
+<ol start="100" class="example" type="1">
+<li>(In an out-of-the-blue context) *He sat down.</li>
+</ol></li>
+<li><p>The way that Heim accomplishes this is by making assignments partial, and introducing a syntactic condition stating that pronouns should re-use an index that has already been introduced.</p></li>
+</ul>
+</section>
+<section id="the-familiarity-condition-1" class="level2">
+<h2>The familiarity condition</h2>
+<ul>
+<li><p> can capture something like the familiarity condition.</p></li>
+<li><p>If <span class="math inline">\(π\)</span> is a unary predicate, then <span class="math inline">\(\evalM[g]{π(\textit{pro})} = \Set{⟨s,s'⟩| s' = s \metalang{ and } s'_τ ∈ \evalM{π}}\)</span></p>
+<ul>
+<li><p>Recall that formulas with pronouns are tests on a stack <span class="math inline">\(s'\)</span>, just in case <span class="math inline">\(s'_τ\)</span> satisfies the predicate.</p></li>
+<li><p><span class="math inline">\(τ\)</span> is a partial function that is only defined for stacks that have at least one discourse referent. If the input stack is empty, i.e., if there are no salient discourse referents, then <span class="math inline">\(τ\)</span> is undefined.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="further-directions" class="level2">
+<h2>Further directions</h2>
+<ul>
+<li><p>Dynamic semantics was initially motivated by basic data concerning the interaction between scope and pronominal binding.</p></li>
+<li><p>But the empirical reach of dynamic semantics extends beyond this domain.</p></li>
+<li><p>Dynamic semantics is especially well-suited to analyzing phenomena which display a <em>dynamic signature</em> – i.e., phenomena which display a linear asymmetry.</p></li>
+</ul>
+</section>
+<section id="tense" class="level2">
+<h2>Tense</h2>
+<ul>
+<li><p>Partee (1973) observed that their are parallels between tense and pronouns.</p></li>
+<li><p>Consider the following data:</p></li>
+</ul>
+<ol start="101" class="example" type="1">
+<li><p>Pedro owns a donkey<span class="math inline">\(^x\)</span>. He beats it<span class="math inline">\(_x\)</span>.</p></li>
+<li><p>Yesterday, Pedro tried to kiss Juanita. She slapped him.</p></li>
+</ol>
+<ul>
+<li><p>The first sentence is a standard case of <em>donkey anaphora</em>. We are already equipped with the necessary tools to analyse this.</p></li>
+<li><p>The second sentence shows a similar phenomenon, but it the temporal domain – the past tense interpretation of the second clause is anaphorically dependent on the first. The sentence is conveys that Juanita slapped Pedro <em>right after</em> he tried to kiss her.</p></li>
+</ul>
+</section>
+<section id="tense-ii" class="level2">
+<h2>Tense ii</h2>
+<ul>
+<li>The idea informally, is as follows. Action sentences are existentially quantified statements about events (Davidson, 1967). As well as more metaphysically conventional entities, we also have events in our domain.</li>
+</ul>
+<ol start="103" class="example" type="1">
+<li><p>Pedro tried to kiss Juanita. – <span class="math inline">\(∃ e₁[\metalang{tryToKiss}(p,j,e₁) ∧ e₁ ≤ e]\)</span></p></li>
+<li><p>She slapped him – <span class="math inline">\(∃ e₂[\metalang{slapped}(x,y,e₂) ∧ e₂ ≤ e₁]\)</span></p></li>
+<li><p>Pedro tried to kiss Juanita and she slapped him.</p></li>
+</ol>
+<p><span class="math display">\[
+∃ \alert{e₁}[\metalang{tryToKiss}(p,j,e₁) ∧ e₁ ≤ e] ∧ ∃ e₂[\metalang{slapped}(x,y,e₂) ∧ e₂ ≤ \alert{e₁}]
+\]</span></p>
+</section>
+<section id="donkey-tense" class="level2">
+<h2>Donkey tense</h2>
+<ul>
+<li>As well as cross-sentential tense anaphora, we can also create examples which exhibit the correlate of donkey anaphora in the temporal domain.</li>
+</ul>
+<ol start="106" class="example" type="1">
+<li><p>Eevery farmer who owns a donkey beat it.</p></li>
+<li><p>Whenever Pedro tried to kiss Juanita, she slapped him.</p></li>
+</ol>
+<p><span class="math display">\[
+(∃ e₁[\metalang{tryToKiss}(p,j,e₁) ∧ e₁ ≤ e]) → (∃e₂[\metalang{slap}(x,y,e₂) ∧
+e₂ ≤ e₁])
+\]</span></p>
+</section>
+</section>
+<section id="presupposition" class="level1">
+<h1>Presupposition</h1>
+<ul>
+<li>Certain expressions in natural language seem to carry preconditions.</li>
+</ul>
+<ol start="108" class="example" type="1">
+<li>Mary stopped smoking</li>
+</ol>
+<ul>
+<li><p>Sounds fine in a context where it’s know that Mary</p></li>
+<li><p>Sounds weird in a context where it’s known that Mary has never smoked before.</p></li>
+<li><p>I’ll write the presupposition of a predicte <span class="math inline">\(P\)</span> as <span class="math inline">\(Π(P)\)</span>.</p></li>
+<li><p><span class="math inline">\(π = x\)</span> used to smoke</p></li>
+</ul>
+</section>
+</article>
+</body>
+</html>
