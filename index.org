@@ -1,9 +1,8 @@
 ---
 title: About
 author: Patrick D. Elliott
+lang: English
 ---
-
-* About
 
 I'm a postdoctoral researcher at the [[https://www.zas.gwz-berlin.de][Leibniz-Zentrum Allgemeine
 Sprachwissenschaft]] in Berlin, associated with the semantics and pragmatics
@@ -15,7 +14,7 @@ When I'm not doing linguistics, I [[https://github.com/patrl][code]], [[https://
 
 Reach me at: [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott(at)gmail.com]]
 
-** Upcoming
+*** Upcoming
 
 - November 12-14: I'll be giving a solo talk entitled [[https://keybase.pub/patrl/abstracts/applicatives.pdf][Applicatives for anaphora
   and presupposition]], and a joint talk with Yasu sudo entitled [[https://keybase.pub/patrl/abstracts/bindingExPostFacto.pdf][Binding Ex Post Facto]] at LENLS15, Yokohama.
