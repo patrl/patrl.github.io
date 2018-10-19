@@ -32,17 +32,21 @@ summary {
     @extend .f3, .ttu, .tracked, .link, .dim, .plex-sans;
 }
 
-p {
-  @extend .plex-serif, .lh-copy;
+h1, h2, h3 {
+    @extend .lh-title, .ttu, .tracked, .plex-sans, .normal, .measure-wide;
+}
+
+p, ul {
+  @extend .plex-serif, .lh-copy, .measure-wide;
 }
 
 li > a {
     @extend .dim, .link, .purple, .underline-hover;
 }
 
-li {
-    @extend .lh-copy, .plex-serif;
-}
+// li {
+//     @extend .lh-copy, .plex-serif, .measure-wide;
+// }
 
 code {
   @extend .plex-mono;

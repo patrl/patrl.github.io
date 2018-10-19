@@ -7,17 +7,17 @@ lang: english
 
 /If/-clauses are weird. They have a couple of prominent uses: as the
 antecedent clause in a conditional /if...then.../ statement (see (1)),
-and as an embedded question (2).
+and as an embedded question ([[1]]).
 
-1) If Britta is taking this class, then I'm not.
-2) Jeff asked if Britta is taking this class.
+1) <<1>>If Britta is taking this class, then I'm not.
+2) <<2>>Jeff asked if Britta is taking this class.
 
 Here, I'm interested in the latter cases, which I'll call
 /if/-questions. Their distribution is constrained in some interesting
 ways. Under /rogative/ [fn:1] predicates, /if/-questions seem,
 more-or-less, to be in free variation with /whether/-questions.
 
-3) Jeff {wondered|asked} {if|whether} Britta is taking this class.
+3. Jeff {wondered|asked} {if|whether} Britta is taking this class.
 
 Elsewhere however, the similarity between /whether/-questions and
 /if/-questions breaks down. Unlike /whether/-questions (and
@@ -54,16 +54,16 @@ post (maybe!). For the time being I just want to note that the predicate
 /imagine/ poses an interesting problem for the distribution of
 /if/-clauses, and its certainly outside of the scope of Adger & Quer's
 account. First, note that /imagine/ doesn't embed /whether/-questions at
-all (9). The polarity of the matrix clause doesn't seem to make a
-difference (10). However, when the matrix clause is an imperative (11),
-or otherwise a request directed at the addressee (12), an embedded
+all ([[9]]). The polarity of the matrix clause doesn't seem to make a
+difference ([[10]]). However, when the matrix clause is an imperative ([[11]]),
+or otherwise a request directed at the addressee ([[12]]), an embedded
 /if/-question is licensed, despite the fact that an embedded
 /whether/-question still isn't.
 
-9)  Jeff imagined {whether|if|that} Britta left.
-10) Jeff never imagined {whether|if|that} Britta left.
-11) Imagine {*whether|if|that} Britta left.
-12) Can you imagine {*whether|if|that} Britta left.
+9) <<9>>Jeff imagined {whether|if|that} Britta left.
+10) <<10>>Jeff never imagined {whether|if|that} Britta left.
+11) <<11>>Imagine {*whether|if|that} Britta left.
+12) <<12>>Can you imagine {*whether|if|that} Britta left.
 
 Adger & Quer of course don't consider this kind of data, but it's
 difficult to see how one could extend their account to this, since as

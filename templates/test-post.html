@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="English" xml:lang="English"$if(dir)$ dir="$dir$"$endif$>
     $partial("templates/head.html")$
-    <body class="bg-washed-yellow">
-        <div class="center pt4 ph2 pb5 mw100 measure-wide">
-            $partial("templates/test-header.html")$
-            <div class="pt2 pt4-ns plex-serif">
-                <h1 class="f-headline measure f1-ns ttu tracked plex-sans">$title$</h1>
-                <span class="f6 mid-gray ttu tracked plex-sans">$date$</span>
-                <article>
-                    $body$
-                </article>
-            </div>
+    <body>
+        <div class="cf ph3 ph5-ns pv5">
+        $partial("templates/test-header.html")$
+        <div class="fn fl-ns w-two-thirds-ns">
+        <h1 class="f-headline f1-ns">$title$</h1>
+        <span class="f6 mid-gray ttu tracked plex-sans">$date$</span>
+        <article>
+        $body$
+        </article>
+        </div>
         </div>
         $partial("templates/test-footer.html")$
     </body>

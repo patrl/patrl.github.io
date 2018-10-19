@@ -3,8 +3,6 @@ title: research
 author: Patrick D. Elliott
 ...
 
-# Research
-
 <div class="lh-copy">
 <details>
 <summary>Papers</summary>
