@@ -1,0 +1,33 @@
+@import "../node_modules/tachyons-sass/tachyons.scss";
+
+.plex-mono {
+    font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+}
+
+.plex-sans {
+    font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.plex-serif {
+    font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+}
+
+.plex-mono {
+    font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+}
+
+p > a {
+    @extend .dim, .link, .purple, .underline-hover;
+}
+
+p {
+  @extend .plex-serif, .measure, .lh-copy;
+}
+
+code {
+  @extend .plex-mono;
+}
+
+h1,h2,h3 {
+  @extend .plex-sans, .ttu, .tracked;
+}
