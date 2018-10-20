@@ -4,7 +4,7 @@
 import           Data.Monoid                    ( mappend )
 import           Hakyll
 import           Text.Pandoc.Options
-import           Text.Pandoc.SideNote
+import           Text.Pandoc.SideNote (usingSideNotes)
 import           Control.Monad                  ( liftM )
 import           Text.Pandoc.Definition
 import           Hakyll.Web.Sass                ( sassCompiler )
@@ -53,7 +53,7 @@ main = do
     match "org-test.org" $ do
       route $ setExtension "html"
       compile
-        $   pandocBiblioCompiler "csl/unified-style-linguistics.csl"
+        $   myPandocBiblioCompiler "csl/unified-style-linguistics.csl"
                                  "bib/refs.bib"
         >>= loadAndApplyTemplate "templates/post.html" postCtx
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
@@ -62,37 +62,35 @@ main = do
     match "actl2018.markdown" $ do
       route $ setExtension "html"
       compile
-        $   pandocTufteNew
+        $   myPandocCompiler
         >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
         >>= relativizeUrls
 
     match "egg2018/*" $ do
       route $ setExtension "html"
       compile
-        $   pandocTufteNew
+        $   myPandocCompiler
         >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
         >>= relativizeUrls
 
     match "index.org" $ do
       route $ setExtension "html"
       compile
-        $   pandocBiblioCompiler "csl/unified-style-linguistics.csl"
-                                 "bib/refs.bib"
+        $   myPandocCompiler
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
     match "research.markdown" $ do
       route $ setExtension "html"
       compile
-        $   pandocBiblioCompiler "csl/myBib.csl" "bib/myWork.bib"
+        $   myPandocBiblioCompiler "csl/myBib.csl" "bib/myWork.bib"
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
     match "teaching.markdown" $ do
       route $ setExtension "html"
       compile
-        $   pandocBiblioCompiler "csl/unified-style-linguistics.csl"
-                                 "bib/refs.bib"
+        $   myPandocCompiler
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
@@ -100,7 +98,7 @@ main = do
     match "posts/*" $ do
       route $ setExtension "html"
       compile
-        $   pandocBiblioCompiler "csl/unified-style-linguistics.csl"
+        $   myPandocBiblioCompiler "csl/unified-style-linguistics.csl"
                                  "bib/refs.bib"
         >>= saveSnapshot "content"
         >>= loadAndApplyTemplate "templates/post.html" postCtx
@@ -110,7 +108,7 @@ main = do
     match "drafts/*" $ do
       route $ setExtension "html"
       compile
-        $   pandocBiblioCompiler "csl/unified-style-linguistics.csl"
+        $   myPandocBiblioCompiler "csl/unified-style-linguistics.csl"
                                  "bib/refs.bib"
         >>= loadAndApplyTemplate "templates/post.html" postCtx
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
@@ -172,15 +170,14 @@ customHakyllWriterOptions
 readerOpts :: ReaderOptions
 readerOpts = def { readerExtensions = pandocExtensions }
 
-pandocBiblioCompiler' :: String -> String -> Compiler (Item String)
-pandocBiblioCompiler' cslFileName bibFileName = do
+myPandocBiblioCompiler :: String -> String -> Compiler (Item String)
+myPandocBiblioCompiler cslFileName bibFileName = do
   csl <- load $ fromFilePath cslFileName
   bib <- load $ fromFilePath bibFileName
-  liftM (writePandocWith customHakyllWriterOptions) (getResourceBody >>= readPandocBiblio def csl bib)
+  liftM (writePandocWith customHakyllWriterOptions)
+    (traverse (return . usingSideNotes) =<< readPandocBiblio defaultHakyllReaderOptions csl bib =<< getResourceBody)
 
-pandocTufteNew = pandocCompilerWithTransformM readerOpts
-                                              customHakyllWriterOptions
-                                              (fmap return usingSideNotes)
+myPandocCompiler = pandocCompilerWithTransformM defaultHakyllReaderOptions customHakyllWriterOptions (return . usingSideNotes)
 
 myFeedConfiguration :: FeedConfiguration
 myFeedConfiguration = FeedConfiguration

@@ -2,17 +2,37 @@
 title: Hakyll with org-mode
 author: Patrick D. Elliott
 date: 19.10.2018
+reference-section-title: References
 ---
 
-* Test
+* Tests
 
-** Test 2
+** Prose test
 
-*** Test 3
+Boo.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus cras adipiscing enim eu turpis. Lectus proin nibh nisl condimentum. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Diam donec adipiscing tristique risus nec feugiat. Consequat semper viverra nam libero. Convallis aenean et tortor at risus viverra. Diam maecenas sed enim ut sem. Ac tincidunt vitae semper quis lectus nulla at volutpat. Odio eu feugiat pretium nibh ipsum consequat nisl vel.
+
+Tellus in hac habitasse platea dictumst. Quam adipiscing vitae proin sagittis nisl rhoncus mattis. Nisi vitae suscipit tellus mauris a diam maecenas. A cras semper auctor neque vitae. Sodales neque sodales ut etiam. Pellentesque sit amet porttitor eget. Etiam non quam lacus suspendisse faucibus interdum posuere. Id semper risus in hendrerit gravida rutrum quisque non. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Tincidunt nunc pulvinar sapien et. Vehicula ipsum a arcu cursus.
+
+Iaculis nunc sed augue lacus viverra. Eget gravida cum sociis natoque. A arcu cursus vitae congue mauris rhoncus. Elit pellentesque habitant morbi tristique. Nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi. Pharetra diam sit amet nisl suscipit. Nulla posuere sollicitudin aliquam ultrices sagittis. Sed odio morbi quis commodo odio aenean. Dui faucibus in ornare quam viverra. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Est sit amet facilisis magna etiam tempor. Quisque id diam vel quam elementum pulvinar etiam. Orci ac auctor augue mauris augue neque. Tortor consequat id porta nibh venenatis cras.
+
+Risus nullam eget felis eget nunc lobortis mattis. Consectetur lorem donec massa sapien faucibus et molestie ac. Imperdiet nulla malesuada pellentesque elit eget. Sed vulputate mi sit amet. Non curabitur gravida arcu ac. Tellus rutrum tellus pellentesque eu tincidunt tortor. Curabitur vitae nunc sed velit dignissim sodales. Sit amet volutpat consequat mauris nunc congue nisi vitae. Arcu non odio euismod lacinia at quis. Ut faucibus pulvinar elementum integer enim neque volutpat ac. Nisi porta lorem mollis aliquam. Nisl condimentum id venenatis a. Imperdiet dui accumsan sit amet nulla. Massa sed elementum tempus egestas sed.
+
+Justo laoreet sit amet cursus. Bibendum at varius vel pharetra. Risus nullam eget felis eget nunc lobortis mattis. Eget dolor morbi non arcu risus quis varius quam. Orci ac auctor augue mauris augue. At auctor urna nunc id cursus. Suspendisse sed nisi lacus sed viverra tellus. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Id leo in vitae turpis massa sed elementum tempus. Faucibus nisl tincidunt eget nullam non nisi est. Arcu ac tortor dignissim convallis aenean et tortor at risus. Malesuada fames ac turpis egestas maecenas pharetra convallis. A arcu cursus vitae congue mauris rhoncus aenean. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque.
+
+** Description lists
+
+- Elijah Wood :: He plays Frodo
+- Sean Astin :: He plays Sam, Frodo's friend.
+
+** Unordered lists
 
 - hi
-- there
-- my name
+  - there
+    - my name
+
+** Markup
 
 This is a test to allow me to figure out some things. Here is a test of
 /italics/, and here is a test of *bold*, and finally, here is a test of */bold
@@ -20,17 +40,74 @@ italics/*, and here is a test of ~code~, what about ~/italics/ in code 0~.
 
 Here is a test of a [[https://www.google.com][link]].
 
+** Code test
+
 #+BEGIN_SRC haskell
-id :: a -> a
-id x = x
+-- We roll our own indexed continuation monad.
+newtype IxKT n o m i = IxKT { (>>-) :: (i -> n m) -> n o }
+
+instance IxFunctor (IxKT m) where imap f m = IxKT $ \k -> m >>- (k . f)
+
+instance IxPointed (IxKT m) where
+  ireturn a = IxKT ($a)
+
+instance Monad m => IxApplicative (IxKT m) where
+  iap = iapIxMonad
+
+instance Monad m => IxMonad (IxKT m) where
+  ibind f c = IxKT $ \k -> c >>- \a -> f a >>- k
 #+END_SRC
 
-Here is a test of a citation cite:heimThesis.
+Here is a test of a citation @heimThesis.
 
-** Math test
+** Math test with $\KaTeX$
 
-$λ x . λ y . y = x$
+$$
+\left\lbrace\begin{aligned}
+&\lambda p\,.\,p = \lambda w\,.\,\text{Klaus left in }w\\
+&\lambda q\,.\,q = \lambda w\,.\,\text{Hans left in }w\\
+&\ldots
+\end{aligned}\right\rbrace
+$$
 
-Something else.
+Something else. Boo.
 
-** References
+** Table test
+
+| name    | age | gender | favourite color | favourite sport |
+|---------+-----+--------+-----------------+-----------------|
+| Patrick |  29 | Male   | Blue            | Football        |
+| Josie   |  20 | Female | Red             | Baseball        |
+
+
+** Image test
+
+Here is a picture of me.
+
+[[file:images/documenta.jpg][me]]
+
+** Footnote test
+
+Here is a test of an inline footnote.[fn:1]
+smol
+
+[fn:1] hi there, here is a test of the kinds of things once might say in a
+sidenote given the chance.
+
+** Super/subscript test
+
+January the 1^{st}
+
+
+** TODO quote test
+
+Here is some text.
+
+#+BEGIN_QUOTE
+"Everything should be made as simple as possible,
+but not any simpler" -- Albert Einstein
+#+END_QUOTE
+
+Here is some other text.
+
+* References

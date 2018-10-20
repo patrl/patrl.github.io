@@ -18,46 +18,107 @@
 
 q { quotes: "“" "”" "‘" "’"; }
 
+code {
+    @extend .plex-mono;
+}
+
+a.sourceLine {
+    @extend .lh-title; }
+
+a.sourceLine > span {
+    @extend .dib;
+}
+
+div.sourceCode {
+    @extend .measure-wide;
+}
 
 ul, ol {
   padding-left: 0;
   list-style-position: outside;
 }
 
-p > a {
-    @extend .dim, .link, .purple, .underline-hover;
+li > ul {
+    list-style-position: inside;
 }
 
 summary {
-    @extend .f3, .ttu, .tracked, .link, .dim, .plex-sans;
+    @extend .f3, .link, .dim;
 }
 
-h1, h2, h3 {
+summary, h1, h2, h3 {
     @extend .lh-title, .ttu, .tracked, .plex-sans, .normal, .measure-wide;
 }
 
-p, ul, ol {
-  @extend .plex-serif, .lh-copy, .measure-wide;
+dt {
+    @extend .b;
+}
+
+dd {
+    @extend .ml0;
+}
+
+p, ul, ol, dl {
+  @extend .plex-serif, .measure-wide;
+}
+
+ul, ol, dl {
+    @extend .lh-copy;
+}
+
+p {
+
+    @extend .lh-copy, .mv0;
+}
+
+.references > div {
+    @extend .mv3;
+}
+
+table {
+    overflow: auto;
+    @extend .plex-serif, .f6, .w-100;
+}
+
+
+th {
+    @extend .b, .tl, .pb3, .pr3;
+}
+
+.header {
+    @extend .bb;
+}
+
+table > tbody {
+    @extend .lh-copy;
+}
+
+td {
+    @extend .pv3, .pr3;
+}
+
+p + p {
+    text-indent: 1em;
 }
 
 li > a {
     @extend .dim, .link, .purple, .underline-hover;
 }
 
-// li {
-//     @extend .lh-copy, .plex-serif, .measure-wide;
-// }
-
-code {
-  @extend .plex-mono;
+p > a {
+    @extend .dim, .link, .purple, .underline-hover;
 }
 
-h1,h2,h3 {
-  @extend .plex-sans, .ttu, .tracked;
+blockquote {
+    @extend .bl, .bw2, .b--blue, .ml0, .pl4;
 }
 
-code {
-    white-space: pre-wrap;
+blockquote p {
+    text-indent: -0.5em;
+}
+
+.todo,.TODO {
+    @extend .green;
 }
 
 span.smallcaps {
@@ -71,3 +132,64 @@ span.underline {
 div.column {
     display: inline-block; vertical-align: top; width: 50%;
 }
+
+
+/* Sidenotes, margin notes, figures, captions */
+img { @extend .w-100, .center, .pa4; }
+
+// sidenotes
+//
+body {
+    counter-reset: sidenote-counter;
+}
+
+.sidenote, .marginnote {
+                         margin-right: -60%;
+                         clear: right;
+                         float: right;
+                         display: inline;
+                       @extend .relative, .plex-serif, .f6, .lh-copy, .mv0, .w-50, .v-base;
+                       }
+
+.sidenote > a {
+    @extend .link, .purple, .dim;
+}
+
+
+.sidenote-number { counter-increment: sidenote-counter;
+                   @extend .plex-serif, .f6;
+                 }
+
+.sidenote-number:after, .sidenote:before {
+                                           @extend .plex-serif, .relative, .v-base;
+                                         }
+
+.sidenote-number:after { content: counter(sidenote-counter);
+                         vertical-align: super;
+                         font-size: smaller;
+                       }
+
+.sidenote:before { content: counter(sidenote-counter) " ";
+                   vertical-align: super;
+                   font-size: smaller;
+                 }
+
+input.margin-toggle { @extend .dn; }
+
+label.sidenote-number { @extend .di; }
+
+label.margin-toggle:not(.sidenote-number) {
+    @extend .dn-ns, .di;
+}
+
+@media (max-width: 760px) {
+    .sidenote, .marginnote { display: none; }
+    .margin-toggle:checked + .sidenote,
+    .margin-toggle:checked + .marginnote {
+        clear: both;
+        display: block;
+        float: left;
+        vertical-align: base;
+        position: relative;
+    label { cursor: pointer; }
+}}
