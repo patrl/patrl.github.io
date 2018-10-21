@@ -15,7 +15,5 @@
     "@ibm/plex": "^1.2.0",
     "tachyons-sass": "^4.9.3"
   },
-  "devDependencies": {
-    "gradients": "^1.0.1"
-  }
+  "devDependencies": {}
 }
