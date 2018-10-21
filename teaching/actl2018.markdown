@@ -10,6 +10,7 @@ date: 25-29 June 2018
 
 [^mn]: {-} ![](/images/cyclist.jpg)
 
+
 [^mn]This course will provide an introduction to the study of linguistic meaning
 through the lens of *dynamic semantics* 
 - an approach to semantics developed primarily during the 80s by Irene Heim and

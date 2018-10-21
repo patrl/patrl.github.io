@@ -8,6 +8,7 @@ date: 6-10 August 2018
 
 [^mn]: {-} ![](/images/enigma.jpg)
 
+
 [^mn] Building on the techniques introduced in *Introduction to Semantics pt. 1*, this course will give an introductory overview of some of the more advanced topics that have occupied formal semanticists over the previous decades.
 
 # Schedule

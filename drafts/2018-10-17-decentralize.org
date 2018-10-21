@@ -78,7 +78,7 @@ It should now be possible to access the site via, e.g., a public gateway such as
 the IPFS network by navigating to [[https://ipfs.io/ipns/patrickdelliott.com]].
 [[https//ipfs.io]] can of course be replaced by a link to any public IPFS gateway.
 
-*** TODO IPFS redirect
+*** IPFS redirect
 
 It's possible to ensure that someone running an IPFS node locally be
 automatically redirected to the site on IPFS by using a dns ~TXT~ record.

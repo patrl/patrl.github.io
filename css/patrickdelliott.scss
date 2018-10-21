@@ -50,6 +50,10 @@ summary, h1, h2, h3 {
     @extend .lh-title, .ttu, .tracked, .plex-sans, .normal, .measure-wide;
 }
 
+.post-title {
+    @extend .f1-ns, .f2;
+}
+
 dt {
     @extend .b;
 }

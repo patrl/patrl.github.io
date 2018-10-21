@@ -14,18 +14,9 @@ main =
   hakyllWith config $ do
 
   -- static files
-    match ("images/*" .||. "keybase.txt" .||. "et-book/*/*") $ do
+    match ("images/*" .||. "keybase.txt") $ do
       route idRoute
       compile copyFileCompiler
-
-    match "css/*.css" $ do
-      route idRoute
-      compile compressCssCompiler
-
-    match "css/patrickdelliott.scss" $ do
-      route $ setExtension "css"
-      let compressCssItem = fmap compressCss
-      compile (compressCssItem <$> sassCompiler)
 
     match "node_modules/@ibm/plex/IBM-Plex-Sans/fonts/complete/woff2/*" $ do
       route $ gsubRoute
@@ -45,6 +36,15 @@ main =
         (const "fonts")
       compile copyFileCompiler
 
+    match "css/*.css" $ do
+      route idRoute
+      compile compressCssCompiler
+
+    match "css/patrickdelliott.scss" $ do
+      route $ setExtension "css"
+      let compressCssItem = fmap compressCss
+      compile (compressCssItem <$> sassCompiler)
+
     match "org-test.org" $ do
       route $ setExtension "html"
       compile
@@ -54,18 +54,12 @@ main =
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
-    match "actl2018.markdown" $ do
+    match "teaching/*" $ do
       route $ setExtension "html"
       compile
         $   myPandocCompiler
-        >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
-        >>= relativizeUrls
-
-    match "egg2018/*" $ do
-      route $ setExtension "html"
-      compile
-        $   myPandocCompiler
-        >>= loadAndApplyTemplate "templates/tufte.html" defaultContext
+        >>= loadAndApplyTemplate "templates/post.html" postCtx
+        >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
     match "index.org" $ do
@@ -82,13 +76,6 @@ main =
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
-    match "teaching.markdown" $ do
-      route $ setExtension "html"
-      compile
-        $   myPandocCompiler
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
-        >>= relativizeUrls
-
     tags <- buildTags "posts/*" (fromCapture "tags/*.html")
 
     tagsRules tags $ \tag pattern -> do
@@ -98,6 +85,7 @@ main =
             posts <- recentFirst =<< loadAll pattern
             let ctx = constField "title" title
                       `mappend` listField "posts" postCtx (return posts)
+                      `mappend` constField "date"   ""
                       `mappend` defaultContext
 
             makeItem ""
@@ -176,7 +164,6 @@ customHakyllWriterOptions
           (enableExtension Ext_raw_html . enableExtension Ext_example_lists)
             defaultExtensions
         , writerSectionDivs    = True
-             -- this isn't working
         , writerHTMLMathMethod = KaTeX ""
         }
 
@@ -207,11 +194,3 @@ myFeedConfiguration = FeedConfiguration
   , feedAuthorEmail = "patrick.d.elliott@gmail.com"
   , feedRoot        = "http://patrickdelliott.com"
   }
-
--- >>> 2 + 2
--- <interactive>:23:2: warning: [-Wtype-defaults]
---     • Defaulting the following constraints to type ‘Integer’
---         (Show a0) arising from a use of ‘print’ at <interactive>:23:2-6
---         (Num a0) arising from a use of ‘it’ at <interactive>:23:2-6
---     • In a stmt of an interactive GHCi command: print it
--- 4
