@@ -1,32 +1,31 @@
-{ nixpkgs ? import <nixpkgs> {}, compiler ? "default", doBenchmark ? false }:
+{ nixpkgs ? import <nixpkgs> {}, compiler ? "default", withHoogle ? true }:
 
 let
 
   inherit (nixpkgs) pkgs;
 
-  f = { mkDerivation, base, containers, hakyll, hakyll-sass, mtl
-      , pandoc, pandoc-types, stdenv
-      }:
-      mkDerivation {
-        pname = "patrickdelliott";
-        version = "0.1.0.0";
-        src = ./.;
-        isLibrary = false;
-        isExecutable = true;
-        executableHaskellDepends = [
-          base containers hakyll hakyll-sass mtl pandoc pandoc-types
-        ];
-        license = stdenv.lib.licenses.unfree;
-        hydraPlatforms = stdenv.lib.platforms.none;
-      };
+  f = import ./default.nix;
 
-  haskellPackages = if compiler == "default"
-                       then pkgs.haskellPackages
-                       else pkgs.haskell.packages.${compiler};
+  packageSet = (
+    if compiler == "default"
+    then  pkgs.haskellPackages
+    else  pkgs.haskell.packages.${compiler}
+  );
 
-  variant = if doBenchmark then pkgs.haskell.lib.doBenchmark else pkgs.lib.id;
+  haskellPackages = (
+    if withHoogle
+      then  packageSet.override {
+              overrides = (self: super:
+                {
+                  ghc = super.ghc // { withPackages = super.ghc.withHoogle; };
+                  ghcWithPackages = self.ghc.withPackages;
+                }
+              );
+            }
+      else  packageSet
+  );
 
-  drv = variant (haskellPackages.callPackage f {});
+  drv = haskellPackages.callPackage f {};
 
 in
 
