@@ -1,5 +1,10 @@
 <h1 class="f-headline f1-ns">$title$</h1>
-<span class="f6 mid-gray ttu tracked plex-sans lh-title">$date$</span>
+<span class="f6 mid-gray ttu tracked plex-sans lh-title pr3 dib">$date$</span>
+<span class="info f6 mid-gray ttu tracked plex-sans lh-title dib">
+    $if(tags)$
+    Tags: $tags$
+    $endif$
+</span>
 <article class="mt4">
 $body$
 </article>

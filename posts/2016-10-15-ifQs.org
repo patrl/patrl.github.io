@@ -3,6 +3,7 @@ title: A note on if-questions
 author: Patrick D. Elliott
 date: 2016-10-15
 lang: english
+tags: linguistics
 ---
 
 /If/-clauses are weird. They have a couple of prominent uses: as the
