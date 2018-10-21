@@ -1,18 +1,21 @@
 {-# LANGUAGE FlexibleContexts #-}
 
-module Text.Pandoc.SideNote (usingSideNotes) where
+module Text.Pandoc.SideNote
+  ( usingSideNotes
+  )
+where
 
-import           Data.List           (intercalate)
-
+import           Data.List                      ( intercalate )
 import           Control.Monad.State
-
 import           Text.Pandoc.JSON
-import           Text.Pandoc.Walk    (walk, walkM)
+import           Text.Pandoc.Walk               ( walk
+                                                , walkM
+                                                )
 
 getFirstStr :: [Inline] -> Maybe String
-getFirstStr []                 = Nothing
-getFirstStr (Str text:_      ) = Just text
-getFirstStr (_       :inlines) = getFirstStr inlines
+getFirstStr []                   = Nothing
+getFirstStr (Str text : _      ) = Just text
+getFirstStr (_        : inlines) = getFirstStr inlines
 
 newline :: [Inline]
 newline = [LineBreak, LineBreak]
@@ -78,8 +81,8 @@ filterInline (Note blocks) = do
   let input             = RawInline (Format "html") inputHTML
 
   let (ident, _, attrs) = nullAttr
-  let noteTypeCls       = if nonu then "marginnote" else "sidenote"
-  let note              = Span (ident, [noteTypeCls], attrs) content'
+  let noteTypeCls = if nonu then "marginnote" else "sidenote"
+  let note = Span (ident, [noteTypeCls], attrs) content'
 
   return $ Span nullAttr [label, input, note]
 

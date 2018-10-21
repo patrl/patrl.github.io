@@ -1,17 +1,16 @@
 --------------------------------------------------------------------------------
-{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE OverloadedStrings, NoPatternSynonyms #-}
 
 import           Data.Monoid                    ( mappend )
 import           Hakyll
 import           Text.Pandoc.Options
-import           Text.Pandoc.SideNote (usingSideNotes)
-import           Control.Monad                  ( liftM )
-import           Text.Pandoc.Definition
+import           Text.Pandoc.SideNote           ( usingSideNotes )
+-- import           Control.Monad                  ( liftM )
 import           Hakyll.Web.Sass                ( sassCompiler )
 
 --------------------------------------------------------------------------------
 main :: IO ()
-main = do
+main =
   hakyllWith config $ do
 
   -- static files
@@ -46,16 +45,12 @@ main = do
         (const "fonts")
       compile copyFileCompiler
 
-    match "node_modules/gradients/gradients.min.css" $ do
-      route $ customRoute (const "css/gradients.min.css")
-      compile copyFileCompiler
-
     match "org-test.org" $ do
       route $ setExtension "html"
       compile
         $   myPandocBiblioCompiler "csl/unified-style-linguistics.csl"
-                                 "bib/refs.bib"
-        >>= loadAndApplyTemplate "templates/post.html" postCtx
+                                   "bib/refs.bib"
+        >>= loadAndApplyTemplate "templates/post.html"    postCtx
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
@@ -94,14 +89,29 @@ main = do
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
+    tags <- buildTags "posts/*" (fromCapture "tags/*.html")
+
+    tagsRules tags $ \tag pattern -> do
+        let title = "Posts tagged \"" ++ tag ++ "\""
+        route idRoute
+        compile $ do
+            posts <- recentFirst =<< loadAll pattern
+            let ctx = constField "title" title
+                      `mappend` listField "posts" postCtx (return posts)
+                      `mappend` defaultContext
+
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/tag.html" ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= relativizeUrls
 
     match "posts/*" $ do
       route $ setExtension "html"
       compile
         $   myPandocBiblioCompiler "csl/unified-style-linguistics.csl"
-                                 "bib/refs.bib"
+                                   "bib/refs.bib"
         >>= saveSnapshot "content"
-        >>= loadAndApplyTemplate "templates/post.html" postCtx
+        >>= loadAndApplyTemplate "templates/post.html"    (postCtxWithTags tags)
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
@@ -109,17 +119,17 @@ main = do
       route $ setExtension "html"
       compile
         $   myPandocBiblioCompiler "csl/unified-style-linguistics.csl"
-                                 "bib/refs.bib"
-        >>= loadAndApplyTemplate "templates/post.html" postCtx
+                                   "bib/refs.bib"
+        >>= loadAndApplyTemplate "templates/post.html"    postCtx
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
     create ["atom.xml"] $ do
       route idRoute
       compile $ do
-        let feedCtx = postCtx `mappend` bodyField "description"
-        posts <- fmap (take 10) . recentFirst =<<
-          loadAllSnapshots "posts/*" "content"
+        let feedCtx = postCtxWithTags tags `mappend` bodyField "description"
+        posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots "posts/*"
+                                                                   "content"
         renderAtom myFeedConfiguration feedCtx posts
 
 
@@ -132,22 +142,25 @@ main = do
       compile $ do
         posts <- recentFirst =<< loadAll "posts/*"
         let archiveCtx =
-              listField "posts" postCtx (return posts)
+              listField "posts" (postCtxWithTags tags) (return posts)
                 `mappend` constField "author" "Patrick D. Elliott"
-                `mappend` constField "title" "Pluralia Tantrum"
-                `mappend` constField "date" ""
-
-                                                       `mappend` postCtx
+                `mappend` constField "title"  "Pluralia Tantrum"
+                `mappend` constField "date"   ""
+                `mappend` postCtxWithTags tags
 
         makeItem ""
           >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-          >>= loadAndApplyTemplate "templates/default.html"    archiveCtx
+          >>= loadAndApplyTemplate "templates/default.html" archiveCtx
           >>= relativizeUrls
 
     match "templates/*" $ compile templateBodyCompiler
 
 
 --------------------------------------------------------------------------------
+--
+postCtxWithTags :: Tags -> Context String
+postCtxWithTags tags = tagsField "tags" tags `mappend` postCtx
+
 postCtx :: Context String
 postCtx = dateField "date" "%B %e, %Y" `mappend` defaultContext
 
@@ -160,7 +173,7 @@ customHakyllWriterOptions
     in
       defaultHakyllWriterOptions
         { writerExtensions     =
-          ((enableExtension Ext_raw_html) . (enableExtension Ext_example_lists))
+          (enableExtension Ext_raw_html . enableExtension Ext_example_lists)
             defaultExtensions
         , writerSectionDivs    = True
              -- this isn't working
@@ -174,10 +187,17 @@ myPandocBiblioCompiler :: String -> String -> Compiler (Item String)
 myPandocBiblioCompiler cslFileName bibFileName = do
   csl <- load $ fromFilePath cslFileName
   bib <- load $ fromFilePath bibFileName
-  liftM (writePandocWith customHakyllWriterOptions)
-    (traverse (return . usingSideNotes) =<< readPandocBiblio defaultHakyllReaderOptions csl bib =<< getResourceBody)
+  fmap
+    (writePandocWith customHakyllWriterOptions)
+    (   traverse (return . usingSideNotes)
+    =<< readPandocBiblio defaultHakyllReaderOptions csl bib
+    =<< getResourceBody
+    )
 
-myPandocCompiler = pandocCompilerWithTransformM defaultHakyllReaderOptions customHakyllWriterOptions (return . usingSideNotes)
+myPandocCompiler :: Compiler (Item String)
+myPandocCompiler = pandocCompilerWithTransformM defaultHakyllReaderOptions
+                                                customHakyllWriterOptions
+                                                (return . usingSideNotes)
 
 myFeedConfiguration :: FeedConfiguration
 myFeedConfiguration = FeedConfiguration
@@ -187,3 +207,11 @@ myFeedConfiguration = FeedConfiguration
   , feedAuthorEmail = "patrick.d.elliott@gmail.com"
   , feedRoot        = "http://patrickdelliott.com"
   }
+
+-- >>> 2 + 2
+-- <interactive>:23:2: warning: [-Wtype-defaults]
+--     • Defaulting the following constraints to type ‘Integer’
+--         (Show a0) arising from a use of ‘print’ at <interactive>:23:2-6
+--         (Num a0) arising from a use of ‘it’ at <interactive>:23:2-6
+--     • In a stmt of an interactive GHCi command: print it
+-- 4
