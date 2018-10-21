@@ -69,6 +69,13 @@ main =
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
+    match "about-site.org" $ do
+      route $ setExtension "html"
+      compile
+        $   myPandocCompiler
+        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= relativizeUrls
+
     match "research.markdown" $ do
       route $ setExtension "html"
       compile

@@ -67,6 +67,8 @@ siteloc=~/GitHub/patrl.github.io/_site
 dirhash=$(ipfs add -r $(siteloc)/ | grep $(siteloc)$ | cut -d" " -f2)
 #+END_SRC
 
+#+RESULTS:
+
 Finally, we publish the directory to our nodes ~ipns~ entry:
 
 #+BEGIN_SRC bash
@@ -80,8 +82,12 @@ the IPFS network by navigating to [[https://ipfs.io/ipns/patrickdelliott.com]].
 
 *** IPFS redirect
 
-It's possible to ensure that someone running an IPFS node locally be
-automatically redirected to the site on IPFS by using a dns ~TXT~ record.
+It's possible to ensure that someone running an IPFS node locally. Add a dns
+~TXT~ record via your provider (I use cloudflare) with the following content:
+
+#+BEGIN_SRC bash
+dnslink=/ipfs/
+#+END_SRC
 
 ** Dat
 

@@ -38,9 +38,9 @@ ul, ol {
   list-style-position: outside;
 }
 
-li > ul {
-    list-style-position: inside;
-}
+// li > ul {
+//     list-style-position: inside;
+// }
 
 summary {
     @extend .f3, .link, .dim;

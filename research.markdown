@@ -7,14 +7,14 @@ date: 19.10.2018
 <details>
 <summary>Papers</summary>
 
-- @elliottEtAl2018simplex <a href="https://patrl.keybase.pub/papers/whoAndWhatMs.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
-- @paper17jos <a href="https://patrl.keybase.pub/papers/PoRs.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
-- @paper16nels <a href="https://patrl.keybase.pub/papers/nels46.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
-- @paper16salt <a href="https://patrl.keybase.pub/papers/saltpaper.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
-- @paper16sub <a href="https://patrl.keybase.pub/papers/SuB20.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
-- @paper16cls <a href="https://patrl.keybase.pub/papers/cls52proceedings.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
-- @paper16wccfl <a href="https://patrl.keybase.pub/papers/wccfl-draft.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
-- @paper15cls <a href="https://patrl.keybase.pub/papers/cls49proceedings.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
+- @elliottEtAl2018simplex <a href="https://patrl.keybase.pub/papers/whoAndWhatMs.pdf">Read.</a>
+- @paper17jos <a href="https://patrl.keybase.pub/papers/PoRs.pdf">Read.</a>
+- @paper16nels <a href="https://patrl.keybase.pub/papers/nels46.pdf">Read.</a>
+- @paper16salt <a href="https://patrl.keybase.pub/papers/saltpaper.pdf">Read.</a>
+- @paper16sub <a href="https://patrl.keybase.pub/papers/SuB20.pdf">Read.</a>
+- @paper16cls <a href="https://patrl.keybase.pub/papers/cls52proceedings.pdf">Read.</a>
+- @paper16wccfl <a href="https://patrl.keybase.pub/papers/wccfl-draft.pdf">Read.</a>
+- @paper15cls <a href="https://patrl.keybase.pub/papers/cls49proceedings.pdf">Read.</a>
 
 </details>
 
@@ -23,13 +23,13 @@ date: 19.10.2018
 
 <summary class="podkova f3 ttu tracked cl-effect-1 link dim">Snippets</Summary>
 
-- @snippet18uncond <a href="https://patrl.keybase.pub/snippets/whSnippet.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
-- @snippet18wh <a href="https://patrl.keybase.pub/snippets/uncondSnippet.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
-- @snippet18zero <a href="https://patrl.keybase.pub/snippets/zeroSnippet.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
-- @snippet18collectivePred <a href="https://patrl.keybase.pub/snippets/collectivePredSnippet.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
-- @snippet17 <a href="https://patrl.keybase.pub/snippets/snippet-superiority.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
-- @snippet15 <a href="https://patrl.keybase.pub/snippets/snippet.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
-- @snippet17tense <a href="https://patrl.keybase.pub/snippets/tenseSnippet_v1.pdf"><i class="far fa-file-pdf" aria-hidden="true"></i></a>
+- @snippet18uncond <a href="https://patrl.keybase.pub/snippets/whSnippet.pdf">Read.</a>
+- @snippet18wh <a href="https://patrl.keybase.pub/snippets/uncondSnippet.pdf">Read.</a>
+- @snippet18zero <a href="https://patrl.keybase.pub/snippets/zeroSnippet.pdf">Read.</a>
+- @snippet18collectivePred <a href="https://patrl.keybase.pub/snippets/collectivePredSnippet.pdf">Read.</a>
+- @snippet17 <a href="https://patrl.keybase.pub/snippets/snippet-superiority.pdf">Read.</a>
+- @snippet15 <a href="https://patrl.keybase.pub/snippets/snippet.pdf">Read.</a>
+- @snippet17tense <a href="https://patrl.keybase.pub/snippets/tenseSnippet_v1.pdf">Read.</a>
 
 
 </details>
