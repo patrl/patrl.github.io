@@ -138,7 +138,8 @@ swarm peers</code>, which should return the ipfs addresses of your peers.</p>
 </section>
 <section id="ipfs-redirect" class="level3">
 <h3>IPFS redirect</h3>
-<p>It’s possible to ensure that someone running an IPFS node locally be automatically redirected to the site on IPFS by using a dns <code>TXT</code> record.</p>
+<p>It’s possible to ensure that someone running an IPFS node locally. Add a dns <code>TXT</code> record via your provider (I use cloudflare) with the following content:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="va">dnslink=</span>/ipfs/</a></code></pre></div>
 </section>
 </section>
 <section id="dat" class="level2">
@@ -176,6 +177,7 @@ swarm peers</code>, which should return the ipfs addresses of your peers.</p>
         <p>
             Built with λove using <a class="link dim purple" href="https://jaspervdj.be/hakyll/">hakyll</a> and <a class="link dim purple" href="http://tachyons.io/">tachyons</a>. <a class="link dim purple" href="https://github.com/patrl/patrl.github.io/tree/develop">Source</a>
         </p>
+        <p><a class="link dim purple" href="../about.html">About this site.</p>
     </div>
 </footer>
 
