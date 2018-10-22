@@ -1,0 +1,172 @@
+---
+title: Decentralize your personal website
+author: Patrick D. Elliott
+toc: true
+lang: english
+tags: decentralization, tech, ipfs, dat
+date: 22.10.2018
+---
+
+Like many academics and developers, my personal website is a static site[fn:1]
+hosted by GitHub pages, aliased to my personal domain. In fact, you can see the
+entire source for the site, including drafts for any posts I might happen to be
+working on [[https://github.com/patrl/patrl.github.io][here]]. As I started getting interested in the /decentralized
+web/[fn:2], I decided to experiment with publishing this site via contemporary
+peer-to-peer protocols - which means, of course, this site will persist
+regardless of what happens to GitHub's central servers.
+
+[[https://dat-project.org][Dat]] and [[https://ipfs.io][IPFS]] are two of the most prominent protocols at the heart of the
+decentralization movement, which aims to develop
+alternatives to huge cloud-based companies like google and facebook, and return
+power and control over information to the user by abandoning the traditional
+client/server archiecture. In a decentralized world, in principle there are only
+peers.
+
+Dat and IPFS (which stands for Inter-Planetary File System) have relatively similar aims -- they both provide a protocol and tooling for
+sharing content-addressable information between peers, with no single point of failure. Dat was originally developed as a means for
+scientists to share large datasets, but the ecosystem has however grown quite a bit beyond this
+initial remit -- see, e.g., [[https://beakerbrowser.com/][the Beaker Browser]]. IPFS on the other hand was
+pretty much always intended as a distributed alternative to the web, and there's
+already an [[https://github.com/ipfs-shipyard/ipfs-companion][extension]] to integrate modern browsers with the IPFS protocol. There
+are of course other technologies on the scene, such as [[https://www.scuttlebutt.nz/][scuttlebutt]] (which I'll
+probably write about some other time), and Tim Berners-Lee's new [[https://solid.mit.edu/][solid]] platform,
+but for now dat and IPFS seem the most mature.
+
+This post is a record of how I publish my [[https://patrickdelliott.com][homepage]] via IPFS at
+[[https://ipfs.io/ipns/patrickdelliott.com]][fn:3] and dat at [[dat://patrl.hashbase.io]]. There wasn't any real necessity to publish this site on the decentralized web -
+after all, the number of users who are going to visit this page via dat/ipfs is
+probably vanishingly small -- but I thought it would be a fun
+experiment, and an opportunity to learn a little more about emerging peer-to-peer
+technologies, which I think are independently quite exciting.
+
+** IPFS
+
+First, I'll talk through how I publish my site on the IPFS network to ~/ipns/patrickdelliott.com~
+via [[https://docs.ipfs.io/guides/concepts/dnslink/][DNSLink]].
+
+*** Running an IPFS node locally
+
+Before doing anything else, I needed to install ipfs, initialize the repository,
+and start the ipfs daemon - you can follow the instructions [[https://docs.ipfs.io/introduction/usage][here]].[fn:4] After starting the ipfs daemon,
+you can check whether or not you're connected to the network by running ~ipfs
+swarm peers~, which should return the ipfs addresses of your peers.
+
+*** Publishing on IPFS
+
+First, you need to retrieve the peer ID of your locally running ipfs node, by
+running the following command:
+
+#+BEGIN_SRC bash
+peerid=$(ipfs id -f"<id>")
+#+END_SRC
+
+On my local machine, the source for my website can be found at
+~~GitHub/patrl.github.io/_site/~. I ran the
+following commands, which adds the website to IPFS and retrieves the hash of the directory root:
+
+#+BEGIN_SRC bash
+siteloc=$HOME/GitHub/patrl.github.io/_site
+dirhash=$(ipfs add -r $(siteloc)/ | grep $(siteloc)$ | cut -d" " -f2)
+#+END_SRC
+
+#+RESULTS:
+
+Finally, we publish the directory to our node's ~ipns~ entry by running the
+following command:
+
+#+BEGIN_SRC bash
+ipfs name publish $dirhash
+#+END_SRC
+
+It should now be possible to access the site via, e.g., a public gateway such as
+[[https://ipfs.io]]. Even without running an IPFS node, you can access my site over
+the IPFS network by navigating to [[https://ipfs.io/ipns/patrickdelliott.com]].
+
+*** DNSLink
+
+We can go a step further and ensure that someone running a local IPFS node with
+the [[https://github.com/ipfs-shipyard/ipfs-companion][IPFS companion]] browser extension is automatically redirected to view the
+site on the IPFS network. This can be achieved by adding a DNS
+~TXT~ record via your provider (I use cloudflare) with the following content,
+pointing at your base url (in this case, ~patrickdelliott.com~):
+
+#+BEGIN_SRC bash
+dnslink=/ipns/$peerid
+#+END_SRC
+
+** Dat
+
+Before talking about dat, a little background: what got me started with this
+whole endeavour was an (in hindsight, overly ambitious) attempt to migrate this
+site from GitHub pages to a personal web server, and publish to both
+[[https://patrickdelliott.com]] and [[dat://patrickdelliott.com]]
+via [[https://github.com/beakerbrowser/homebase][homebase]]. I managed to get this working after jumping through quite a few
+hoops, but found that homebase wouldn't reliably sync with my website's dat
+repository, and the whole setup required too much manual intervention to be
+really worthwhile. I'll take another look at homebase once it's a bit more mature.
+
+In the meantime, I decided that a much more manageable solution would be to
+continue to host my site at ~https://patrickdelliott.com~, while simultaneously
+syncing it with a dat repository pinned at [[https://hashbase.io][hashbase.io]] - [[dat://patrl.hashbase.io]].
+
+
+** Installing ~dat~
+
+The first step is to install the ~dat~ cli tool, by following the instructions [[https://docs.datproject.org/install][here]].
+
+** Creating a ~dat~ repository
+
+Next, we want to turn our published site into a dat repo. Ordinarily, this would
+be as simple as running ~dat init~ in relevant directory, but things are a bit
+more complicated with a static website - ordinarily, my site gets built into
+~$HOME/GitHub/patrl.github.io/_site~, but every time the site gets /re/built,
+this entire directory gets wiped, including any metadata generated by ~dat~.
+This would mean I'd effectively have to initialize a new dat repo with a
+new hash every time the site gets rebuilt, and we don't want that.
+
+Instead, I did the following: first, I built the site and copied it into
+~$HOME/dat/patrickdelliott.com~. I then navigated to this directory and ran ~dat
+init~ to create the dat repository. Next, I went to [[https://hashbase.io]] and
+followed the instructions there to pin my dat repo to [[dat://patrl.hashbase.io]]. I
+then navigated to the local and run ~dat share --watch false~ to share the dat
+repo to the pinning service for the first time.
+
+Whenever I want to update the dat repo and sync with hashbase, I run a script
+called ~deploy-dat~, from my site's git repo. This wipes everything from the
+local dat repo, /except/ for the dat metadata, and copies in the newly built
+site, before syncing with the pinning service.
+
+#+BEGIN_SRC bash
+find ~/dat/patrickdelliott.com/ -mindepth 1 -maxdepth 1 \! \( -name .dat -o -name dat.json \) -exec rm -rf '{}' \;
+cp -a ~/GitHub/patrl.github.io/_site/. ~/dat/patrickdelliott.com/.
+cd ~/dat/patrickdelliott.com
+dat sync --watch false
+#+END_SRC
+
+* Resources
+
+ - [[https://ipfs.io/][IPFS]] :: homepage of the InterPlanetary Filesystem
+ - [[https://github.com/ipfs-shipyard/ipfs-companion][the IPFS browser extension]] :: use this to access the IPFS network via a
+      modern browser.
+ - [[https://datproject.org/][Dat Project]] :: homepage of the dat project
+ - [[https://beakerbrowser.com/][Beaker Browser]] :: a browser for the decentralized web, supporting both dat
+      and IPFS.
+ - [[https://github.com/beakerbrowser/homebase][Homebase]] :: An alternative tool for publishing on the decentralized web, by
+      the beaker devs.
+
+
+[fn:1] I build my site using the excellent haskell static-site generator [[https://jaspervdj.be/hakyll/][hakyll]].
+
+[fn:2] See also: /distributed web/, /immutable web/, /permanent
+web/, etc.
+
+[fn:3] You can substitute https://ipfs.io with any public IPFS gateway here,
+ such as [[https://cloudflare-ipfs.com]].
+
+[fn:4] On the off-chance you happen to be another NixOS
+user, this is as simple as adding the following line to your
+~configuration.nix~!
+
+#+BEGIN_SRC nix
+services.enable.ifps = true;
+#+END_SRC

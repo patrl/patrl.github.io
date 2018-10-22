@@ -109,6 +109,14 @@ li > a {
     @extend .dim, .link, .purple, .underline-hover;
 }
 
+dt > a {
+    @extend .dim, .link, .purple, .underline-hover;
+}
+
+.info > a{
+    @extend .dim, .link, .purple, .underline-hover, .normal;
+}
+
 p > a {
     @extend .dim, .link, .purple, .underline-hover;
 }
