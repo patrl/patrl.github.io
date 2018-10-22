@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="English" xml:lang="English">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    
+    <meta name="author" content="Patrick D. Elliott" />
+    
+    <!-- <meta name="dcterms.date" content="22.10.2018" /> -->
+    
+    <!-- <title>Decentralize your personal website</title> -->
+    <style type="text/css">
+ @font-face {
+     font-family: 'IBM Plex Sans';
+     font-style: normal;
+     font-weight: 400;
+     src: url("/fonts/IBMPlexSans-Regular.woff2") format("woff2"); }
+
+ @font-face {
+     font-family: 'IBM Plex Sans';
+     font-style: normal;
+     font-weight: 700;
+     src: url("/fonts/IBMPlexSans-Bold.woff2") format("woff2"); }
+
+ @font-face {
+     font-family: 'IBM Plex Sans';
+     font-style: italic;
+     font-weight: 400;
+     src: url("/fonts/IBMPlexSans-Italic.woff2") format("woff2"); }
+
+ @font-face {
+     font-family: 'IBM Plex Sans';
+     font-style: italic;
+     font-weight: 700;
+     src: url("/fonts/IBMPlexSans-BoldItalic.woff2") format("woff2"); }
+
+ @font-face {
+     font-family: 'IBM Plex Serif';
+     font-style: normal;
+     font-weight: 400;
+     src: url("/fonts/IBMPlexSerif-Regular.woff2") format("woff2"); }
+
+ @font-face {
+     font-family: 'IBM Plex Serif';
+     font-style: normal;
+     font-weight: 700;
+     src: url("/fonts/IBMPlexSerif-Bold.woff2") format("woff2"); }
+
+ @font-face {
+     font-family: 'IBM Plex Serif';
+     font-style: italic;
+     font-weight: 400;
+     src: url("/fonts/IBMPlexSerif-Italic.woff2") format("woff2"); }
+
+ @font-face {
+     font-family: 'IBM Plex Serif';
+     font-style: italic;
+     font-weight: 700;
+     src: url("/fonts/IBMPlexSerif-BoldItalic.woff2") format("woff2"); }
+
+ @font-face {
+     font-family: 'IBM Plex Mono';
+     font-style: normal;
+     font-weight: 400;
+     src: url("/fonts/IBMPlexMono-Regular.woff2") format("woff2"); }
+
+ @font-face {
+     font-family: 'IBM Plex Mono';
+     font-style: normal;
+     font-weight: 700;
+     src: url("/fonts/IBMPlexMono-Bold.woff2") format("woff2"); }
+
+ @font-face {
+     font-family: 'IBM Plex Mono';
+     font-style: italic;
+     font-weight: 400;
+     src: url("/fonts/IBMPlexMono-Italic.woff2") format("woff2"); }
+
+ @font-face {
+     font-family: 'IBM Plex Mono';
+     font-style: italic;
+     font-weight: 700;
+     src: url("/fonts/IBMPlexMono-BoldItalic.woff2") format("woff2"); }
+</style>
+
+    <link rel="stylesheet" href="../css/patrickdelliott.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+</head>
+
+    <body>
+        <div class="cf ph3 ph5-ns pv5">
+            <header class="fn fl-ns w-third-ns pr4-ns">
+    <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
+        <a href="../" title="home" class="black link normal">
+            Patrick D. Elliott
+        </a>
+    </h1>
+    <nav class="f4 mid-gray lh-copy ttu tracked plex-sans" role="navigation">
+        <a class="link dim mid-gray db" href="https://patrl.keybase.pub/cv.pdf" title="CV">vitæ</a>
+        <a class="link dim mid-gray db" href="../research.html" title="Research">research</a>
+        <a class="link dim mid-gray db" href="../teaching/index.html" title="Teaching">teaching</a>
+        <a class="link dim mid-gray db" href="../blog.html" title="Blog">blog</a>
+    </nav>
+</header>
+
+            <div class="fn fl-ns w-two-thirds-ns">
+                <h1 class="post-title">Decentralize your personal website</h1>
+<span class="f6 mid-gray ttu tracked plex-sans lh-title pr3 dib">October 22, 2018</span>
+<span class="info f6 mid-gray ttu tracked plex-sans lh-title dib">
+    
+    Tags: <a href="../tags/decentralization.html">decentralization</a>, <a href="../tags/tech.html">tech</a>, <a href="../tags/ipfs.html">ipfs</a>, <a href="../tags/dat.html">dat</a>
+    
+</span>
+<article class="mt4">
+<p>Like many academics and developers, my personal website is a static site<span><label for="sn-0" class="margin-toggle sidenote-number"><sup></sup></label><input type="checkbox" id="sn-0" class="margin-toggle" /><span class="sidenote">I build my site using the excellent haskell static-site generator <a href="https://jaspervdj.be/hakyll/">hakyll</a>.<br />
+<br />
+</span></span> hosted by GitHub pages, aliased to my personal domain. In fact, you can see the entire source for the site, including drafts for any posts I might happen to be working on <a href="https://github.com/patrl/patrl.github.io">here</a>. As I started getting interested in the <em>decentralized web</em><span><label for="sn-1" class="margin-toggle sidenote-number"><sup></sup></label><input type="checkbox" id="sn-1" class="margin-toggle" /><span class="sidenote">See also: <em>distributed web</em>, <em>immutable web</em>, <em>permanent web</em>, etc.<br />
+<br />
+</span></span>, I decided to experiment with publishing this site via contemporary peer-to-peer protocols - which means, of course, this site will persist regardless of what happens to GitHub’s central servers.</p>
+<p><a href="https://dat-project.org">Dat</a> and <a href="https://ipfs.io">IPFS</a> are two of the most prominent protocols at the heart of the decentralization movement, which aims to develop alternatives to huge cloud-based companies like google and facebook, and return power and control over information to the user by abandoning the traditional client/server archiecture. In a decentralized world, in principle there are only peers.</p>
+<p>Dat and IPFS (which stands for Inter-Planetary File System) have relatively similar aims – they both provide a protocol and tooling for sharing content-addressable information between peers, with no single point of failure. Dat was originally developed as a means for scientists to share large datasets, but the ecosystem has however grown quite a bit beyond this initial remit – see, e.g., <a href="https://beakerbrowser.com/">the Beaker Browser</a>. IPFS on the other hand was pretty much always intended as a distributed alternative to the web, and there’s already an <a href="https://github.com/ipfs-shipyard/ipfs-companion">extension</a> to integrate modern browsers with the IPFS protocol. There are of course other technologies on the scene, such as <a href="https://www.scuttlebutt.nz/">scuttlebutt</a> (which I’ll probably write about some other time), and Tim Berners-Lee’s new <a href="https://solid.mit.edu/">solid</a> platform, but for now dat and IPFS seem the most mature.</p>
+<p>This post is a record of how I publish my <a href="https://patrickdelliott.com">homepage</a> via IPFS at <a href="https://ipfs.io/ipns/patrickdelliott.com" class="uri">https://ipfs.io/ipns/patrickdelliott.com</a><span><label for="sn-2" class="margin-toggle sidenote-number"><sup></sup></label><input type="checkbox" id="sn-2" class="margin-toggle" /><span class="sidenote">You can substitute <a href="https://ipfs.io" class="uri">https://ipfs.io</a> with any public IPFS gateway here, such as <a href="https://cloudflare-ipfs.com" class="uri">https://cloudflare-ipfs.com</a>.<br />
+<br />
+</span></span> and dat at <a href="dat://patrl.hashbase.io" class="uri">dat://patrl.hashbase.io</a>. There wasn’t any real necessity to publish this site on the decentralized web - after all, the number of users who are going to visit this page via dat/ipfs is probably vanishingly small – but I thought it would be a fun experiment, and an opportunity to learn a little more about emerging peer-to-peer technologies, which I think are independently quite exciting.</p>
+<section id="ipfs" class="level2">
+<h2>IPFS</h2>
+<p>First, I’ll talk through how I publish my site on the IPFS network to <code>/ipns/patrickdelliott.com</code> via <a href="https://docs.ipfs.io/guides/concepts/dnslink/">DNSLink</a>.</p>
+<section id="running-an-ipfs-node-locally" class="level3">
+<h3>Running an IPFS node locally</h3>
+<p>Before doing anything else, I needed to install ipfs, initialize the repository, and start the ipfs daemon - you can follow the instructions <a href="https://docs.ipfs.io/introduction/usage">here</a>.<span><label for="sn-3" class="margin-toggle sidenote-number"><sup></sup></label><input type="checkbox" id="sn-3" class="margin-toggle" /><span class="sidenote">On the off-chance you happen to be another NixOS user, this is as simple as adding the following line to your <code>configuration.nix</code>!<br />
+<br />
+</span></span> After starting the ipfs daemon, you can check whether or not you’re connected to the network by running <code>ipfs
+swarm peers</code>, which should return the ipfs addresses of your peers.</p>
+</section>
+<section id="publishing-on-ipfs" class="level3">
+<h3>Publishing on IPFS</h3>
+<p>First, you need to retrieve the peer ID of your locally running ipfs node, by running the following command:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="va">peerid=$(</span><span class="ex">ipfs</span> id -f<span class="st">&quot;&lt;id&gt;&quot;</span><span class="va">)</span></a></code></pre></div>
+<p>On my local machine, the source for my website can be found at <code>~GitHub/patrl.github.io/_site/</code>. I ran the following commands, which adds the website to IPFS and retrieves the hash of the directory root:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="va">siteloc=$HOME</span>/GitHub/patrl.github.io/_site</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="va">dirhash=$(</span><span class="ex">ipfs</span> add -r <span class="va">$(</span><span class="ex">siteloc</span><span class="va">)</span>/ <span class="kw">|</span> <span class="fu">grep</span> <span class="va">$(</span><span class="ex">siteloc</span><span class="va">)</span>$ <span class="kw">|</span> <span class="fu">cut</span> -d<span class="st">&quot; &quot;</span> -f2<span class="va">)</span></a></code></pre></div>
+<p>Finally, we publish the directory to our node’s <code>ipns</code> entry by running the following command:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="ex">ipfs</span> name publish <span class="va">$dirhash</span></a></code></pre></div>
+<p>It should now be possible to access the site via, e.g., a public gateway such as <a href="https://ipfs.io" class="uri">https://ipfs.io</a>. Even without running an IPFS node, you can access my site over the IPFS network by navigating to <a href="https://ipfs.io/ipns/patrickdelliott.com" class="uri">https://ipfs.io/ipns/patrickdelliott.com</a>.</p>
+</section>
+<section id="dnslink" class="level3">
+<h3>DNSLink</h3>
+<p>We can go a step further and ensure that someone running a local IPFS node with the <a href="https://github.com/ipfs-shipyard/ipfs-companion">IPFS companion</a> browser extension is automatically redirected to view the site on the IPFS network. This can be achieved by adding a DNS <code>TXT</code> record via your provider (I use cloudflare) with the following content, pointing at your base url (in this case, <code>patrickdelliott.com</code>):</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="va">dnslink=</span>/ipns/<span class="va">$peerid</span></a></code></pre></div>
+</section>
+</section>
+<section id="dat" class="level2">
+<h2>Dat</h2>
+<p>Before talking about dat, a little background: what got me started with this whole endeavour was an (in hindsight, overly ambitious) attempt to migrate this site from GitHub pages to a personal web server, and publish to both <a href="https://patrickdelliott.com" class="uri">https://patrickdelliott.com</a> and <a href="dat://patrickdelliott.com" class="uri">dat://patrickdelliott.com</a> via <a href="https://github.com/beakerbrowser/homebase">homebase</a>. I managed to get this working after jumping through quite a few hoops, but found that homebase wouldn’t reliably sync with my website’s dat repository, and the whole setup required too much manual intervention to be really worthwhile. I’ll take another look at homebase once it’s a bit more mature.</p>
+<p>In the meantime, I decided that a much more manageable solution would be to continue to host my site at <code>https://patrickdelliott.com</code>, while simultaneously syncing it with a dat repository pinned at <a href="https://hashbase.io">hashbase.io</a> - <a href="dat://patrl.hashbase.io" class="uri">dat://patrl.hashbase.io</a>.</p>
+</section>
+<section id="installing-dat" class="level2">
+<h2>Installing <code>dat</code></h2>
+<p>The first step is to install the <code>dat</code> cli tool, by following the instructions <a href="https://docs.datproject.org/install">here</a>.</p>
+</section>
+<section id="creating-a-dat-repository" class="level2">
+<h2>Creating a <code>dat</code> repository</h2>
+<p>Next, we want to turn our published site into a dat repo. Ordinarily, this would be as simple as running <code>dat init</code> in relevant directory, but things are a bit more complicated with a static website - ordinarily, my site gets built into <code>$HOME/GitHub/patrl.github.io/_site</code>, but every time the site gets /re/built, this entire directory gets wiped, including any metadata generated by <code>dat</code>. This would mean I’d effectively have to initialize a new dat repo with a new hash every time the site gets rebuilt, and we don’t want that.</p>
+<p>Instead, I did the following: first, I built the site and copied it into <code>$HOME/dat/patrickdelliott.com</code>. I then navigated to this directory and ran <code>dat
+init</code> to create the dat repository. Next, I went to <a href="https://hashbase.io" class="uri">https://hashbase.io</a> and followed the instructions there to pin my dat repo to <a href="dat://patrl.hashbase.io" class="uri">dat://patrl.hashbase.io</a>. I then navigated to the local and run <code>dat share --watch false</code> to share the dat repo to the pinning service for the first time.</p>
+<p>Whenever I want to update the dat repo and sync with hashbase, I run a script called <code>deploy-dat</code>, from my site’s git repo. This wipes everything from the local dat repo, <em>except</em> for the dat metadata, and copies in the newly built site, before syncing with the pinning service.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="fu">find</span> ~/dat/patrickdelliott.com/ -mindepth 1 -maxdepth 1 \! <span class="dt">\(</span> -name .dat -o -name dat.json <span class="dt">\)</span> -exec rm -rf <span class="st">'{}'</span> <span class="dt">\;</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="fu">cp</span> -a ~/GitHub/patrl.github.io/_site/. ~/dat/patrickdelliott.com/.</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="bu">cd</span> ~/dat/patrickdelliott.com</a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="ex">dat</span> sync --watch false</a></code></pre></div>
+</section>
+<section id="resources" class="level1">
+<h1>Resources</h1>
+<dl>
+<dt><a href="https://ipfs.io/">IPFS</a></dt>
+<dd>homepage of the InterPlanetary Filesystem
+</dd>
+<dt><a href="https://github.com/ipfs-shipyard/ipfs-companion">the IPFS browser extension</a></dt>
+<dd>use this to access the IPFS network via a modern browser.
+</dd>
+<dt><a href="https://datproject.org/">Dat Project</a></dt>
+<dd>homepage of the dat project
+</dd>
+<dt><a href="https://beakerbrowser.com/">Beaker Browser</a></dt>
+<dd>a browser for the decentralized web, supporting both dat and IPFS.
+</dd>
+<dt><a href="https://github.com/beakerbrowser/homebase">Homebase</a></dt>
+<dd>An alternative tool for publishing on the decentralized web, by the beaker devs.
+</dd>
+</dl>
+</section>
+</article>
+
+            </div>
+        </div>
+        <footer class="bt b--light-gray f6 gray tc">
+    <div class="w-100 ph3 pt5 ">
+        <a class="inline-flex items-center tc" href="https://twitter.com/patrickdelliott" title="Twitter">
+            <img class="dib h2 w2" src="../images/twitter.svg" />
+        </a>
+        <a class="inline-flex items-center tc" href="https://keybase.io/patrl" title="Keybase">
+            <img class="dib h2 w2" src="../images/keybase.svg" />
+        </a>
+        <a class="inline-flex items-center tc" href="https://github.com/patrl" title="GitHub">
+            <img class="dib h2 w2" src="../images/github.svg" />
+        </a>
+    </div>
+    <div class="measure tc center ph2 pb3 lh-copy">
+        <p>
+            @ 2018 Patrick D. Elliott
+        </p>
+        <p>
+            Built with λove using <a class="link dim purple" href="https://jaspervdj.be/hakyll/">hakyll</a> and <a class="link dim purple" href="http://tachyons.io/">tachyons</a>. <a class="link dim purple" href="https://github.com/patrl/patrl.github.io/tree/develop">Source</a>
+        </p>
+        <p><a class="link dim purple" href="../about-site.html">About this site.</p>
+    </div>
+</footer>
+
+    </body>
+</html>
