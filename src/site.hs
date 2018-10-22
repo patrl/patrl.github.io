@@ -144,11 +144,14 @@ main =
                 `mappend` postCtxWithTags tags
 
         makeItem ""
+          >>= loadAndApplyTemplate "node_modules/octicons/build/svg/rss.svg" archiveCtx
           >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
           >>= loadAndApplyTemplate "templates/default.html" archiveCtx
           >>= relativizeUrls
 
     match "templates/*" $ compile templateBodyCompiler
+
+    match "node_modules/octicons/build/svg/*" $ compile templateBodyCompiler
 
 
 --------------------------------------------------------------------------------
