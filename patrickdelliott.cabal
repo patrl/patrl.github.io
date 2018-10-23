@@ -12,6 +12,8 @@ executable site
                   , mtl
                   , hakyll-sass
                   , containers
+                  , clay
+                  , process
   hs-source-dirs: src
   other-modules: Text.Pandoc.SideNote
   ghc-options:      -threaded

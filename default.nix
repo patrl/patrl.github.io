@@ -1,5 +1,5 @@
-{ mkDerivation, base, containers, hakyll, hakyll-sass, mtl, pandoc
-, pandoc-types, stdenv
+{ mkDerivation, base, clay, containers, hakyll, hakyll-sass, mtl
+, pandoc, pandoc-types, process, stdenv
 }:
 mkDerivation {
   pname = "patrickdelliott";
@@ -8,7 +8,8 @@ mkDerivation {
   isLibrary = false;
   isExecutable = true;
   executableHaskellDepends = [
-    base containers hakyll hakyll-sass mtl pandoc pandoc-types
+    base clay containers hakyll hakyll-sass mtl pandoc pandoc-types
+    process
   ];
   license = stdenv.lib.licenses.unfree;
   hydraPlatforms = stdenv.lib.platforms.none;
