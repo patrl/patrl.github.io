@@ -110,11 +110,11 @@ continue to host my site at ~https://patrickdelliott.com~, while simultaneously
 syncing it with a dat repository pinned at [[https://hashbase.io][hashbase.io]] - [[dat://patrl.hashbase.io]].
 
 
-** Installing ~dat~
+*** Installing ~dat~
 
 The first step is to install the ~dat~ cli tool, by following the instructions [[https://docs.datproject.org/install][here]].
 
-** Creating a ~dat~ repository
+*** Creating a ~dat~ repository
 
 Next, we want to turn our published site into a dat repo. Ordinarily, this would
 be as simple as running ~dat init~ in relevant directory, but things are a bit
