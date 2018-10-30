@@ -7,7 +7,6 @@ import           Text.Pandoc.Options
 import           Text.Pandoc.SideNote           ( usingSideNotes )
 -- import           Control.Monad                  ( liftM )
 import           Hakyll.Web.Sass                ( sassCompiler )
-import           System.Process ( readProcess )
 
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -46,6 +45,7 @@ main =
       let compressCssItem = fmap compressCss
       compile (compressCssItem <$> sassCompiler)
 
+    -- Clay
     match "css/*.hs" $ do
       route $ setExtension "css"
       compile $ getResourceString >>= withItemBody (unixFilter "cabal" ["exec", "runghc"])
@@ -111,7 +111,7 @@ main =
         $   myPandocBiblioCompiler "csl/unified-style-linguistics.csl"
                                    "bib/refs.bib"
         >>= saveSnapshot "content"
-        >>= loadAndApplyTemplate "templates/post.html"    ((postCtxWithTags tags) `mappend` gitTag)
+        >>= loadAndApplyTemplate "templates/post.html"    (postCtxWithTags tags)
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
@@ -167,13 +167,14 @@ postCtxWithTags tags = tagsField "tags" tags `mappend` postCtx
 postCtx :: Context String
 postCtx = dateField "date" "%B %e, %Y" `mappend` defaultContext
 
-gitTag :: Context String
-gitTag = field "git" $ \_ -> do
-  unsafeCompiler $ do
-    sha <- readProcess "git" ["log", "-1", "HEAD", "--pretty=format:%H"] []
-    message <- readProcess "git" ["log", "-1", "HEAD", "--pretty=format:%s"] []
-    return ("<a href=\"https://github.com/patrl/patrl.github.io/commit/" ++ sha ++
-           "\" title=\"" ++ message ++ "\">" ++ (take 8 sha) ++ "</a>")
+-- -- Adding a git revision:
+-- gitTag :: Context String
+-- gitTag = field "git" $ \_ -> do
+  -- unsafeCompiler $ do
+    -- sha <- readProcess "git" ["log", "-1", "HEAD", "--pretty=format:%H"] []
+    -- message <- readProcess "git" ["log", "-1", "HEAD", "--pretty=format:%s"] []
+    -- return ("<a href=\"https://github.com/patrl/patrl.github.io/commit/" ++ sha ++
+           -- "\" title=\"" ++ message ++ "\">" ++ (take 8 sha) ++ "</a>")
 
 config :: Configuration
 config = defaultConfiguration { deployCommand = "./deploy.sh" }

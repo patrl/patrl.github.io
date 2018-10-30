@@ -1,85 +1,118 @@
 {-# LANGUAGE OverloadedStrings #-}
 
 import           Clay                    hiding ( map )
+import Clay.Selector ( selectorFromText )
 import qualified Clay.Media                    as Mq
-import           Prelude                 hiding ( rem, div, span )
+import           Prelude                 hiding ( rem
+                                                , div
+                                                , span
+                                                )
+import qualified Data.Text as T
+import Control.Applicative
 
 main :: IO ()
-main = putCss $ do
-  importUrl "tachyons.css"
-  fontFace $ do
-    fontStyle normal
-    fontWeight $ weight 400
-    fontFamily ["IBM Plex Mono"] []
-    fontFaceSrc [ FontFaceSrcLocal "/fonts/IBMPlexMono-Regular.woff2" ]
-  fontFace $ do
-    fontStyle italic 
-    fontWeight $ weight 400
-    fontFamily ["IBM Plex Mono"] []
-    fontFaceSrc [ FontFaceSrcLocal "/fonts/IBMPlexMono-Italic.woff2" ]
-  fontFace $ do
-    fontStyle normal
-    fontWeight $ weight 700
-    fontFamily ["IBM Plex Mono"] []
-    fontFaceSrc [ FontFaceSrcLocal "/fonts/IBMPlexMono-Bold.woff2" ]
-  fontFace $ do
-    fontStyle italic
-    fontWeight $ weight 700
-    fontFamily ["IBM Plex Mono"] []
-    fontFaceSrc [ FontFaceSrcLocal "/fonts/IBMPlexMono-BoldItalic" ]
-  ol ? ul ? do
-    _lhCopy
-    paddingLeft $ unitless 0
-    listStylePosition inside
-  dl ? _lhCopy
-  div ? do
-    ".sourceCode" ? _measureWide
-  table ? overflow auto
-  p |+ p ? textIndent (indent $ em 1)
-  p ? do
-    a <? _link
-  blockquote ? p ? textIndent (indent . em $ negate 0.5)
-  ".post-title" ? do
-    _ns _f1
-    _f2
-  code ? _plexMono
-  a ? do
-    ".sourceLine" ? do
-      _lhTitle
-      span <? display inlineBlock
-  ".summary" ? h1 ? h2 ? h3 ? do
-    _lhTitle
-    _measureWide
-    _ttu
+main =
+  putCss $ do
+    ".f-headine" ? ".f-6" ? fH
+    ".f-headline-ns" ? ".f-6-ns" ? ns fH
+    ".f-subheadline" ? ".f-5" ? fSubH
+    ".f-subheadline-ns" ? ".f-5-ns" ? ns f1
+    ".f1" ? f1
+    ".f1-ns" ? ns f1
+    ".f2" ? f2
+    ".f2-ns" ? ns f2
+    ".f3" ? f3
+    ".f3-ns" ? ns f3
+    ".f4" ? f4
+    ".f4-ns" ? ns f4
+    ".f5" ? f5
+    ".f5-ns" ? ns f5
+    ".f6" ? f6
+    ".f6-ns" ? ns f6
+    ".f7" ? f7
+
+-- >>> :t ("f" ? fH)
+-- <interactive>:1:6: warning: [-Wdeferred-out-of-scope-variables]
+--     Variable not in scope: (?) :: [Char] -> t0 -> t
+-- <interactive>:1:8: warning: [-Wdeferred-out-of-scope-variables]
+--     Variable not in scope: fH
+-- ("f" ? fH) :: t
+
+-- >>> mapM_ putCss $ (?) <$> (ZipList fClasses) <*> (ZipList fCss)
+-- .f1
+-- {
+--   font-size : 3rem;
+-- }
+-- /* Generated with Clay, http://fvisser.nl/clay */
+-- .f2
+-- {
+--   font-size : 2.25rem;
+-- }
+-- /* Generated with Clay, http://fvisser.nl/clay */
+-- .f3
+-- {
+--   font-size : 1.5rem;
+-- }
+-- /* Generated with Clay, http://fvisser.nl/clay */
+-- .f4
+-- {
+--   font-size : 1.25rem;
+-- }
+-- /* Generated with Clay, http://fvisser.nl/clay */
+-- .f5
+-- {
+--   font-size : 1rem;
+-- }
+-- /* Generated with Clay, http://fvisser.nl/clay */
+-- .f6
+-- {
+--   font-size : 0.875rem;
+-- }
+-- /* Generated with Clay, http://fvisser.nl/clay */
+-- 
+-- >>> mapM_ putCss $ (?) <$> (ZipList $ map ((append "-ns")) (fClasses)) <*> (ZipList $ map ns fCss)
+-- <interactive>:533:42: warning: [-Wdeferred-out-of-scope-variables]
+--     • Variable not in scope: append :: [Char] -> Selector -> Selector
+--     • Perhaps you meant ‘mappend’ (imported from Prelude)
+-- *** Exception: <interactive>:533:42: error:
+--     • Variable not in scope: append :: [Char] -> Selector -> Selector
+--     • Perhaps you meant ‘mappend’ (imported from Prelude)
+-- (deferred type error)
+
+
+fClasses :: [Selector]
+fClasses = [".f1",".f2",".f3",".f4",".f5",".f6"]
+
+fCss :: [Css]
+fCss = [f1,f2,f3,f4,f5,f6]
 
 -- -- tachyons type scale module in clay
--- _fH, _fSubH, _f1, _f2, _f3, _f4, _f5, _f6, _f7 :: Css
--- [_fH, _fSubH, _f1, _f2, _f3, _f4, _f5, _f6, _f7] =
---   map (fontSize . rem) [6.0, 5.0, 3.0, 2.25, 1.5, 1.25, 1.0, 0.875, 0.75]
+fH, fSubH, f1, f2, f3, f4, f5, f6, f7 :: Css
+[fH, fSubH, f1, f2, f3, f4, f5, f6, f7] =
+  map (fontSize . rem) [6.0, 5.0, 3.0, 2.25, 1.5, 1.25, 1.0, 0.875, 0.75]
 
--- -- tachyons breakpoints
--- _ns, _m, _l :: Css -> Css
--- [_ns, _m, _l] = map
---   (query Mq.screen)
---   [ [Mq.minWidth $ em 30]
---   , [Mq.minWidth $ em 30, Mq.maxWidth $ em 60]
---   , [Mq.minWidth $ em 60]
---   ]
+-- tachyons breakpoints
+ns, m, l :: Css -> Css
+[ns, m, l] = map
+  (query Mq.screen)
+  [ [Mq.minWidth $ em 30]
+  , [Mq.minWidth $ em 30, Mq.maxWidth $ em 60]
+  , [Mq.minWidth $ em 60]
+  ]
 
--- _measure, _measureWide, _measureNarrow :: Css
--- [_measure, _measureWide, _measureNarrow] = map (maxWidth . em) [30, 34, 20]
+measure, measureWide, measureNarrow :: Css
+[measure, measureWide, measureNarrow] = map (maxWidth . em) [30, 34, 20]
 
--- _lhCopy, _lhTitle, _lhSolid :: Css
--- [_lhCopy, _lhTitle, _lhSolid] =
---   map (lineHeight . unitless) [1.5, 1.25, 1.0]
+lhCopy, lhTitle, lhSolid :: Css
+[lhCopy, lhTitle, lhSolid] = map (lineHeight . unitless) [1.5, 1.25, 1.0]
 
--- _plexMono :: Css
--- _plexMono = fontFamily
---   ["IBM Plex Mono", "Menlo", "DejaVu Sans Mono", "Bitstream Vera Sans Mono"]
---   [monospace]
+plexMono :: Css
+plexMono = fontFamily
+  ["IBM Plex Mono", "Menlo", "DejaVu Sans Mono", "Bitstream Vera Sans Mono"]
+  [monospace]
 
--- _ttu :: Css
--- _ttu = textTransform uppercase
+ttu :: Css
+ttu = textTransform uppercase
 
--- _link :: Css
--- _link = textDecoration none
+link :: Css
+link = textDecoration none
