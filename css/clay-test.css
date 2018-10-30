@@ -1,0 +1,124 @@
+
+
+.f-headine .f-6
+{
+  font-size : 6rem;
+}
+
+
+
+@media screen and (min-width: 30em)
+{
+.f-headline-ns .f-6-ns
+{
+  font-size : 6rem;
+}
+
+}
+
+.f-subheadline .f-5
+{
+  font-size : 5rem;
+}
+
+
+
+@media screen and (min-width: 30em)
+{
+.f-subheadline-ns .f-5-ns
+{
+  font-size : 3rem;
+}
+
+}
+.f1
+{
+  font-size : 3rem;
+}
+
+
+@media screen and (min-width: 30em)
+{
+.f1-ns
+{
+  font-size : 3rem;
+}
+
+}
+.f2
+{
+  font-size : 2.25rem;
+}
+
+
+@media screen and (min-width: 30em)
+{
+.f2-ns
+{
+  font-size : 2.25rem;
+}
+
+}
+.f3
+{
+  font-size : 1.5rem;
+}
+
+
+@media screen and (min-width: 30em)
+{
+.f3-ns
+{
+  font-size : 1.5rem;
+}
+
+}
+.f4
+{
+  font-size : 1.25rem;
+}
+
+
+@media screen and (min-width: 30em)
+{
+.f4-ns
+{
+  font-size : 1.25rem;
+}
+
+}
+.f5
+{
+  font-size : 1rem;
+}
+
+
+@media screen and (min-width: 30em)
+{
+.f5-ns
+{
+  font-size : 1rem;
+}
+
+}
+.f6
+{
+  font-size : 0.875rem;
+}
+
+
+@media screen and (min-width: 30em)
+{
+.f6-ns
+{
+  font-size : 0.875rem;
+}
+
+}
+.f7
+{
+  font-size : 0.75rem;
+}
+
+
+/* Generated with Clay, http://fvisser.nl/clay */
