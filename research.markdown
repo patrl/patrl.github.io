@@ -7,6 +7,7 @@ date: 19.10.2018
 <details>
 <summary>Papers</summary>
 
+- @elliott18intervention
 - @lenls18a
 - @lenls18b
 - @elliottEtAl2018simplex <a href="https://patrl.keybase.pub/papers/whoAndWhatMs.pdf">Read.</a>

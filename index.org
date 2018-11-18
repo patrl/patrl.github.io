@@ -2,7 +2,7 @@
 title: About
 author: Patrick D. Elliott
 lang: English
-date: 19.10.2018
+date: 18.11.2018
 ---
 
 I'm a postdoctoral researcher at the [[https://www.zas.gwz-berlin.de][Leibniz-Zentrum Allgemeine
@@ -17,7 +17,5 @@ Reach me at: [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott(at)gmail.co
 
 *** Upcoming
 
-- November 12-14: I'll be giving a solo talk entitled [[https://keybase.pub/patrl/abstracts/applicatives.pdf][Applicatives for anaphora
-  and presupposition]], and a joint talk with Yasu sudo entitled [[https://keybase.pub/patrl/abstracts/bindingExPostFacto.pdf][Binding Ex Post Facto]] at LENLS15, Yokohama.
-- March 6-8, 2019: I'll be giving an invited talk at the DGfS workshop "Encoding
-  emotive attitudes in non-truth conditional meaning" in Bremen.
+- March 6-8, 2019: I'll be giving an invited talk at the DGfS workshop [[https://sites.google.com/site/encodingemotiveattitudes/][Emo 2019]]
+  in Bremen entitled "The Dynamics of Expressive Content".
