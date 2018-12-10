@@ -17,5 +17,12 @@ Reach me at: [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott(at)gmail.co
 
 *** Upcoming
 
+- December 14.12, 2018: I'll be giving a guest seminar at the [[http://danielrothschild.com/attitudes/][UCL semantics of
+  attitudes]] series entitled "Arguments and Attitudes".
 - March 6-8, 2019: I'll be giving an invited talk at the DGfS workshop [[https://sites.google.com/site/encodingemotiveattitudes/][Emo 2019]]
   in Bremen entitled "The Dynamics of Expressive Content".
+- I have two papers in preparation for the /Proceedings of LENLS
+  15/, one with Yasu Sudo entitled "Binding /Ex Post Facto/", and one by myself
+  entitled "Applicatives for Anaphora and Presupposition".
+- I have a paper in preparation for the /Proceedings of Sinn und Bedeutung 23/
+  with Uli Sauerland entitled "Ineffability and unexhaustification".
