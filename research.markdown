@@ -49,6 +49,7 @@ date: 19.10.2018
 <details>
 <summary>talks 2018</summary>
 
+- @talk18zas
 - @talk18uclc
 - @talk18uclb
 - @talk18ucla
