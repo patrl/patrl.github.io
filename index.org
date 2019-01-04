@@ -18,7 +18,8 @@ Reach me at: [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott(at)gmail.co
 *** Upcoming
 
 - January 17, 2019: I'll be giving an invited talk at the Frankfurt Semantics
-  Colloquium, title TBA.
+  Colloquium, entitled "Two souls of disjunction: deriving presupposition
+  projection from exhaustification".
 - March 6-8, 2019: I'll be giving an invited talk at the DGfS workshop [[https://sites.google.com/site/encodingemotiveattitudes/][Emo 2019]]
   in Bremen entitled "The Dynamics of Expressive Content".
 - April 12-13, 2019: I'll be giving a joint talk with Yasu Sudo at [[https://voices.uchicago.edu/sluicingat50/][SLUICING+@50]]
