@@ -7,9 +7,9 @@
     
     <meta name="author" content="Patrick D. Elliott" />
     
-    <!-- <meta name="dcterms.date" content="18.11.2018" /> -->
+    <!-- <meta name="dcterms.date" content="24.01.2019" /> -->
     
-    <!-- <title>About</title> -->
+    <!-- <title>Update semantics via the state monad</title> -->
     <style type="text/css">
  @font-face {
      font-family: 'IBM Plex Sans';
@@ -84,7 +84,7 @@
      src: url("/fonts/IBMPlexMono-BoldItalic.woff2") format("woff2"); }
 </style>
 
-    <link rel="stylesheet" href="./css/patrickdelliott.css" />
+    <link rel="stylesheet" href="../css/patrickdelliott.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
@@ -94,31 +94,79 @@
         <div class="cf ph3 ph5-ns pv5">
             <header class="fn fl-ns w-third-ns pr4-ns">
     <h1 class="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
-        <a href="./" title="home" class="black link normal">
+        <a href="../" title="home" class="black link normal">
             Patrick D. Elliott
         </a>
     </h1>
     <nav class="f4 mid-gray lh-copy ttu tracked plex-sans" role="navigation">
         <a class="link dim mid-gray db" href="https://patrl.keybase.pub/cv.pdf" title="CV">vitæ</a>
-        <a class="link dim mid-gray db" href="./research.html" title="Research">research</a>
-        <a class="link dim mid-gray db" href="./teaching/index.html" title="Teaching">teaching</a>
-        <a class="link dim mid-gray db" href="./blog.html" title="Blog">blog</a>
+        <a class="link dim mid-gray db" href="../research.html" title="Research">research</a>
+        <a class="link dim mid-gray db" href="../teaching/index.html" title="Teaching">teaching</a>
+        <a class="link dim mid-gray db" href="../blog.html" title="Blog">blog</a>
     </nav>
 </header>
 
             <div class="fn fl-ns w-two-thirds-ns">
-                <p>I’m a postdoctoral researcher at the <a href="https://www.zas.gwz-berlin.de">Leibniz-Zentrum Allgemeine Sprachwissenschaft</a> in Berlin, associated with the semantics and pragmatics research group. I’m a theoretical linguist, which means that my work involves developing formal models of what we know when we know a language. Mostly, I do semantics, but I’m also interested in syntax, morphology, pragmatics, and their interfaces with semantics.</p>
-<p>When I’m not doing linguistics, I <a href="https://github.com/patrl">code</a>, <a href="https://www.goodreads.com/user/show/59694544-patrick-elliott">read</a>, and scale vertical walls.</p>
-<p>Reach me at: <a href="mailto:patrick.d.elliott@gmail.com">patrick.d.elliott(at)gmail.com</a></p>
-<section id="upcoming" class="level3">
-<h3>Upcoming</h3>
-<ul>
-<li>March 6-8, 2019: I’ll be giving an invited talk at the DGfS workshop <a href="https://sites.google.com/site/encodingemotiveattitudes/">Emo 2019</a> in Bremen entitled “<em>fuck</em> compositionality”.</li>
-<li>April 12-13, 2019: I’ll be giving a joint talk with Yasu Sudo at <a href="https://voices.uchicago.edu/sluicingat50/">SLUICING+<span class="citation" data-cites="50">@50</span></a> in Chicago entitled “The dynamics of ellipsis identity”.</li>
-<li>I have two papers in preparation for the <em>Proceedings of LENLS 15</em>, one with Yasu Sudo entitled “Binding <em>Ex Post Facto</em>”, and one by myself entitled “Applicatives for Anaphora and Presupposition”.</li>
-<li>I have a paper in preparation for the <em>Proceedings of Sinn und Bedeutung 23</em> with Uli Sauerland entitled “Ineffability and unexhaustification”.</li>
-</ul>
+                <h1 class="post-title">Update semantics via the state monad</h1>
+<span class="f6 mid-gray ttu tracked plex-sans lh-title pr3 dib">24.01.2019</span>
+<span class="info f6 mid-gray ttu tracked plex-sans lh-title dib">
+    
+</span>
+<article class="mt4">
+<p>In the following, I’ll show how to formalizea particular conception of <em>update semantics</em> – a semantic theory tailored to account for <em>presupposition projection</em> <span class="citation" data-cites="heim1983">(Heim 1983)</span> – using Haskell’s <code>StateT</code> monad transformer. This will help us end up with a clear-eyed view of the relation between `classical` meanings for propositional connectives, such as <em>and</em>, <em>or</em>, <em>if…then…</em> etc., and the (quite different) meanings posited in an update semantics. I’ll be working towards a system in which the propositional connectives can be straightforwardly lifted into their dynamic counterparts. Spoiler: we’re not going to quite succeed, but I’ll suggest a possible fix.</p>
+<section id="background-on-presupposition-projection" class="level1">
+<h1>Background on presupposition projection</h1>
+<p>If one were to ask a layperson the question: what is language <em>for</em>? The chances are that they would answer with something like the following: language is used to convey information. To give an example, bordering on the trivial, if we’re wondering whether or not Hubert smokes, and a speaker utters the sentence “Hubert doesn’t smoke”, and we trust her to be truthful, then we come to believe something new – namely, <em>that Hubert doesn’t smoke</em>, from which we can infer that <em>someone doesn’t smoke</em>, etc.</p>
+<p>To say that language can be used informatively seems, of course, so trivial that it borders on a truism. Somewhat more surprisingly, some sentences seem to require certain information to be <em>redundant</em> in a given context to be usable. Consider for example, the sentence “Hubert stopped smoking”. If a speaker utters this sentence in a context where we have no idea whether Hubert ever smokes, it seems…odd. The intuition here is that she seems to be <em>taking for granted</em> that we know that Hubert smoked in the past. If it so happens that we <em>do</em> believe that Hubert smoked in the past, then we learn something new – namely, <em>that Hubert doesn’t smoke now</em>. Linguists and philosophers call the meaning component that is required to be redundant the <em>presupposition</em> of the sentence, and the information conveyed by a sentence, its <em>assertion</em>.</p>
+<p>One of the hallmarks of <em>presuppositions</em> is the fact that they <em>project</em> in certain environments. <span class="citation" data-cites="karttunen1973">Karttunen (1973)</span>, the <em>locus classicus</em> for presupposition projection in complex sentences, observes non-trivial projection patterns in complex sentences involving logical operators, such as negation, conjunction, and disjunction. What do we mean by this? Well, we know that “Hubert stopped smoking” asserts that <em>Hubert doesn’t smoke now</em>, and presupposes that <em>Hubert did smoke in the past</em>. Now consider the assertion/presupposition of “Hubert didn’t stop smoking”:</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\text{Hubert stopped smoking}\\
+&amp;\textit{assertion} &amp;= \text{Hubert doesn't smoke now}\\
+&amp;\textit{presupposition} &amp;= \text{Hubert smoked in the past}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\text{Hubert didn't stop smoking}\\
+&amp;\textit{assertion}  &amp;= \text{Hubert smokes now}\\
+&amp;\textit{presupposition} &amp;= \text{Hubert smoked in the past}
+\end{aligned}
+\]</span></p>
+<p>Note that the assertion is negated - just as we expect - but the presupposition of the negative sentence is the same as the presupposition of the positive sentence. More generally, a sentence of the form <span class="math inline">\(\text{not}\,ϕ\)</span> presupposes whatever <span class="math inline">\(ϕ\)</span> presupposes.</p>
+<p>Moving on to conjunction, Karttunen observed that the presupposition of a conjunctive sentence of the form <span class="math inline">\(ϕ \text{and} ψ\)</span>, depends on whether <span class="math inline">\(ϕ\)</span> entails the presupposition of <span class="math inline">\(ψ\)</span> – in other words, on whether or not the presupposition of the second conjunct is redundant in light of the first conjunct.</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\text{Hubert stopped smoking}\\
+&amp;\textit{assertion} &amp;= \text{Hubert doesn't smoke now}\\
+&amp;\textit{presupposition} &amp;= \text{Hubert smoked in the past}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\text{Hubert did smoke and Hubert stopped smoking}\\
+&amp;\textit{assertion}  &amp;= \text{Hubert smoked in the past and doesn't smoke now}\\
+&amp;\textit{presupposition} &amp;= \text{N/A}
+\end{aligned}
+\]</span></p>
+<p>A theory that is tailored to account for presupposition is Irene Heim’s update semantics. In the next section, I’ll show how I implemented update semantics in Haskell, using the <code>StateT</code> monad transformer.</p>
 </section>
+<section id="the-basic-implementation" class="level1">
+<h1>The basic implementation</h1>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-heim1983">
+<p>Heim, Irene. 1983. On the projection problem for presuppositions. In, <em>Proceedings of WCCFL 2</em>, 114–125. Stanford University.</p>
+</div>
+<div id="ref-karttunen1973">
+<p>Karttunen, Lauri. 1973. Presuppositions of compound sentences. 4(2). 169–193. <a href="https://www.jstor.org/stable/4177763" class="uri">https://www.jstor.org/stable/4177763</a>.</p>
+</div>
+</div>
+</section>
+</article>
+
             </div>
         </div>
         <footer class="bt b--light-gray f6 pv4 ph3 tc">
@@ -135,7 +183,7 @@
             @ 2018 Patrick D. Elliott
     </div>
     <div class="mt2">
-    <a class="link dim purple" href="./about-site.html">About this site.</p>
+    <a class="link dim purple" href="../about-site.html">About this site.</p>
     </div>
 </footer>
 
