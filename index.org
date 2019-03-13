@@ -17,12 +17,13 @@ Reach me at: [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott(at)gmail.co
 
 *** Upcoming
 
-- March 6-8, 2019: I'll be giving an invited talk at the DGfS workshop [[https://sites.google.com/site/encodingemotiveattitudes/][Emo 2019]]
-  in Bremen entitled "/fuck/ compositionality".
 - April 12-13, 2019: I'll be giving a joint talk with Yasu Sudo at [[https://voices.uchicago.edu/sluicingat50/][SLUICING+@50]]
   in Chicago entitled "The dynamics of ellipsis identity".
-- I have two papers in preparation for the /Proceedings of LENLS
-  15/, one with Yasu Sudo entitled "Binding /Ex Post Facto/", and one by myself
-  entitled "Applicatives for Anaphora and Presupposition".
-- I have a paper in preparation for the /Proceedings of Sinn und Bedeutung 23/
+- June 11, 2019: I'll be giving an invited talk at Göttingen university entitled
+  "The two souls of disjunction".
+- August 26-30, 2019: I'll be teaching a class on presupposition projection
+  entitled "Satisfaction and its discontents" at the Balaton Linguistics Summer
+  School (BLing) in Hungary. [[https://sites.google.com/view/bling2019/schedule/satisfaction-and-its-discontents][course description]]
+- I have a paper in preparation from the /Proceedings of LENLS 15/ entitled "Applicatives for Anaphora and Presupposition".
+- I have a paper to appear in the /Proceedings of Sinn und Bedeutung 23/
   with Uli Sauerland entitled "Ineffability and unexhaustification".
