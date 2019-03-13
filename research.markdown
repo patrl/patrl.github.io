@@ -50,6 +50,7 @@ date: 19.10.2018
 <details>
 <summary>talks 2019</summary>
 
+- @talk19dgfs <a href="https://patrl.keybase.pub/slides/emoSlides.pdf">Handout.</a>
 - @talk19frankfurt <a href="https://patrl.keybase.pub/handouts/frankfurt.pdf">Handout.</a>
 
 </details>
