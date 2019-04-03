@@ -21,10 +21,10 @@ Reach me at: [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott(at)gmail.co
   in Chicago entitled "The dynamics of ellipsis identity".
 - June 11, 2019: I'll be giving an invited talk at Göttingen university entitled
   "The two souls of disjunction".
-- August 26-30, 2019: I'll be teaching two classes at the Balaton Linguistics Summer
-  School (BLing) in Hungary: one on presupposition projection
-  entitled "Satisfaction and its discontents" ([[https://sites.google.com/view/bling2019/schedule/satisfaction-and-its-discontents][course description]]), and another
-  joint with Daniele Panizza on semantic parsing (this will be a lab course).
-- I have a paper in preparation from the /Proceedings of LENLS 15/ entitled "Applicatives for Anaphora and Presupposition".
+- July 1-3, 2019: I'll be giving two talks at the workshop /Asymmetries in
+  language: presuppositions and beyond/ at ZAS Berlin. One by myself entitled
+  "Two souls of disjunction: towards a state-monadic update semantics", and one
+  joine with Yasu Sudo entitled "Binding back from the future".
+- I have a paper to appear in the /Proceedings of LENLS 15/ entitled "Applicatives for Anaphora and Presupposition".
 - I have a paper to appear in the /Proceedings of Sinn und Bedeutung 23/
   with Uli Sauerland entitled "Ineffability and unexhaustification".
