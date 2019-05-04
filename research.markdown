@@ -25,9 +25,10 @@ date: 19.10.2018
 
 <summary class="podkova f3 ttu tracked cl-effect-1 link dim">Snippets</Summary>
 
-- @snippet18uncond <a href="https://patrl.keybase.pub/snippets/whSnippet.pdf">Read.</a>
-- @snippet18wh <a href="https://patrl.keybase.pub/snippets/uncondSnippet.pdf">Read.</a>
-- @snippet18zero <a href="https://patrl.keybase.pub/snippets/zeroSnippet.pdf">Read.</a>
+- @snippet19recip <a href="https://patrl.keybase.pub/snippets/resniprocals.pdf">Read.</a>
+- @snippet18uncond <a href="https://www.ledonline.it/snippets/allegati/snippets35002.pdf">Read.</a>
+- @snippet18zero <a href="https://www.ledonline.it/snippets/allegati/snippets35001.pdf">Read.</a>
+- @snippet18wh <a href="https://patrl.keybase.pub/snippets/whSnippet.pdf">Read.</a>
 - @snippet18collectivePred <a href="https://patrl.keybase.pub/snippets/collectivePredSnippet.pdf">Read.</a>
 - @snippet17 <a href="https://patrl.keybase.pub/snippets/snippet-superiority.pdf">Read.</a>
 - @snippet15 <a href="https://patrl.keybase.pub/snippets/snippet.pdf">Read.</a>
