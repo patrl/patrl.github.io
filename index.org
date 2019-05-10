@@ -26,8 +26,8 @@ Reach me at: [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott(at)gmail.co
   deriving Beck effects via cyclic scope and local exhaustification", in Tübingen.
 - July 1-3, 2019: I'll be giving two talks at the workshop /Asymmetries in
   language: presuppositions and beyond/ at ZAS Berlin. One by myself entitled
-  "Two souls of disjunction: towards a state-monadic update semantics", and one
-  joint with Yasu Sudo entitled "Binding back from the future".
+  "Two souls of disjunction: towards a state-monadic update semantics" ([[https://patrl.keybase.pub/abstracts/asymm-elliott.pdf][abstract]]), and one
+  joint with Yasu Sudo entitled "Binding back from the future" ([[https://patrl.keybase.pub/abstracts/asymm-elliottSudo.pdf][abstract]]).
 - I have a paper to appear in the /Proceedings of LENLS 15/ entitled "Applicatives for Anaphora and Presupposition".
 - I have a paper to appear in the /Proceedings of Sinn und Bedeutung 23/
   with Uli Sauerland entitled "Ineffability and unexhaustification".
