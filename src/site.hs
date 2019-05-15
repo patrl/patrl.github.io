@@ -59,6 +59,16 @@ main =
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
+    match "conceptual-mathematics.org" $ do
+      route $ setExtension "html"
+      compile
+        $   myPandocBiblioCompiler "csl/unified-style-linguistics.csl"
+                                   "bib/refs.bib"
+        >>= loadAndApplyTemplate "templates/post.html"    postCtx
+        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= relativizeUrls
+
+
     match "teaching/*" $ do
       route $ setExtension "html"
       compile
