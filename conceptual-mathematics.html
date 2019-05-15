@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-05-15 Wed 17:44 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Notes on <i>Conceptual Mathematics</i></title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Patrick D. Elliott" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Notes on <i>Conceptual Mathematics</i></h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgedf266c">1. Notes</a>
+<ul>
+<li><a href="#orgd1c2b96">1.1. Category of finite sets</a>
+<ul>
+<li><a href="#org0182d75">1.1.1. Test for equality of maps</a></li>
+</ul>
+</li>
+<li><a href="#orga724397">1.2. 1. Isomorphisms</a>
+<ul>
+<li><a href="#org9d0b1fb">1.2.1. Exercise 1</a></li>
+<li><a href="#org5b385fe">1.2.2. Exercise 2</a></li>
+<li><a href="#org2ac4baf">1.2.3. Exercise 3</a></li>
+</ul>
+</li>
+<li><a href="#org9a73f4c">1.3. 2. General division problems: Determination and choice</a></li>
+<li><a href="#orgbb8d929">1.4. 3. Retractions, sections, and idempotents</a></li>
+<li><a href="#org42f88c6">1.5. 4. Isomorphisms and automorphisms</a></li>
+<li><a href="#orgb6e5213">1.6. 5. Guide</a></li>
+</ul>
+</li>
+<li><a href="#org51fc1c1">2. Session 1</a>
+<ul>
+<li><a href="#org515315f">2.1. 1.2</a>
+<ul>
+<li><a href="#org455d9dc">2.1.1. Exercise 1</a></li>
+<li><a href="#org97da73c">2.1.2. Exercise 2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org53af38d">3. Part 1</a>
+<ul>
+<li>
+<ul>
+<li><a href="#orgc4c7918">3.0.1. Category definition</a></li>
+<li><a href="#orgfdc7847">3.0.2. Back to sets</a></li>
+<li><a href="#orga585986">3.0.3. <span class="todo TODO">TODO</span> Exercises (p20)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgbeea50b">4. Session 2</a></li>
+<li><a href="#org494b805">5. <span class="todo TODO">TODO</span> article 2 + sessions 4 + session 5 25.05</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgedf266c" class="outline-2">
+<h2 id="orgedf266c"><span class="section-number-2">1</span> Notes</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgd1c2b96" class="outline-3">
+<h3 id="orgd1c2b96"><span class="section-number-3">1.1</span> Category of finite sets</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org0182d75" class="outline-4">
+<h4 id="org0182d75"><span class="section-number-4">1.1.1</span> Test for equality of maps</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+If for each point \(1 \xrightarrow{a} A\), \(f \circ a = g \circ a\), then \(f =
+g\)
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orga724397" class="outline-3">
+<h3 id="orga724397"><span class="section-number-3">1.2</span> 1. Isomorphisms</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+
+<div id="outline-container-org9d0b1fb" class="outline-4">
+<h4 id="org9d0b1fb"><span class="section-number-4">1.2.1</span> Exercise 1</h4>
+<div class="outline-text-4" id="text-1-2-1">
+</div>
+
+<ol class="org-ol">
+<li><a id="org95409be"></a>Prove that \(1_A\) is an isomorphism.<br />
+<div class="outline-text-5" id="text-1-2-1-1">
+<p>
+There is an inverse of \(A \xrightarrow{1_A} A\) &#x2013; namely, \(A
+  \xrightarrow{1_A} A\), since:
+</p>
+<ul class="org-ul">
+<li>\(1_A \circ 1_A = 1_A\), by the <b>Identity Laws</b>.</li>
+<li>Since \(1_A\) has an inverse, \(1_A\) is an isomorphism.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org084ba55"></a>Show that if \(A \xrightarrow{f} B\) is an isomorphism, and \(B \xrightarrow{g} A\) is an inverse for \(f\), then \(g\) is also an isomorphism<br />
+<div class="outline-text-5" id="text-1-2-1-2">
+<p>
+If \(B \xrightarrow{g} A\) is an inverse for \(A \xrightarrow{f} B\), then
+  the following must hold:
+</p>
+<ul class="org-ul">
+<li>\(g \circ f = 1_A\)</li>
+<li>\(f \circ g = 1_B\)</li>
+<li>Since these two properties must hold, \(f\) must be an inverse for \(g\).</li>
+<li>Since \(g\) has an inverse, \(g\) must be an isomorphism.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org4d9d8b9"></a>Prove that if \(A \xrightarrow{f} B\) and \(B \xrightarrow{k} C\) are isomorphisms, \(A \xrightarrow{k \circ f} C\) is also an isomorphism.<br />
+<div class="outline-text-5" id="text-1-2-1-3">
+<p>
+If \(f\) and \(k\) are isomorphisms, they must have inverses \(B
+  \xrightarrow{g} A\) and \(C \xrightarrow{l} B\) with the following properties:
+</p>
+<ul class="org-ul">
+<li>\(g \circ f = 1_A\)</li>
+<li>\(f \circ g = 1_B\)</li>
+<li>\(l \circ k = 1_B\)</li>
+<li>\(k \circ l = 1_C\)</li>
+</ul>
+<p>
+If \(k \circ f\) is an isomorphism, it should have an inverse \(h\), with the
+following properties:
+</p>
+<ul class="org-ul">
+<li>\(h \circ k \circ f = 1_A\)</li>
+<li>\(k \circ f \circ h = 1_C\)</li>
+</ul>
+<p>
+A map with such a property is the composition of the inverses of \(f\) and
+\(k\), namely \(g \circ l\), since:
+</p>
+<ul class="org-ul">
+<li>\(g \circ l \circ k \circ f\)</li>
+<li>\(g \circ (l \circ k) \circ f\) (by associativity)</li>
+<li>\(= g \circ 1_B \circ f\) (by substitution)</li>
+<li>\(= g \circ (1_B \circ f)\) (by associativity)</li>
+<li>\(= g \circ f\) (by the identity laws)</li>
+<li>\(= 1_A\) (by subsitution)</li>
+<li>Therefore: \(g \circ l \circ k \circ f = 1_A\)</li>
+<li>\(k \circ f \circ g \circ l\)</li>
+<li>\(= k \circ (f \circ g) \circ l\) (by associativity)</li>
+<li>\(= k \circ 1_B \circ l\) (by subsitution)</li>
+<li>\(= k \circ (1_B \circ l)\) (by associativity)</li>
+<li>\(= k \circ l\) (by the identity laws)</li>
+<li>\(= 1_C\) (by substitution)</li>
+<li>Therefore: \(k \circ f \circ g \circ l = 1_C\)</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+
+<div id="outline-container-org5b385fe" class="outline-4">
+<h4 id="org5b385fe"><span class="section-number-4">1.2.2</span> Exercise 2</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<ul class="org-ul">
+<li>Prove that, if \(B \xrightarrow{g} A\) and \(B \xrightarrow{k} A\) are both
+inverses for \(A \xrightarrow{f} B\), then \(g = k\)</li>
+
+<li>See <a href="https://math.stackexchange.com/questions/2105875/prove-that-that-the-inverse-to-a-map-is-unique">https://math.stackexchange.com/questions/2105875/prove-that-that-the-inverse-to-a-map-is-unique</a>.</li>
+</ul>
+
+<p>
+If \(g\) and \(k\) are both inverses for \(f\), then the following must hold:
+</p>
+
+<ol class="org-ol">
+<li>\(g \circ f = 1_A\)</li>
+<li>\(k \circ f = 1_A\)</li>
+<li>\(f \circ g = 1_B\)</li>
+<li>\(f \circ k = 1_B\)</li>
+</ol>
+
+<p>
+Therefore, the following holds:
+</p>
+
+<p>
+\[f \circ g = f \circ k\]
+</p>
+
+<p>
+And furthermore:
+</p>
+
+<p>
+\[g \circ f \circ g = g \circ f \circ k\]
+</p>
+
+<ol class="org-ol">
+<li>\((g \circ f) \circ g = (g \circ f) \circ k\) (by associativity)</li>
+<li>\(1_A \circ g = 1_A \circ k\) (by subsitution)</li>
+<li>\(g = k\) (by the identity laws)</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org2ac4baf" class="outline-4">
+<h4 id="org2ac4baf"><span class="section-number-4">1.2.3</span> Exercise 3</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+If \(f\) has an inverse, then \(f\) satisfies the two cancellation laws:
+</p>
+
+<p>
+a. If \(f \circ h = f \circ k\), then \(h = k\)
+b. If \(h \circ f = k \circ f\), then \(h = k\)
+</p>
+
+<p>
+The following putative cancellation law is not valid, even if \(f\) has an
+inverse:
+</p>
+
+<p>
+c. If \(h \circ f = f \circ k\), then \(h = k\).
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org1dc6cd9"></a>Part (a)<br />
+<div class="outline-text-5" id="text-1-2-3-1">
+<p>
+Premise: \(f \circ h = f \circ k\)
+</p>
+
+<p>
+It follows that:
+</p>
+
+<p>
+\[f^{-1} (f \circ h) = f^{-1} (f \circ k)\]
+</p>
+
+<p>
+And now by associativity:
+</p>
+
+<p>
+\[(f^{-1} \circ f) \circ h = (f^{-1} \circ f) \circ k\]
+</p>
+
+<p>
+By the inverse laws:
+</p>
+
+<p>
+\[1_A \circ f = 1_A \circ k\]
+</p>
+
+<p>
+By the identity laws:
+</p>
+
+<p>
+\[f = k\]
+</p>
+</div>
+</li>
+
+<li><a id="org2669332"></a>Part (b)<br /></li>
+</ol>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="outline-container-org9a73f4c" class="outline-3">
+<h3 id="org9a73f4c"><span class="section-number-3">1.3</span> 2. General division problems: Determination and choice</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+</div>
+
+<div id="outline-container-orgbb8d929" class="outline-3">
+<h3 id="orgbb8d929"><span class="section-number-3">1.4</span> 3. Retractions, sections, and idempotents</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+</div>
+
+<div id="outline-container-org42f88c6" class="outline-3">
+<h3 id="org42f88c6"><span class="section-number-3">1.5</span> 4. Isomorphisms and automorphisms</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+</div>
+
+<div id="outline-container-orgb6e5213" class="outline-3">
+<h3 id="orgb6e5213"><span class="section-number-3">1.6</span> 5. Guide</h3>
+<div class="outline-text-3" id="text-1-6">
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org51fc1c1" class="outline-2">
+<h2 id="org51fc1c1"><span class="section-number-2">2</span> Session 1</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org515315f" class="outline-3">
+<h3 id="org515315f"><span class="section-number-3">2.1</span> 1.2</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+\(SPACE = PLANE × LINE\)
+</p>
+
+<p>
+<i>shadow</i> is a <i>map</i> from space to the plane. We can think of it as a function
+from 3-dimensional coordinates to 2-dimensional coordinates. Differences in the
+z-axis essentially get flattened out.
+</p>
+
+<p>
+<i>level</i> is a map from space to the line. We can think of it as a function from
+3-dimensional coordinates to 1-dimensional coordinates. <i>level</i> takes the value
+of the z-axis and ignores the x and y axes.
+</p>
+
+
+<p>
+Motion in space is reduced to motion in the plane and motion on the line.
+</p>
+
+<p>
+The <i>flight of bird</i> is a function from <i>times</i> to <i>points in space</i>
+(3-dimensional coordinats).
+</p>
+
+<p>
+Once we compose the <i>flight of bird</i> function with the <i>level</i> function and the
+<i>shadow</i> function, space completely disappears from the picture.
+</p>
+
+<p>
+We can think of <i>conjunction reduction</i> as a complex operation decomposable into
+two functions.
+</p>
+</div>
+
+<div id="outline-container-org455d9dc" class="outline-4">
+<h4 id="org455d9dc"><span class="section-number-4">2.1.1</span> Exercise 1</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>The hypotoneuse of a triangle, in relation to its two sides.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org97da73c" class="outline-4">
+<h4 id="org97da73c"><span class="section-number-4">2.1.2</span> Exercise 2</h4>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org53af38d" class="outline-2">
+<h2 id="org53af38d"><span class="section-number-2">3</span> Part 1</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Categories have <i>objects</i>, and <i>maps</i>.</li>
+
+<li><i>maps</i> have <i>domains</i> and <i>codomains</i>.</li>
+
+<li>A map in which the domain and codomain are identical is an <i>endomap</i>.</li>
+
+<li>For every object in the category of finite sets, there is an <i>identity map</i>.
+The identity map of the finite set \(A\) is written \(1_A\)</li>
+
+<li>external vs internal diagrams for maps in the category of finite sets.</li>
+
+<li>The <i>composition of maps</i> is function composition.</li>
+</ul>
+</div>
+
+<div id="outline-container-orgc4c7918" class="outline-4">
+<h4 id="orgc4c7918"><span class="section-number-4">3.0.1</span> Category definition</h4>
+<div class="outline-text-4" id="text-3-0-1">
+<ul class="org-ul">
+<li>Objects: \(A, B, C, …\)</li>
+
+<li>Maps: \(A \xrightarrow{f} B, …\)</li>
+
+<li>Identity maps (one per object): \(A \xrightarrow{1_A} B, … \)</li>
+
+<li>Composition of maps: assigns to each pair of maps of type \(A \xrightarrow{g}
+  B \xrightarrow{f} C\) another map called "\(f\) following \(g\)", \(A
+  \xrightarrow{f ∘ g} C\). Note, the codomain of \(g\) must be identical to the
+domain of \(f\).</li>
+
+<li>Rules for a category:
+
+<ul class="org-ul">
+<li>The identity laws:
+
+<ol class="org-ol">
+<li>If \(A \xrightarrow{1_A} A \xrightarrow{g} B\) then \(A \xrightarrow{g ∘
+       1_A = g} B\)</li>
+
+<li>If \(A \xrightarrow{f} B\ \xrightarrow{1_B} B\) then \(A \xrightarrow{1_B
+       ∘ f = f} B\)</li>
+</ol></li>
+
+<li><p>
+The associative law:
+</p>
+
+<p>
+If \(A \xrightarrow{f} B \xrightarrow{g} C \xrightarrow{h} D\) then \(A
+    \xrightarrow{h ∘ (g ∘ f)= (h ∘ g) ∘ f} D\)
+</p></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfdc7847" class="outline-4">
+<h4 id="orgfdc7847"><span class="section-number-4">3.0.2</span> Back to sets</h4>
+<div class="outline-text-4" id="text-3-0-2">
+<p>
+We call a singleton set \(\mathbf{1}\). A <i>point</i> of a set \(X\) is a map \(1 →
+X\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga585986" class="outline-4">
+<h4 id="orga585986"><span class="section-number-4">3.0.3</span> <span class="todo TODO">TODO</span> Exercises (p20)</h4>
+<div class="outline-text-4" id="text-3-0-3">
+<ul class="org-ul">
+<li>\(A = \set{John, Mary, Sam} \)</li>
+
+<li>\(B = \set{Eggs, Coffee}\)</li>
+</ul>
+</div>
+
+<ol class="org-ol">
+<li><a id="orgb0def0d"></a>2<br />
+<div class="outline-text-5" id="text-3-0-3-1">
+<p>
+How many maps with a domain \(A\) and a codomain \(B\)? Note that since \(B\) is
+a 2-membered set, the question is essentially asking how many characteristic
+functions of \(A\) there are.
+</p>
+
+<ul class="org-ul">
+<li>Answer: 111,110,011,101,100,001,010,000, i.e., \(2^3\). More generally, the
+number of maps with a domain \(A\) and a codomain \(B\) (in the category of
+finite sets) is \(|B|^{|A|}\).</li>
+
+<li>How many maps \(A \xrightarrow{f}A\)? We can use our general formula from
+before, so it should be \(|A|^{|A|}\), i.e., \(3^3\), i.e., 27.</li>
+
+<li>How many maps \(B \xrightarrow{f} A\)? \(3^2\), i.e., 9.</li>
+
+<li>How many maps \(B \xrightarrow{f} B\)? \(2^2\), i.e., 4.</li>
+
+<li>How may maps \(A \xrightarrow{f} A\) satisfy \(f ∘ f = f\)? Just one &#x2013; the endomap.</li>
+
+<li>How many maps \(B \xrightarrow{g} B\) satisfy \(g ∘ g = g\)? Again, just one,
+the endomap.</li>
+
+<li>There are no such maps, since \(|B| < |A|\)</li>
+
+<li>There are 9 such pairs - the same number as there are maps from \(B\) to \(A\).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgbeea50b" class="outline-2">
+<h2 id="orgbeea50b"><span class="section-number-2">4</span> Session 2</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Maps are <i>extensional</i>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org494b805" class="outline-2">
+<h2 id="org494b805"><span class="section-number-2">5</span> <span class="todo TODO">TODO</span> article 2 + sessions 4 + session 5 25.05</h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Patrick D. Elliott</p>
+<p class="date">Created: 2019-05-15 Wed 17:44</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
