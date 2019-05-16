@@ -9,10 +9,7 @@ date: 21.10.2018
 ** Publishing
 
 - This is a static site built using [[https://jaspervdj.be/hakyll/][hakyll]], and hosted via [[https://pages.github.com/][GitHub pages]].
-- I support the movement to /decentralize the web/; as such, you can also access
-  this site via modern peer-to-peer protocols.
- - You can find me via [[https://datproject.org/][dat]] @ [[dat://patrl.hashbase.io]], using, e.g., [[https://beakerbrowser.com/][beaker browser]].
- - You can find me on the [[https://ipfs.io/][IPFS]] network at ~ipns/patrickdelliott.com~. If you use
+- I support the movement to /decentralize the web/; as such, you can also find me on the [[https://ipfs.io/][IPFS]] network at ~ipns/patrickdelliott.com~. If you use
    the [[https://github.com/ipfs-shipyard/ipfs-companion][IPFS companion]] browser extension, then you should be automatically redirected.
 
 ** Design
