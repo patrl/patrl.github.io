@@ -52,6 +52,7 @@ date: 19.10.2018
 
 - @talk19dgfs <a href="https://patrl.keybase.pub/slides/emoSlides.pdf">Slides.</a>
 - @talk19frankfurt <a href="https://patrl.keybase.pub/handouts/frankfurt.pdf">Handout.</a>
+- @goettingen19 <a href="https://patrl.keybase.pub/slides/goettingen-mvt.pdf">Slides.</a>
 
 </details>
 

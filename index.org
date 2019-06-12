@@ -19,8 +19,8 @@ Reach me at: [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott(at)gmail.co
 
 - April 12-13, 2019: I gave a joint talk with Yasu Sudo at [[https://voices.uchicago.edu/sluicingat50/][SLUICING+@50]]
   in Chicago entitled "The dynamics of ellipsis identity".
-- June 11, 2019: I'll be giving an invited talk at Göttingen university entitled
-  "The two souls of disjunction".
+- June 11, 2019: I gave an invited talk at Göttingen university entitled
+  "Movement as higher-order structure building". [[https://patrl.keybase.pub/slides/goettingen-mvt.pdf][slides]]
 - June 13-14, 2019: I'll be giving a joint talk with Uli Sauerland at the
   workshop [[https://www.xprag.de/?page_id=6207][Exhaustivity in Questions and Answers]] entitled "Nuclear intervention:
   deriving Beck effects via cyclic scope and local exhaustification", in Tübingen.
