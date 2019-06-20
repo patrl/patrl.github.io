@@ -1,32 +1,24 @@
-{ nixpkgs ? import <nixpkgs> {}, compiler ? "default", withHoogle ? true }:
+{
+  pkgs ? import <nixpkgs> {},
+  hc ? "ghc865"
+}:
 
-let
-
-  inherit (nixpkgs) pkgs;
-
-  f = import ./default.nix;
-
-  packageSet = (
-    if compiler == "default"
-    then  pkgs.haskellPackages
-    else  pkgs.haskell.packages.${compiler}
-  );
-
-  haskellPackages = (
-    if withHoogle
-      then  packageSet.override {
-              overrides = (self: super:
-                {
-                  ghc = super.ghc // { withPackages = super.ghc.withHoogle; };
-                  ghcWithPackages = self.ghc.withPackages;
-                }
-              );
-            }
-      else  packageSet
-  );
-
-  drv = haskellPackages.callPackage f {};
-
-in
-
-  if pkgs.lib.inNixShell then drv.env else drv
+pkgs.stdenv.mkDerivation rec {
+  name = "example";
+  buildInputs = [
+    pkgs.haskell.compiler.${hc}
+    pkgs.git
+    pkgs.zlib
+    pkgs.cabal-install
+    pkgs.pkgconfig
+    pkgs.which
+  ];
+  shellHook = ''
+    export LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath buildInputs}:$LD_LIBRARY_PATH
+    export LANG=en_US.UTF-8
+  '';
+  LOCALE_ARCHIVE =
+    if pkgs.stdenv.isLinux
+    then "${pkgs.glibcLocales}/lib/locale/locale-archive"
+    else "";
+}

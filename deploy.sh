@@ -2,8 +2,8 @@
 
 git stash
 git checkout develop
-cabal run site clean
-cabal run site build
+nix-shell --pure --comand "cabal run site clean"
+nix-shell --pure --command "cabal run site build"
 git fetch --all
 git checkout -b master --track origin/master
 cp -a _site/. .
