@@ -2,7 +2,7 @@
 
 git stash
 git checkout develop
-nix-shell --pure --comand "cabal run site clean"
+nix-shell --pure --command "cabal run site clean"
 nix-shell --pure --command "cabal run site build"
 git fetch --all
 git checkout -b master --track origin/master
