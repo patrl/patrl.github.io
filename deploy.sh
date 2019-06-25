@@ -1,6 +1,3 @@
-#!/usr/bin/env bash
-
-direnv allow . && eval "$(direnv export bash)"
 git stash
 git checkout develop
 cabal new-run site clean
