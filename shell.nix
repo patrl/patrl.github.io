@@ -22,6 +22,7 @@ mkShell {
     pkgs.cabal-install
     pkgs.pkgconfig
     pkgs.which
+    pkgs.nodejs
     # put packages here.
   ];
 }
