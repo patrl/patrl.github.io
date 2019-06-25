@@ -1,3 +1,4 @@
+.direnv/
 _cache/
 _site/
 .stack-work/

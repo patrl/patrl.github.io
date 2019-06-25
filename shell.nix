@@ -1,24 +1,27 @@
-{
-  pkgs ? import <nixpkgs> {},
-  hc ? "ghc865"
-}:
+let
+  # Look here for information about how to generate `nixpkgs-version.json`.
+  #  → https://nixos.wiki/wiki/FAQ/Pinning_Nixpkgs
+  pinnedVersion = builtins.fromJSON (builtins.readFile ./.nixpkgs-version.json);
+  pinnedPkgs = import (builtins.fetchGit {
+    inherit (pinnedVersion) url rev;
 
-pkgs.stdenv.mkDerivation rec {
-  name = "example";
+    ref = "nixos-unstable";
+  }) {};
+in
+
+# This allows overriding pkgs by passing `--arg pkgs ...`
+{ pkgs ? pinnedPkgs }:
+
+with pkgs;
+
+mkShell {
   buildInputs = [
-    pkgs.haskell.compiler.${hc}
+    pkgs.haskell.compiler.ghc865
     pkgs.git
     pkgs.zlib
     pkgs.cabal-install
     pkgs.pkgconfig
     pkgs.which
+    # put packages here.
   ];
-  shellHook = ''
-    export LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath buildInputs}:$LD_LIBRARY_PATH
-    export LANG=en_US.UTF-8
-  '';
-  LOCALE_ARCHIVE =
-    if pkgs.stdenv.isLinux
-    then "${pkgs.glibcLocales}/lib/locale/locale-archive"
-    else "";
 }
