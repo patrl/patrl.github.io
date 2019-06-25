@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
+direnv allow . && eval "$(direnv export bash)"
 git stash
 git checkout develop
-nix-shell --pure --command "cabal run site clean"
-nix-shell --pure --command "cabal run site build"
+cabal new-run site clean
+cabal new-run site build
 git fetch --all
 git checkout -b master --track origin/master
 cp -a _site/. .
