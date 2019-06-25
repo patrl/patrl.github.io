@@ -6,12 +6,11 @@ cabal-version:      >= 1.10
 executable site
   main-is:          site.hs
   build-depends:    base<5
-                  , hakyll>=4.12.5.2
-                  , clay>=0.13.1
-                  , pandoc
+                  , hakyll==4.12.5.2
+                  , pandoc==2.7.3
+                  , hakyll-sass==0.2.4
                   , pandoc-types
                   , mtl
-                  , hakyll-sass
                   , containers
   hs-source-dirs: src
   other-modules: Text.Pandoc.SideNote
