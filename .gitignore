@@ -1,3 +1,5 @@
+.direnv/
+.ghc.environment*
 _cache/
 _site/
 .stack-work/
