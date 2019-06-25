@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 git stash
 git checkout develop
 cabal new-run site clean
