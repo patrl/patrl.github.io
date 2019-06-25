@@ -22,7 +22,6 @@ main =
       route idRoute
       compile copyFileCompiler
 
-
     match "node_modules/@ibm/plex/IBM-Plex-Sans/fonts/complete/woff2/*" $ do
       route $ gsubRoute
         "node_modules/@ibm/plex/IBM-Plex-Sans/fonts/complete/woff2"
@@ -50,10 +49,11 @@ main =
       let compressCssItem = fmap compressCss
       compile (compressCssItem <$> sassCompiler)
 
-    -- Clay
-    match "css/*.hs" $ do
-      route $ setExtension "css"
-      compile $ getResourceString >>= withItemBody (unixFilter "cabal" ["exec", "runghc"])
+    -- FIXME
+    -- -- Clay
+    -- match "css/*.hs" $ do
+    --   route $ setExtension "css"
+    --   compile $ getResourceString >>= withItemBody (unixFilter "cabal" [ "new-exec", "ghc" ])
 
     match "org-test.org" $ do
       route $ setExtension "html"
