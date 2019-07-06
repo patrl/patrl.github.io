@@ -50,9 +50,9 @@ date: 19.10.2018
 <details>
 <summary>talks 2019</summary>
 
-- @talk19asymm2 <a href="https:://patrl.keybase.pub/slides/berlin-disj.pdf">Slides.</a>
-- @talk19asymm1 <a href="https:://patrl.keybase.pub/slides/berlin-cataphora.pdf">Slides.</a>
-- @talk19tuebingen <a href="https:://patrl.keybase.pub/slides/tuebingen-slides.pdf">Slides.</a>
+- @talk19asymm2 <a href="https://patrl.keybase.pub/slides/berlin-disj.pdf">Slides.</a>
+- @talk19asymm1 <a href="https://patrl.keybase.pub/slides/berlin-cataphora.pdf">Slides.</a>
+- @talk19tuebingen <a href="https://patrl.keybase.pub/slides/tuebingen-slides.pdf">Slides.</a>
 - @talk19goettingen <a href="https://patrl.keybase.pub/slides/goettingen-mvt.pdf">Slides.</a>
 - @talk19chicago
 - @talk19dgfs <a href="https://patrl.keybase.pub/slides/emoSlides.pdf">Slides.</a>
