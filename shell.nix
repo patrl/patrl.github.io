@@ -25,4 +25,6 @@ mkShell {
     pkgs.nodejs
     # put packages here.
   ];
+
+  LD_LIBRARY_PATH="${pkgs.zlib}/lib";
 }
