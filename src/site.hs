@@ -92,6 +92,13 @@ main =
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
+    match "research-test.org" $ do
+      route $ setExtension "html"
+      compile
+        $   myPandocBiblioCompiler "csl/myBib.csl" "bib/myWork.bib"
+        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= relativizeUrls
+
     tags <- buildTags "posts/*" (fromCapture "tags/*.html")
 
     tagsRules tags $ \tag pattern -> do
