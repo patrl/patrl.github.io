@@ -4,7 +4,6 @@
 import           Data.Monoid                    ( mappend )
 import           Hakyll
 import           Text.Pandoc.Options
-import           Text.Pandoc.SideNote           ( usingSideNotes )
 import           Hakyll.Web.Sass                ( sassCompiler )
 
 --------------------------------------------------------------------------------
@@ -209,17 +208,11 @@ myPandocBiblioCompiler :: String -> String -> Compiler (Item String)
 myPandocBiblioCompiler cslFileName bibFileName = do
   csl <- load $ fromFilePath cslFileName
   bib <- load $ fromFilePath bibFileName
-  fmap
-    (writePandocWith customHakyllWriterOptions)
-    (   traverse (return . usingSideNotes)
-    =<< readPandocBiblio defaultHakyllReaderOptions csl bib
-    =<< getResourceBody
-    )
+  liftM (writePandocWith customHakyllWriterOptions)
+    (getResourceBody >>= readPandocBiblio defaultHakyllReaderOptions csl bib)
 
 myPandocCompiler :: Compiler (Item String)
-myPandocCompiler = pandocCompilerWithTransformM defaultHakyllReaderOptions
-                                                customHakyllWriterOptions
-                                                (return . usingSideNotes)
+myPandocCompiler = pandocCompilerWith defaultHakyllReaderOptions customHakyllWriterOptions
 
 myFeedConfiguration :: FeedConfiguration
 myFeedConfiguration = FeedConfiguration
