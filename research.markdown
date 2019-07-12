@@ -23,8 +23,9 @@ date: 19.10.2018
 
 <details>
 
-<summary class="podkova f3 ttu tracked cl-effect-1 link dim">Snippets</Summary>
+<summary class="podkova f3 ttu tracked cl-effect-1 link dim">Snippets and squiblets</Summary>
 
+- @snippet19multi <a href="https://patrl.keybase.pub/snippets/multisnip.pdf">Read.</a>
 - @snippet19recip <a href="https://patrl.keybase.pub/snippets/resniprocals.pdf">Read.</a>
 - @snippet18uncond <a href="https://www.ledonline.it/snippets/allegati/snippets35002.pdf">Read.</a>
 - @snippet18zero <a href="https://www.ledonline.it/snippets/allegati/snippets35001.pdf">Read.</a>

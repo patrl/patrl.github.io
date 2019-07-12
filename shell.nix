@@ -23,7 +23,7 @@ mkShell {
     pkgs.pkgconfig
     pkgs.which
     pkgs.nodejs
-    # put packages here.
+    pkgs.haskellPackages.brittany
   ];
 
   LD_LIBRARY_PATH="${pkgs.zlib}/lib";
