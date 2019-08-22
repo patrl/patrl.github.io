@@ -2,18 +2,16 @@
 title: About
 author: Patrick D. Elliott
 lang: English
-date: 18.11.2018
+date: 22.08.2019
 ---
 
-I'm a postdoctoral researcher at the [[https://www.zas.gwz-berlin.de][Leibniz-Zentrum Allgemeine
-Sprachwissenschaft]] in Berlin, associated with the semantics and pragmatics
-research group. I'm a theoretical linguist, which means that my work involves
+I'm a postdoctoral associate in the linguistics & philosophy department at MIT. I'm a theoretical linguist, which means that my work involves
 developing formal models of what we know when we know a language. Mostly, I do
 semantics, but I'm also interested in syntax, morphology, pragmatics, and their interfaces with semantics.
 
 When I'm not doing linguistics, I [[https://github.com/patrl][code]], [[https://www.goodreads.com/user/show/59694544-patrick-elliott][read]], and scale vertical walls.
 
-Reach me at: [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott(at)gmail.com]]
+Reach me at: [[pdell(at)mit.edu]]
 
 *** Upcoming
 
@@ -30,5 +28,3 @@ Reach me at: [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott(at)gmail.co
 - I have a paper to appear in the /Proceedings of LENLS 15/ entitled "Applicatives for Anaphora and Presupposition".
 - I have a paper to appear in the /Proceedings of Sinn und Bedeutung 23/
   with Uli Sauerland entitled "Ineffability and unexhaustification".
-- September 1, 2019: I'll start a visiting position in the department of
-  linguistics and philosophy at MIT.
