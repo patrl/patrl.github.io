@@ -6,14 +6,13 @@ date: 22.08.2019
 ---
 
 I'm a postdoctoral associate in the linguistics & philosophy department at MIT.
-I'm a theoretical linguist, which means that my work involves developing formal
-models of what we know when we know a language. Mostly, I do semantics, but I'm also interested in syntax, morphology, pragmatics, and their interfaces with semantics.
+I'm a theoretical linguist, which means that my work involves developing formal models of what we know when we know a language. Mostly, I do semantics, but I'm also interested in syntax, morphology, pragmatics, and their interfaces with semantics.
 
 When I'm not doing linguistics, I [[https://github.com/patrl][code]], [[https://www.goodreads.com/user/show/59694544-patrick-elliott][read]], and scale vertical walls.
 
 Reach me at: ~pdell@mit.edu~
 
-*** Upcoming
+*** Recent and upcoming
 
 - June 11, 2019: I gave an invited talk at Göttingen university entitled
   "Movement as higher-order structure building". [[https://patrl.keybase.pub/slides/goettingen-mvt.pdf][slides]]
