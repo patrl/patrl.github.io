@@ -4,6 +4,10 @@ author: Patrick D. Elliott
 date: 19.10.2018
 ...
 
+## Spring 2020
+
+- 24.973: *Topics in Semantics* (with Martin Hackl)
+
 ## Fall 2019
 
 I'm teaching two courses at MIT this semester:

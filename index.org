@@ -2,10 +2,10 @@
 title: About
 author: Patrick D. Elliott
 lang: English
-date: 17.11.2019
+date: 28.11.2019
 ---
 
-I'm a postdoctoral associate in the linguistics & philosophy department at MIT.
+I'm a visiting faculty member in the linguistics & philosophy department at MIT.
 I'm a theoretical linguist, which means that my work involves developing formal models of what we know when we know a language. Mostly, I do semantics, but I'm also interested in syntax, morphology, pragmatics, and their interfaces with semantics.
 
 When I'm not doing linguistics, I [[https://github.com/patrl][code]], [[https://www.goodreads.com/user/show/59694544-patrick-elliott][read]], and scale vertical walls.
@@ -14,8 +14,5 @@ Reach me at: ~pdell@mit.edu~
 
 *** Recent and upcoming
 
-- I have a paper to appear in the /Proceedings of LENLS 15/ entitled "Applicatives for Anaphora and Presupposition".
-- I have a paper to appear in the /Proceedings of Sinn und Bedeutung 23/
-  with Uli Sauerland entitled "Ineffability and unexhaustification".
-- November 25, 2019: I'm giving an invited talk entitled "Nesting habits of
+- November 25, 2019: I gave an invited talk entitled "Nesting habits of
   flightless /wh/-expressions" as part of the workshop [[https://anamariafalaus.org/workshop/][Complex multiple /wh/-expressions]]  in Nantes.
