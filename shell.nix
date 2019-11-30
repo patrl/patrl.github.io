@@ -28,4 +28,5 @@ mkShell {
 
   LD_LIBRARY_PATH="${pkgs.zlib}/lib";
   SSL_CERT_FILE = "/etc/ssl/certs/ca-bundle.crt";
+  GIT_SSL_CAINFO = "/etc/ssl/certs/ca-certificates.crt";
 }
