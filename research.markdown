@@ -14,7 +14,7 @@ date: 28.11.2019
 - @paper16nels <a href="https://patrl.keybase.pub/papers/nels46.pdf">Read.</a>
 - @paper16salt <a href="https://patrl.keybase.pub/papers/saltpaper.pdf">Read.</a>
 - @paper16sub <a href="https://patrl.keybase.pub/papers/SuB20.pdf">Read.</a>
-- @paper16cls <a href="https://patrl.keybase.pub/papers/cls52proceedings.pdf">Read.</a>
+- @paper16cls <a href="https://patrl.keybase.pub/papers/cls52_final.pdf">Read.</a>
 - @paper16wccfl <a href="https://patrl.keybase.pub/papers/wccfl-draft.pdf">Read.</a>
 - @paper15cls <a href="https://patrl.keybase.pub/papers/cls49proceedings.pdf">Read.</a>
 
