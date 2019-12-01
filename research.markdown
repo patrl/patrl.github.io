@@ -41,7 +41,7 @@ date: 28.11.2019
 <details>
 <summary>Unpublished</summary>
 
-- @unpub17thesis
+- @unpub17thesis <a href="https://patrl.keybase.pub/thesis.pdf">Read.</a>
 - @unpub13thesis
 - @unpub12thesis
 
