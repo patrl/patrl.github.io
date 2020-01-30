@@ -51,6 +51,7 @@ date: 28.11.2019
 <details>
 <summary>talks 2019</summary>
 
+- @nantes2019 <a href="https://patrl.keybase.pub/slides/nantes.pdf">Slides.</a>
 - @talk19asymm2 <a href="https://patrl.keybase.pub/slides/berlin-disj.pdf">Slides.</a>
 - @talk19asymm1 <a href="https://patrl.keybase.pub/slides/berlin-cataphora.pdf">Slides.</a>
 - @talk19tuebingen <a href="https://patrl.keybase.pub/slides/tuebingen-slides.pdf">Slides.</a>
