@@ -1,4 +1,3 @@
---------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings, NoPatternSynonyms #-}
 
 import           Data.Monoid                    ( mappend )
@@ -7,7 +6,6 @@ import           Text.Pandoc.Options
 import           Hakyll.Web.Sass                ( sassCompiler )
 import           Control.Monad                  ( liftM )
 
---------------------------------------------------------------------------------
 main :: IO ()
 main = hakyllWith config $ do
 
