@@ -20,3 +20,5 @@ When I'm not doing linguistics, I [[https://github.com/patrl][code]], [[https://
   web page can be found [[http://stellar.mit.edu/S/course/24/sp20/24.979/][here]].
 - March 7, 2020: I'm giving a talk at WCCFL38, entitled /A generalized scope
   theory of intensionality/. The abstract can be found [[https://patrl.keybase.pub/abstracts/wccfl38.pdf][here]].
+- April, 2020: I'm giving a talk at SALT with Yasu Sudo, entitled /Generalized
+  crossover/.
