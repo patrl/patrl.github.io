@@ -1,1 +1,1 @@
-cradle: { cabal: {} }
+cradle: { cabal: {component: "exe:site" } }
