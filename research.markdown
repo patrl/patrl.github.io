@@ -41,6 +41,7 @@ date: 28.11.2019
 <details>
 <summary>Unpublished</summary>
 
+- Elliott, Patrick D. In prep. Exceptional *de re* as exceptional scope.
 - @unpub17thesis <a href="https://patrl.keybase.pub/thesis.pdf">Read.</a>
 - @unpub13thesis
 - @unpub12thesis
