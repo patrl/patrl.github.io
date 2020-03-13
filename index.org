@@ -2,6 +2,7 @@
 title: About
 author: Patrick D. Elliott
 lang: English
+date: 03.13.2020
 ---
 
 I'm a visiting faculty member in the linguistics & philosophy department at MIT.
