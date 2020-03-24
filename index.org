@@ -13,6 +13,8 @@ at ~pdell@mit.edu~, or via [[https://keybase.io/patrl/chat][encrypted chat]].
 
 *** Recent and upcoming
 
+- March 2020: I have a new manuscript entitled /A flexible scope theory of
+  intensionality/, which can be found [[https://ling.auf.net/lingbuzz/005107][here]].
 - January 2020: I uploaded a corrected version of my PhD dissertation /Elements
   of Clausal Embedding/ to semantics archive and lingbuzz. It can be downloaded
   from [[https://semanticsarchive.net/Archive/2YyN2M5N/][here]].
