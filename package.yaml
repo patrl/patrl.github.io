@@ -1,0 +1,27 @@
+spec-version: 0.30.0
+name: patrickdelliott
+author: Patrick D. Elliott
+maintainer: patrick.d.elliott@gmail.com
+version: 0.1.0.0
+license: BSD3
+copyright: 2020 Patrick D. Elliott
+
+extra-source-files:
+- README.org
+
+build-type: Simple
+
+source-dirs: app
+dependencies:
+- { name: "base", version: '^>=4.13' }
+- { name: "slick", version: '^>=1.0.1.1' }
+
+
+ghc-options:
+ - -Wall
+ - -threaded
+ - -rtsopts
+ - -with-rtsopts=-N
+# default-extensions:
+executable:
+  main: Main.hs
