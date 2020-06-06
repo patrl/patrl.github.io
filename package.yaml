@@ -15,6 +15,13 @@ source-dirs: app
 dependencies:
 - { name: "base", version: '^>=4.13' }
 - { name: "slick", version: '^>=1.0.1.1' }
+- { name: "shake" }
+- { name: "text" }
+- { name: "containers" }
+- { name: "unordered-containers" }
+- { name: "lens" }
+- { name: "lens-aeson" }
+- { name: "time" }
 
 
 ghc-options:

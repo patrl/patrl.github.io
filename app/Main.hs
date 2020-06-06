@@ -1,6 +1,6 @@
-module Main where
+{-# LANGUAGE OverloadedStrings     #-}
 
-import           Slick
+module Main where
 
 siteMeta :: SiteMeta
 siteMeta = SiteMeta { siteAuthor = "Patrick D, Elliott"
@@ -15,6 +15,9 @@ data SiteMeta = SiteMeta { siteAuthor :: String
                          , twitterHandle :: Maybe String
                          , githubUser :: Maybe String }
 
+outputFolder :: FilePath
+outputFolder = "./docs"
+
 main :: IO ()
 main = do
-  print "hello haskell!"
+  print ("hello haskell!" :: String)
