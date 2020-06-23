@@ -30,18 +30,18 @@ swarm peers</code>, which should return the ipfs addresses of your peers.</p>
 <section id="publishing-on-ipfs" class="level3">
 <h3>Publishing on IPFS</h3>
 <p>First, you need to retrieve the peer ID of your locally running ipfs node, by running the following command:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="va">peerid=$(</span><span class="ex">ipfs</span> id -f<span class="st">&quot;&lt;id&gt;&quot;</span><span class="va">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="va">peerid=$(</span><span class="ex">ipfs</span> id -f<span class="st">&quot;&lt;id&gt;&quot;</span><span class="va">)</span></span></code></pre></div>
 <p>On my local machine, the source for my website can be found at <code>~GitHub/patrl.github.io/_site/</code>. I ran the following commands, which adds the website to IPFS and retrieves the hash of the directory root:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="va">siteloc=$HOME</span>/GitHub/patrl.github.io/_site</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="va">dirhash=$(</span><span class="ex">ipfs</span> add -r <span class="va">$(</span><span class="ex">siteloc</span><span class="va">)</span>/ <span class="kw">|</span> <span class="fu">grep</span> <span class="va">$(</span><span class="ex">siteloc</span><span class="va">)</span>$ <span class="kw">|</span> <span class="fu">cut</span> -d<span class="st">&quot; &quot;</span> -f2<span class="va">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="va">siteloc=$HOME</span>/GitHub/patrl.github.io/_site</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="va">dirhash=$(</span><span class="ex">ipfs</span> add -r <span class="va">$(</span><span class="ex">siteloc</span><span class="va">)</span>/ <span class="kw">|</span> <span class="fu">grep</span> <span class="va">$(</span><span class="ex">siteloc</span><span class="va">)</span>$ <span class="kw">|</span> <span class="fu">cut</span> -d<span class="st">&quot; &quot;</span> -f2<span class="va">)</span></span></code></pre></div>
 <p>Finally, we publish the directory to our node’s <code>ipns</code> entry by running the following command:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">ipfs</span> name publish <span class="va">$dirhash</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="ex">ipfs</span> name publish <span class="va">$dirhash</span></span></code></pre></div>
 <p>It should now be possible to access the site via, e.g., a public gateway such as <a href="https://ipfs.io">https://ipfs.io</a>. Even without running an IPFS node, you can access my site over the IPFS network by navigating to <a href="https://ipfs.io/ipns/patrickdelliott.com">https://ipfs.io/ipns/patrickdelliott.com</a>.</p>
 </section>
 <section id="dnslink" class="level3">
 <h3>DNSLink</h3>
 <p>We can go a step further and ensure that someone running a local IPFS node with the <a href="https://github.com/ipfs-shipyard/ipfs-companion">IPFS companion</a> browser extension is automatically redirected to view the site on the IPFS network. This can be achieved by adding a DNS <code>TXT</code> record via your provider (I use cloudflare) with the following content, pointing at your base url (in this case, <code>patrickdelliott.com</code>):</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="va">dnslink=</span>/ipns/<span class="va">$peerid</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="va">dnslink=</span>/ipns/<span class="va">$peerid</span></span></code></pre></div>
 </section>
 </section>
 <section id="dat" class="level2">
@@ -58,10 +58,10 @@ swarm peers</code>, which should return the ipfs addresses of your peers.</p>
 <p>Instead, I did the following: first, I built the site and copied it into <code>$HOME/dat/patrickdelliott.com</code>. I then navigated to this directory and ran <code>dat
 init</code> to create the dat repository. Next, I went to <a href="https://hashbase.io">https://hashbase.io</a> and followed the instructions there to pin my dat repo to <a href="dat://patrl.hashbase.io">dat://patrl.hashbase.io</a>. I then navigated to the local and run <code>dat share --watch false</code> to share the dat repo to the pinning service for the first time.</p>
 <p>Whenever I want to update the dat repo and sync with hashbase, I run a script called <code>deploy-dat</code>, from my site’s git repo. This wipes everything from the local dat repo, <em>except</em> for the dat metadata, and copies in the newly built site, before syncing with the pinning service.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">find</span> ~/dat/patrickdelliott.com/ -mindepth 1 -maxdepth 1 \! <span class="dt">\(</span> -name .dat -o -name dat.json <span class="dt">\)</span> -exec rm -rf <span class="st">&#39;{}&#39;</span> <span class="dt">\;</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">cp</span> -a ~/GitHub/patrl.github.io/_site/. ~/dat/patrickdelliott.com/.</span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="bu">cd</span> ~/dat/patrickdelliott.com</span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="ex">dat</span> sync --watch false</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="fu">find</span> ~/dat/patrickdelliott.com/ -mindepth 1 -maxdepth 1 \! <span class="dt">\(</span> -name .dat -o -name dat.json <span class="dt">\)</span> -exec rm -rf <span class="st">&#39;{}&#39;</span> <span class="dt">\;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a><span class="fu">cp</span> -a ~/GitHub/patrl.github.io/_site/. ~/dat/patrickdelliott.com/.</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a><span class="bu">cd</span> ~/dat/patrickdelliott.com</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a><span class="ex">dat</span> sync --watch false</span></code></pre></div>
 </section>
 </section>
 <section id="resources" class="level1">
@@ -91,7 +91,7 @@ init</code> to create the dat repository. Next, I went to <a href="https://hashb
 <li id="fn2" role="doc-endnote"><p>See also: <em>distributed web</em>, <em>immutable web</em>, <em>permanent web</em>, etc.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3" role="doc-endnote"><p>You can substitute <a href="https://ipfs.io">https://ipfs.io</a> with any public IPFS gateway here, such as <a href="https://cloudflare-ipfs.com">https://cloudflare-ipfs.com</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4" role="doc-endnote"><p>On the off-chance you happen to be another NixOS user, this is as simple as adding the following line to your <code>configuration.nix</code>!</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode nix"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">services.enable.ifps</span> = true<span class="kw">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode nix"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">services.enable.ifps</span> = true<span class="kw">;</span></span></code></pre></div>
 <a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></li>
 </ol>
 </section>]]></summary>
