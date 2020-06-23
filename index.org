@@ -18,10 +18,9 @@ at ~pdell@mit.edu~, or via [[https://keybase.io/patrl/chat][encrypted chat]].
 - January 2020: I uploaded a corrected version of my PhD dissertation /Elements
   of Clausal Embedding/ to semantics archive and lingbuzz. It can be downloaded
   from [[https://semanticsarchive.net/Archive/2YyN2M5N/][here]].
-- Spring semester 2020: I'm teaching a semantics seminar at MIT with Martin Hackl,
+- Spring semester 2020: I taught a semantics seminar at MIT with Martin Hackl,
   entitled /Getting high: scope, projection, and evaluation order/. The class
   web page can be found [[http://stellar.mit.edu/S/course/24/sp20/24.979/][here]].
-- March 7, 2020: I'm giving a talk at WCCFL38, entitled /A generalized scope
-  theory of intensionality/. The abstract can be found [[https://patrl.keybase.pub/abstracts/wccfl38.pdf][here]].
-- April, 2020: I'm giving a talk at SALT with Yasu Sudo, entitled /Generalized
+- August, 2020: I'm giving a talk at SALT with Yasu Sudo, entitled /Generalized
   crossover/.
+- I'm working on an ms. entitled /dynamics of crossover: another origin story/, responding to Chierchia's recent NLS paper on weak crossover. Email me for a draft.
