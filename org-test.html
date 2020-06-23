@@ -149,20 +149,20 @@
 </section>
 <section id="code-test" class="level2">
 <h2>Code test</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">-- We roll our own indexed continuation monad.</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">newtype</span> <span class="dt">IxKT</span> n o m i <span class="ot">=</span> <span class="dt">IxKT</span> {<span class="ot"> (&gt;&gt;-) ::</span> (i <span class="ot">-&gt;</span> n m) <span class="ot">-&gt;</span> n o }</span>
-<span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="kw">instance</span> <span class="dt">IxFunctor</span> (<span class="dt">IxKT</span> m) <span class="kw">where</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>  imap f m <span class="ot">=</span> <span class="dt">IxKT</span> <span class="op">$</span> \k <span class="ot">-&gt;</span> m <span class="op">&gt;&gt;-</span> (k <span class="op">.</span> f)</span>
-<span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="kw">instance</span> <span class="dt">IxPointed</span> (<span class="dt">IxKT</span> m) <span class="kw">where</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>  ireturn a <span class="ot">=</span> <span class="dt">IxKT</span> (<span class="op">$</span>a)</span>
-<span id="cb1-9"><a href="#cb1-9"></a></span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="kw">instance</span> <span class="dt">Monad</span> m <span class="ot">=&gt;</span> <span class="dt">IxApplicative</span> (<span class="dt">IxKT</span> m) <span class="kw">where</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a>  iap <span class="ot">=</span> iapIxMonad</span>
-<span id="cb1-12"><a href="#cb1-12"></a></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="kw">instance</span> <span class="dt">Monad</span> m <span class="ot">=&gt;</span> <span class="dt">IxMonad</span> (<span class="dt">IxKT</span> m) <span class="kw">where</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a>  ibind f c <span class="ot">=</span> <span class="dt">IxKT</span> <span class="op">$</span> \k <span class="ot">-&gt;</span> c <span class="op">&gt;&gt;-</span> \a <span class="ot">-&gt;</span> f a <span class="op">&gt;&gt;-</span> k</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="co">-- We roll our own indexed continuation monad.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="kw">newtype</span> <span class="dt">IxKT</span> n o m i <span class="ot">=</span> <span class="dt">IxKT</span> {<span class="ot"> (&gt;&gt;-) ::</span> (i <span class="ot">-&gt;</span> n m) <span class="ot">-&gt;</span> n o }</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="kw">instance</span> <span class="dt">IxFunctor</span> (<span class="dt">IxKT</span> m) <span class="kw">where</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>  imap f m <span class="ot">=</span> <span class="dt">IxKT</span> <span class="op">$</span> \k <span class="ot">-&gt;</span> m <span class="op">&gt;&gt;-</span> (k <span class="op">.</span> f)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a><span class="kw">instance</span> <span class="dt">IxPointed</span> (<span class="dt">IxKT</span> m) <span class="kw">where</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>  ireturn a <span class="ot">=</span> <span class="dt">IxKT</span> (<span class="op">$</span>a)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a><span class="kw">instance</span> <span class="dt">Monad</span> m <span class="ot">=&gt;</span> <span class="dt">IxApplicative</span> (<span class="dt">IxKT</span> m) <span class="kw">where</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>  iap <span class="ot">=</span> iapIxMonad</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a><span class="kw">instance</span> <span class="dt">Monad</span> m <span class="ot">=&gt;</span> <span class="dt">IxMonad</span> (<span class="dt">IxKT</span> m) <span class="kw">where</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>  ibind f c <span class="ot">=</span> <span class="dt">IxKT</span> <span class="op">$</span> \k <span class="ot">-&gt;</span> c <span class="op">&gt;&gt;-</span> \a <span class="ot">-&gt;</span> f a <span class="op">&gt;&gt;-</span> k</span></code></pre></div>
 </section>
 <section id="citation-test" class="level2">
 <h2>Citation test</h2>
