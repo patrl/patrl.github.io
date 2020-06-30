@@ -13,6 +13,7 @@ at ~pdell@mit.edu~, or via [[https://keybase.io/patrl/chat][encrypted chat]].
 
 *** Recent and upcoming
 
+- June 2020: I have a new ms. entitled /Prospects for a dynamic account of weak crossover: A commentary on Chierchia 2020/. Contact me for a draft.
 - March 2020: I have a new manuscript entitled /A flexible scope theory of
   intensionality/, which can be found [[https://ling.auf.net/lingbuzz/005107][here]].
 - January 2020: I uploaded a corrected version of my PhD dissertation /Elements
@@ -23,4 +24,3 @@ at ~pdell@mit.edu~, or via [[https://keybase.io/patrl/chat][encrypted chat]].
   web page can be found [[http://stellar.mit.edu/S/course/24/sp20/24.979/][here]].
 - August, 2020: I'm giving a talk at SALT with Yasu Sudo, entitled /Generalized
   crossover/.
-- I'm working on an ms. entitled /dynamics of crossover: another origin story/, responding to Chierchia's recent NLS paper on weak crossover. Email me for a draft.
