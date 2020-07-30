@@ -13,7 +13,9 @@ at ~pdell@mit.edu~, or via [[https://keybase.io/patrl/chat][encrypted chat]].
 
 *** Recent and upcoming
 
-- June 2020: I have a new ms. entitled /Prospects for a dynamic account of weak crossover: A commentary on Chierchia 2020/. Contact me for a draft.
+- July 2020: I have a new ms. (in prep) entitled /Coreference, negation, and modal subordination/. Contact me directly for a draft.
+- July 2020: I have a new ms. on lingbuzz entitled /Exceptional de re in continuation semantics/, which can be found [[https://ling.auf.net/lingbuzz/005297][here]].
+- June 2020: I have a new ms. on lingbuzz entitled /Crossover and accessibility in dynamic semantics/, which can be found [[https://ling.auf.net/lingbuzz/005311][here]].
 - March 2020: I have a new manuscript entitled /A flexible scope theory of
   intensionality/, which can be found [[https://ling.auf.net/lingbuzz/005107][here]].
 - January 2020: I uploaded a corrected version of my PhD dissertation /Elements
