@@ -7,7 +7,7 @@ date: 08.26.2020
 
 I'm currently [[https://linguistics.mit.edu/user/pdell/][a visiting faculty member in the linguistics & philosophy department at MIT]].
 
-I'm a theoretical linguist, which means that my work involves developing formal models of what we know when we know a language. Mostly, I work on semantics and pragmatics; I'm also interested in computational approaches to meaning and the syntax-semantics interface..
+I'm a theoretical linguist, which means that my work involves developing formal models of what we know when we know a language. Mostly, I work on semantics and pragmatics; I'm also interested in computational approaches to meaning and the syntax-semantics interface.
 
 When I'm not doing linguistics, I [[https://github.com/patrl][code]], [[https://www.goodreads.com/user/show/59694544-patrick-elliott][read]], and scale vertical walls. Reach me
 at ~pdell@mit.edu~, or via [[https://keybase.io/patrl/chat][encrypted chat]].
