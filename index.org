@@ -2,17 +2,21 @@
 title: About
 author: Patrick D. Elliott
 lang: English
-date: 03.13.2020
+date: 08.26.2020
 ---
 
-I'm a visiting faculty member in the linguistics & philosophy department at MIT.
-I'm a theoretical linguist, which means that my work involves developing formal models of what we know when we know a language. Mostly, I do semantics, but I'm also interested in syntax, morphology, pragmatics, and their interfaces with semantics.
+I'm currently [[https://linguistics.mit.edu/user/pdell/][a visiting faculty member in the linguistics & philosophy department at MIT]].
+
+I'm a theoretical linguist, which means that my work involves developing formal models of what we know when we know a language. Mostly, I work on semantics and pragmatics; I'm also interested in computational approaches to meaning and the syntax-semantics interface..
 
 When I'm not doing linguistics, I [[https://github.com/patrl][code]], [[https://www.goodreads.com/user/show/59694544-patrick-elliott][read]], and scale vertical walls. Reach me
 at ~pdell@mit.edu~, or via [[https://keybase.io/patrl/chat][encrypted chat]].
 
 *** Recent and upcoming
 
+- November, 2020: I'll be giving an invited talk at [[http://www.is.ocha.ac.jp/~bekki/lenls/][/Logic and Engineering of Natural Language Semantics 17/]].
+- August, 2020: I gave a talk at SALT with Yasu Sudo, entitled /Generalized
+  crossover/ - you can find the slides [[https://osf.io/avms8][here]].
 - July 2020: I have a new ms. (in prep) entitled /Coreference, negation, and modal subordination/. Contact me directly for a draft.
 - July 2020: I have a new ms. on lingbuzz entitled /Exceptional de re in continuation semantics/, which can be found [[https://ling.auf.net/lingbuzz/005297][here]].
 - June 2020: I have a new ms. on lingbuzz entitled /Crossover and accessibility in dynamic semantics/, which can be found [[https://ling.auf.net/lingbuzz/005311][here]].
@@ -24,5 +28,3 @@ at ~pdell@mit.edu~, or via [[https://keybase.io/patrl/chat][encrypted chat]].
 - Spring semester 2020: I taught a semantics seminar at MIT with Martin Hackl,
   entitled /Getting high: scope, projection, and evaluation order/. The class
   web page can be found [[http://stellar.mit.edu/S/course/24/sp20/24.979/][here]].
-- August, 2020: I'm giving a talk at SALT with Yasu Sudo, entitled /Generalized
-  crossover/.
