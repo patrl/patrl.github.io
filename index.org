@@ -15,6 +15,7 @@ at ~pdell@mit.edu~, or via [[https://keybase.io/patrl/chat][encrypted chat]].
 *** Recent and upcoming
 
 - November, 2020: I'll be giving an invited talk at [[http://www.is.ocha.ac.jp/~bekki/lenls/][/Logic and Engineering of Natural Language Semantics 17/]].
+- October 9, 2020: I'll be giving a talk at the NYU semantics group, topic TBC.
 - August, 2020: I gave a talk at SALT with Yasu Sudo, entitled /Generalized
   crossover/ - you can find the slides [[https://osf.io/avms8][here]].
 - July 2020: I have a new ms. (in prep) entitled /Coreference, negation, and modal subordination/. Contact me directly for a draft.
