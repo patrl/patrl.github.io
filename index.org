@@ -2,35 +2,22 @@
 title: About
 author: Patrick D. Elliott
 lang: English
-date: 08.26.2020
+date: 20.02.2021
 ---
 
 I'm currently [[https://linguistics.mit.edu/user/pdell/][a visiting faculty member in the linguistics & philosophy department at MIT]].
 
 I'm a theoretical linguist, which means that my work involves developing formal models of what we know when we know a language. Mostly, I work on semantics and pragmatics; I'm also interested in computational approaches to meaning and the syntax-semantics interface.
 
-When I'm not doing linguistics, I [[https://github.com/patrl][code]], [[https://www.goodreads.com/user/show/59694544-patrick-elliott][read]], and scale vertical walls. Reach me
-at ~pdell@mit.edu~, or via [[https://keybase.io/patrl/chat][encrypted chat]].
+When I'm not doing linguistics, I [[https://github.com/patrl][code]], run, and scale vertical walls. Reach me at ~pdell(at)mit.edu~.
 
 *** Recent and upcoming
 
-- February, 2021. I'll be giving an invited talk at the workshop /On the nouniness of propositional arguments/ at DGfS 43, Freiburg. Topic TBC.
-- December 8, 2020: I'll be giving a talk at MIT CompLang entitled /What linguists can learn from functional programmers: A study in opacity and environment sensitivity/.
+- February, 2021. I'll be giving an invited talk entitled /Objects of attitude ascriptions/ at the workshop /On the nouniness of propositional arguments/ at DGfS 43, Freiburg.
+- December 8, 2020: I gave a talk at MIT CompLang entitled /What linguists can learn from functional programmers: A study in opacity and environment sensitivity/.
 - November 2020: I have a new ms. on lingbuzz entitled /Towards a principled logic of anaphora/, which can be found [[https://ling.auf.net/lingbuzz/005562][here]].
 - November, 2020: I gave an invited talk at [[http://www.is.ocha.ac.jp/~bekki/lenls/][/Logic and Engineering of Natural Language Semantics 17/]], entitled /Classical negation in a dynamic alternative semantics/. [[https://patrl.keybase.pub/slides/lenls2020.pdf][Slides]].
-- October 27, 2020: I gave at the Rutgers SURGE meeting, entitled /Coreference, negation, and modal subordination/.
+- October 27, 2020: I gave a talk at the Rutgers SURGE meeting, entitled /Coreference, negation, and modal subordination/.
 - October 9, 2020: I gave a talk at the NYU semantics group, entitled /Crossover and the dynamics of negation/.
-- September, 2020: I a new ms., to appear as a commentary in a special issue of /Theoretical Linguistiics/, entitled /A plea for equality: remarks on Moltmann's semantics for clausal embedding/, which can be found [[https://ling.auf.net/lingbuzz/005440][here]].
-- August, 2020: I gave a talk at SALT with Yasu Sudo, entitled /Generalized
-  crossover/ - you can find the slides [[https://osf.io/avms8][here]].
+- September, 2020: I have a commentary in a special issue of /Theoretical Linguistics/, entitled /A plea for equality: remarks on Moltmann's semantics for clausal embedding/, which can be found [[https://ling.auf.net/lingbuzz/005440][here]].
 - July 2020: I have a new ms. (in prep) entitled /Coreference, negation, and modal subordination/. Contact me directly for a draft.
-- July 2020: I have a new ms. on lingbuzz entitled /Exceptional de re in continuation semantics/, which can be found [[https://ling.auf.net/lingbuzz/005297][here]].
-- June 2020: I have a new ms. on lingbuzz entitled /Crossover and accessibility in dynamic semantics/, which can be found [[https://ling.auf.net/lingbuzz/005311][here]].
-- March 2020: I have a new manuscript entitled /A flexible scope theory of
-  intensionality/, which can be found [[https://ling.auf.net/lingbuzz/005107][here]].
-- January 2020: I uploaded a corrected version of my PhD dissertation /Elements
-  of Clausal Embedding/ to semantics archive and lingbuzz. It can be downloaded
-  from [[https://semanticsarchive.net/Archive/2YyN2M5N/][here]].
-- Spring semester 2020: I taught a semantics seminar at MIT with Martin Hackl,
-  entitled /Getting high: scope, projection, and evaluation order/. The class
-  web page can be found [[http://stellar.mit.edu/S/course/24/sp20/24.979/][here]].

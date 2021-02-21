@@ -7,7 +7,9 @@ date: 28.11.2019
 <details>
 <summary>Papers</summary>
 
-- @elliott18intervention
+- @elliott2021flexibleScope <a href="https://ling.auf.net/lingbuzz/005107">Read.</a>
+- @elliott2020cont <a href="https://ling.auf.net/lingbuzz/005297">Read.</a>
+- @elliott2020crossover <a href="https://ling.auf.net/lingbuzz/005311">Read.</a>
 - @lenls18a
 - @elliottEtAl2018simplex <a href="https://patrl.keybase.pub/papers/whoAndWhatMs.pdf">Read.</a>
 - @paper17jos <a href="https://patrl.keybase.pub/papers/PoRs.pdf">Read.</a>
@@ -41,13 +43,21 @@ date: 28.11.2019
 <details>
 <summary>Unpublished</summary>
 
-- Elliott, Patrick D. In prep. Exceptional *de re* as exceptional scope.
-- @unpub17thesis <a href="https://patrl.keybase.pub/thesis.pdf">Read.</a>
+- @elliott18intervention
+- @unpub17thesis <a href="https://ling.auf.net/lingbuzz/004991">2020 corrected version.</a>
 - @unpub13thesis
 - @unpub12thesis
 
 </details>
 
+<details>
+<summary>talks 2020</summary>
+
+- @elliottSudo2020salt <a href="https://osf.io/4sp3g/">Slides.</a>
+- ...
+- ...
+
+</details>
 
 <details>
 <summary>talks 2019</summary>
