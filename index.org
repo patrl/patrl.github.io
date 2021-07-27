@@ -13,6 +13,7 @@ When I'm not doing linguistics, I [[https://github.com/patrl][code]], run, and s
 
 *** Recent and upcoming
 
+- July 14, 2020: I gave a talk at ENS (Paris) entitled /Externally-dynamic Dynamic Semantics/. [[https://patrl.keybase.pub/handouts/ens.pdf][Handout]].
 - December 8, 2020: I gave a talk at MIT CompLang entitled /What linguists can learn from functional programmers: A study in opacity and environment sensitivity/.
 - November 2020: I have a new ms. on lingbuzz entitled /Towards a principled logic of anaphora/, which can be found [[https://ling.auf.net/lingbuzz/005562][here]].
 - November, 2020: I gave an invited talk at [[http://www.is.ocha.ac.jp/~bekki/lenls/][/Logic and Engineering of Natural Language Semantics 17/]], entitled /Classical negation in a dynamic alternative semantics/. [[https://patrl.keybase.pub/slides/lenls2020.pdf][Slides]].

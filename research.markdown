@@ -54,8 +54,6 @@ date: 28.11.2019
 <summary>talks 2020</summary>
 
 - @elliottSudo2020salt <a href="https://osf.io/4sp3g/">Slides.</a>
-- ...
-- ...
 
 </details>
 
