@@ -8,6 +8,7 @@ date: 28.11.2019
 <summary>Papers</summary>
 
 - @elliott2021flexibleScope <a href="https://ling.auf.net/lingbuzz/005107">Read.</a>
+- @elliott2020plea
 - @elliott2020cont <a href="https://ling.auf.net/lingbuzz/005297">Read.</a>
 - @elliott2020crossover <a href="https://ling.auf.net/lingbuzz/005311">Read.</a>
 - @lenls18a
