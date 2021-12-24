@@ -1,0 +1,63 @@
+;; load emacs package manager
+(require 'package)
+
+;; install packages in a local directory
+(setq package-user-dir (expand-file-name "./.packages"))
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("elpa" . "https://elpa.gnu.org/packages/")))
+
+;; Initialize the package system
+(package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
+
+;; Install dependencies (for formatting code blocks)
+(package-install 'htmlize)
+
+;; Load the publishing system
+(require 'ox-publish)
+
+;; Define the publishing project
+(setq org-publish-project-alist
+      '(("patrickdelliott.com"
+	     :recursive t
+	     :base-directory "./content/"
+	     :publishing-directory "./public/"
+	     :publishing-function org-html-publish-to-html
+	     :with-author nil
+	     :with-creator nil
+	     :with-toc nil
+	     :section-numbers nil
+	     :time-stamp-file t
+	     :html-container "section"
+	     :html-divs ((preamble "div" "preamble")
+			 (content "main" "content") ;; necessary to get the right styling
+			 (postamble "div" "postamble"))
+	     :html-doctype "html5"
+	     :headline-levels 2
+	     :html-html5-fancy t
+	     :html-head "<link rel=\"stylesheet\" href=\"css/patrickdelliott.css\" />"
+	     :html-head-include-default-style nil
+	     :html-head-include-scripts nil
+	     :html-validation-link nil
+	     :html-preamble nil
+	     :html-postamble nil
+	     ;; :auto-sitemap t
+	     ;; :sitemap-filename "sitemap.org"
+	     ;; :sitemap-title "Sitemap"
+	     )
+
+	("images"
+	 :base-directory "./content/"
+	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|eot\\|svg\\|ttf\\|woff"
+	 :publishing-directory "./public/"
+	 :recursive t
+	 :publishing-function org-publish-attachment)
+	)
+      )
+
+
+;; Generate the site output
+(org-publish-all t)
+
+(message "Build complete!")

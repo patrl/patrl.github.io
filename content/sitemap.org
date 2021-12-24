@@ -1,0 +1,4 @@
+#+TITLE: Sitemap
+
+- [[file:other-page.org][Other page]]
+- [[file:index.org][Test]]

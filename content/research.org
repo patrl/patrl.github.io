@@ -1,0 +1,6 @@
+#+title: Research
+#+bibliography: myWork.bib
+
+-  [cite:@elliott2020plea]
+  
+#+print_bibliography:
