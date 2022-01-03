@@ -1,9 +1,11 @@
 #+title: Patrick D. Elliott
 #+author: Patrick D. Elliott
 
+🚨 *this site is a work in progress - see [[file:pdf/vitae.pdf][vitae]] for up-to-date information* 🚨
+
 * Links
 
-- [[https://patrl.keybase.pub/vitae.pdf][vitae]]
+- [[file:pdf/vitae.pdf][vitae]]
 - [[https://github.com/patrl][github]]
 - [[https://twitter.com/patrickdelliott][twitter]]
 
@@ -14,3 +16,4 @@ I'm currently [[https://linguistics.mit.edu/user/pdell/][a visiting faculty memb
 I'm a theoretical linguist, which means that my work involves developing formal models of what we know when we know a language. Mostly, I work on semantics and pragmatics; I'm also interested in computational approaches to meaning and the syntax-semantics interface.
 
 When I'm not doing linguistics, I code, run, and scale vertical walls. Reach me at [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott@gmail.com]].
+ 
