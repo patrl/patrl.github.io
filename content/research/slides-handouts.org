@@ -1,0 +1,91 @@
+#+title: Slides and handouts
+#+author: Patrick D. Elliott
+
+* 2021
+
+- *Meaning in linguistic theory: formal semantics and Montague grammar*
+  * MIT Quest meaning representation workshop, September 11.
+  * [[https://patrl.keybase.pub/slides/quest-workshop-handout.pdf][Slides]]
+- *Intensionalizing abstract meaning representations: non-veridicality and scope*
+  * Joint work with Greg Williamson and Yuxin Ji.
+  * Talk given at the LAW-DMR 2021 workshop, November 10-11.
+  * [[https://arxiv.org/pdf/2109.09858.pdf][Paper]]
+- *A scopal theory of pied-piping in relative clauses*
+  * Talk given at NELS 52.
+  * [[https://osf.io/gfeky/][Handout]]
+- *Externally dynamic dynamic semantics*
+  * Talk given at ENS, July 14.
+  * [[https://patrl.keybase.pub/handouts/ens.pdf][Handout]]
+- *Trivalent foundations for a logic of anaphora*
+  - Invited job talk given at MIT.
+  - [[http://patrickdelliott.com/mit-job-talk][Slides]]
+    
+* 2020
+    
+- *What linguists can learn from functional programmers: a study in opacity and environment sensitivity*
+   * Talk given at MIT CompLang, December 8. 
+- *Classical negation in a dynamic alternative semantics*
+  * Invited talk at LENLS 17.
+  * [[https://patrl.keybase.pub/slides/lenls2020.pdf][Slides]]
+- *Coreference, negation, and modal subordination*
+  * Talk at Rutgers SURGE meeting, October 27.
+- *Crossover and the dynamics of negation*
+  * Talk at NYU semantics group, October 9.
+- *Generalized crossover*
+  * Joint work with Yasu Sudo.
+  * Talk given at SALT
+  * [[https://osf.io/4sp3g/][Slides]]
+    
+* 2019
+
+- *Nesting habits of flightless /wh/-expressions*
+  * Invited talk given at the workshop /Complex wh-expressions/ in Nantes.
+  * [[https://patrl.keybase.pub/slides/nantes.pdf][Slides]]
+- *Two souls of disjunction*
+  * Talk given at the workshop /Asymmetries in language: presuppositions and beyond/ in Berlin.
+  * [[https://patrl.keybase.pub/slides/berlin-disj.pdf][Slides]]
+- *Binding back to the future*
+  * Joint work with Yasu Sudo.
+  * Talk given at the workshop /Asymmetries in language: presuppositions and beyond/ in Berlin.
+  * [[https://patrl.keybase.pub/slides/berlin-cataphora.pdf][Slides]]
+- *Nuclear intervention: deriving Beck effects via cyclic scope and local exhaustification*
+  * Joint work with Uli Sauerland.
+  * Talk given at the workshop /Exhaustivity in questions and answers/ in Tübingen.
+  * [[https://patrl.keybase.pub/slides/tuebingen-slides.pdf][Slides]]
+- *The dynamics of ellipsis identity*
+  * Joint work with Yasu Sudo.
+  * Talk given at the workshop SLUICING+@50 in Chicago.
+- */Fuck/ compositionality*
+  * Invited talk at the DGfS workshop /Encoding emotive attitudes in non-truth-conditional meaning/ in Bremen.
+  * [[https://patrl.keybase.pub/slides/emoSlides.pdf][Slides]]
+- *Two souls of disjunction: making dynamic semantics (more) explanatory*
+  * Invited talk at Frankfurt Semantics Colloquium
+  * [[https://patrl.keybase.pub/handouts/frankfurt.pdf][Handout]]
+- *Movement as higher-order structure building*
+  * Invited talk at Göttingen.
+  * [[https://patrl.keybase.pub/slides/goettingen-mvt.pdf][Slides]]
+
+* 2018
+
+- *Deriving dynamic disjunction*
+  * Talk given at the FB IV workshop, ZAS Berlin.
+- *Arguments and attitudes*
+  * Guest lecture at the semantics of attitudes seminar series, UCL.
+- *On Prior's substitution problem*
+  * Talk given at the UCL workshop on attitude predicates.
+- *Embedded exhaustification and plurality: two case studies*
+  * Talk given at UCL.
+    
+* 2017
+
+- *An algebraic theory of attitudes*
+  * Talk given at LENLS 14.
+- *Arguments and attitudes*
+  * Talk given at the FB IV workshop, ZAS Berlin.
+    
+* 2016
+
+- *Nested /which/-phrases: consequences for the syntax of /wh/-scope*
+  * Talk given at the IGG 42, Lecce.
+- *Nested /wh/-questions and the locality of scope-taking*
+  * Talk given at ConSOLE XXIV, York.

@@ -9,3 +9,5 @@ bib/auto/
 bib/.auctex-auto/
 dist/
 dist-newstyle/
+.packages/
+public/

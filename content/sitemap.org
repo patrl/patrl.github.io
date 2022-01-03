@@ -1,4 +1,9 @@
-#+TITLE: Sitemap
+#+TITLE: Sitemap for project patrickdelliott.com
 
-- [[file:other-page.org][Other page]]
-- [[file:index.org][Test]]
+- [[file:index.org][Patrick D. Elliott]]
+- [[file:teaching.org][Teaching]]
+- research
+  - [[file:research/papers.org][Papers]]
+  - [[file:research/slides-handouts.org][Slides and handouts]]
+- test
+  - [[file:test/math.org][Math test]]

@@ -1,0 +1,7 @@
+#+title: Math test
+
+Hi there, I just want to say that $\lambda x \,.\,dog(x) \wedge x = y$.
+
+\(
+\lambda x\,.\,\lambda k\,.\,k(x)(y)(z) \wedge \llbracket \alpha \rrbracket
+\)

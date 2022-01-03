@@ -1,0 +1,101 @@
+#+title: Papers
+#+author: Patrick D. Elliott
+
+* Manuscripts
+
+** Crossover and accessibility in dynamic semantics
+- [[https://ling.auf.net/lingbuzz/005311][lingbuzz/005311]] 
+
+** Towards a principles logic of anaphora
+- [[https://ling.auf.net/lingbuzz/005562][lingbuzz/005562]]
+
+* 2021
+
+** A flexible scope theory of intensionality
+- [[https://ling.auf.net/lingbuzz/005107][lingbuzz/005107]]
+- Accepted with minor revisions at /Linguistics & Philosophy/.
+
+** Who and what do /who/ and /what/ range over cross-linguistically?
+- [[https://ling.auf.net/lingbuzz/003959][lingbuzz/003959]]
+- Accepted at /Journal of Semantics/.
+  
+** A plea for equality: remarks on Moltmann's semantics for clausal embedding
+- [[https://ling.auf.net/lingbuzz/005440][lingbuzz/005440]]
+- Published in /Theoretical Linguistics/.
+
+* 2020
+
+** Exceptional /de re/ in continuation semantics
+- [[https://ling.auf.net/lingbuzz/005297][lingbuzz/005297]]
+- Published in /Proceedings of WCCFL 38/.
+
+* 2019  
+
+** Applicatives for anaphora and presupposition
+- Published in /Proceedings of LENLS 18/.
+  
+** Exactly one theory of multiplicity inferences
+- with Paul Marty.
+- Published in /Snippets/.
+  
+** Unconditional sluicing: a case of ineffable ellipsis
+- with Andrew Murphy.
+- Published in /Snippets/.
+  
+** \#Only zero
+- Published in /Snippets/.
+  
+** Ineffability and unexhaustification
+- with Uli Sauerland
+- [[https://semanticsarchive.net/Archive/Tg3ZGI2M/Elliott.pdf][semanticsarchive/Tg3ZGI2M]]
+- Published in /Proceedings of Sinn und Bedeutung 23/.
+
+* 2018
+
+** Collective predication and ellipsis: another case of ineffability
+- [[https://ling.auf.net/lingbuzz/003963][lingbuzz/003963]]
+- Published in /Snippets/.
+
+* 2017
+
+** Predicates of relevance and theories of question embedding
+- Published in /Journal of Semantics/.
+  
+** Do superiority-violating multiple singular /which/-questions have pair-list readings?
+- with Andreea Nicolae and Yasu Sudo.
+- Published in /Snippets/.
+
+* 2016
+
+** Explaining DPs vs. CPs without syntax
+- [[https://ling.auf.net/lingbuzz/003128][lingbuzz/003128]]
+- Published in /Proceedings of CLS 52/.
+
+** E-type readings of quantifiers under ellipsis: consequences for the identity condition  
+- with Yasu Sudo
+- [[https://ling.auf.net/lingbuzz/repo/semanticsArchive/article/001561][semanticsArchive/2QzYmEzO]]
+  
+** List readings of questions with conjoined singular /which/-phrases
+- with Andreea Nicolae and Yasu Sudo
+- [[https://ling.auf.net/lingbuzz/004193][lingbuzz/004193]]
+- Published in /Proceedings of NELS 46/.
+  
+** The sticky reading: VP ellipsis without parallel binding
+- with Andreea Nicolae and Yasu Sudo
+- [[https://ling.auf.net/lingbuzz/002900][lingbuzz/002900]]
+- Published in /Proceedings of SALT 24/.
+  
+** QR out of control
+- with Gary Thoms
+- Published in /Proceedings of WCCFL 33/.
+
+* 2015
+
+** More variation in island repair: the clausal/non-clausal distinction
+- with Matt Barros and Gary Thoms.
+- Published in /Proceedings of CLS 49/.
+
+* Dissertation
+
+** Elements of clausal embedding
+- [[https://ling.auf.net/lingbuzz/004991][lingbuzz/004991]]
