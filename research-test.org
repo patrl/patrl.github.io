@@ -1,9 +1,0 @@
----
-title: Research
-author: Patrick D. Elliott
-date: 06.07.2019
----
-
-* yo
-
-- @elliott18intervention
