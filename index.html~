@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-01-07 Fri 18:01 -->
+<!-- 2022-01-07 Fri 18:00 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sitemap for project patrickdelliott.com</title>
-<meta name="author" content="Patrick Elliott" />
+<title>Patrick D. Elliott</title>
+<meta name="author" content="Patrick D. Elliott" />
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" href="/css/patrickdelliott.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
@@ -25,20 +25,38 @@
 </nav>
 <main id="content" class="content">
 <header>
-<h1 class="title">Sitemap for project patrickdelliott.com</h1>
-</header><ul class="org-ul">
-<li><a href="index.html">Patrick D. Elliott</a></li>
-<li><a href="teaching.html">Teaching</a></li>
-<li>research
+<h1 class="title">Patrick D. Elliott</h1>
+</header><p>
+🚨 <b>this site is a work in progress - see <a href="pdf/vitae.pdf">vitae</a> for up-to-date information</b> 🚨
+</p>
+
+<section id="outline-container-org995ddfb" class="outline-2">
+<h2 id="org995ddfb">Links</h2>
+<div class="outline-text-2" id="text-org995ddfb">
 <ul class="org-ul">
-<li><a href="research/papers.html">Papers</a></li>
-<li><a href="research/slides-handouts.html">Slides and handouts</a></li>
-</ul></li>
-<li>test
-<ul class="org-ul">
-<li><a href="test/math.html">Math test</a></li>
-</ul></li>
+<li><a href="pdf/vitae.pdf">vitae</a></li>
+<li><a href="https://github.com/patrl">github</a></li>
+<li><a href="https://twitter.com/patrickdelliott">twitter</a></li>
 </ul>
+</div>
+</section>
+
+<section id="outline-container-org5c80174" class="outline-2">
+<h2 id="org5c80174">About me</h2>
+<div class="outline-text-2" id="text-org5c80174">
+<p>
+I'm currently <a href="https://linguistics.mit.edu/user/pdell/">a visiting faculty member in the linguistics &amp; philosophy department at MIT</a>.
+</p>
+
+<p>
+I'm a theoretical linguist, which means that my work involves developing formal models of what we know when we know a language. Mostly, I work on semantics and pragmatics; I'm also interested in computational approaches to meaning and the syntax-semantics interface.
+</p>
+
+<p>
+When I'm not doing linguistics, I code, run, and scale vertical walls. Reach me at <a href="mailto:patrick.d.elliott@gmail.com">patrick.d.elliott@gmail.com</a>.
+</p>
+</div>
+</section>
 </main>
 </body>
 </html>

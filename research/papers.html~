@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2022-01-07 Fri 18:00 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Papers</title>
+<meta name="author" content="Patrick D. Elliott" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" href="/css/patrickdelliott.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossorigin="anonymous">
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js" integrity="sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx" crossorigin="anonymous"></script>
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+</head>
+<body>
+<nav id="preamble" class="status">
+<a class="active" href="/">Home</a>
+<a href="/research/papers.html">Papers</a>
+<a href="/research/slides-handouts.html">Talks</a>
+<a href="/teaching.html">Teaching</a>
+<!-- <a href="https://blog.patrickdelliott.com">Blog</a> -->
+<!-- <a href="https://notes.patrickdelliott.com">Notes</a> -->
+</nav>
+<main id="content" class="content">
+<header>
+<h1 class="title">Papers</h1>
+</header>
+<section id="outline-container-org9b61adc" class="outline-2">
+<h2 id="org9b61adc">Manuscripts</h2>
+<div class="outline-text-2" id="text-org9b61adc">
+</div>
+<div id="outline-container-org362e449" class="outline-3">
+<h3 id="org362e449">Crossover and accessibility in dynamic semantics</h3>
+<div class="outline-text-3" id="text-org362e449">
+<ul class="org-ul">
+<li><a href="https://ling.auf.net/lingbuzz/005311">lingbuzz/005311</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdb68d67" class="outline-3">
+<h3 id="orgdb68d67">Towards a principled logic of anaphora</h3>
+<div class="outline-text-3" id="text-orgdb68d67">
+<ul class="org-ul">
+<li><a href="https://ling.auf.net/lingbuzz/005562">lingbuzz/005562</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="outline-container-orgc4a5bfe" class="outline-2">
+<h2 id="orgc4a5bfe">2021</h2>
+<div class="outline-text-2" id="text-orgc4a5bfe">
+</div>
+<div id="outline-container-orgbbe0fbc" class="outline-3">
+<h3 id="orgbbe0fbc">A flexible scope theory of intensionality</h3>
+<div class="outline-text-3" id="text-orgbbe0fbc">
+<ul class="org-ul">
+<li><a href="https://ling.auf.net/lingbuzz/005107">lingbuzz/005107</a></li>
+<li>Accepted with minor revisions at <i>Linguistics &amp; Philosophy</i>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2a9f58c" class="outline-3">
+<h3 id="org2a9f58c">Who and what do <i>who</i> and <i>what</i> range over cross-linguistically?</h3>
+<div class="outline-text-3" id="text-org2a9f58c">
+<ul class="org-ul">
+<li><a href="https://ling.auf.net/lingbuzz/003959">lingbuzz/003959</a></li>
+<li>Accepted at <i>Journal of Semantics</i>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org49f74ad" class="outline-3">
+<h3 id="org49f74ad">A plea for equality: remarks on Moltmann's semantics for clausal embedding</h3>
+<div class="outline-text-3" id="text-org49f74ad">
+<ul class="org-ul">
+<li><a href="https://ling.auf.net/lingbuzz/005440">lingbuzz/005440</a></li>
+<li>Published in <i>Theoretical Linguistics</i>.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="outline-container-orgf84018e" class="outline-2">
+<h2 id="orgf84018e">2020</h2>
+<div class="outline-text-2" id="text-orgf84018e">
+</div>
+<div id="outline-container-org0bab39c" class="outline-3">
+<h3 id="org0bab39c">Exceptional <i>de re</i> in continuation semantics</h3>
+<div class="outline-text-3" id="text-org0bab39c">
+<ul class="org-ul">
+<li><a href="https://ling.auf.net/lingbuzz/005297">lingbuzz/005297</a></li>
+<li>Published in <i>Proceedings of WCCFL 38</i>.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org89a2372" class="outline-2">
+<h2 id="org89a2372">2019</h2>
+<div class="outline-text-2" id="text-org89a2372">
+</div>
+<div id="outline-container-orgd08c057" class="outline-3">
+<h3 id="orgd08c057">Applicatives for anaphora and presupposition</h3>
+<div class="outline-text-3" id="text-orgd08c057">
+<ul class="org-ul">
+<li>Published in <i>Proceedings of LENLS 18</i>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org560ffc8" class="outline-3">
+<h3 id="org560ffc8">Exactly one theory of multiplicity inferences</h3>
+<div class="outline-text-3" id="text-org560ffc8">
+<ul class="org-ul">
+<li>with Paul Marty.</li>
+<li>Published in <i>Snippets</i>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7d9877d" class="outline-3">
+<h3 id="org7d9877d">Unconditional sluicing: a case of ineffable ellipsis</h3>
+<div class="outline-text-3" id="text-org7d9877d">
+<ul class="org-ul">
+<li>with Andrew Murphy.</li>
+<li>Published in <i>Snippets</i>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1b69e92" class="outline-3">
+<h3 id="org1b69e92">\#Only zero</h3>
+<div class="outline-text-3" id="text-org1b69e92">
+<ul class="org-ul">
+<li>Published in <i>Snippets</i>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org47b4368" class="outline-3">
+<h3 id="org47b4368">Ineffability and unexhaustification</h3>
+<div class="outline-text-3" id="text-org47b4368">
+<ul class="org-ul">
+<li>with Uli Sauerland</li>
+<li><a href="https://semanticsarchive.net/Archive/Tg3ZGI2M/Elliott.pdf">semanticsarchive/Tg3ZGI2M</a></li>
+<li>Published in <i>Proceedings of Sinn und Bedeutung 23</i>.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="outline-container-orgea447a0" class="outline-2">
+<h2 id="orgea447a0">2018</h2>
+<div class="outline-text-2" id="text-orgea447a0">
+</div>
+<div id="outline-container-org19e2af8" class="outline-3">
+<h3 id="org19e2af8">Collective predication and ellipsis: another case of ineffability</h3>
+<div class="outline-text-3" id="text-org19e2af8">
+<ul class="org-ul">
+<li><a href="https://ling.auf.net/lingbuzz/003963">lingbuzz/003963</a></li>
+<li>Published in <i>Snippets</i>.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="outline-container-orgd597169" class="outline-2">
+<h2 id="orgd597169">2017</h2>
+<div class="outline-text-2" id="text-orgd597169">
+</div>
+<div id="outline-container-org654af09" class="outline-3">
+<h3 id="org654af09">Predicates of relevance and theories of question embedding</h3>
+<div class="outline-text-3" id="text-org654af09">
+<ul class="org-ul">
+<li>Published in <i>Journal of Semantics</i>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge2e0408" class="outline-3">
+<h3 id="orge2e0408">Do superiority-violating multiple singular <i>which</i>-questions have pair-list readings?</h3>
+<div class="outline-text-3" id="text-orge2e0408">
+<ul class="org-ul">
+<li>with Andreea Nicolae and Yasu Sudo.</li>
+<li>Published in <i>Snippets</i>.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org07e16a6" class="outline-2">
+<h2 id="org07e16a6">2016</h2>
+<div class="outline-text-2" id="text-org07e16a6">
+</div>
+<div id="outline-container-org7a3a4cf" class="outline-3">
+<h3 id="org7a3a4cf">Explaining DPs vs. CPs without syntax</h3>
+<div class="outline-text-3" id="text-org7a3a4cf">
+<ul class="org-ul">
+<li><a href="https://ling.auf.net/lingbuzz/003128">lingbuzz/003128</a></li>
+<li>Published in <i>Proceedings of CLS 52</i>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8baeda1" class="outline-3">
+<h3 id="org8baeda1">E-type readings of quantifiers under ellipsis: consequences for the identity condition</h3>
+<div class="outline-text-3" id="text-org8baeda1">
+<ul class="org-ul">
+<li>with Yasu Sudo</li>
+<li><a href="https://ling.auf.net/lingbuzz/repo/semanticsArchive/article/001561">semanticsArchive/2QzYmEzO</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbf668f2" class="outline-3">
+<h3 id="orgbf668f2">List readings of questions with conjoined singular <i>which</i>-phrases</h3>
+<div class="outline-text-3" id="text-orgbf668f2">
+<ul class="org-ul">
+<li>with Andreea Nicolae and Yasu Sudo</li>
+<li><a href="https://ling.auf.net/lingbuzz/004193">lingbuzz/004193</a></li>
+<li>Published in <i>Proceedings of NELS 46</i>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge900349" class="outline-3">
+<h3 id="orge900349">The sticky reading: VP ellipsis without parallel binding</h3>
+<div class="outline-text-3" id="text-orge900349">
+<ul class="org-ul">
+<li>with Andreea Nicolae and Yasu Sudo</li>
+<li><a href="https://ling.auf.net/lingbuzz/002900">lingbuzz/002900</a></li>
+<li>Published in <i>Proceedings of SALT 24</i>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org33c2995" class="outline-3">
+<h3 id="org33c2995">QR out of control</h3>
+<div class="outline-text-3" id="text-org33c2995">
+<ul class="org-ul">
+<li>with Gary Thoms</li>
+<li>Published in <i>Proceedings of WCCFL 33</i>.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="outline-container-orge77f1b4" class="outline-2">
+<h2 id="orge77f1b4">2015</h2>
+<div class="outline-text-2" id="text-orge77f1b4">
+</div>
+<div id="outline-container-org0ac217d" class="outline-3">
+<h3 id="org0ac217d">More variation in island repair: the clausal/non-clausal distinction</h3>
+<div class="outline-text-3" id="text-org0ac217d">
+<ul class="org-ul">
+<li>with Matt Barros and Gary Thoms.</li>
+<li>Published in <i>Proceedings of CLS 49</i>.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="outline-container-orgdca72ba" class="outline-2">
+<h2 id="orgdca72ba">Dissertation</h2>
+<div class="outline-text-2" id="text-orgdca72ba">
+</div>
+<div id="outline-container-org031ed7f" class="outline-3">
+<h3 id="org031ed7f">Elements of clausal embedding</h3>
+<div class="outline-text-3" id="text-org031ed7f">
+<ul class="org-ul">
+<li><a href="https://ling.auf.net/lingbuzz/004991">lingbuzz/004991</a></li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+</body>
+</html>

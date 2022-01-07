@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-01-07 Fri 18:01 -->
+<!-- 2022-01-07 Fri 18:00 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sitemap for project patrickdelliott.com</title>
+<title>Math test</title>
 <meta name="author" content="Patrick Elliott" />
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" href="/css/patrickdelliott.css" />
@@ -25,20 +25,16 @@
 </nav>
 <main id="content" class="content">
 <header>
-<h1 class="title">Sitemap for project patrickdelliott.com</h1>
-</header><ul class="org-ul">
-<li><a href="index.html">Patrick D. Elliott</a></li>
-<li><a href="teaching.html">Teaching</a></li>
-<li>research
-<ul class="org-ul">
-<li><a href="research/papers.html">Papers</a></li>
-<li><a href="research/slides-handouts.html">Slides and handouts</a></li>
-</ul></li>
-<li>test
-<ul class="org-ul">
-<li><a href="test/math.html">Math test</a></li>
-</ul></li>
-</ul>
+<h1 class="title">Math test</h1>
+</header><p>
+Hi there, I just want to say that \(\lambda x \,.\,dog(x) \wedge x = y\).
+</p>
+
+<p>
+\(
+\lambda x\,.\,\lambda k\,.\,k(x)(y)(z) \wedge \llbracket \alpha \rrbracket
+\)
+</p>
 </main>
 </body>
 </html>
