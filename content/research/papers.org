@@ -6,7 +6,7 @@
 ** Crossover and accessibility in dynamic semantics
 - [[https://ling.auf.net/lingbuzz/005311][lingbuzz/005311]] 
 
-** Towards a principles logic of anaphora
+** Towards a principled logic of anaphora
 - [[https://ling.auf.net/lingbuzz/005562][lingbuzz/005562]]
 
 * 2021
