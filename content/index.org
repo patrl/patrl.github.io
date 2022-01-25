@@ -17,3 +17,6 @@ I'm a theoretical linguist, which means that my work involves developing formal 
 
 When I'm not doing linguistics, I code, run, and scale vertical walls. Reach me at [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott@gmail.com]].
  
+* Upcoming
+
+- I'll be giving a talk at the [[http://tsinghualogic.net/JRC/?page_id=3591][TLLM 2022 workshop on Dynamics in Logic and Language]], Tsinghua University, Beijing.
