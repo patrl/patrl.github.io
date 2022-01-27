@@ -11,12 +11,9 @@
 
 * About me  
 
-I'm currently [[https://linguistics.mit.edu/user/pdell/][a visiting faculty member in the linguistics & philosophy department at MIT]].
-
-I'm a theoretical linguist, which means that my work involves developing formal models of what we know when we know a language. Mostly, I work on semantics and pragmatics; I'm also interested in computational approaches to meaning and the syntax-semantics interface.
-
-When I'm not doing linguistics, I code, run, and scale vertical walls. Reach me at [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott@gmail.com]].
+I'm a formal semanticist, which means that my work involves developing models of how we slot meanings together to determine the information conveyed by a sentence, using tools from logic and computer science. I'm currently [[https://linguistics.mit.edu/user/pdell/][a visiting faculty member in the linguistics & philosophy department at MIT]]. Reach me at [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott@gmail.com]].
  
-* Upcoming
+* News
 
 - I'll be giving a talk at the [[http://tsinghualogic.net/JRC/?page_id=3591][TLLM 2022 workshop on Dynamics in Logic and Language]], Tsinghua University, Beijing.
+- I'm teaching a class on discourse referents at MIT during the Spring semester. Course webpage: [[https://patrickdelliott.com/anaphora-seminar/][MIT topics in semantics seminar (spring 2022)]]
