@@ -1,0 +1,4 @@
+#+title: Resources
+#+author: Patrick D. Elliott
+
+- [[https://patrickdelliott.com/emacs.d][Emacs config]].
