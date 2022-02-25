@@ -1,6 +1,7 @@
 #+TITLE: Sitemap for project patrickdelliott.com
 
 - [[file:index.org][Patrick D. Elliott]]
+- [[file:resources.org][Resources]]
 - [[file:teaching.org][Teaching]]
 - research
   - [[file:research/papers.org][Papers]]
