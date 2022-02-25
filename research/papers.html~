@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-01-25 Tue 16:54 -->
+<!-- 2022-02-25 Fri 11:27 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Papers</title>
@@ -20,6 +20,7 @@
 <a href="/research/papers.html">Papers</a>
 <a href="/research/slides-handouts.html">Talks</a>
 <a href="/teaching.html">Teaching</a>
+<a href="/resources.html">Resources</a>
 <!-- <a href="https://blog.patrickdelliott.com">Blog</a> -->
 <!-- <a href="https://notes.patrickdelliott.com">Notes</a> -->
 </nav>
@@ -27,22 +28,22 @@
 <header>
 <h1 class="title">Papers</h1>
 </header>
-<section id="outline-container-org3b95b1c" class="outline-2">
-<h2 id="org3b95b1c">Manuscripts</h2>
-<div class="outline-text-2" id="text-org3b95b1c">
+<section id="outline-container-orgc64ca8c" class="outline-2">
+<h2 id="orgc64ca8c">Manuscripts</h2>
+<div class="outline-text-2" id="text-orgc64ca8c">
 </div>
-<div id="outline-container-org5b2a23d" class="outline-3">
-<h3 id="org5b2a23d">Crossover and accessibility in dynamic semantics</h3>
-<div class="outline-text-3" id="text-org5b2a23d">
+<div id="outline-container-org747ea0a" class="outline-3">
+<h3 id="org747ea0a">Crossover and accessibility in dynamic semantics</h3>
+<div class="outline-text-3" id="text-org747ea0a">
 <ul class="org-ul">
 <li><a href="https://ling.auf.net/lingbuzz/005311">lingbuzz/005311</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org9eea93c" class="outline-3">
-<h3 id="org9eea93c">Towards a principled logic of anaphora</h3>
-<div class="outline-text-3" id="text-org9eea93c">
+<div id="outline-container-org3613a62" class="outline-3">
+<h3 id="org3613a62">Towards a principled logic of anaphora</h3>
+<div class="outline-text-3" id="text-org3613a62">
 <ul class="org-ul">
 <li><a href="https://ling.auf.net/lingbuzz/005562">lingbuzz/005562</a></li>
 </ul>
@@ -50,13 +51,13 @@
 </div>
 </section>
 
-<section id="outline-container-org2d26ad1" class="outline-2">
-<h2 id="org2d26ad1">2021</h2>
-<div class="outline-text-2" id="text-org2d26ad1">
+<section id="outline-container-orgdbc54e3" class="outline-2">
+<h2 id="orgdbc54e3">2021</h2>
+<div class="outline-text-2" id="text-orgdbc54e3">
 </div>
-<div id="outline-container-org125dc5b" class="outline-3">
-<h3 id="org125dc5b">A flexible scope theory of intensionality</h3>
-<div class="outline-text-3" id="text-org125dc5b">
+<div id="outline-container-org5dc1dc4" class="outline-3">
+<h3 id="org5dc1dc4">A flexible scope theory of intensionality</h3>
+<div class="outline-text-3" id="text-org5dc1dc4">
 <ul class="org-ul">
 <li><a href="https://ling.auf.net/lingbuzz/005107">lingbuzz/005107</a></li>
 <li>Accepted with minor revisions at <i>Linguistics &amp; Philosophy</i>.</li>
@@ -64,9 +65,9 @@
 </div>
 </div>
 
-<div id="outline-container-org1438e2d" class="outline-3">
-<h3 id="org1438e2d">Who and what do <i>who</i> and <i>what</i> range over cross-linguistically?</h3>
-<div class="outline-text-3" id="text-org1438e2d">
+<div id="outline-container-orgd753bf8" class="outline-3">
+<h3 id="orgd753bf8">Who and what do <i>who</i> and <i>what</i> range over cross-linguistically?</h3>
+<div class="outline-text-3" id="text-orgd753bf8">
 <ul class="org-ul">
 <li><a href="https://ling.auf.net/lingbuzz/003959">lingbuzz/003959</a></li>
 <li>Accepted at <i>Journal of Semantics</i>.</li>
@@ -74,9 +75,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgeb6be73" class="outline-3">
-<h3 id="orgeb6be73">A plea for equality: remarks on Moltmann's semantics for clausal embedding</h3>
-<div class="outline-text-3" id="text-orgeb6be73">
+<div id="outline-container-org6dcbb16" class="outline-3">
+<h3 id="org6dcbb16">A plea for equality: remarks on Moltmann's semantics for clausal embedding</h3>
+<div class="outline-text-3" id="text-org6dcbb16">
 <ul class="org-ul">
 <li><a href="https://ling.auf.net/lingbuzz/005440">lingbuzz/005440</a></li>
 <li>Published in <i>Theoretical Linguistics</i>.</li>
@@ -85,13 +86,13 @@
 </div>
 </section>
 
-<section id="outline-container-orgb95062a" class="outline-2">
-<h2 id="orgb95062a">2020</h2>
-<div class="outline-text-2" id="text-orgb95062a">
+<section id="outline-container-org5405bf7" class="outline-2">
+<h2 id="org5405bf7">2020</h2>
+<div class="outline-text-2" id="text-org5405bf7">
 </div>
-<div id="outline-container-orgd25365a" class="outline-3">
-<h3 id="orgd25365a">Exceptional <i>de re</i> in continuation semantics</h3>
-<div class="outline-text-3" id="text-orgd25365a">
+<div id="outline-container-org6f59436" class="outline-3">
+<h3 id="org6f59436">Exceptional <i>de re</i> in continuation semantics</h3>
+<div class="outline-text-3" id="text-org6f59436">
 <ul class="org-ul">
 <li><a href="https://ling.auf.net/lingbuzz/005297">lingbuzz/005297</a></li>
 <li>Published in <i>Proceedings of WCCFL 38</i>.</li>
@@ -100,22 +101,22 @@
 </div>
 </section>
 
-<section id="outline-container-orge7168e8" class="outline-2">
-<h2 id="orge7168e8">2019</h2>
-<div class="outline-text-2" id="text-orge7168e8">
+<section id="outline-container-org6e813c0" class="outline-2">
+<h2 id="org6e813c0">2019</h2>
+<div class="outline-text-2" id="text-org6e813c0">
 </div>
-<div id="outline-container-org6979a2e" class="outline-3">
-<h3 id="org6979a2e">Applicatives for anaphora and presupposition</h3>
-<div class="outline-text-3" id="text-org6979a2e">
+<div id="outline-container-org530adc9" class="outline-3">
+<h3 id="org530adc9">Applicatives for anaphora and presupposition</h3>
+<div class="outline-text-3" id="text-org530adc9">
 <ul class="org-ul">
 <li>Published in <i>Proceedings of LENLS 18</i>.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org8bde107" class="outline-3">
-<h3 id="org8bde107">Exactly one theory of multiplicity inferences</h3>
-<div class="outline-text-3" id="text-org8bde107">
+<div id="outline-container-org7a8a2d7" class="outline-3">
+<h3 id="org7a8a2d7">Exactly one theory of multiplicity inferences</h3>
+<div class="outline-text-3" id="text-org7a8a2d7">
 <ul class="org-ul">
 <li>with Paul Marty.</li>
 <li>Published in <i>Snippets</i>.</li>
@@ -123,9 +124,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgb55098f" class="outline-3">
-<h3 id="orgb55098f">Unconditional sluicing: a case of ineffable ellipsis</h3>
-<div class="outline-text-3" id="text-orgb55098f">
+<div id="outline-container-org22919e4" class="outline-3">
+<h3 id="org22919e4">Unconditional sluicing: a case of ineffable ellipsis</h3>
+<div class="outline-text-3" id="text-org22919e4">
 <ul class="org-ul">
 <li>with Andrew Murphy.</li>
 <li>Published in <i>Snippets</i>.</li>
@@ -133,18 +134,18 @@
 </div>
 </div>
 
-<div id="outline-container-orgf7f7fbb" class="outline-3">
-<h3 id="orgf7f7fbb">\#Only zero</h3>
-<div class="outline-text-3" id="text-orgf7f7fbb">
+<div id="outline-container-orge1e67cf" class="outline-3">
+<h3 id="orge1e67cf">\#Only zero</h3>
+<div class="outline-text-3" id="text-orge1e67cf">
 <ul class="org-ul">
 <li>Published in <i>Snippets</i>.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org8bc2d29" class="outline-3">
-<h3 id="org8bc2d29">Ineffability and unexhaustification</h3>
-<div class="outline-text-3" id="text-org8bc2d29">
+<div id="outline-container-org520d876" class="outline-3">
+<h3 id="org520d876">Ineffability and unexhaustification</h3>
+<div class="outline-text-3" id="text-org520d876">
 <ul class="org-ul">
 <li>with Uli Sauerland</li>
 <li><a href="https://semanticsarchive.net/Archive/Tg3ZGI2M/Elliott.pdf">semanticsarchive/Tg3ZGI2M</a></li>
@@ -154,13 +155,13 @@
 </div>
 </section>
 
-<section id="outline-container-orgfbfca08" class="outline-2">
-<h2 id="orgfbfca08">2018</h2>
-<div class="outline-text-2" id="text-orgfbfca08">
+<section id="outline-container-org00e082c" class="outline-2">
+<h2 id="org00e082c">2018</h2>
+<div class="outline-text-2" id="text-org00e082c">
 </div>
-<div id="outline-container-orgd5a1b2b" class="outline-3">
-<h3 id="orgd5a1b2b">Collective predication and ellipsis: another case of ineffability</h3>
-<div class="outline-text-3" id="text-orgd5a1b2b">
+<div id="outline-container-org71925a2" class="outline-3">
+<h3 id="org71925a2">Collective predication and ellipsis: another case of ineffability</h3>
+<div class="outline-text-3" id="text-org71925a2">
 <ul class="org-ul">
 <li><a href="https://ling.auf.net/lingbuzz/003963">lingbuzz/003963</a></li>
 <li>Published in <i>Snippets</i>.</li>
@@ -169,22 +170,22 @@
 </div>
 </section>
 
-<section id="outline-container-org834fbb6" class="outline-2">
-<h2 id="org834fbb6">2017</h2>
-<div class="outline-text-2" id="text-org834fbb6">
+<section id="outline-container-org5e87444" class="outline-2">
+<h2 id="org5e87444">2017</h2>
+<div class="outline-text-2" id="text-org5e87444">
 </div>
-<div id="outline-container-org5eb520a" class="outline-3">
-<h3 id="org5eb520a">Predicates of relevance and theories of question embedding</h3>
-<div class="outline-text-3" id="text-org5eb520a">
+<div id="outline-container-orgf2a96e0" class="outline-3">
+<h3 id="orgf2a96e0">Predicates of relevance and theories of question embedding</h3>
+<div class="outline-text-3" id="text-orgf2a96e0">
 <ul class="org-ul">
 <li>Published in <i>Journal of Semantics</i>.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orge1bf331" class="outline-3">
-<h3 id="orge1bf331">Do superiority-violating multiple singular <i>which</i>-questions have pair-list readings?</h3>
-<div class="outline-text-3" id="text-orge1bf331">
+<div id="outline-container-org49c3068" class="outline-3">
+<h3 id="org49c3068">Do superiority-violating multiple singular <i>which</i>-questions have pair-list readings?</h3>
+<div class="outline-text-3" id="text-org49c3068">
 <ul class="org-ul">
 <li>with Andreea Nicolae and Yasu Sudo.</li>
 <li>Published in <i>Snippets</i>.</li>
@@ -193,13 +194,13 @@
 </div>
 </section>
 
-<section id="outline-container-orgdabe18c" class="outline-2">
-<h2 id="orgdabe18c">2016</h2>
-<div class="outline-text-2" id="text-orgdabe18c">
+<section id="outline-container-org3cac964" class="outline-2">
+<h2 id="org3cac964">2016</h2>
+<div class="outline-text-2" id="text-org3cac964">
 </div>
-<div id="outline-container-orgfe1ffb6" class="outline-3">
-<h3 id="orgfe1ffb6">Explaining DPs vs. CPs without syntax</h3>
-<div class="outline-text-3" id="text-orgfe1ffb6">
+<div id="outline-container-orgb7cd8d3" class="outline-3">
+<h3 id="orgb7cd8d3">Explaining DPs vs. CPs without syntax</h3>
+<div class="outline-text-3" id="text-orgb7cd8d3">
 <ul class="org-ul">
 <li><a href="https://ling.auf.net/lingbuzz/003128">lingbuzz/003128</a></li>
 <li>Published in <i>Proceedings of CLS 52</i>.</li>
@@ -207,9 +208,9 @@
 </div>
 </div>
 
-<div id="outline-container-org37bba03" class="outline-3">
-<h3 id="org37bba03">E-type readings of quantifiers under ellipsis: consequences for the identity condition</h3>
-<div class="outline-text-3" id="text-org37bba03">
+<div id="outline-container-org921d6c1" class="outline-3">
+<h3 id="org921d6c1">E-type readings of quantifiers under ellipsis: consequences for the identity condition</h3>
+<div class="outline-text-3" id="text-org921d6c1">
 <ul class="org-ul">
 <li>with Yasu Sudo</li>
 <li><a href="https://ling.auf.net/lingbuzz/repo/semanticsArchive/article/001561">semanticsArchive/2QzYmEzO</a></li>
@@ -217,9 +218,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgc6c0150" class="outline-3">
-<h3 id="orgc6c0150">List readings of questions with conjoined singular <i>which</i>-phrases</h3>
-<div class="outline-text-3" id="text-orgc6c0150">
+<div id="outline-container-org5deabe9" class="outline-3">
+<h3 id="org5deabe9">List readings of questions with conjoined singular <i>which</i>-phrases</h3>
+<div class="outline-text-3" id="text-org5deabe9">
 <ul class="org-ul">
 <li>with Andreea Nicolae and Yasu Sudo</li>
 <li><a href="https://ling.auf.net/lingbuzz/004193">lingbuzz/004193</a></li>
@@ -228,9 +229,9 @@
 </div>
 </div>
 
-<div id="outline-container-orge5c2cb3" class="outline-3">
-<h3 id="orge5c2cb3">The sticky reading: VP ellipsis without parallel binding</h3>
-<div class="outline-text-3" id="text-orge5c2cb3">
+<div id="outline-container-org072a498" class="outline-3">
+<h3 id="org072a498">The sticky reading: VP ellipsis without parallel binding</h3>
+<div class="outline-text-3" id="text-org072a498">
 <ul class="org-ul">
 <li>with Andreea Nicolae and Yasu Sudo</li>
 <li><a href="https://ling.auf.net/lingbuzz/002900">lingbuzz/002900</a></li>
@@ -239,9 +240,9 @@
 </div>
 </div>
 
-<div id="outline-container-org7aad8e1" class="outline-3">
-<h3 id="org7aad8e1">QR out of control</h3>
-<div class="outline-text-3" id="text-org7aad8e1">
+<div id="outline-container-org8f529a3" class="outline-3">
+<h3 id="org8f529a3">QR out of control</h3>
+<div class="outline-text-3" id="text-org8f529a3">
 <ul class="org-ul">
 <li>with Gary Thoms</li>
 <li>Published in <i>Proceedings of WCCFL 33</i>.</li>
@@ -250,13 +251,13 @@
 </div>
 </section>
 
-<section id="outline-container-org4e4a9ae" class="outline-2">
-<h2 id="org4e4a9ae">2015</h2>
-<div class="outline-text-2" id="text-org4e4a9ae">
+<section id="outline-container-org910252f" class="outline-2">
+<h2 id="org910252f">2015</h2>
+<div class="outline-text-2" id="text-org910252f">
 </div>
-<div id="outline-container-org54d0b34" class="outline-3">
-<h3 id="org54d0b34">More variation in island repair: the clausal/non-clausal distinction</h3>
-<div class="outline-text-3" id="text-org54d0b34">
+<div id="outline-container-org277fcda" class="outline-3">
+<h3 id="org277fcda">More variation in island repair: the clausal/non-clausal distinction</h3>
+<div class="outline-text-3" id="text-org277fcda">
 <ul class="org-ul">
 <li>with Matt Barros and Gary Thoms.</li>
 <li>Published in <i>Proceedings of CLS 49</i>.</li>
@@ -265,13 +266,13 @@
 </div>
 </section>
 
-<section id="outline-container-org64fcdcb" class="outline-2">
-<h2 id="org64fcdcb">Dissertation</h2>
-<div class="outline-text-2" id="text-org64fcdcb">
+<section id="outline-container-orgaf543fe" class="outline-2">
+<h2 id="orgaf543fe">Dissertation</h2>
+<div class="outline-text-2" id="text-orgaf543fe">
 </div>
-<div id="outline-container-org727cd28" class="outline-3">
-<h3 id="org727cd28">Elements of clausal embedding</h3>
-<div class="outline-text-3" id="text-org727cd28">
+<div id="outline-container-org71e39c8" class="outline-3">
+<h3 id="org71e39c8">Elements of clausal embedding</h3>
+<div class="outline-text-3" id="text-org71e39c8">
 <ul class="org-ul">
 <li><a href="https://ling.auf.net/lingbuzz/004991">lingbuzz/004991</a></li>
 </ul>
