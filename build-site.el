@@ -11,6 +11,8 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
+(setq make-backup-files nil) ;; stop emacs from creating backup files
+
 ;; Install dependencies (for formatting code blocks)
 (package-install 'htmlize)
 
