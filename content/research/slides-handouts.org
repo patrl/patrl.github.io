@@ -1,6 +1,12 @@
 #+title: Slides and handouts
 #+author: Patrick D. Elliott
 
+* 2022
+
+- *Disjunction in a predictive theory of anaphora*
+  * TLLM III
+  * [[file:~/repos/patrl.github.io/content/pdf/tllm-slides.pdf][Slides]]
+
 * 2021
 
 - *Meaning in linguistic theory: formal semantics and Montague grammar*
