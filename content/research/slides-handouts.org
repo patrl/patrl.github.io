@@ -5,7 +5,7 @@
 
 - *Disjunction in a predictive theory of anaphora*
   * TLLM III
-  * [[file:~/repos/patrl.github.io/content/pdf/tllm-slides.pdf][Slides]]
+  * [[https://patrickdelliott.com/pdf/tllm-slides.pdf][Slides]]
 
 * 2021
 
