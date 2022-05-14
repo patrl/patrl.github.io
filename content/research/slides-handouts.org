@@ -3,6 +3,9 @@
 
 * 2022
 
+- *Partee conjunctions and anaphora with free choice*
+  * LFRG (MIT)
+  * [[https://patrickdelliott.com/pdfs/lfrg2022-handout.pdf][Handout]]
 - *Disjunction in a predictive theory of anaphora*
   * TLLM III
   * [[https://patrickdelliott.com/pdf/tllm-slides.pdf][Slides]]
