@@ -1,8 +1,6 @@
 #+title: Patrick D. Elliott
 #+author: Patrick D. Elliott
 
-🚨 *this site is a work in progress - see [[file:pdf/vitae.pdf][vitae]] for up-to-date information* 🚨
-
 * Links
 
 - [[file:pdf/vitae.pdf][vitae]]
