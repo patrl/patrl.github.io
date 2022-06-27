@@ -14,6 +14,6 @@ I'm a formal semanticist, which means that my work involves developing models of
 * News
 
 - I have a new paper under review for the TLLM 2022 proceedings, entitled *Disjunction in a predictive theory of anaphora*.
-- I gave a talk at the MIT LF Reading Group entitled *Partee conjunctions and free choice with anaphora*. Here is the [[https://patrickdelliott.com/pdfs/lfrg2022-handout.pdf][Handout]].
+- I gave a talk at the MIT LF Reading Group entitled *Partee conjunctions and free choice with anaphora*. Here is the [[https://patrickdelliott.com/pdf/lfrg2022-handout.pdf][Handout]].
 - I gave talk at the [[http://tsinghualogic.net/JRC/?page_id=3591][TLLM 2022 workshop on Dynamics in Logic and Language]], Tsinghua University, Beijing entitled *Disjunction in a predictive theory of anaphora*. Here are the [[https://patrickdelliott.com/pdf/tllm-slides.pdf][Slides]].
 - I'm teaching a class on discourse referents at MIT during the Spring semester. Course webpage: [[https://patrickdelliott.com/anaphora-seminar/][MIT topics in semantics seminar (spring 2022)]].
