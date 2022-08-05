@@ -3,6 +3,9 @@
 
 * Manuscripts
 
+** Partee conjunctions: projection and possibility
+- In prep.
+
 ** Crossover and accessibility in dynamic semantics
 - [[https://ling.auf.net/lingbuzz/005311][lingbuzz/005311]] 
 
