@@ -21,6 +21,7 @@
 
 (setq org-html-head (org-file-contents "./content/html/head.html"))
 (setq org-html-preamble (org-file-contents "./content/html/preamble.html"))
+;; (setq org-html-postamble (org-file-contents "./content/html/postamble.html"))
 
 ;; Define the publishing project
 (setq org-publish-project-alist
