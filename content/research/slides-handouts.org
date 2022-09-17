@@ -3,6 +3,10 @@
 
 * 2022
 
+- *Against simplification: free choice with anaphora*
+  * Joint work with Yasu Sudo
+  * Talk given at SuB 2022
+  * [[https://patrickdelliott.com/pdf/sub2022.pdf][Slides]]
 - *Partee conjunctions and anaphora with free choice*
   * LFRG (MIT)
   * [[https://patrickdelliott.com/pdf/lfrg2022-handout.pdf][Handout]]
