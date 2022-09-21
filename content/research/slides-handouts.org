@@ -32,6 +32,10 @@
 - *Trivalent foundations for a logic of anaphora*
   - Invited job talk given at MIT.
   - [[http://patrickdelliott.com/mit-job-talk][Slides]]
+- *Radical successive cyclicity and the freedom of parasitic gaps*
+  * Joint work with Colin Davis
+  * Talk given at LSA, January 8.
+  * [[https://patrickdelliott.com/pdf/lsa2021.pdf][Handout]]
     
 * 2020
     
