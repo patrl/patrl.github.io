@@ -25,6 +25,11 @@
 ** A plea for equality: remarks on Moltmann's semantics for clausal embedding
 - [[https://ling.auf.net/lingbuzz/005440][lingbuzz/005440]]
 - Published in /Theoretical Linguistics/.
+  
+** Intensionalizing abstract meaning representations: non-veridicality and scope
+- With Greg Williamson and Yuxin Ji 
+- [[https://aclanthology.org/2021.law-1.17.pdf]]
+- Published in the proceedings of EMNLP 2021
 
 * 2020
 
