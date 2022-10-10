@@ -1,50 +1,56 @@
 #+title: Teaching
 #+author: Patrick D. Elliott
 
-* MIT Fall 2021
+* HHU Winter Semeser 2022-23
 
-- Introduction to semantics (graduate)
-  * Co-taught with Martin Hackl.
+** Going plural: compositional routes to multiplicity in natural language
 
-* MIT Spring 2021
-
-- Language and its structure III: semantics (undergraduate seminar)
-
-** Topics in semantics (with Danny Fox, Kai von Fintel, David Pesetsky, and Sabine Iatridou)
-
-#+begin_quote
-Despite the assumed theoretical primacy of declarative sentences, /questions/ have frequently played a central role in the literature spanning syntax, semantics, and pragmatics - informing issues ranging from structure-building and combinatorics, to speech acts and their effect on the common ground. In this vein, we'll be asking: /what kinds of things are questions/, /how are they built/, /and what can they do/? Specific topics we'll cover include: question composition and pied-piping, embedded questions and question-embedding predicates, the dynamic pragmatics of questions qua illocutionary acts, and the external syntax of interrogative clauses.
-#+end_quote
-
-
-
-* MIT Spring 2020
-
-** Topics in semantics (with Martin Hackl)
-
-#+begin_quote
-This seminar will provide a venue for discussing various mechanisms for scope-taking and projection, taking as our starting point continuations - a perspective on scope-taking developed by Chris Barker and Chung-chieh Shan. We will attempt to develop a solid working knowledge of the relevant mechanics, as well as arrive at a comprehensive empirical assessment of their advantages and drawbacks in selected areas of application. These will include quantifier scope, variable binding, cross-over, and presupposition projection, paying particular attention to linearity effects which continuations are designed to handle in a principled manner.
-#+end_quote
-
-* MIT Fall 2019
-
-- Language and its structure II: syntax (undergraduate seminar)
-- Pragmatics in linguistic theory (graduate seminar)
-  * Co-taught with Roger Schwarzschild.
+- Advanced semantics seminar.
+- [[https://github.com/patrl/hhu-multiplicity]]
   
-* Previous
+** Continuations and friends: what linguists can learn from programming language theorists
 
-** 2018 ACTL summer school, UCL
-
-- Introduction to dynamic semantics
+- Advanced semantics seminar.
+- [[https://github.com/patrl/hhu-fp]]
   
-** 2018 EGG summer school, Banja Luka
+* Past teaching
 
-- Introduction to semantics
-  * Co-taught with Gillian Ramchand
-- Topics in the syntax of ellipsis
-  * Co-taught with Andrew Murphy
-- Ellipsis, binding, and logical form
-  * Co-taught with Yasu Sudo.
+** MIT
 
+- /Topics in semantics/
+  * Grad research seminar on anaphora
+  * Spring 2022
+- /Introduction to semantics/
+  * Grad seminar
+  * With Martin Hackl
+  * Fall 2021
+- /Language and its structure III: semantics/
+  * Undergrad seminar
+  * Spring 2021
+- /Topics in semantics/
+  * Grad research seminar on questions
+  * Spring 2021
+- /Pragmatics in linguistic theory/
+  * Grad seminar
+  * with Danny Fox
+  * Fall 2020
+- /Topics in semantics/
+  * Grad research seminar on scope and projective content
+  * with Martin Hackl
+  * Spring 2020
+- /Pragmatics in linguistic theory/
+  * Grad seminar
+  * with Roger Schwarzschild
+  * Fall 2019
+- /Language and its structure II: syntax/
+  * Undergrad seminar
+  * Fall 2019
+    
+** Other
 
+- EGG summer school, Banja Luka
+  * Summer 2018
+  * Primary instructor for "Topics in the syntax of ellipsis" (with Andrew Murphy), "Ellipsis, binding, and Logical Form" (with Yasu Sudo), and "Introduction to semantics" (with Gillian Ramchand).
+- ACTL summer school, UCL, London
+  * Summer 2018
+  * Primary instructor for "Introduction to dynamic semantics".
