@@ -2,3 +2,4 @@
 
 * TODO export org mode to details/summary blocks
 * TODO add 2021 SALT proceedings paper on crossover
+* TODO add details for dissertations I've supervised
