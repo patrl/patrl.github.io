@@ -4,7 +4,7 @@
 * Manuscripts
 
 ** Partee conjunctions: projection and possibility
-- In prep.
+- [[https://ling.auf.net/lingbuzz/006857][lingbuzz/006857]]
 
 ** Crossover and accessibility in dynamic semantics
 - [[https://ling.auf.net/lingbuzz/005311][lingbuzz/005311]] 
@@ -12,16 +12,22 @@
 ** Towards a principled logic of anaphora
 - [[https://ling.auf.net/lingbuzz/005562][lingbuzz/005562]]
 
-* 2021
-
-** A flexible scope theory of intensionality
-- [[https://ling.auf.net/lingbuzz/005107][lingbuzz/005107]]
-- Accepted with minor revisions at /Linguistics & Philosophy/.
+* 2022
 
 ** Who and what do /who/ and /what/ range over cross-linguistically?
 - [[https://ling.auf.net/lingbuzz/003959][lingbuzz/003959]]
-- Accepted at /Journal of Semantics/.
+- Published in /Journal of Semantics/.
   
+** Disjunction in a predictive theory of anaphora
+- [[https://ling.auf.net/lingbuzz/006657][lingbuzz/006657]].
+- To appear in the /Proceedings of TLLM/.
+  
+** A flexible scope theory of intensionality
+- [[https://ling.auf.net/lingbuzz/005107][lingbuzz/005107]]
+- To appear in /Linguistics & Philosophy/.
+
+* 2021
+
 ** A plea for equality: remarks on Moltmann's semantics for clausal embedding
 - [[https://ling.auf.net/lingbuzz/005440][lingbuzz/005440]]
 - Published in /Theoretical Linguistics/.
