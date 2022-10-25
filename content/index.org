@@ -15,7 +15,7 @@ Reach me at [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott@gmail.com]].
  
 * News
 
+- My paper *A flexible scope theory of intensionality* has been published open-access in Linguistics & Philosophy. You can find it [[https://link.springer.com/article/10.1007/s10988-022-09367-w][here]].
 - I have a new manuscript on lingbuzz entitled *Partee conjunctions: projection and possibility*. You can find it [[https://ling.auf.net/lingbuzz/006857][here]].
 - I gave a talk at SuB 2022 with Yasu Sudo entitled *Against simplification: free choice with anaphora*. You can find the slides [[https://patrickdelliott.com/pdf/sub2022.pdf][here]].
 - I have a new paper to appear in the TLLM 2022 proceedings, entitled *Disjunction in a predictive theory of anaphora*. You can find a non-final draft [[https://ling.auf.net/lingbuzz/006657][here]].
-- I gave a talk at the MIT LF Reading Group entitled *Partee conjunctions and free choice with anaphora*. Here is the [[https://patrickdelliott.com/pdf/lfrg2022-handout.pdf][Handout]].
