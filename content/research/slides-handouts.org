@@ -3,6 +3,10 @@
 
 * 2022
 
+- *Anaphora and simplification*
+  * Joint work with Yasu Sudo
+  * Talk given at the Heinrich-Heine University of Düsseldorf, Meaning in Language colloquium series.
+  * [[file:~/repos/patrl.github.io/content/pdf/mil-slides.pdf][Slides]]
 - *Against simplification: free choice with anaphora*
   * Joint work with Yasu Sudo
   * Talk given at SuB 2022
