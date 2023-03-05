@@ -15,21 +15,21 @@
 * 2022
 
 ** Who and what do /who/ and /what/ range over cross-linguistically?
-- [[https://ling.auf.net/lingbuzz/003959][lingbuzz/003959]]
+- https://academic.oup.com/jos/article-abstract/39/3/551/6598655
 - Published in /Journal of Semantics/.
   
 ** Disjunction in a predictive theory of anaphora
-- [[https://ling.auf.net/lingbuzz/006657][lingbuzz/006657]].
-- To appear in the /Proceedings of TLLM/.
+- [[https://link.springer.com/chapter/10.1007/978-3-031-25894-7_4]]
+- Published in the /TLLM 2022: Dynamics in logic and language/.
   
 ** A flexible scope theory of intensionality
-- [[https://ling.auf.net/lingbuzz/005107][lingbuzz/005107]]
-- To appear in /Linguistics & Philosophy/.
+- https://link.springer.com/article/10.1007/s10988-022-09367-w
+- Published in /Linguistics & Philosophy/.
 
 * 2021
 
 ** A plea for equality: remarks on Moltmann's semantics for clausal embedding
-- [[https://ling.auf.net/lingbuzz/005440][lingbuzz/005440]]
+- https://www.degruyter.com/document/doi/10.1515/tl-2020-0013/pdf
 - Published in /Theoretical Linguistics/.
   
 ** Intensionalizing abstract meaning representations: non-veridicality and scope
@@ -40,7 +40,7 @@
 * 2020
 
 ** Exceptional /de re/ in continuation semantics
-- [[https://ling.auf.net/lingbuzz/005297][lingbuzz/005297]]
+- http://www.lingref.com/cpp/wccfl/38/paper3563.pdf
 - Published in /Proceedings of WCCFL 38/.
 
 * 2019  
