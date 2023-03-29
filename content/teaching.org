@@ -1,56 +1,20 @@
 #+title: Teaching
 #+author: Patrick D. Elliott
 
-* HHU Winter Semeser 2022-23
+Current and upcoming teaching - see my [[./pdf/vitae.pdf][cv]] for past teaching.
 
-** Going plural: compositional routes to multiplicity in natural language
+* HHU Spring-Summer Semester 2023
 
-- Advanced semantics seminar.
-- [[https://github.com/patrl/hhu-multiplicity]]
+** Implementing semantic fragments with haskell
   
-** Continuations and friends: what linguists can learn from programming language theorists
+** Introduction to semantics
 
-- Advanced semantics seminar.
-- [[https://github.com/patrl/hhu-fp]]
+- The course homepage can be found on [[https://moodle.phil.hhu.de/course/view.php?id=1373][moodle]].
   
-* Past teaching
+* ESSLLI 2023
 
-** MIT
+** Explaining anaphoric accessibility: navigating non-veridical environments in dynamic semantics
 
-- /Topics in semantics/
-  * Grad research seminar on anaphora
-  * Spring 2022
-- /Introduction to semantics/
-  * Grad seminar
-  * With Martin Hackl
-  * Fall 2021
-- /Language and its structure III: semantics/
-  * Undergrad seminar
-  * Spring 2021
-- /Topics in semantics/
-  * Grad research seminar on questions
-  * Spring 2021
-- /Pragmatics in linguistic theory/
-  * Grad seminar
-  * with Danny Fox
-  * Fall 2020
-- /Topics in semantics/
-  * Grad research seminar on scope and projective content
-  * with Martin Hackl
-  * Spring 2020
-- /Pragmatics in linguistic theory/
-  * Grad seminar
-  * with Roger Schwarzschild
-  * Fall 2019
-- /Language and its structure II: syntax/
-  * Undergrad seminar
-  * Fall 2019
-    
-** Other
-
-- EGG summer school, Banja Luka
-  * Summer 2018
-  * Primary instructor for "Topics in the syntax of ellipsis" (with Andrew Murphy), "Ellipsis, binding, and Logical Form" (with Yasu Sudo), and "Introduction to semantics" (with Gillian Ramchand).
-- ACTL summer school, UCL, London
-  * Summer 2018
-  * Primary instructor for "Introduction to dynamic semantics".
+- Advanced course on the Language & Logic track, co-taught with [[https://lihofmann.github.io/][Lisa Hofmann]] (Stuttgart).
+- August 7-11, 2023, Ljubljana, Slovenia.
+- You can read the course proposal [[./pdf/esslli2023-proposal.pdf][here]].
