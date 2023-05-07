@@ -15,6 +15,7 @@ Reach me at [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott@gmail.com]].
  
 * News
 
+- I'm giving a talk at [[https://mandelkern.hosting.nyu.edu/silt.html][SILT]] in NYC on May 15, entitled *Gluts in the logic of anaphoric dependencies*.
 - I've presenting a poster on so-called weak/strong readings associated with donkey anaphora at [[https://saltconf.github.io/salt33/][SALT 2023]] at Yale on May 12-14, entitled *Donkey disjunctions and overlapping updates*.
 - I have a new manuscript on lingbuzz entitled *Partee conjunctions: projection and possibility*. You can find it [[https://ling.auf.net/lingbuzz/006857][here]].
 - I gave a talk at SuB 2022 with Yasu Sudo entitled *Against simplification: free choice with anaphora*. You can find the slides [[https://patrickdelliott.com/pdf/sub2022.pdf][here]].
