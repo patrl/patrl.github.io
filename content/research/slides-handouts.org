@@ -3,6 +3,8 @@
 
 * 2023
 
+- *Gluts in the logic of anaphoric dependencies*
+  * Talk at SILT, NYC.
 - *Disjunctive donkeys and overlapping updates*
   * Poster presented at SALT 33.
   * [[https://patrickdelliott.com/pdf/salt33.pdf][Poster]].

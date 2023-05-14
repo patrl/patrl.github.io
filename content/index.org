@@ -19,5 +19,3 @@ Reach me at [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott@gmail.com]].
 - I've presenting a poster on so-called weak/strong readings associated with donkey anaphora at [[https://saltconf.github.io/salt33/][SALT 2023]] at Yale on May 12-14, entitled *Donkey disjunctions and overlapping updates*. You can check out the poster [[https://patrickdelliott.com/pdf/salt33.pdf][here]].
 - I have a new manuscript on lingbuzz entitled *Partee conjunctions: projection and possibility*. You can find it [[https://ling.auf.net/lingbuzz/006857][here]].
 - I gave a talk at SuB 2022 with Yasu Sudo entitled *Against simplification: free choice with anaphora*. You can find the slides [[https://patrickdelliott.com/pdf/sub2022.pdf][here]].
-- My paper *A flexible scope theory of intensionality* has been published open-access in Linguistics & Philosophy. You can find it [[https://link.springer.com/article/10.1007/s10988-022-09367-w][here]].
-- I have a new paper to in the TLLM 2022 proceedings, entitled *Disjunction in a predictive theory of anaphora*. You can find it [[https://link.springer.com/chapter/10.1007/978-3-031-25894-7_4][here]].

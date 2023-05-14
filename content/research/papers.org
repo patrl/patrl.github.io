@@ -15,6 +15,7 @@
 * 2022
 
 ** Who and what do /who/ and /what/ range over cross-linguistically?
+- With Andreea C. Nicolae and Uli Sauerland.
 - https://academic.oup.com/jos/article-abstract/39/3/551/6598655
 - Published in /Journal of Semantics/.
   
