@@ -5,6 +5,7 @@
 
 - *Gluts in the logic of anaphoric dependencies*
   * Talk at SILT, NYC.
+  * [[https://patrickdelliott.com/pdf/silt.pdf][Slides]].
 - *Disjunctive donkeys and overlapping updates*
   * Poster presented at SALT 33.
   * [[https://patrickdelliott.com/pdf/salt33.pdf][Poster]].
