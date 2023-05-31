@@ -17,4 +17,3 @@ Current and upcoming teaching - see my [[./pdf/vitae.pdf][cv]] for past teaching
 
 - Advanced course on the Language & Logic track, co-taught with [[https://lihofmann.github.io/][Lisa Hofmann]] (Stuttgart).
 - August 7-11, 2023, Ljubljana, Slovenia.
-- You can read the course proposal [[./pdf/esslli2023-proposal.pdf][here]].
