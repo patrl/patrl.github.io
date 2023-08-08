@@ -91,7 +91,7 @@
   * Talk given at the workshop SLUICING+@50 in Chicago.
 - */Fuck/ compositionality*
   * Invited talk at the DGfS workshop /Encoding emotive attitudes in non-truth-conditional meaning/ in Bremen.
-  * [[https://patrl.keybase.pub/slides/emoSlides.pdf][Slides]]
+  * [[https://patrickdelliott.com/pdf/fuck-compositionality.pdf][Slides]]
 - *Two souls of disjunction: making dynamic semantics (more) explanatory*
   * Invited talk at Frankfurt Semantics Colloquium
   * [[https://patrl.keybase.pub/handouts/frankfurt.pdf][Handout]]
