@@ -35,7 +35,6 @@
 
 - *Meaning in linguistic theory: formal semantics and Montague grammar*
   * MIT Quest meaning representation workshop, September 11.
-  * [[https://patrl.keybase.pub/slides/quest-workshop-handout.pdf][Slides]]
 - *Intensionalizing abstract meaning representations: non-veridicality and scope*
   * Joint work with Greg Williamson and Yuxin Ji.
   * Talk given at the LAW-DMR 2021 workshop, November 10-11.
@@ -45,7 +44,6 @@
   * [[https://osf.io/gfeky/][Handout]]
 - *Externally dynamic dynamic semantics*
   * Talk given at ENS, July 14.
-  * [[https://patrl.keybase.pub/handouts/ens.pdf][Handout]]
 - *Trivalent foundations for a logic of anaphora*
   - Invited job talk given at MIT.
   - [[http://patrickdelliott.com/mit-job-talk][Slides]]
@@ -60,7 +58,6 @@
    * Talk given at MIT CompLang, December 8. 
 - *Classical negation in a dynamic alternative semantics*
   * Invited talk at LENLS 17.
-  * [[https://patrl.keybase.pub/slides/lenls2020.pdf][Slides]]
 - *Coreference, negation, and modal subordination*
   * Talk at Rutgers SURGE meeting, October 27.
 - *Crossover and the dynamics of negation*
@@ -74,18 +71,14 @@
 
 - *Nesting habits of flightless /wh/-expressions*
   * Invited talk given at the workshop /Complex wh-expressions/ in Nantes.
-  * [[https://patrl.keybase.pub/slides/nantes.pdf][Slides]]
 - *Two souls of disjunction*
   * Talk given at the workshop /Asymmetries in language: presuppositions and beyond/ in Berlin.
-  * [[https://patrl.keybase.pub/slides/berlin-disj.pdf][Slides]]
 - *Binding back to the future*
   * Joint work with Yasu Sudo.
   * Talk given at the workshop /Asymmetries in language: presuppositions and beyond/ in Berlin.
-  * [[https://patrl.keybase.pub/slides/berlin-cataphora.pdf][Slides]]
 - *Nuclear intervention: deriving Beck effects via cyclic scope and local exhaustification*
   * Joint work with Uli Sauerland.
   * Talk given at the workshop /Exhaustivity in questions and answers/ in Tübingen.
-  * [[https://patrl.keybase.pub/slides/tuebingen-slides.pdf][Slides]]
 - *The dynamics of ellipsis identity*
   * Joint work with Yasu Sudo.
   * Talk given at the workshop SLUICING+@50 in Chicago.
@@ -94,10 +87,8 @@
   * [[https://patrickdelliott.com/pdf/fuck-compositionality.pdf][Slides]]
 - *Two souls of disjunction: making dynamic semantics (more) explanatory*
   * Invited talk at Frankfurt Semantics Colloquium
-  * [[https://patrl.keybase.pub/handouts/frankfurt.pdf][Handout]]
 - *Movement as higher-order structure building*
   * Invited talk at Göttingen.
-  * [[https://patrl.keybase.pub/slides/goettingen-mvt.pdf][Slides]]
 
 * 2018
 
