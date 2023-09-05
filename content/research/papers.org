@@ -12,6 +12,12 @@
 ** Towards a principled logic of anaphora
 - [[https://ling.auf.net/lingbuzz/005562][lingbuzz/005562]]
 
+* 2023  
+
+** Donkey disjunctions and overlapping updates
+- To appear in the /Proceedings of SALT 33/.
+- You can read a pre-final draft [[https://patrickdelliott.com/pdf/salt33-draft.pdf][here]].
+
 * 2022
 
 ** Who and what do /who/ and /what/ range over cross-linguistically?
