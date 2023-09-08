@@ -3,6 +3,9 @@
 
 * Manuscripts
 
+** Free choice with anaphora
+- with Yasu Sudo
+
 ** Partee conjunctions: projection and possibility
 - [[https://ling.auf.net/lingbuzz/006857][lingbuzz/006857]]
 
