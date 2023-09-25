@@ -5,6 +5,7 @@
 
 ** Free choice with anaphora
 - with Yasu Sudo
+- [[https://ling.auf.net/lingbuzz/007608][lingbuzz/007608]]
 
 ** Partee conjunctions: projection and possibility
 - [[https://ling.auf.net/lingbuzz/006857][lingbuzz/006857]]
