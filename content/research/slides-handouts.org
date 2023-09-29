@@ -44,6 +44,7 @@
   * [[https://osf.io/gfeky/][Handout]]
 - *Externally dynamic dynamic semantics*
   * Talk given at ENS, July 14.
+  * [[https://patrickdelliott.com/pdf/ens.pdf]]
 - *Trivalent foundations for a logic of anaphora*
   - Invited job talk given at MIT.
   - [[http://patrickdelliott.com/mit-job-talk][Slides]]
@@ -66,6 +67,9 @@
   * Joint work with Yasu Sudo.
   * Talk given at SALT
   * [[https://osf.io/4sp3g/][Slides]]
+- *A flexible scope theory of intensionality*
+  * Talk given at WCCFL 38, UBC. 
+  * [[https://patrickdelliott.com/pdf/wccfl38.pdf]]
     
 * 2019
 
@@ -79,6 +83,10 @@
 - *Nuclear intervention: deriving Beck effects via cyclic scope and local exhaustification*
   * Joint work with Uli Sauerland.
   * Talk given at the workshop /Exhaustivity in questions and answers/ in Tübingen.
+- *Nuclear intervention: towards a unified account of weak islands and Beck effects*
+  * Joint work with Uli Sauerland.
+  * Talk given at LingLunch, MIT.
+  * [[https://patrickdelliott.com/pdf/linglunch.pdf]]
 - *The dynamics of ellipsis identity*
   * Joint work with Yasu Sudo.
   * Talk given at the workshop SLUICING+@50 in Chicago.
@@ -87,8 +95,10 @@
   * [[https://patrickdelliott.com/pdf/fuck-compositionality.pdf][Slides]]
 - *Two souls of disjunction: making dynamic semantics (more) explanatory*
   * Invited talk at Frankfurt Semantics Colloquium
+  * [[https://patrickdelliott.com/pdf/frankfurt.pdf]]
 - *Movement as higher-order structure building*
   * Invited talk at Göttingen.
+  * [[https://patrickdelliott.com/pdf/goettingen-mvt.pdf]]
 
 * 2018
 
@@ -114,3 +124,31 @@
   * Talk given at the IGG 42, Lecce.
 - *Nested /wh/-questions and the locality of scope-taking*
   * Talk given at ConSOLE XXIV, York.
+- *Severing everything: substitution failures, and their consequences for the theory of argument structure*
+  * Talk given at UCLA syntax round table.
+  * [[https://patrickdelliott.com/pdf/ucla_roundtable.pdf][Handout]]
+- *Embedded declaratives as modifiers*
+  * Talk given at SuB 21, University of Edinburgh.
+  * [[https://patrickdelliott.com/pdf/SuB2016.pdf][Slides]]
+- *Explaining DPs vs. CPs without syntax*
+  * Talk given at CLS 52, Chicago.
+  * [[https://patrickdelliott.com/pdf/cls52.pdf][Handout]]
+- */Explain/ and the semantics of embedding*
+  * Talk given at London Semantics Day.
+  * [[https://patrickdelliott.com/pdf/lsd2016.pdf][Handout]]
+- *Rethinking the semantics of embedding*
+  * Talk given at the FB IV Workshop, ZAS Berlin.
+  * [[https://patrickdelliott.com/pdf/fbiv_workshop_handout.pdf][Handout]]
+- *Propositional content of events and individuals*
+  * Poster presented at NASSLLI 2016.
+  * [[https://patrickdelliott.com/pdf/posters/nasslli2016.pdf][Poster]]
+- *Selection without Syntax*
+  * Poster presented at OLINCO 2016.
+  * [[https://patrickdelliott.com/pdf/posters/olinco_solo_poster.pdf][Poster]] 
+
+* 2015
+
+  - *Optimizing the ellipsis site*
+    * Joint work with Andrew Murphy.
+    * Talk given at the Grasping Ellipsis workshop, University of Campinas, Brazil.
+    * [[https://patrickdelliott.com/pdf/joint-brazil-talk.pdf]]
