@@ -153,3 +153,10 @@
     * Joint work with Andrew Murphy.
     * Talk given at the Grasping Ellipsis workshop, University of Campinas, Brazil.
     * [[https://patrickdelliott.com/pdf/joint-brazil-talk.pdf]]
+  - *E-type readings of quantifiers under ellipsis*
+    * Joint work with Yasu Sudo.
+    * Poster presented at SuB 20.
+    * [[https://patrickdelliott.com/pdf/sub-poster.pdf][Poster]].
+  - *Discourse /even/ vs. attitude /even/*
+    * Joint work with Elin McCready and Yasu Sudo.
+    * Poster presented at SALT 25.
