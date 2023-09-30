@@ -57,15 +57,7 @@
 	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|eot\\|svg\\|ttf\\|woff"
 	 :publishing-directory "./public/"
 	 :recursive t
-	 :publishing-function org-publish-attachment)
-	("files"
-	 :base-directory "./content/files/"
-	 :base-extension "txt"
-	 :publishing-directory "./public/"
-	 :recursive nil
-	 :publishing-function org-publish-attachment)
-	)
-      )
+	 :publishing-function org-publish-attachment)))
 
 
 ;; Generate the site output
