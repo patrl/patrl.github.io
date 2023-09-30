@@ -59,6 +59,7 @@
    * Talk given at MIT CompLang, December 8. 
 - *Classical negation in a dynamic alternative semantics*
   * Invited talk at LENLS 17.
+  * [[file:~/repos/patrl.github.io/content/pdf/lenls2020.pdf][Slides]].
 - *Coreference, negation, and modal subordination*
   * Talk at Rutgers SURGE meeting, October 27.
 - *Crossover and the dynamics of negation*
