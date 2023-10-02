@@ -1,15 +1,8 @@
 #+title: Teaching
 #+author: Patrick D. Elliott
 
-Current and upcoming teaching - see my [[./pdf/vitae.pdf][cv]] for past teaching.
+Selected courses - see my [[./pdf/vitae.pdf][cv]] for the full list.
 
-* 2023
-
-** Explaining anaphoric accessibility: navigating non-veridical environments in dynamic semantics
-
-- Advanced course on the Language & Logic track at ESSLLI, co-taught with [[https://lihofmann.github.io/][Lisa Hofmann]] (Stuttgart).
-- August 7-11, 2023, Ljubljana, Slovenia.
-  
 * 2022
 
 ** Discourse referents inside and out
@@ -26,6 +19,19 @@ Current and upcoming teaching - see my [[./pdf/vitae.pdf][cv]] for past teaching
 - I taught (i) a series of classes on pied-piping and question composition, and (ii) a series of classes on functional readings of questions. 
   * Pied-piping and question composition: [[file:pdf/teaching/2021-questions/1-1-qcomp.pdf][Part 1]], [[file:pdf/teaching/2021-questions/1-2-qcomp.pdf][Part 2]], [[file:pdf/teaching/2021-questions/1-3-qcomp.pdf][Part 3]].
   * Functional readings: [[file:pdf/teaching/2021-questions/2-1-functional.pdf][Part 1]], [[file:pdf/teaching/2021-questions/2-1-functional.pdf][Part 2]], [[file:pdf/teaching/2021-questions/2-3-functional.pdf][Part 3]].
+    
+* 2020
+
+** Getting high: scope, projection, and evaluation order
+
+- MIT topics in semantics seminar.
+- Co-taught with Martin Hackl.
+- I taught a series of classes on continuation semantics and related topics:
+  * Continuations: [[file:pdf/teaching/2020-getting-high/1-1-cont.pdf][Part 1]], [[file:pdf/teaching/2020-getting-high/1-2-cont.pdf][Part 2]].
+  * Crossover: [[file:pdf/teaching/2020-getting-high/2-1-crossover.pdf][Part 1]], [[file:pdf/teaching/2020-getting-high/2-2-crossover.pdf][Part 2]].
+  * Presupposition: [[file:pdf/teaching/2020-getting-high/3-presupp.pdf][Handout]].
+  * Expressive content: [[file:pdf/teaching/2020-getting-high/4-1-expressive.pdf][Part 1]], [[file:pdf/teaching/2020-getting-high/4-2-expressive.pdf][Part 2]].
+  
   
 # Local Variables:
 # org-link-file-path-type: relative
