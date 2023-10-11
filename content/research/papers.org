@@ -20,7 +20,7 @@
 
 ** Donkey disjunctions and overlapping updates
 - To appear in the /Proceedings of SALT 33/.
-- You can read a pre-final draft [[https://patrickdelliott.com/pdf/salt33-draft.pdf][here]].
+- You can read a pre-final draft [[https://ling.auf.net/lingbuzz/007629][here]].
 
 * 2022
 
