@@ -16,7 +16,7 @@ Reach me at [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott@gmail.com]].
 * News
 
 - [[http://tbond.scripts.mit.edu/tb/][Tanya Bondarenko]] and I will give a talk entitled "On the monotonicity of attitudes: NPIs and clausal embedding" at NELS 54, MIT, in 2024.
-- I'll be giving an invited talk at the PALLMYR workshop, UCL, on November 18, entitiled "Finding strength in contradiction".
+- I'll be giving an invited talk at the PALLMYR workshop, UCL, on November 18, entitiled "Finding strength in contradiction". You can find the slides [[https://patrickdelliott.com/pdf/pallmyr.pdf][here]].
 - [[https://linguistics.fas.harvard.edu/people/tatiana-bondarenko][Tanya Bondarenko]] is presenting our joint work *On the monotonicity of attitudes: Clausal embedding and NPI licensing* at [[https://lucian.uchicago.edu/blogs/phlip/phlip-8/][PhLiP 8]], November 11.
 - I have a new paper to appear in the Proceedings of SALT 33 entitled *Donkey disjunctions and overlapping updates*, which you can find [[https://ling.auf.net/lingbuzz/007629][here]].
 - I have a new manuscript on lingbuzz together with Yasu Sudo entitled *Free choice with anaphora*. You can find it [[https://ling.auf.net/lingbuzz/007608][here]].
