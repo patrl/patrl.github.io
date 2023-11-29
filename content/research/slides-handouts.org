@@ -9,6 +9,9 @@
 
 * 2023
 
+- *On the monotonicity of attitudes: NPIs and clausal embedding*
+  * Joint work with Tanya Bondarenko.
+  * Presented at [[https://lucian.uchicago.edu/blogs/phlip/phlip-8/][PhLiP 8]], November 11.
 - *Finding strength in contradiction*
   * Invited talk at PALLMYR workshop, UCL, November 18.
 - *Gluts in the logic of anaphoric dependencies*
