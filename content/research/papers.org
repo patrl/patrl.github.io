@@ -15,6 +15,10 @@
 
 ** Towards a principled logic of anaphora
 - [[https://ling.auf.net/lingbuzz/005562][lingbuzz/005562]]
+  
+** There is no island repair
+- With Matt Barros and Gary Thoms
+- [[https://ling.auf.net/lingbuzz/002100][lingbuzz/002100]]
 
 * 2023  
 
