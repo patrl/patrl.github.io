@@ -20,11 +20,11 @@
 - With Matt Barros and Gary Thoms
 - [[https://ling.auf.net/lingbuzz/002100][lingbuzz/002100]]
 
-* 2023  
+* 2024  
 
 ** Donkey disjunctions and overlapping updates
-- To appear in the /Proceedings of SALT 33/.
-- You can read a pre-final draft [[https://ling.auf.net/lingbuzz/007629][here]].
+- https://journals.linguisticsociety.org/proceedings/index.php/SALT/article/view/33.033/5258
+- Published in the /Proceedings of SALT 33/.
 
 * 2022
 
