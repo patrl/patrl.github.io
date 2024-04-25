@@ -132,6 +132,9 @@
     
 * 2016
 
+- *Ellipsis identity and the alternative tier*
+  * Talk given at Leipzig University.
+  * [[https://patrickdelliott.com/pdf/leipzig-ellipsis.pdf][Handout]]
 - *Nested /which/-phrases: consequences for the syntax of /wh/-scope*
   * Talk given at the IGG 42, Lecce.
 - *Nested /wh/-questions and the locality of scope-taking*
