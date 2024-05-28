@@ -3,8 +3,12 @@
 
 * Manuscripts
 
+** Monotonicity via mereology in the semantics of attitude reports
+- with Tanya Bondarenko.
+- [[https://ling.auf.net/lingbuzz/008158][lingbuzz/008158]] 
+
 ** Free choice with anaphora
-- with Yasu Sudo
+- with Yasu Sudo.
 - [[https://ling.auf.net/lingbuzz/007608][lingbuzz/007608]]
 
 ** Partee conjunctions: projection and possibility
@@ -17,7 +21,7 @@
 - [[https://ling.auf.net/lingbuzz/005562][lingbuzz/005562]]
   
 ** There is no island repair
-- With Matt Barros and Gary Thoms
+- With Matt Barros and Gary Thoms.
 - [[https://ling.auf.net/lingbuzz/002100][lingbuzz/002100]]
 
 * 2024  
