@@ -3,6 +3,13 @@
 
 * 2024
 
+- *Nominal Free Choice*
+  * Joint work with Filipe Hisao Kobayashi.
+  * Talk given at the [[https://wuegaki.ppls.ed.ac.uk/mecore/mecore-final-workshop/][MECORE closing workshop]], Konstanz.
+  * [[https://patrickdelliott.com/pdf/nominal-fc.pdf][Slides]].
+- *On the monotonicity of attitudes*.
+  * Joint work with Tanya Bondarenko.
+  * Invited talk at the Bochum Language Colloquium.
 - *On the monotonicity of attitudes: NPIs and clausal embedding*
   * Joint work with Tanya Bondarenko
   * Talk accepted at NELS 54, MIT.
