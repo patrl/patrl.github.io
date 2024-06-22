@@ -15,7 +15,7 @@ Reach me at [[mailto:patrick.d.elliott@gmail.com][patrick.d.elliott@gmail.com]].
  
 * News
 
-- Filipe Hisao Kobayashi and gave a talk entitled "Nominal free choice" at the MECORE closing workshop, Konstanz, June. You can find the slides [[https//patrickdelliott.com/pdf/nominal-fc.pdf][here]].
+- Filipe Hisao Kobayashi and gave a talk entitled "Nominal free choice" at the MECORE closing workshop, Konstanz, June. You can find the slides [[https://patrickdelliott.com/pdf/nominal-fc.pdf][here]].
 - I have a new manuscript on lingbuzz together with Tanya Bondarenko entitled *Monotonicity via mereology in the semantics of attitude reports*, which you can find [[https://ling.auf.net/lingbuzz/008158][here]]. 
 - I have a new manuscript on lingbuzz together with Tanya Bondarenko entitled *Monotonicity via mereology in the semantics of attitude reports*. You can find it [[https://ling.auf.net/lingbuzz/008158][here]].
 - Tanya Bondarenko and I gave a talk entitled "On the monotonicity of attitudes: NPIs and clausal embedding" at NELS 54, MIT, in 2024. You can find the handout [[https://patrickdelliott.com/pdf/nels54.pdf][here]].
