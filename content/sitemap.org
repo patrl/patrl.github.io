@@ -5,6 +5,6 @@
 - [[file:teaching.org][Teaching]]
 - research
   - [[file:research/papers.org][Papers]]
-  - [[file:research/slides-handouts.org][Slides and handouts]]
+  - [[file:research/slides-handouts.org][Talks]]
 - test
   - [[file:test/math.org][Math test]]
