@@ -1,18 +1,27 @@
-#+title: Slides and handouts
+#+title: Talks
 #+author: Patrick D. Elliott
 
 * 2024
 
+- *Mixed polarity pluralities: a solution to van Benthem's puzzle*
+  * Talk accepted at Sinn und Bedeutung 29.
+- *Restricting determiners: conservativity and negative counterparts*
+  * Talk accepted at the workshop "Does semantics have a /too many tools/ problem?", September 20.
+- *Mixed polarity pluralities*
+  * Talk accepted at the LAGB annual meeting, August 29. 
 - *Nominal Free Choice*
   * Joint work with Filipe Hisao Kobayashi.
-  * Talk given at the [[https://wuegaki.ppls.ed.ac.uk/mecore/mecore-final-workshop/][MECORE closing workshop]], Konstanz.
+  * Talk given at the [[https://wuegaki.ppls.ed.ac.uk/mecore/mecore-final-workshop/][MECORE closing workshop]], Konstanz, June 21.
   * [[https://patrickdelliott.com/pdf/nominal-fc.pdf][Slides]].
 - *On the monotonicity of attitudes*.
   * Joint work with Tanya Bondarenko.
-  * Invited talk at the Bochum Language Colloquium.
+  * Invited talk at the Bochum Language Colloquium, June 18.
+- *Prospects for a Trivalent Approach to Presupposition: the Case of Conditionals*
+  * Joint work with Alex Kalomoiros.
+  * Talk given at [[http://tsinghualogic.net/JRC/tllm/2024connectives][TLLM 2024]], March 29.
 - *On the monotonicity of attitudes: NPIs and clausal embedding*
   * Joint work with Tanya Bondarenko
-  * Talk accepted at NELS 54, MIT.
+  * Talk given at [[https://nels54.mit.edu/][NELS 54]], MIT, January 26.
 
 * 2023
 
