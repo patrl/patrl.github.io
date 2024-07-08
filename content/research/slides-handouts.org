@@ -3,8 +3,6 @@
 
 * 2024
 
-- *Mixed polarity pluralities: a solution to van Benthem's puzzle*
-  * Talk accepted at Sinn und Bedeutung 29.
 - *Restricting determiners: conservativity and negative counterparts*
   * Talk accepted at the workshop "Does semantics have a /too many tools/ problem?", September 20.
 - *Mixed polarity pluralities*
