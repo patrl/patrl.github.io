@@ -39,6 +39,7 @@
   
 ** Disjunction in a predictive theory of anaphora
 - [[https://link.springer.com/chapter/10.1007/978-3-031-25894-7_4]]
+- [[https://ling.auf.net/lingbuzz/006657][lingbuzz/006657]] (prefinal draft).
 - Published in the /TLLM 2022: Dynamics in logic and language/.
   
 ** A flexible scope theory of intensionality
