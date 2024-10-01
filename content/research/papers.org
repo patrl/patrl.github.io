@@ -70,13 +70,16 @@
   
 ** Exactly one theory of multiplicity inferences
 - with Paul Marty.
+- https://www.ledonline.it/snippets/allegati/snippets37010.pdf
 - Published in /Snippets/.
   
-** Unconditional sluicing: a case of ineffable ellipsis
+** Unconditional sluicing: an ellipsis identity puzzle
 - with Andrew Murphy.
+- https://www.ledonline.it/snippets/allegati/snippets35002.pdf
 - Published in /Snippets/.
   
 ** \#Only zero
+- https://www.ledonline.it/snippets/allegati/snippets35001.pdf
 - Published in /Snippets/.
   
 ** Ineffability and unexhaustification
@@ -86,8 +89,8 @@
 
 * 2018
 
-** Collective predication and ellipsis: another case of ineffability
-- [[https://ling.auf.net/lingbuzz/003963][lingbuzz/003963]]
+** Collective predication and ellipsis  
+- [[https://www.ledonline.it/snippets/allegati/snippets33003.pdf]]
 - Published in /Snippets/.
 
 * 2017
