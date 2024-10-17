@@ -9,9 +9,12 @@
 - *Mixed-polarity pluralities: a solution to van Benthem's problem*
   * Poster presented at Sinn und Bedeutung 29, Noto, Sicily, September 17.
   * [[https://patrickdelliott.com/pdf/sub29.pdf][Poster]].
+- *Homogeneity in non-monotonic contexts*
+  * Talk given at Sinn und Bedeutung 29, Noto, Sicily, September 17.
+  * Joint work with Paul Marty (first author), Omri Amiraz, Guillermo del Pinal, and Jacopo Romoli.
 - *Mixed polarity pluralities*
   * Talk given at the LAGB annual meeting, Newcastle University, August 29. 
-- *Nominal Free Choice*
+- *Nominal Free Choice* 
   * Joint work with Filipe Hisao Kobayashi.
   * Talk given at the [[https://wuegaki.ppls.ed.ac.uk/mecore/mecore-final-workshop/][MECORE closing workshop]], Konstanz, June 21.
   * [[https://patrickdelliott.com/pdf/nominal-fc.pdf][Slides]].
