@@ -3,6 +3,9 @@
 
 * 2024
 
+- *Ignorance under attitudes*
+  * Joint work with Filipe Hisao Kobayashi.
+  * Poster to be presented at the Amsterdam Colloquium 2024.
 - *Restricting determiners: conservativity and negative counterparts*
   * Talk presented at the workshop "Does semantics have a /too many tools/ problem?", September 20.
   * [[https://patrickdelliott.com/pdf/tmt2024.pdf][Slides]].
