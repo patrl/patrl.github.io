@@ -7,10 +7,6 @@
 - with Tanya Bondarenko.
 - [[https://ling.auf.net/lingbuzz/008158][lingbuzz/008158]] 
 
-** Free choice with anaphora
-- with Yasu Sudo.
-- [[https://ling.auf.net/lingbuzz/007608][lingbuzz/007608]]
-
 ** Partee conjunctions: projection and possibility
 - [[https://ling.auf.net/lingbuzz/006857][lingbuzz/006857]]
 
@@ -23,6 +19,13 @@
 ** There is no island repair
 - With Matt Barros and Gary Thoms.
 - [[https://ling.auf.net/lingbuzz/002100][lingbuzz/002100]]
+  
+* 2025
+
+** Free choice with anaphora
+- with Yasu Sudo.
+- https://doi.org/10.3765/sp.18.2
+- Published in /Semantics and Pragmatics/.
 
 * 2024  
 

@@ -1,6 +1,12 @@
 #+title: Talks
 #+author: Patrick D. Elliott
 
+* 2025
+
+- *Part-whole relations in the semantics of attitude reports*
+  * Joint work with Tanya Bondarenko.
+  * Talk given at the workshop /Nature of the Objects of Thought and Assertion/, Glasgow, January 9.
+
 * 2024
 
 - *Ignorance under attitudes*
