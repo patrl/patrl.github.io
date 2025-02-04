@@ -5,7 +5,7 @@
 
 - [[file:pdf/vitae.pdf][vitae]]
 - [[https://github.com/patrl][github]]
-- [[https://twitter.com/patrickdelliott][twitter]]
+- [[https://bsky.app/profile/qfwfq.club][bluesky]]
 
 * About me  
 
