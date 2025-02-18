@@ -22,6 +22,9 @@
   
 * 2025
 
+** Mixed-polarity pluralities: a solution to van Benthem's problem
+- to appear in the /Proceedings of Sinn und Bedeutung 29/. 
+
 ** Free choice with anaphora
 - with Yasu Sudo.
 - https://doi.org/10.3765/sp.18.2
