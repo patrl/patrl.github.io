@@ -24,6 +24,7 @@
 
 ** Mixed-polarity pluralities: a solution to van Benthem's problem
 - to appear in the /Proceedings of Sinn und Bedeutung 29/. 
+- [[https://ling.auf.net/lingbuzz/008822][lingbuzz/008822]]
 
 ** Free choice with anaphora
 - with Yasu Sudo.
