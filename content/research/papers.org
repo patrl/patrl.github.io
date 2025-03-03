@@ -103,6 +103,7 @@
 * 2017
 
 ** Predicates of relevance and theories of question embedding
+- https://academic.oup.com/jos/article-abstract/34/3/547/3784336
 - Published in /Journal of Semantics/.
   
 ** Do superiority-violating multiple singular /which/-questions have pair-list readings?
@@ -117,7 +118,8 @@
 
 ** E-type readings of quantifiers under ellipsis: consequences for the identity condition  
 - with Yasu Sudo
-- [[https://ling.auf.net/lingbuzz/repo/semanticsArchive/article/001561][semanticsArchive/2QzYmEzO]]
+- [[https://semanticsarchive.net/sub2015/SeparateArticles/Elliott-Sudo-SuB20.pdf][semanticsArchive/2QzYmEzO]]
+- Published in /Proceedings of Sinn und Bedeutung 20/.
   
 ** List readings of questions with conjoined singular /which/-phrases
 - with Andreea Nicolae and Yasu Sudo
