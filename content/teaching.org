@@ -3,35 +3,43 @@
 
 Selected courses - see my [[./pdf/vitae.pdf][cv]] for the full list.
 
-* 2022
+** Explanation and semantic theory: the case of presupposition
+
+- 2025 ESSLLI course, co-taught with Alexandros Kalomoiros.
+- [[https://patrickdelliott.com/esslli2025-proj][Course site]].
+
+* Previous 
+
+** Explaining anaphoric accessibility
+
+- 2023 ESSLLI course, co-taught with Lisa Hofmann.
+- [[https://github.com/patrl/esslli2023-accessibility][Course site]].
 
 ** Discourse referents inside and out
 
-- MIT topics in semantics seminar (Spring 2022).
+- 2022 MIT topics in semantics seminar.
 - [[https://patrickdelliott.com/anaphora-seminar][Course site]].
-  
-* 2021  
 
 ** Topics in the syntax and semantics of questions
 
-- MIT research seminar (Spring 2021).
-- Co-taught with Kai von Fintel, Danny Fox, Sabine Iatridou, and David Pesetsky.
-- I taught (i) a series of classes on pied-piping and question composition, and (ii) a series of classes on functional readings of questions. 
-  * Pied-piping and question composition: [[file:pdf/teaching/2021-questions/1-1-qcomp.pdf][Part 1]], [[file:pdf/teaching/2021-questions/1-2-qcomp.pdf][Part 2]], [[file:pdf/teaching/2021-questions/1-3-qcomp.pdf][Part 3]].
-  * Functional readings: [[file:pdf/teaching/2021-questions/2-1-functional.pdf][Part 1]], [[file:pdf/teaching/2021-questions/2-1-functional.pdf][Part 2]], [[file:pdf/teaching/2021-questions/2-3-functional.pdf][Part 3]].
-    
-* 2020
-
+- 2021 MIT research seminar, co-taught with Kai von Fintel, Danny Fox, Sabine Iatridou, and David Pesetsky.
+- My handouts on pied-piping and question composition:
+  * [[file:pdf/teaching/2021-questions/1-1-qcomp.pdf][Part 1]]
+  * [[file:pdf/teaching/2021-questions/1-2-qcomp.pdf][Part 2]]
+  * [[file:pdf/teaching/2021-questions/1-3-qcomp.pdf][Part 3]].
+- My handouts on functional readings of questions:
+  * [[file:pdf/teaching/2021-questions/2-1-functional.pdf][Part 1]]
+  * [[file:pdf/teaching/2021-questions/2-1-functional.pdf][Part 2]]
+  * [[file:pdf/teaching/2021-questions/2-3-functional.pdf][Part 3]].
+   
 ** Getting high: scope, projection, and evaluation order
 
-- MIT topics in semantics seminar.
-- Co-taught with Martin Hackl.
-- I taught a series of classes on continuation semantics and related topics:
+- 2020 MIT topics in semantics seminar co-taught with Martin Hackl.
+- My handouts on continuation semantics and related topics:
   * Continuations: [[file:pdf/teaching/2020-getting-high/1-1-cont.pdf][Part 1]], [[file:pdf/teaching/2020-getting-high/1-2-cont.pdf][Part 2]].
   * Crossover: [[file:pdf/teaching/2020-getting-high/2-1-crossover.pdf][Part 1]], [[file:pdf/teaching/2020-getting-high/2-2-crossover.pdf][Part 2]].
   * Presupposition: [[file:pdf/teaching/2020-getting-high/3-presupp.pdf][Handout]].
   * Expressive content: [[file:pdf/teaching/2020-getting-high/4-1-expressive.pdf][Part 1]], [[file:pdf/teaching/2020-getting-high/4-2-expressive.pdf][Part 2]].
-  
   
 # Local Variables:
 # org-link-file-path-type: relative
