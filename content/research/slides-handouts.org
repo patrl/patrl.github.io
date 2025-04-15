@@ -3,6 +3,10 @@
 
 * 2025
 
+- *Free Choice in (non-)monotonic contexts*
+  * Joint work with Paul Marty (first author), Guillermo del Pinal, and Jacopo Romoli.
+  * [[https://osf.io/rs952/][OSF repo]]
+  * Poster at SALT 35, Harvard University, May 20-22.
 - *Determiners as predicates*
   * [[https://osf.io/vsg5b/][OSF repo]].
   * Talk at SALT 35, Harvard University, May 20-22.
