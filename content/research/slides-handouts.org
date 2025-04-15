@@ -3,6 +3,9 @@
 
 * 2025
 
+- *Determiners as predicates*
+  * [[https://osf.io/vsg5b/][OSF repo]].
+  * Talk at SALT 35, Harvard University, May 20-22.
 - *Part-whole relations in the semantics of attitude reports*
   * Joint work with Tanya Bondarenko.
   * Talk given at the workshop /Nature of the Objects of Thought and Assertion/, Glasgow, January 9.
