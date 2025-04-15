@@ -5,11 +5,11 @@
 
 - *Free Choice in (non-)monotonic contexts*
   * Joint work with Paul Marty (first author), Guillermo del Pinal, and Jacopo Romoli.
-  * [[https://osf.io/rs952/][OSF repo]]
   * Poster at SALT 35, Harvard University, May 20-22.
+  * [[https://osf.io/rs952/][OSF repo]]
 - *Determiners as predicates*
-  * [[https://osf.io/vsg5b/][OSF repo]].
   * Talk at SALT 35, Harvard University, May 20-22.
+  * [[https://osf.io/vsg5b/][OSF repo]]
 - *Part-whole relations in the semantics of attitude reports*
   * Joint work with Tanya Bondarenko.
   * Talk given at the workshop /Nature of the Objects of Thought and Assertion/, Glasgow, January 9.
@@ -87,9 +87,9 @@
   * Joint work with Greg Williamson and Yuxin Ji.
   * Talk given at the LAW-DMR 2021 workshop, November 10-11.
   * [[https://arxiv.org/pdf/2109.09858.pdf][Paper]]
-- *A scopal theory of pied-piping in relative clauses*
+- *A Q-based theory of pied-piping in relative clauses*
   * Talk given at NELS 52.
-  * [[https://osf.io/gfeky/][Handout]]
+  * [[https://osf.io/bpwjy/][OSF repo]] 
 - *Externally dynamic dynamic semantics*
   * Talk given at ENS, July 14.
   * [[https://patrickdelliott.com/pdf/ens.pdf]]
