@@ -3,6 +3,9 @@
 
 * 2025
 
+- *The DP-CP connection: lessons from mismatching coordinations*
+  * Joint work with Luise Schwarzer.
+  * Talk at the workshop /Clausal Complementation Across Categories/, ZAS, Berlin, June 19-20.
 - *Free Choice in (non-)monotonic contexts*
   * Joint work with Paul Marty (first author), Guillermo del Pinal, and Jacopo Romoli.
   * Poster at SALT 35, Harvard University, May 20-22.
