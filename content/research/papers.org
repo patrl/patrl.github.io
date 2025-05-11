@@ -33,6 +33,11 @@
 
 * 2024  
 
+** Ignorance under attitudes
+- with Filipe Hisao Kobayashi.
+- https://drive.google.com/file/d/12QAPQf7EIsQkY_o-PEupkuzRpFMY8-2x/view
+- Published in the /Proceedings of the 24th Amsterdam Colloquium/.
+
 ** Donkey disjunctions and overlapping updates
 - https://journals.linguisticsociety.org/proceedings/index.php/SALT/article/view/33.033/5258
 - Published in the /Proceedings of SALT 33/.
