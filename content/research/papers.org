@@ -22,6 +22,13 @@
   
 * 2025
 
+** Determiners as predicates
+- In prep for /Proceedings of SALT 35/.
+  
+** Free choice in (non-)monotonic contexts
+- With Paul Marty (first author), Guillermo Del Pinal and Jacopo Romoli.
+- In prep for /Proceedings of SALT 35/.
+
 ** Mixed-polarity pluralities: a solution to van Benthem's problem
 - to appear in the /Proceedings of Sinn und Bedeutung 29/. 
 - [[https://ling.auf.net/lingbuzz/008822][lingbuzz/008822]]
