@@ -2,14 +2,15 @@
 #+author: Patrick D. Elliott
 
 * 2025
-
+- *Invited talk at the DIP colloquium* (title TBC)
+  * University of Amsterdam, October 24.
 - *Latent discourse referents*
   * Joint work with Nathan Klinedinst.
   * Talk at Sinn und Bedeutung 30, Frankfurt, September 23-27.
 - *Presupposition projection in (non-)monotonic contexts*
   * Joint work with Paul Marty (first author), Guillermo Del Pinal, and Jacopo Romoli.
   * Poster at Sinn und Bedeutung 30, Frankfurt, September 23-27.
-- Invited commentary on Gennaro Chierchia's talk (title TBC)
+- *Invited commentary on Gennaro Chierchia* (title TBC)
   * Summer workshop on Asymmetries, ZAS Berlin, July 1.
 - *The DP-CP connection: lessons from mismatching coordinations*
   * Joint work with Luise Schwarzer.
