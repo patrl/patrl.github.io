@@ -142,6 +142,7 @@
 - *Binding back to the future*
   * Joint work with Yasu Sudo.
   * Talk given at the workshop /Asymmetries in language: presuppositions and beyond/ in Berlin.
+  * [[https://patrickdelliott.com/pdf/berlin-cataphora.pdf][Slides]]
 - *Nuclear intervention: deriving Beck effects via cyclic scope and local exhaustification*
   * Joint work with Uli Sauerland.
   * Talk given at the workshop /Exhaustivity in questions and answers/ in Tübingen.
