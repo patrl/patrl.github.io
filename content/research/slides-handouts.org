@@ -145,6 +145,7 @@
 - *Nuclear intervention: deriving Beck effects via cyclic scope and local exhaustification*
   * Joint work with Uli Sauerland.
   * Talk given at the workshop /Exhaustivity in questions and answers/ in Tübingen.
+  * [[https://patrickdelliott.com/pdf/tuebingen-slides.pdf][Slides]]
 - *Nuclear intervention: towards a unified account of weak islands and Beck effects*
   * Joint work with Uli Sauerland.
   * Talk given at LingLunch, MIT.
