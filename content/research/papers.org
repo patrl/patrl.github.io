@@ -27,11 +27,16 @@
   
 ** Free choice in (non-)monotonic contexts
 - With Paul Marty (first author), Guillermo Del Pinal and Jacopo Romoli.
-- In prep for /Proceedings of SALT 35/.
+- Submitted to /Proceedings of SALT 35/.
 
 ** Mixed-polarity pluralities: a solution to van Benthem's problem
-- to appear in the /Proceedings of Sinn und Bedeutung 29/. 
-- [[https://ling.auf.net/lingbuzz/008822][lingbuzz/008822]]
+- Published in the /Proceedings of Sinn und Bedeutung 29/. 
+- https://ojs.ub.uni-konstanz.de/sub/index.php/sub/article/view/1222
+  
+** Homogeneity in (non-)monotonic contexts
+- With Paul Marty (first author), Omri Amiraz, Guillermo Del Pinal and Jacopo Romoli.
+- Published in the /Proceedings of Sinn und Bedeutung 29/.
+- https://ojs.ub.uni-konstanz.de/sub/index.php/sub/article/view/1257
 
 ** Free choice with anaphora
 - with Yasu Sudo.
