@@ -77,11 +77,16 @@
 - Published in /Theoretical Linguistics/.
   
 ** Intensionalizing abstract meaning representations: non-veridicality and scope
-- With Greg Williamson and Yuxin Ji 
+- With Greg Williamson (first author) and Yuxin Ji.
 - [[https://aclanthology.org/2021.law-1.17.pdf]]
 - Published in the proceedings of EMNLP 2021
 
 * 2020
+
+** Generalized crossover
+- With Yasutada Sudo.
+- https://journals.linguisticsociety.org/proceedings/index.php/SALT/article/view/30.396/
+- Published in the /Proceedings of SALT 30/.
 
 ** Exceptional /de re/ in continuation semantics
 - http://www.lingref.com/cpp/wccfl/38/paper3563.pdf
