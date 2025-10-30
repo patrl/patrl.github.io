@@ -2,9 +2,12 @@
 #+author: Patrick D. Elliott
 
 * 2025
-- *Invited talk at the DIP colloquium* (title TBC)
-  * University of Amsterdam, October 24.
-- *Latent discourse referents*
+- *Negativity in the individual domain* (tentative title)
+  * Invited talk at the linguistics research seminar, University of Vienna, November 18.
+- *A quadrivalent approach to anaphora*
+  * Based on joint work with Amir Anvari.
+  * Invited talk at the Discourse In Philosophy colloquium, University of Amsterdam, October 24.
+- *Latent discourse referents (cancelled)*
   * Joint work with Nathan Klinedinst.
   * Talk at Sinn und Bedeutung 30, Frankfurt, September 23-27.
 - *Presupposition projection in (non-)monotonic contexts*
