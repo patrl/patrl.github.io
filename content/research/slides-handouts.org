@@ -7,6 +7,7 @@
 - *A quadrivalent approach to anaphora*
   * Based on joint work with Amir Anvari.
   * Invited talk at the Discourse In Philosophy colloquium, University of Amsterdam, October 24.
+  * [[https://patrickdelliott.com/pdf/dip.pdf][Handout]].
 - *Latent discourse referents (cancelled)*
   * Joint work with Nathan Klinedinst.
   * Talk at Sinn und Bedeutung 30, Frankfurt, September 23-27.
