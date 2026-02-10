@@ -1,6 +1,12 @@
 #+title: Talks
 #+author: Patrick D. Elliott
 
+* 2026
+
+- *Trivalence and incrementality*
+  * with Alexandros Kalomoiros.
+  * Talk at /Theoretical Linguistics at Keio/ (TaLK), March 15.
+
 * 2025
 - *Negative individuals*
   * Invited talk at the linguistics research seminar, University of Geneva, November 18.
