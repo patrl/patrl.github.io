@@ -3,10 +3,6 @@
 
 * Manuscripts
 
-** Monotonicity via mereology in the semantics of attitude reports
-- with Tanya Bondarenko.
-- [[https://ling.auf.net/lingbuzz/008158][lingbuzz/008158]] 
-
 ** Partee conjunctions: projection and possibility
 - [[https://ling.auf.net/lingbuzz/006857][lingbuzz/006857]]
 
@@ -19,6 +15,14 @@
 ** There is no island repair
 - With Matt Barros and Gary Thoms.
 - [[https://ling.auf.net/lingbuzz/002100][lingbuzz/002100]]
+  
+* 2026
+
+** Monotonicity via mereology in the semantics of attitude reports
+- with Tanya Bondarenko.
+- Accepted at /Semantics and Pragmatics/.
+- [[https://ling.auf.net/lingbuzz/008158][lingbuzz/008158]] 
+
   
 * 2025
 
