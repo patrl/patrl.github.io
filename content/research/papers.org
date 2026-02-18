@@ -20,9 +20,8 @@
 
 ** Monotonicity via mereology in the semantics of attitude reports
 - with Tanya Bondarenko.
-- Accepted at /Semantics and Pragmatics/.
-- [[https://ling.auf.net/lingbuzz/008158][lingbuzz/008158]] 
-
+- https://doi.org/10.3765/sp.19.2
+- Published in /Semantics and Pragmatics/.
   
 * 2025
 
