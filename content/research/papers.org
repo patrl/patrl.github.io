@@ -18,20 +18,21 @@
   
 * 2026
 
+** Determiners as predicates
+- Forthcoming in /Proceedings of SALT 35/.
+- [[https://ling.auf.net/lingbuzz/009627][lingbuzz/009627]]
+
 ** Monotonicity via mereology in the semantics of attitude reports
 - with Tanya Bondarenko.
 - https://doi.org/10.3765/sp.19.2
 - Published in /Semantics and Pragmatics/.
   
-* 2025
-
-** Determiners as predicates
-- In prep for /Proceedings of SALT 35/.
-  
 ** Free choice in (non-)monotonic contexts
 - With Paul Marty (first author), Guillermo Del Pinal and Jacopo Romoli.
-- Submitted to /Proceedings of SALT 35/.
-
+- Forthcoming in /Proceedings of SALT 35/.
+  
+* 2025
+  
 ** Mixed-polarity pluralities: a solution to van Benthem's problem
 - Published in the /Proceedings of Sinn und Bedeutung 29/. 
 - https://ojs.ub.uni-konstanz.de/sub/index.php/sub/article/view/1222
