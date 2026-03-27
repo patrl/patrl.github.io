@@ -3,6 +3,13 @@
 
 * 2026
 
+- *Quantifying multiplicity*
+  * with Paul Marty (first author), Alexandros Kalomoiros and Jacopo Romoli.
+  * Talk at SALT 36, Buenos Aires, July.
+- *Title TBA*
+  * Invited talk at [[https://sites.google.com/view/berlinbrnovienna/home][BerlinBrnoVienna 2026]], June.
+- *Title TBA*
+  * Formal Linguistics Group, IPI PAN, Warsaw, April 23.
 - *Trivalence and incrementality*
   * with Alexandros Kalomoiros.
   * Talk at /Theoretical Linguistics at Keio/ (TaLK), March 15.
