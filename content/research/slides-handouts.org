@@ -8,8 +8,9 @@
   * Talk at SALT 36, Buenos Aires, July.
 - *Title TBA*
   * Invited talk at [[https://sites.google.com/view/berlinbrnovienna/home][BerlinBrnoVienna 2026]], June.
-- *Title TBA*
+- *Explorations in the negative zone*
   * Formal Linguistics Group, IPI PAN, Warsaw, April 23.
+  * [[https://patrickdelliott.com/pdf/ipi-pan.pdf][Handout]].
 - *Trivalence and incrementality*
   * with Alexandros Kalomoiros.
   * Talk at /Theoretical Linguistics at Keio/ (TaLK), March 15.
