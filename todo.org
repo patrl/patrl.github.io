@@ -1,5 +1,13 @@
 #+TITLE: todo
 
-* TODO export org mode to details/summary blocks
-* TODO add 2021 SALT proceedings paper on crossover
-* TODO add details for dissertations I've supervised
+* Site audit (2026-04-27)
+
+** Errors
+
+*** TODO Auto-clean orphaned outputs in =public/=
+- =org-publish= doesn't delete outputs whose source has been removed/excluded (e.g., stale =public/test/math.html= after excluding =test/=).
+- Since builds already force a full rebuild (=org-publish-all t=), wipe =public/= first.
+- Options:
+  * In =build.sh=: prepend =rm -rf public/= (simple, visible).
+  * In =build-site.el=: =(when (file-directory-p "./public/") (delete-directory "./public/" t))= before =(org-publish-all t)= (keeps build logic in one place).
+- Tradeoff: every build becomes fully cold; revisit if switching back to incremental publishing.
