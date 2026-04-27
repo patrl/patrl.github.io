@@ -1,0 +1,88 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/patrl/repos/patrl.github.io/todo.org
+
+
+* DONE Fix duplicate link in teaching.org
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-04-27 Mon 16:22
+:ARCHIVE_FILE: ~/repos/patrl.github.io/todo.org
+:ARCHIVE_OLPATH: Site audit (2026-04-27)/Errors
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+- =content/teaching.org:32= — "Part 2" links to =2-1-functional.pdf= (duplicate of Part 1).
+- Intended file =2-2-functional.pdf= exists in =content/pdf/teaching/2021-questions/=.
+
+
+* DONE Fix invalid CSS in footer rule
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-04-27 Mon 16:22
+:ARCHIVE_FILE: ~/repos/patrl.github.io/todo.org
+:ARCHIVE_OLPATH: Site audit (2026-04-27)/Errors
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+- =content/css/patrickdelliott.css:98= — =align: center;= is not a valid CSS property.
+- Should be =text-align: center;= inside the =footer { … }= rule.
+
+
+* DONE Fix escaped quotes in deploy.sh commit message
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-04-27 Mon 16:22
+:ARCHIVE_FILE: ~/repos/patrl.github.io/todo.org
+:ARCHIVE_OLPATH: Site audit (2026-04-27)/Errors
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+- =deploy.sh:10= — =git commit -m \"Publish.\"= produces a commit message of literal ="Publish."= (with the quotes embedded), not =Publish.=.
+- Drop the backslashes.
+
+
+* DONE Make =git stash pop= in deploy.sh conditional
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-04-27 Mon 16:22
+:ARCHIVE_FILE: ~/repos/patrl.github.io/todo.org
+:ARCHIVE_OLPATH: Site audit (2026-04-27)/Errors
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+- =deploy.sh:14= — =git stash pop= runs unconditionally, but =git stash= (line 3) only creates a stash if there were changes.
+- With a clean tree, =pop= either fails or pops an unrelated older stash.
+- Guard by only popping if a stash was actually pushed (e.g., =git stash push -m deploy= + check).
+
+
+* DONE Exclude test page from production build
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-04-27 Mon 16:22
+:ARCHIVE_FILE: ~/repos/patrl.github.io/todo.org
+:ARCHIVE_OLPATH: Site audit (2026-04-27)/Errors
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+- =content/test/math.org= ships to production and appears in the auto-generated =sitemap.org=.
+- Either move it out of =content/= or exclude via =:exclude= in =build-site.el=.
+
+
+* DONE Fix or delete unused postamble.html
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-04-27 Mon 16:22
+:ARCHIVE_FILE: ~/repos/patrl.github.io/todo.org
+:ARCHIVE_OLPATH: Site audit (2026-04-27)/Errors
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+- Deleted =content/html/postamble.html= and the commented-out =org-html-postamble= line in =build-site.el=.
+
+
+* DONE Bump KaTeX from 0.15.1 to latest 0.16.x
+:PROPERTIES:
+:ARCHIVE_TIME: 2026-04-27 Mon 16:23
+:ARCHIVE_FILE: ~/repos/patrl.github.io/todo.org
+:ARCHIVE_OLPATH: Site audit (2026-04-27)/Security
+:ARCHIVE_CATEGORY: todo
+:ARCHIVE_TODO: DONE
+:END:
+- Bumped to 0.16.45 in =content/html/head.html=, regenerated SRI hashes for css/js/auto-render.
+
