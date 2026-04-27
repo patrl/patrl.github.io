@@ -21,13 +21,13 @@
 
 (setq org-html-head (org-file-contents "./content/html/head.html"))
 (setq org-html-preamble (org-file-contents "./content/html/preamble.html"))
-;; (setq org-html-postamble (org-file-contents "./content/html/postamble.html"))
 
 ;; Define the publishing project
 (setq org-publish-project-alist
       '(("patrickdelliott.com"
 	     :recursive t
 	     :base-directory "./content/"
+	     :exclude "test/"
 	     :publishing-directory "./public/"
 	     :publishing-function org-html-publish-to-html
 	     :with-author t
