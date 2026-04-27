@@ -29,7 +29,7 @@ Selected courses - see my [[./pdf/vitae.pdf][cv]] for the full list.
   * [[file:pdf/teaching/2021-questions/1-3-qcomp.pdf][Part 3]].
 - My handouts on functional readings of questions:
   * [[file:pdf/teaching/2021-questions/2-1-functional.pdf][Part 1]]
-  * [[file:pdf/teaching/2021-questions/2-1-functional.pdf][Part 2]]
+  * [[file:pdf/teaching/2021-questions/2-2-functional.pdf][Part 2]]
   * [[file:pdf/teaching/2021-questions/2-3-functional.pdf][Part 3]].
    
 ** Getting high: scope, projection, and evaluation order
