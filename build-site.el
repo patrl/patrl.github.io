@@ -54,7 +54,7 @@
 
 	("images"
 	 :base-directory "./content/"
-	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|eot\\|svg\\|ttf\\|woff"
+	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|webp\\|pdf\\|eot\\|svg\\|ttf\\|woff"
 	 :publishing-directory "./public/"
 	 :recursive t
 	 :publishing-function org-publish-attachment)))
