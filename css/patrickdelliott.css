@@ -46,6 +46,15 @@ main {
     padding: 2rem;
 }
 
+.avatar {
+    display: block;
+    width: 160px;
+    height: auto;
+    margin: 1rem 0 1.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--surface1);
+}
+
 pre {
     background-color: var(--crust);
     padding: 1em;
@@ -95,7 +104,7 @@ blockquote {
 }
 
 footer {
-    align: center;
+    text-align: center;
 }
 
 .status {
