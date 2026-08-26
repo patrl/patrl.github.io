@@ -46,13 +46,27 @@ main {
     padding: 2rem;
 }
 
+/* pulled up alongside the title: -2.5rem cancels the h1 line box (2.4rem)
+   plus its bottom margin (.1rem), so the image top aligns with the title top */
+.avatar-frame {
+    float: right;
+    margin: -2.5rem 0 1rem 1.5rem;
+}
+
 .avatar {
     display: block;
     width: 160px;
     height: auto;
-    margin: 1rem 0 1.5rem;
     border-radius: 6px;
     border: 1px solid var(--surface1);
+}
+
+/* too little room left for the text column: stack it again */
+@media (max-width: 36rem) {
+    .avatar-frame {
+        float: none;
+        margin: 1rem 0 1.5rem;
+    }
 }
 
 pre {
@@ -82,6 +96,8 @@ h4:before {
 
 h1 {
     color: var(--blue);
+    font-size: 2rem;
+    line-height: 1.2;
     margin-bottom: .1rem;
 }
 
