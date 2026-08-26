@@ -18,29 +18,36 @@
   
 * 2026
 
-** Determiners as predicates
-- Forthcoming in /Proceedings of SALT 35/.
-- [[https://ling.auf.net/lingbuzz/009627][lingbuzz/009627]]
+** Quantifying presupposition projection
+- with Paul Marty (first author), Alexandros Kalomoiros, and Jacopo Romoli.
+- https://doi.org/10.18148/sub/2026.v30.1366
+- Published in /Proceedings of Sinn und Bedeutung 30/.
 
 ** Monotonicity via mereology in the semantics of attitude reports
 - with Tanya Bondarenko.
 - https://doi.org/10.3765/sp.19.2
 - Published in /Semantics and Pragmatics/.
   
-** Free choice in (non-)monotonic contexts
+** Free choice and dual prohibition in (non-)monotonic contexts
 - With Paul Marty (first author), Guillermo Del Pinal and Jacopo Romoli.
+- https://doi.org/10.3765/5pvgb937
+- Published in /Proceedings of SALT 35/.
+
+** Determiners as predicates
 - Forthcoming in /Proceedings of SALT 35/.
+- https://doi.org/10.3765/jz3zkp76
+- Published in the /Proceedings of SALT 35/.
   
 * 2025
-  
+
 ** Mixed-polarity pluralities: a solution to van Benthem's problem
+- https://doi.org/10.18148/sub/2025.v29.1222
 - Published in the /Proceedings of Sinn und Bedeutung 29/. 
-- https://ojs.ub.uni-konstanz.de/sub/index.php/sub/article/view/1222
   
 ** Homogeneity in (non-)monotonic contexts
 - With Paul Marty (first author), Omri Amiraz, Guillermo Del Pinal and Jacopo Romoli.
-- Published in the /Proceedings of Sinn und Bedeutung 29/.
-- https://ojs.ub.uni-konstanz.de/sub/index.php/sub/article/view/1257
+- https://doi.org/10.18148/sub/2024.v29.1257
+- Published in /Proceedings of Sinn und Bedeutung 29/.
 
 ** Free choice with anaphora
 - with Yasu Sudo.
