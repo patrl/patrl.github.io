@@ -7,7 +7,7 @@
 #+HTML_HEAD_EXTRA: <meta name="twitter:card" content="summary" />
 
 #+BEGIN_EXPORT html
-<picture>
+<picture class="avatar-frame">
   <source type="image/webp"
           srcset="/images/patrick-320.webp 320w, /images/patrick-480.webp 480w"
           sizes="160px">
