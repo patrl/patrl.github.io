@@ -18,6 +18,11 @@
   
 * 2026
 
+** Anaphora in a four-valued setting
+- with Amir Anvari.
+- https://ling.auf.net/lingbuzz/009360
+- Published in /A Festschrift for Danny Fox: MIT Working Papers in Linguistics 98/.
+
 ** Quantifying presupposition projection
 - with Paul Marty (first author), Alexandros Kalomoiros, and Jacopo Romoli.
 - https://doi.org/10.18148/sub/2026.v30.1366
