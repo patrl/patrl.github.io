@@ -3,10 +3,19 @@
 
 * 2026
 
+- *Excepting pluralities with entity negation*
+  * with Justin Bledin.
+  * Talk at the Amsterdam Colloquium, December.
+- *Complement subordination*
+  * with Alexandros Kalomoiros.
+  * Talk at the Amsterdam Colloquium, December.
+- *Complement subordination*
+  * with Alexandros Kalomoiros.
+  * Talk at LENLS 22, Kobe University, November 26.
 - *Quantifying multiplicity*
   * with Paul Marty (first author), Alexandros Kalomoiros and Jacopo Romoli.
   * Talk at SALT 36, Buenos Aires, July.
-- *Title TBA*
+- *Rethinking the semantics of quantification*
   * Invited talk at [[https://sites.google.com/view/berlinbrnovienna/home][BerlinBrnoVienna 2026]], June.
 - *Explorations in the negative zone*
   * Formal Linguistics Group, IPI PAN, Warsaw, April 23.
