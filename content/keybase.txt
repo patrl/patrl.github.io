@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/patrl
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://patrickdelliott.com
+  * I am patrl (https://keybase.io/patrl) on keybase.
+  * I have a public key ASDOGewU9ogOAUQzTXIqQnWj40zZ4xawNSU1TUu2m7U9vgo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120ce19ec14f6880e0144334d722a4275a3e34cd9e316b03525354d4bb69bb53dbe0a",
+            "host": "keybase.io",
+            "kid": "0120ce19ec14f6880e0144334d722a4275a3e34cd9e316b03525354d4bb69bb53dbe0a",
+            "uid": "fab8df186de0adbd7eaa4d22a1a7ed19",
+            "username": "patrl"
+        },
+        "service": {
+            "hostname": "patrickdelliott.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.18"
+    },
+    "ctime": 1492253679,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1492253671,
+        "hash": "7693aa5c9839a64ce11e0e340fddba28452ea44d171567bc1ac54041d4f34d9d91a0503bf8e1e076337b3c4dfeb26cb2749e7f8ffe7501e318665eaeafba890d",
+        "seqno": 1020987
+    },
+    "prev": "3ce555d18fe10a54f93ff0fc9e833826c91c799a5b39326129a2783e80de5abd",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgzhnsFPaIDgFEM01yKkJ1o+NM2eMWsDUlNU1Ltpu1Pb4Kp3BheWxvYWTFAvl7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwY2UxOWVjMTRmNjg4MGUwMTQ0MzM0ZDcyMmE0Mjc1YTNlMzRjZDllMzE2YjAzNTI1MzU0ZDRiYjY5YmI1M2RiZTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwY2UxOWVjMTRmNjg4MGUwMTQ0MzM0ZDcyMmE0Mjc1YTNlMzRjZDllMzE2YjAzNTI1MzU0ZDRiYjY5YmI1M2RiZTBhIiwidWlkIjoiZmFiOGRmMTg2ZGUwYWRiZDdlYWE0ZDIyYTFhN2VkMTkiLCJ1c2VybmFtZSI6InBhdHJsIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJwYXRyaWNrZGVsbGlvdHQuY29tIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xOCJ9LCJjdGltZSI6MTQ5MjI1MzY3OSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDkyMjUzNjcxLCJoYXNoIjoiNzY5M2FhNWM5ODM5YTY0Y2UxMWUwZTM0MGZkZGJhMjg0NTJlYTQ0ZDE3MTU2N2JjMWFjNTQwNDFkNGYzNGQ5ZDkxYTA1MDNiZjhlMWUwNzYzMzdiM2M0ZGZlYjI2Y2IyNzQ5ZTdmOGZmZTc1MDFlMzE4NjY1ZWFlYWZiYTg5MGQiLCJzZXFubyI6MTAyMDk4N30sInByZXYiOiIzY2U1NTVkMThmZTEwYTU0ZjkzZmYwZmM5ZTgzMzgyNmM5MWM3OTlhNWIzOTMyNjEyOWEyNzgzZTgwZGU1YWJkIiwic2Vxbm8iOjEwLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQOr011vBBlceBBxlOPY/LnueCl3SPN0hokrPS4KhnugMNNKRPGku+podAUzFQr6mNZim9o5l/4ObeAtjlNRvLAmoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCAdeoQK16iv8vU0+nP9aepXs7SMQ94xMzyLgSCmhPg/xaN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/patrl
+
+==================================================================

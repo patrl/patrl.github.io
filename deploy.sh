@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
+# Build the site and publish public/ to the master branch (served by GitHub Pages).
+# Uses a temporary worktree, so the current checkout is never touched.
+set -euo pipefail
+cd "$(dirname "$0")"
 
-stashed=0
-if ! git diff-index --quiet HEAD --; then
-    git stash push -m "deploy.sh autosave"
-    stashed=1
-fi
-
-git checkout org-publish
 ./build.sh
-git fetch --all
-git checkout -b master --track origin/master
-cp -a public/. .
-git add -A
-git commit -m "Publish."
-git push origin master
-git checkout org-publish
-git branch -D master
 
-if [ "$stashed" -eq 1 ]; then
-    git stash pop
+tmp=$(mktemp -d)
+git fetch origin master
+git worktree add --detach "$tmp" origin/master
+trap 'git worktree remove --force "$tmp"' EXIT
+
+rsync -a --delete --exclude .git public/ "$tmp"/
+cd "$tmp"
+git add -A
+if git diff --cached --quiet; then
+    echo "Nothing to deploy."
+    exit 0
 fi
+git commit -m "Publish."
+git push origin HEAD:master

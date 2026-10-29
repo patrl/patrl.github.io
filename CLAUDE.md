@@ -8,8 +8,8 @@ Personal academic website (patrickdelliott.com) built with Emacs `org-publish`. 
 
 ## Commands
 
-- `./build.sh` — runs `emacs -Q --script build-site.el`, which installs `htmlize` into `./.packages/` (first run only) and exports the site to `./public/`.
-- `./deploy.sh` — stashes WIP, builds on `org-publish`, copies `public/` onto a fresh `master` branch tracked from `origin/master`, commits as `"Publish."`, pushes, then returns to `org-publish` and deletes the local `master`. Pushes to remote — confirm with the user before running.
+- `./build.sh` — clears `public/`, then runs `emacs -Q --script build-site.el`, which installs `htmlize` into `./.packages/` (first run only) and exports the site to `./public/`.
+- `./deploy.sh` — builds, checks out `origin/master` in a temporary git worktree, mirrors `public/` into it with `rsync --delete`, commits as `"Publish."` and pushes to `master`. Never touches the current checkout. Pushes to remote — confirm with the user before running.
 
 `public/` and `.packages/` are gitignored on the `org-publish` branch; built artifacts only live on `master`.
 
@@ -27,6 +27,7 @@ Personal academic website (patrickdelliott.com) built with Emacs `org-publish`. 
 - `content/index.org`, `content/teaching.org`, `content/resources.org` — top-level pages.
 - `content/research/` — `papers.org`, `slides-handouts.org`.
 - `content/pdf/`, `content/files/`, `content/images/` — static assets copied verbatim.
+- `content/CNAME`, `content/keybase.txt` — must stay in `content/`; deploy mirrors `public/` exactly, so anything not produced by the build is removed from `master`.
 - `content/css/patrickdelliott.css` — single stylesheet, linked from `head.html`.
 - `content/sitemap.org` — generated, do not edit by hand.
 
