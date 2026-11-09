@@ -5,6 +5,7 @@
 
 ** Nested /which/-phrases and the logic of pied-piping
 - with Filipe Hisao Kobayashi
+- [[https://ling.auf.net/lingbuzz/010522][lingbuzz/010522]]
 
 ** Partee conjunctions: projection and possibility
 - [[https://ling.auf.net/lingbuzz/006857][lingbuzz/006857]]
