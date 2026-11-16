@@ -9,7 +9,7 @@ cd "$(dirname "$0")"
 
 # Dotfiles are excluded, which also protects them from --delete: agate keeps
 # its TLS certificates in /home/gemini/.certificates.
-rsync -av --delete --exclude '.*' --chmod=D755,F644 \
+rsync -rltv --omit-dir-times --delete --exclude '.*' --chmod=D755,F644 \
     public-gemini/ nebula:/home/gemini/
 
 tmp=$(mktemp -d)
