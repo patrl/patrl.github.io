@@ -8,17 +8,18 @@ Personal academic website (patrickdelliott.com) built with Emacs `org-publish`. 
 
 ## Commands
 
-- `./build.sh` — clears `public/`, then runs `emacs -Q --script build-site.el`, which installs `htmlize` into `./.packages/` (first run only) and exports the site to `./public/`.
-- `./deploy.sh` — builds, checks out `origin/master` in a temporary git worktree, mirrors `public/` into it with `rsync --delete`, commits as `"Publish."` and pushes to `master`. Never touches the current checkout. Pushes to remote — confirm with the user before running.
+- `./build.sh` — clears `public/` and `public-gemini/`, then runs `emacs -Q --script build-site.el`, which installs `htmlize` and `ox-gemini` into `./.packages/` (first run only) and exports the HTML site to `./public/` and a Gemini capsule to `./public-gemini/`.
+- `./deploy.sh` — builds, mirrors `public-gemini/` to `nebula:/home/gemini/` (agate serves it as `qfwfq.club`; dotfiles such as `.certificates/` are excluded so `--delete` never touches them), then checks out `origin/master` in a temporary git worktree, mirrors `public/` into it with `rsync --delete`, commits as `"Publish."` and pushes to `master`. Never touches the current checkout. Pushes to remote — confirm with the user before running.
 
-`public/` and `.packages/` are gitignored on the `org-publish` branch; built artifacts only live on `master`.
+`public/`, `public-gemini/` and `.packages/` are gitignored on the `org-publish` branch; built artifacts only live on `master`.
 
 ## Architecture
 
-`build-site.el` defines two `org-publish` projects:
+`build-site.el` defines these `org-publish` projects:
 
 1. **`patrickdelliott.com`** — recursively publishes `.org` files under `content/` to HTML. Key settings: HTML5 with `nav`/`main`/`footer` div containers, no default styles or scripts, headline level 2, auto-generated `sitemap.org`. Page chrome is injected from `content/html/head.html` and `content/html/preamble.html` via `org-html-head` / `org-html-preamble`; postamble is disabled.
 2. **`images`** — copies static assets (css, js, images, pdfs, fonts) from `content/` to `public/` via `org-publish-attachment`.
+3. **`gemini`** / **`gemini-assets`** — the same `.org` sources exported to gemtext via `ox-gemini`, plus PDFs/images. Export filters in `build-site.el` strip the `file:` link prefix, drop emphasis markers and insert a nav block (`my/gemini-nav`, keep in sync with `preamble.html`).
 
 `org-publish-all` is called with the force flag (`t`), so every build is a full rebuild.
 
